@@ -16,6 +16,7 @@ com\agency\mapper\ProgramMapper.class
 com\agency\repository\OrderRepository.class
 com\agency\mapper\LocationMapper.class
 com\agency\mapper\AbstractMapper.class
+com\agency\mapper\CommentMapper.class
 com\agency\configuration\DatabaseConfig.class
 com\agency\repository\RoleRepository.class
 com\agency\entity\Location.class
@@ -30,6 +31,7 @@ com\agency\controller\StartController.class
 com\agency\entity\BaseEntity.class
 com\agency\repository\ClientRepository.class
 com\agency\dto\CommentDto.class
+com\agency\service\CommentService.class
 com\agency\entity\Client.class
 com\agency\repository\AccountRepository.class
 com\agency\mapper\AccountMapper.class

@@ -19,4 +19,6 @@ public class FoodDto extends BaseDto {
     private float rating;
     private Set<Comment> comment;
     private Set<Order> order;
+
+
 }

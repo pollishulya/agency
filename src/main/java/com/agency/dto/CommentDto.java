@@ -22,4 +22,10 @@ public class CommentDto extends BaseDto {
     private Food food;
     private Location location;
     private Program program;
+
+
+    private String username;
+
+    private Long foodId;
+    private Long accountId;
 }
