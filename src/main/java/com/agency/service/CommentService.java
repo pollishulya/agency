@@ -1,6 +1,5 @@
 package com.agency.service;
 
-<<<<<<< HEAD
 import com.agency.dto.CommentDto;
 import com.agency.entity.Account;
 import com.agency.entity.Comment;
@@ -94,7 +93,4 @@ public class CommentService {
 
         return id;
     }
-=======
-public class CommentService {
->>>>>>> github/master
 }
