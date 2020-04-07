@@ -27,6 +27,7 @@ com\agency\configuration\HibernateAwareObjectMapper.class
 com\agency\dto\BaseDto.class
 com\agency\entity\Account.class
 com\agency\entity\Comment.class
+com\agency\entity\Role.class
 com\agency\dto\LocationDto.class
 com\agency\enums\Roles.class
 com\agency\controller\StartController.class

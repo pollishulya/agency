@@ -1,10 +1,39 @@
 package com.agency.controller;
 
+//import com.agency.service.AccountService;
+//import com.agency.service.StartService;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.stereotype.Controller;
+//import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.web.servlet.ModelAndView;
+//
+//@Controller
+//public class AccountController {
+//
+//    private final AccountService accountService;
+//
+//    @Autowired
+//    public AccountController(AccountService accountService) {
+//        this.accountService = accountService;
+//    }
+//
+//    @GetMapping("/test")
+//    public ModelAndView deniedAccess() {
+//
+//        ModelAndView modelAndView = new ModelAndView();
+//        accountService.start();
+//        modelAndView.setViewName("welcomePage");
+//
+//        return modelAndView;
+//    }
+//
+//
+//}
+
 import com.agency.dto.AccountDto;
-//import com.agency.entity.Role;
 import com.agency.mapper.AccountMapper;
 import com.agency.repository.AccountRepository;
-//import com.agency.repository.RoleRepository;
+import com.agency.repository.RoleRepository;
 import com.agency.service.AccountService;
 import com.agency.entity.Account;
 import lombok.extern.slf4j.Slf4j;
@@ -37,15 +66,15 @@ public class AccountController {
     private final AccountService accountService;
     private final AccountRepository accountRepository;
     private final AccountMapper accountMapper;
-   // private final RoleRepository roleRepository;
+    private final RoleRepository roleRepository;
 
     @Autowired
     public AccountController(AccountService accountService, AccountRepository accountRepository,
-                             AccountMapper accountMapper/*, RoleRepository roleRepository*/) {
+                             AccountMapper accountMapper, RoleRepository roleRepository) {
         this.accountService = accountService;
         this.accountRepository = accountRepository;
         this.accountMapper = accountMapper;
-     //   this.roleRepository = roleRepository;
+        this.roleRepository = roleRepository;
     }
 
     @PostMapping(value = "/saveAfterUpdate")
@@ -53,13 +82,13 @@ public class AccountController {
     public ResponseEntity updateAccount(@RequestBody AccountDto accountDto) {
 
         if (accountDto.getFirstname().equals("") || accountDto.getEmail().equals("") || accountDto.getPhone().equals("")) {
-            return new ResponseEntity<>("Empty fields error", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
         } else {
             List<Account> account = accountRepository.findAccountByEmailOrPhone(accountDto.getEmail(), accountDto.getPhone());
-            if (account.size() <= 1) {
+            if (account.size() == 1) {
                 return accountService.updateAccount(accountDto);
             }
-            return new ResponseEntity<>("Unique fields error", HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -91,7 +120,7 @@ public class AccountController {
             return new ResponseEntity<>(HttpStatus.OK);
         }
 
-        return new ResponseEntity<>("Delete account error", HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
     @GetMapping(value = "/update/{id}", produces = "application/json")
@@ -105,17 +134,17 @@ public class AccountController {
     }
 
     @GetMapping(value = "/settings", produces = "application/json")
-    public ResponseEntity<AccountDto> updateAccountViaUser() {
+    public ResponseEntity updateAccountViaUser() {
 
         Long id = getCurrentUserId();
 
         Optional<Account> account = accountRepository.findById(id);
         if (account.isPresent()) {
             AccountDto accountDto = accountMapper.toDto(account.get());
-            return new ResponseEntity<>(accountDto, HttpStatus.OK);
+            return new ResponseEntity(accountDto, HttpStatus.OK);
         }
 
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
 
     @PostMapping(value = "/settings/save", produces = "application/json")
@@ -123,15 +152,18 @@ public class AccountController {
     public ResponseEntity saveAccountUpdateViaUser(@RequestBody AccountDto accountDto) {
 
         if (accountDto.getFirstname().equals("") || accountDto.getEmail().equals("") || accountDto.getPhone().equals("")) {
-            return new ResponseEntity<>("Empty fields error", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
         } else {
             List<Account> account = accountRepository.findAccountByEmailOrPhone(accountDto.getEmail(), accountDto.getPhone());
             if (account.size() == 1) {
+                Collection<SimpleGrantedAuthority> nowAuthorities = (Collection<SimpleGrantedAuthority>) SecurityContextHolder
+                        .getContext().getAuthentication().getAuthorities();
+                UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(accountDto.getEmail(), accountDto.getPassword(), nowAuthorities);
+                SecurityContextHolder.getContext().setAuthentication(authentication);
 
-                updateAuthentication(accountDto);
-                return accountService.updateAccount(accountDto);
+                return  accountService.updateAccount(accountDto);
             }
-            return new ResponseEntity<>("Unique fields error", HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -144,14 +176,13 @@ public class AccountController {
         return modelAndView;
     }
 
-//    @GetMapping(value = "/roles", produces = "application/json")
-//    @ResponseBody
-//    public List<Role> findRoles() {
-//
-//        List<Role> roles = roleRepository.findAll();
-//
-//        return roles;
-//    }
+    @GetMapping(value = "/roles", produces = "application/json")
+    @ResponseBody
+    public List<Account> findRoles() {
+
+        List<Account> roles = roleRepository.findAll();
+        return roles;
+    }
 
     private Long getCurrentUserId() {
 
@@ -161,12 +192,5 @@ public class AccountController {
         Long id = account.getId();
 
         return id;
-    }
-
-    private void updateAuthentication(AccountDto accountDto) {
-
-        Collection<SimpleGrantedAuthority> nowAuthorities = (Collection<SimpleGrantedAuthority>) SecurityContextHolder.getContext().getAuthentication().getAuthorities();
-        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(accountDto.getEmail(), accountDto.getPassword(), nowAuthorities);
-        SecurityContextHolder.getContext().setAuthentication(authentication);
     }
 }

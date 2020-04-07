@@ -26,7 +26,7 @@ import static org.modelmapper.config.Configuration.AccessLevel.PRIVATE;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan( "com.agency.controller")
+@ComponentScan( "com.agency")
 public class SpringMvcConfig implements WebMvcConfigurer {
 
     @Override

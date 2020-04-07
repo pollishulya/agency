@@ -87,4 +87,7 @@ public class AccountService {
         log.info("IN UserService changeUserPassword for user {}", account);
 
     }
+    public String start(){
+        return "hello";
+    }
 }

@@ -1,6 +1,7 @@
 package com.agency.dto;
 
 import com.agency.entity.Comment;
+import com.agency.entity.Role;
 import lombok.*;
 
 import java.util.Set;
@@ -19,4 +20,9 @@ public class AccountDto extends BaseDto {
     private String login;
     private String password;
     private Set<Comment> comment;
+
+
+
+    private String role;
+    private Set<Role> roleSet;
 }
