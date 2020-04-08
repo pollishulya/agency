@@ -52,9 +52,7 @@
                         rowsHtml += "<p><h3>" + data[j].name + "</h3></a><p>";
                         rowsHtml += "<p><small>" + data[j].country + "</small></p>";
                         rowsHtml += "<p> Дата выезда:<b>" + exitDate + "</b><p>";
-                        rowsHtml += "<p><span class='glyphicon glyphicon-time' ></span><b> " + data[j].numberDays + " <spring:message code='day.label'/></b></p>";
-                        rowsHtml += " <a href='/tour/" + data[j].id + "'class='btn btn-primary text-uppercase position-view'>" + "<spring:message code='view.label'/>" + "</a><br/><br/>";
-                        rowsHtml += "</div>";
+                       rowsHtml += "</div>";
                         if (j + 1 < data.length) {
 
                             var date = new Date(data[j + 1].exitDate);
@@ -75,9 +73,7 @@
                             rowsHtml += "<p><h3>" + data[j + 1].name + "</h3></a><p>";
                             rowsHtml += "<p><small>" + data[j + 1].country + "</small></p>";
                             rowsHtml += "<p> Дата выезда:<b>" + exitDate + "</b><p>";
-                            rowsHtml += "<p><span class='glyphicon glyphicon-time' ></span><b> " + data[j + 1].numberDays + " <spring:message code='day.label'/></b></p>";
-                            rowsHtml += " <a href='/tour/" + data[j + 1].id + "'class='btn btn-primary text-uppercase position-view'>" + "<spring:message code='view.label'/>" + "</a><br/><br/>";
-                            rowsHtml += "</div>";
+                           rowsHtml += "</div>";
                         }
 
 
@@ -100,9 +96,7 @@
                             rowsHtml += "<p><h3>" + data[j + 2].name + "</h3></a><p>";
                             rowsHtml += "<p><small>" + data[j + 2].country + "</small></p>";
                             rowsHtml += "<p> Дата выезда:<b>" + exitDate + "</b><p>";
-                            rowsHtml += "<p><span class='glyphicon glyphicon-time' ></span><b> " + data[j + 2].numberDays + " <spring:message code='day.label'/></b></p>";
-                            rowsHtml += " <a href='/tour/" + data[j + 2].id + "'class='btn btn-primary text-uppercase position-view'>" + "<spring:message code='view.label'/>" + "</a><br/><br/>";
-                            rowsHtml += "</div>";
+                             rowsHtml += "</div>";
                         }
 
                         rowsHtml += "</div>";

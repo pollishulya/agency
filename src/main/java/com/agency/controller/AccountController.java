@@ -1,35 +1,5 @@
 package com.agency.controller;
 
-//import com.agency.service.AccountService;
-//import com.agency.service.StartService;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.stereotype.Controller;
-//import org.springframework.web.bind.annotation.GetMapping;
-//import org.springframework.web.servlet.ModelAndView;
-//
-//@Controller
-//public class AccountController {
-//
-//    private final AccountService accountService;
-//
-//    @Autowired
-//    public AccountController(AccountService accountService) {
-//        this.accountService = accountService;
-//    }
-//
-//    @GetMapping("/test")
-//    public ModelAndView deniedAccess() {
-//
-//        ModelAndView modelAndView = new ModelAndView();
-//        accountService.start();
-//        modelAndView.setViewName("welcomePage");
-//
-//        return modelAndView;
-//    }
-//
-//
-//}
-
 import com.agency.dto.AccountDto;
 import com.agency.mapper.AccountMapper;
 import com.agency.repository.AccountRepository;

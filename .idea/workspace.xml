@@ -6,128 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfedfaa7-d78e-46d7-9c7a-56bfab34c927" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/agency.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/agency.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/agency_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/com_agency_Web_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/com_agency_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/agency_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="dfedfaa7-d78e-46d7-9c7a-56bfab34c927" name="Default Changelist" comment="Добавила все с Food">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.agency.iml" beforeDir="false" afterPath="$PROJECT_DIR$/com.agency.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_Web_exploded/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_Web_exploded/WEB-INF/classes/com/agency/configuration/DatabaseConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_Web_exploded/WEB-INF/classes/com/agency/configuration/HibernateAwareObjectMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_Web_exploded/WEB-INF/classes/com/agency/configuration/SpringMvcConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_Web_exploded/WEB-INF/classes/com/agency/configuration/WebServletConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_Web_exploded/WEB-INF/classes/com/agency/entity/BaseEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_Web_exploded/WEB-INF/classes/com/agency/entity/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_Web_exploded/WEB-INF/classes/com/agency/entity/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_Web_exploded/WEB-INF/classes/com/agency/entity/Food.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_Web_exploded/WEB-INF/classes/com/agency/entity/Location.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_Web_exploded/WEB-INF/classes/com/agency/entity/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_Web_exploded/WEB-INF/classes/com/agency/entity/Program.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_Web_exploded/WEB-INF/classes/com/agency/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/configuration/DatabaseConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/configuration/HibernateAwareObjectMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/configuration/SpringMvcConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/configuration/WebServletConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/controller/AccountController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/dto/AccountDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/dto/BaseDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/dto/ClientDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/dto/FoodDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/dto/LocationDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/dto/OrderDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/dto/ProgramDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/entity/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/entity/BaseEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/entity/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/entity/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/entity/Food.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/entity/Location.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/entity/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/entity/Program.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/enums/Roles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/mapper/AbstractMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/mapper/AccountMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/mapper/ClientMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/mapper/LocationMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/mapper/Mapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/mapper/ProgramMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/repository/AccountRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/repository/RoleRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/classes/com/agency/service/StartService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/aspectjrt-1.8.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/aspectjweaver-1.8.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/bootstrap-3.3.7-1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/classmate-1.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/commons-compress-1.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/commons-lang3-3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/dom4j-1.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/dom4j-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/hamcrest-core-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/hibernate-core-5.2.12.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/jackson-core-2.9.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/jackson-databind-2.9.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/jackson-datatype-hibernate4-2.5.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/jandex-2.0.3.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/javassist-3.20.0-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/javax.ws.rs-api-2.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/jaxen-1.1.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/jquery-3.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/junit-4.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/modelmapper-2.3.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/mysql-connector-java-8.0.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/protobuf-java-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/slf4j-api-1.7.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/slf4j-simple-1.7.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-aop-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-aspects-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-beans-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-context-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-core-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-data-commons-2.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-data-jpa-2.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-expression-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-jcl-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-jdbc-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-orm-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-security-acl-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-security-config-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-security-core-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-security-taglibs-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-security-web-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-test-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-tx-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-web-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/spring-webmvc-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/webjars-locator-0.30.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/lib/webjars-locator-core-0.30.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/com_agency_war_exploded/WEB-INF/views/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/configuration/SpringMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/configuration/SpringMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/configuration/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/configuration/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/configuration/SpringSecurityInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/configuration/SpringSecurityInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/AccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/StartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/StartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/AccountDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/AccountDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/configuration/SpringMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/configuration/SpringMvcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/controller/AccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/controller/StartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/controller/StartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/service/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/AccountDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/AccountDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.agency-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.agency-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
@@ -164,102 +49,103 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/configuration/SpringSecurityConfig.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/service/FoodService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-824">
-              <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/configuration/SpringSecurityInitializer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/StartController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-start-column="2" selection-end-line="7" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/service/AccountService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="79" selection-start-line="55" selection-end-line="79" />
+            <state relative-caret-position="901">
+              <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3076#3077#0" expanded="true" />
-                <element signature="e#3106#3107#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/configuration/HibernateAwareObjectMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/CommentMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/AccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2332">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/CommentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1190">
+              <caret line="70" column="71" selection-start-line="70" selection-start-column="71" selection-end-line="70" selection-end-column="71" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/AccountController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-311">
-              <caret line="149" column="39" lean-forward="true" selection-start-line="149" selection-start-column="39" selection-end-line="149" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-719">
+              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/RoleRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Role.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/AccountDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/configuration/SpringMvcConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/configuration/WebServletConfiguration.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/FoodRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-119">
+              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/service/LocationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -290,6 +176,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GithubProjectSettings">
     <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
@@ -299,7 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/agency/entity/Food.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/configuration/DatabaseConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/create.sql" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
@@ -331,7 +217,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/OrderDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/enums/TourType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/RoleRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/FoodRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/CommentDto.java" />
@@ -346,10 +231,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/agency/configuration/SpringSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/configuration/SpringSecurityInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/StartController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/AccountDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/StartController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/AccountController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp" />
       </list>
     </option>
   </component>
@@ -381,8 +268,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -459,15 +344,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -530,34 +406,12 @@
               <item name="target" type="462c0819:PsiDirectoryNode" />
               <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -581,19 +435,20 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\agency\src\main\java\com\agency\service" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.agency.entity" />
-      <recent name="com.agency.repository" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\com.agency\src\main\webapp\WEB-INF\views" />
       <recent name="D:\com.agency\src\main\java\com\agency" />
       <recent name="D:\com.agency\src\main\java\com\agency\controller" />
       <recent name="D:\com.agency\src\main\java\com\agency\configuration" />
       <recent name="D:\com.agency\src\main\java\com\agency\dto" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.agency.controller" />
+      <recent name="com.agency.entity" />
+      <recent name="com.agency.repository" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\agency\src\main\java\com\agency\service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -805,12 +660,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88944000" />
+    <option name="totallyTimeSpent" value="89779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-3" width="1542" height="830" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49716714" visible="true" weight="0.14966443" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49716714" visible="true" weight="0.13691275" />
       <window_info id="Structure" order="1" sideWeight="0.5028329" side_tool="true" weight="0.14563759" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -834,11 +690,11 @@
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="15" sideWeight="0.49932885" weight="0.28045326" />
+      <window_info anchor="bottom" id="Version Control" order="15" sideWeight="0.49932885" weight="0.09773371" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.14899328" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.13221477" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.10738255" />
@@ -928,30 +784,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Dasha and Polina are beautiful" />
     <MESSAGE value="her znaet voobshche" />
-    <option name="LAST_COMMIT_MESSAGE" value="her znaet voobshche" />
+    <MESSAGE value="Добавила все с Food" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавила все с Food" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Location.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../samurai/project/myapp/node_modules/react-redux/es/components/Provider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -979,13 +819,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dasha.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-950">
-          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -998,11 +831,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1025,8 +855,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        <state relative-caret-position="-119">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1041,15 +871,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/FoodRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="272">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/service/FoodService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -1255,18 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/StartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/configuration/HibernateAwareObjectMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1338,13 +1156,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/AccountController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/StartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-311">
-          <caret line="149" column="39" lean-forward="true" selection-start-line="149" selection-start-column="39" selection-end-line="149" selection-end-column="39" />
+        <state relative-caret-position="901">
+          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/AccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2332">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="71" selection-start-line="70" selection-start-column="71" selection-end-line="70" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-719">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
         </state>
       </provider>
     </entry>
