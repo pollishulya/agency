@@ -1,6 +1,7 @@
 package com.agency.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,9 @@ import org.hibernate.annotations.Cascade;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -45,5 +48,12 @@ public class Food extends BaseEntity {
     public List<Droid> getDroids() {
         return droids;
     }*/
+  @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "food",fetch = FetchType.LAZY)
+  @JsonManagedReference
+  private List<FoodDescription> foodDescriptions = new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "food_company_id")
+    private Account company;
 
 }

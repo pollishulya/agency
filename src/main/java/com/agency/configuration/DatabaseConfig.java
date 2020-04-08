@@ -97,7 +97,7 @@ public class DatabaseConfig {
 //<!--        <description>Hibernate EntityManager Demo</description>-->
 //<class>com.example.entity.User</class>
 //<class>com.example.entity.Role</class>
-//<class>com.example.entity.TravelCompany</class>
+//<class>com.example.entity.FoodCompany</class>
 //<class>com.example.entity.Comment</class>
 //<exclude-unlisted-classes>true</exclude-unlisted-classes>
 //</persistence-unit>
