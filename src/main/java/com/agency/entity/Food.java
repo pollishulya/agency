@@ -36,6 +36,9 @@ public class Food extends BaseEntity {
     @Column(name = "rating")
     private float rating;
 
+    @Column(name = "image_url")
+    private String image;
+
     @JsonIgnore
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE},orphanRemoval=true, mappedBy = "food", fetch = FetchType.LAZY)
     private Set<Comment> comments = new HashSet<>();
