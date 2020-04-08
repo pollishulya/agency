@@ -20,12 +20,9 @@ public interface FoodRepository extends JpaRepository<Food, Long> {
 
     Page<Food> findAllByCompanyId(Long id, Pageable pageable);
 
-    List<Food> findAllByType(String type);
+   // List<Food> findAllByType(String type);
 
-    @Query("SELECT tour FROM Tour tour WHERE tour.name LIKE CONCAT('%', :string, '%')" +
-            " or tour.country LIKE CONCAT('%', :string, '%') or tour.exitDate LIKE CONCAT('%', :string, '%')" +
-            "or tour.numberDays LIKE CONCAT('%', :string, '%') or tour.cost LIKE CONCAT('%', :string, '%')" +
-            "or tour.rating LIKE CONCAT('%', :string, '%')or tour.type LIKE CONCAT('%', :string, '%')")
+    @Query("SELECT food FROM Food food WHERE food.name LIKE CONCAT('%', :string, '%')")
     Page<Food> findFoods(@Param("string") String param, Pageable pageable);
 
 }

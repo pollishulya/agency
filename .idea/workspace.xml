@@ -7,16 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfedfaa7-d78e-46d7-9c7a-56bfab34c927" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/repository/FoodDescriptionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/repository/TourRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodDescriptionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/repository/CompanyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/FoodCompanyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/FoodService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/UserDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/repository/FoodRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/repository/FoodRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/service/FoodService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/FoodDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/FoodDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Food.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/mapper/FoodMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/mapper/FoodMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/repository/FoodRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/repository/FoodRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.agency-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.agency-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
@@ -53,22 +55,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/CommentController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="70" column="71" selection-start-line="70" selection-start-column="71" selection-end-line="70" selection-end-column="71" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-719">
-              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -83,19 +73,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/service/UserDetailsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/FoodDescriptionRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="44">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,12 +85,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/TourRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="419">
+              <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodDescriptionMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="47" column="97" selection-start-line="47" selection-start-column="97" selection-end-line="47" selection-end-column="97" />
               <folding>
-                <element signature="e#0#349#1" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,26 +108,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/FoodRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+            <state relative-caret-position="221">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#73#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/FoodDescriptionRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/FoodCompany.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+            <state relative-caret-position="119">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,8 +132,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/FoodDescription.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="92">
               <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -190,15 +198,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/ReservationMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/AccountRepozitory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/AccountRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Account.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/AccountMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/ModelMapperDemoApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/AbstractMapper.java" />
@@ -238,8 +238,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/service/TourRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/TourRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/FoodDescriptionRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/TourRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/service/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/service/FoodCompanyService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/CompanyRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/TourMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/service/FoodService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Account.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodDescriptionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/FoodRepository.java" />
       </list>
     </option>
@@ -262,9 +270,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="width" value="973" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="910" />
+    <option name="y" value="1" />
+    <option name="width" value="1037" />
     <option name="height" value="1035" />
   </component>
   <component name="ProjectView">
@@ -348,6 +357,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="agency" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agency" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="agency" type="462c0819:PsiDirectoryNode" />
               <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -414,7 +432,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/agency/repository" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/agency/mapper" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -431,17 +449,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\agency\src\main\java\com\agency\repository" />
+      <recent name="D:\agency\src\main\java\com\agency\mapper" />
       <recent name="D:\agency\src\main\java\com\agency\service" />
+      <recent name="D:\agency\src\main\java\com\agency\repository" />
       <recent name="D:\agency\src\main\java\com\agency\entity" />
       <recent name="D:\com.agency\src\main\webapp\WEB-INF\views" />
-      <recent name="D:\com.agency\src\main\java\com\agency" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.agency.repository" />
       <recent name="com.agency.dto" />
       <recent name="com.agency.controller" />
       <recent name="com.agency.entity" />
-      <recent name="com.agency.repository" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\agency\src\main\java\com\agency\service" />
@@ -666,17 +684,24 @@
       <option name="project" value="LOCAL" />
       <updated>1586366286102</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="FoodRepository, FoodDescriptionRepository">
+      <created>1586366975633</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586366975633</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91143000" />
+    <option name="totallyTimeSpent" value="93662000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="0" width="778" height="828" extended-state="0" />
+    <frame x="-3" y="-3" width="1542" height="830" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49716714" visible="true" weight="0.28099173" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49716714" visible="true" weight="0.13691275" />
       <window_info id="Structure" order="1" sideWeight="0.5028329" side_tool="true" weight="0.14563759" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -687,7 +712,7 @@
       <window_info id="Web" order="8" sideWeight="0.50141644" side_tool="true" weight="0.18120806" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.328125" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24573864" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44050992" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -797,60 +822,14 @@
     <MESSAGE value="Добавила все с Food" />
     <MESSAGE value="commentController, startController" />
     <MESSAGE value="Food+discription,company in entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Food+discription,company in entity" />
+    <MESSAGE value="FoodRepository, FoodDescriptionRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="FoodRepository, FoodDescriptionRepository" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/agency/repository/CommentRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#721#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/ProgramMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/OrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/configuration/DatabaseConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.agency.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/ServletContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="115" column="35" selection-start-line="115" selection-start-column="35" selection-end-line="115" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar!/javax/servlet/ServletContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -939,13 +918,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
@@ -1137,30 +1109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/FoodDescription.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/service/TourDescriptionRepository.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1180,23 +1128,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/FoodDescriptionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/TourRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1207,10 +1138,128 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/service/FoodCompanyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/CompanyRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/service/FoodService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/service/UserDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/FoodDescription.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodDescriptionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="47" column="97" selection-start-line="47" selection-start-column="97" selection-end-line="47" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/FoodDescriptionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/FoodRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+        <state relative-caret-position="221">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#73#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

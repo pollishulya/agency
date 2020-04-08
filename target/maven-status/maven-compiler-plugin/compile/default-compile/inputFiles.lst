@@ -1,5 +1,7 @@
 D:\agency\src\main\java\com\agency\dto\FoodDescriptionDto.java
 D:\agency\src\main\java\com\agency\service\OrderService.java
+D:\agency\src\main\java\com\agency\repository\CompanyRepository.java
+D:\agency\src\main\java\com\agency\repository\FoodDescriptionRepository.java
 D:\agency\src\main\java\com\agency\configuration\SpringMvcConfig.java
 D:\agency\src\main\java\com\agency\dto\ClientDto.java
 D:\agency\src\main\java\com\agency\mapper\AbstractMapper.java
@@ -11,6 +13,7 @@ D:\agency\src\main\java\com\agency\entity\Food.java
 D:\agency\src\main\java\com\agency\service\ProgramService.java
 D:\agency\src\main\java\com\agency\entity\BaseEntity.java
 D:\agency\src\main\java\com\agency\service\StartService.java
+D:\agency\src\main\java\com\agency\service\FoodCompanyService.java
 D:\agency\src\main\java\com\agency\repository\ProgramRepository.java
 D:\agency\src\main\java\com\agency\repository\AccountRepository.java
 D:\agency\src\main\java\com\agency\dto\FoodDto.java
@@ -27,6 +30,7 @@ D:\agency\src\main\java\com\agency\entity\Role.java
 D:\agency\src\main\java\com\agency\dto\BaseDto.java
 D:\agency\src\main\java\com\agency\mapper\FoodMapper.java
 D:\agency\src\main\java\com\agency\configuration\SpringSecurityInitializer.java
+D:\agency\src\main\java\com\agency\service\UserDetailsServiceImpl.java
 D:\agency\src\main\java\com\agency\mapper\AccountMapper.java
 D:\agency\src\main\java\com\agency\dto\CommentDto.java
 D:\agency\src\main\java\com\agency\entity\User.java
@@ -34,6 +38,7 @@ D:\agency\src\main\java\com\agency\enums\Roles.java
 D:\agency\src\main\java\com\agency\service\AccountService.java
 D:\agency\src\main\java\com\agency\dto\ProgramDto.java
 D:\agency\src\main\java\com\agency\entity\FoodCompany.java
+D:\agency\src\main\java\com\agency\mapper\FoodDescriptionMapper.java
 D:\agency\src\main\java\com\agency\entity\Account.java
 D:\agency\src\main\java\com\agency\entity\Order.java
 D:\agency\src\main\java\com\agency\dto\LocationDto.java
