@@ -1,0 +1,77 @@
+.formContentDelete {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 17px 17px 17px 17px;
+    background: #fff;
+    padding: 30px;
+    width: 70%;
+    max-width: 400px;
+    height: auto;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    /*text-align: center;*/
+}
+
+#formFooter {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.underlineHover:hover {
+    color: #0d0d0d;
+}
+
+.underlineHover:hover:after{
+    width: 100%;
+}
+
+
+
+/* OTHERS */
+
+*:focus {
+    outline: none;
+}
+
+.modal-header {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+
+#deleteBtn {
+    position: relative;
+    margin-top: -8px;
+    margin-right: 4px;
+}
+
+
+#closeBtn {
+    position: relative;
+    margin-top: -8px;
+    margin-right: 4px;
+}
+
+
+.questionForm{
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: grey;
+}

@@ -1,0 +1,86 @@
+.tour {
+    position: relative;
+    moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px #CCCCCC solid;
+    font-family: sans-serif;
+    background-color: #f2f2ff;
+    margin: 20px;
+    width: 630px;
+    height: 400px;
+}
+
+.tour p {
+    font-size: 15px;
+}
+
+.tour h3 {
+    color: #36486b;
+}
+
+.tour-image {
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+.image {
+    position: relative;
+}
+
+h2 {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+}
+
+h2 span {
+    color: white;
+    font: bold 20px/40px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0);
+    opacity: 0.9;
+    background: #ff7b25;
+    padding: 10px;
+}
+
+.btn-view {
+    background-color: #80ced6;
+    border-color: #fefbd8;
+    color: #fefbd8;
+    size: 15px;
+}
+
+.position-view {
+    position: relative;
+    left: 120px;
+}
+
+.panel-body {
+    padding: 25px 0px;
+    width: 700px;
+    background-color: #f2f2ff;
+}
+
+.panel-body {
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.075);
+    border-radius: 5px;
+    width: 1200px;
+    background: rgba(208, 235, 247,0.4);
+}
+
+
+.position-tour {
+    position: relative;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+body{
+    overflow-x: hidden;
+    background-image: url("/resources/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

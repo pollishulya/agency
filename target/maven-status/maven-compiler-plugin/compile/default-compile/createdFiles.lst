@@ -1,4 +1,5 @@
 com\agency\dto\OrderDto.class
+com\agency\controller\FoodController.class
 com\agency\entity\Food.class
 com\agency\service\FoodCompanyService.class
 com\agency\entity\Program.class
@@ -10,6 +11,7 @@ com\agency\controller\AccountController.class
 com\agency\repository\CommentRepository.class
 com\agency\repository\LocationRepository.class
 com\agency\mapper\ProgramMapper.class
+com\agency\configuration\SpringSecurityInitializer.class
 com\agency\mapper\AbstractMapper.class
 com\agency\mapper\CommentMapper.class
 com\agency\service\ClientService.class
@@ -28,6 +30,7 @@ com\agency\entity\Order.class
 com\agency\mapper\Mapper.class
 com\agency\repository\FoodRepository.class
 com\agency\mapper\ClientMapper.class
+com\agency\configuration\SpringSecurityConfig.class
 com\agency\dto\AccountDto.class
 com\agency\dto\ClientDto.class
 com\agency\configuration\SpringMvcConfig.class

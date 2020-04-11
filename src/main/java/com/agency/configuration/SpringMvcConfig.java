@@ -22,6 +22,9 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.modelmapper.config.Configuration.AccessLevel.PRIVATE;
 
 @EnableWebMvc
@@ -32,15 +35,12 @@ public class SpringMvcConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**")
-               .addResourceLocations("/resources/");
-       registry
-               .addResourceHandler("/webjars/**")
-               .addResourceLocations("/webjars/");
-    }
+                .addResourceLocations("/resources/");
 
-    @Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder(){
-        return new BCryptPasswordEncoder();
+        registry
+                .addResourceHandler("/webjars/**")
+                .addResourceLocations("/webjars/");
+
     }
 
     @Bean
@@ -53,8 +53,74 @@ public class SpringMvcConfig implements WebMvcConfigurer {
         return viewResolver;
     }
 
+    @Bean("messageSource")
+    public MessageSource messageSource() {
+        ReloadableResourceBundleMessageSource messageSource=new ReloadableResourceBundleMessageSource();
+        messageSource.setBasename("classpath:locale/messages");
+        messageSource.setDefaultEncoding("UTF-8");
+        messageSource.setUseCodeAsDefaultMessage(true);
+        return messageSource;
+    }
+
+    @Bean
+    public LocaleResolver localeResolver() {
+        CookieLocaleResolver localeResolver = new CookieLocaleResolver();
+        return localeResolver;
+    }
 
 
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+
+        LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
+        localeChangeInterceptor.setParamName("lang");
+        registry.addInterceptor(localeChangeInterceptor);
+    }
+
+    @Bean
+    public BCryptPasswordEncoder bCryptPasswordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters){
+        List<MediaType> supportedMediaTypes=new ArrayList<>();
+        supportedMediaTypes.add(MediaType.APPLICATION_JSON);
+        supportedMediaTypes.add(MediaType.TEXT_PLAIN);
+        MappingJackson2HttpMessageConverter converter=new MappingJackson2HttpMessageConverter();
+        converter.setObjectMapper(new HibernateAwareObjectMapper());
+        converter.setPrettyPrint(true);
+        converter.setSupportedMediaTypes(supportedMediaTypes);
+        converters.add(converter);
+        WebMvcConfigurer.super.configureMessageConverters(converters);
+    }
+
+    @Bean
+    public ModelMapper modelMapper() {
+        ModelMapper mapper = new ModelMapper();
+        mapper.getConfiguration()
+                .setMatchingStrategy(MatchingStrategies.STRICT)
+                .setFieldMatchingEnabled(true)
+                .setSkipNullEnabled(true)
+                .setFieldAccessLevel(PRIVATE);
+        return mapper;
+    }
+}
+//public class SpringMvcConfig implements WebMvcConfigurer {
+//
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        registry.addResourceHandler("/resources/**")
+//               .addResourceLocations("/resources/");
+//       registry
+//               .addResourceHandler("/webjars/**")
+//               .addResourceLocations("/webjars/");
+//    }
+//
+//    @Bean
+//    public BCryptPasswordEncoder bCryptPasswordEncoder(){
+//        return new BCryptPasswordEncoder();
+//    }
 //
 //    @Bean
 //    public InternalResourceViewResolver viewResolver() {
@@ -66,59 +132,72 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 //        return viewResolver;
 //    }
 //
-//    @Bean("messageSource")
-//    public MessageSource messageSource() {
-//        ReloadableResourceBundleMessageSource messageSource=new ReloadableResourceBundleMessageSource();
-//        messageSource.setBasename("classpath:locale/messages");
-//        messageSource.setDefaultEncoding("UTF-8");
-//        messageSource.setUseCodeAsDefaultMessage(true);
-//        return messageSource;
-//    }
-//
-//    @Bean
-//    public LocaleResolver localeResolver() {
-//        CookieLocaleResolver localeResolver = new CookieLocaleResolver();
-//        return localeResolver;
-//    }
 //
 //
-//    @Override
-//    public void addInterceptors(InterceptorRegistry registry) {
-//
-//        LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
-//        localeChangeInterceptor.setParamName("lang");
-//        registry.addInterceptor(localeChangeInterceptor);
-//    }
-//
-//    @Bean
-//    public BCryptPasswordEncoder bCryptPasswordEncoder(){
-//        return new BCryptPasswordEncoder();
-//    }
-//
-//    @Override
-//    public void configureMessageConverters(List<HttpMessageConverter<?>> converters){
-//        List<MediaType> supportedMediaTypes=new ArrayList<>();
-//        supportedMediaTypes.add(MediaType.APPLICATION_JSON);
-//        supportedMediaTypes.add(MediaType.TEXT_PLAIN);
-//        MappingJackson2HttpMessageConverter converter=new MappingJackson2HttpMessageConverter();
-//        converter.setObjectMapper(new HibernateAwareObjectMapper());
-//        converter.setPrettyPrint(true);
-//        converter.setSupportedMediaTypes(supportedMediaTypes);
-//        converters.add(converter);
-//        WebMvcConfigurer.super.configureMessageConverters(converters);
-//    }
-//
-   @Bean
-    public ModelMapper modelMapper() {
-       ModelMapper mapper = new ModelMapper();
-        mapper.getConfiguration()
-               .setMatchingStrategy(MatchingStrategies.STRICT)
-               .setFieldMatchingEnabled(true)
-               .setSkipNullEnabled(true)
-                .setFieldAccessLevel(PRIVATE);
-       return mapper;
-   }
-}
+////
+////    @Bean
+////    public InternalResourceViewResolver viewResolver() {
+////        InternalResourceViewResolver viewResolver =
+////                new InternalResourceViewResolver();
+////        viewResolver.setViewClass(JstlView.class);
+////        viewResolver.setPrefix("/WEB-INF/views/");
+////        viewResolver.setSuffix(".jsp");
+////        return viewResolver;
+////    }
+////
+////    @Bean("messageSource")
+////    public MessageSource messageSource() {
+////        ReloadableResourceBundleMessageSource messageSource=new ReloadableResourceBundleMessageSource();
+////        messageSource.setBasename("classpath:locale/messages");
+////        messageSource.setDefaultEncoding("UTF-8");
+////        messageSource.setUseCodeAsDefaultMessage(true);
+////        return messageSource;
+////    }
+////
+////    @Bean
+////    public LocaleResolver localeResolver() {
+////        CookieLocaleResolver localeResolver = new CookieLocaleResolver();
+////        return localeResolver;
+////    }
+////
+////
+////    @Override
+////    public void addInterceptors(InterceptorRegistry registry) {
+////
+////        LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
+////        localeChangeInterceptor.setParamName("lang");
+////        registry.addInterceptor(localeChangeInterceptor);
+////    }
+////
+////    @Bean
+////    public BCryptPasswordEncoder bCryptPasswordEncoder(){
+////        return new BCryptPasswordEncoder();
+////    }
+////
+////    @Override
+////    public void configureMessageConverters(List<HttpMessageConverter<?>> converters){
+////        List<MediaType> supportedMediaTypes=new ArrayList<>();
+////        supportedMediaTypes.add(MediaType.APPLICATION_JSON);
+////        supportedMediaTypes.add(MediaType.TEXT_PLAIN);
+////        MappingJackson2HttpMessageConverter converter=new MappingJackson2HttpMessageConverter();
+////        converter.setObjectMapper(new HibernateAwareObjectMapper());
+////        converter.setPrettyPrint(true);
+////        converter.setSupportedMediaTypes(supportedMediaTypes);
+////        converters.add(converter);
+////        WebMvcConfigurer.super.configureMessageConverters(converters);
+////    }
+////
+//   @Bean
+//    public ModelMapper modelMapper() {
+//       ModelMapper mapper = new ModelMapper();
+//        mapper.getConfiguration()
+//               .setMatchingStrategy(MatchingStrategies.STRICT)
+//               .setFieldMatchingEnabled(true)
+//               .setSkipNullEnabled(true)
+//                .setFieldAccessLevel(PRIVATE);
+//       return mapper;
+//   }
+//}
 
 
 

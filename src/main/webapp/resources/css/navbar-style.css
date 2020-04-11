@@ -1,0 +1,93 @@
+.navbar{
+    background: #80ced6;
+}
+
+#home{
+    color:#fefbd8;
+    font-size:25px ;
+    font-family:Courier, monospace;
+    position: absolute;
+    left: 20px;
+    text-decoration: none;
+}
+
+.textWrapLeft{
+    float: left;
+    margin: 10px;
+}
+
+.position-groupTourBtn{
+    position: absolute;
+    left: 280px;
+    top: 10px;
+    color: #fefbd8;
+    font-size: 18px;
+    font-family:sans-serif;
+}
+
+.position-for-login{
+    position: absolute;
+    top: 7px;
+    left: 1250px;
+    color: #fefbd8;
+    font-family:sans-serif;
+}
+
+.position-7{
+    position: absolute;
+    top: 7px;
+    left: 1200px;
+    color: #fefbd8;
+    font-family:sans-serif;
+}
+
+.position-for-logBtn{
+    position: relative;
+    left: 900px;
+    color: #fefbd8;
+    font-family:sans-serif;
+}
+
+.position-for-langBtn{
+    position: absolute;
+    left: -100px;
+    color: #fefbd8;
+    font-family:sans-serif;
+}
+
+.position-button{
+    position: relative;
+    margin-top: 10px;
+    margin-right: 7px;
+}
+
+.position-lang{
+    position: relative;
+    margin-top: 10px;
+    margin-right: 7px;
+}
+
+.user{
+    font-family:sans-serif;
+    font-size: 18px;
+}
+
+.btn-outline-primary {
+    background-color: #80ced6;
+    border-color: #fefbd8;
+}
+
+.select{
+    border-radius:  6px;
+    -moz-border-radius:  5px;
+}
+
+:root {
+    --input-padding-x: 1.5rem;
+    --input-padding-y: .75rem;
+}
+
+a {
+    color: #fefbd8;
+    font-family:sans-serif;
+}
