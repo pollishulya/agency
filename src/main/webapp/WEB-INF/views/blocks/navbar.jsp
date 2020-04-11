@@ -18,7 +18,7 @@
     <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
     <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
 
-    <script src="/resources/jquery/forLogin.js"></script>
+    <script type="text/javascript" src="/webapp/resources/jquery/forLogin.js"></script>
     <link rel="stylesheet" href="/resources/css/navbar-style.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/modal.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/deleteForm.css" type="text/css">
@@ -143,8 +143,8 @@
         <div class="container">
             <div id="navbar" class="collapse navbar-collapse">
                 <a href="/" id="home">
-                    <img src='/resources/images/home_label.svg' width="50" height="50" class="d-inline-block align-top"
-                         alt="">OnlyTravel
+                    <img src='/resources/images/home_label.svg' width="50" height="50" class="d-inline-block align-top" alt=""/>OnlyTravel
+
                 </a>
                 <div id="buttons" class="position-groupTourBtn"></div>
                 <div id="user" class="position-for-logBtn"></div>
