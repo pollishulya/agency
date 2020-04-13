@@ -25,4 +25,5 @@ public class FoodDto extends BaseDto {
     private String image;
     private List<FoodDescriptionDto> description = new ArrayList<>();
     private Long companyId;
+    private Set<ReservationDto> reservations = new HashSet<>();
 }

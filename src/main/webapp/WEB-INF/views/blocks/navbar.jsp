@@ -17,8 +17,9 @@
     <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" type="text/css"/>
     <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
     <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="/webapp/resources/jquery/forLogin.js"></script>
+    <script type="text/javascript" src="resources/jquery/forLogin.js"></script>
     <link rel="stylesheet" href="/resources/css/navbar-style.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/modal.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/deleteForm.css" type="text/css">
@@ -159,7 +160,8 @@
                             '                        <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
                             '                                                   onclick="languageSelect(\'ru\');"><spring:message code="lang.ru"/></a></li>\n' +
                             '                    </ul>\n' +
-                            '                </div><button type="button" class="btn btn-info position-button" id="signup" onclick="signUpForm()"><spring:message code="signup.button"/></button><button type="button" class="btn btn-info position-button" id="login" onclick="loginForm(0)"><spring:message code="signin.button"/></button>')
+                            '                </div>' +
+                            '<button type="button" class="btn btn-info position-button" id="signup" onclick="signUpForm()"><spring:message code="signup.button"/></button> <button type="button" class="btn btn-info position-button" id="login" onclick="loginForm(0)"><spring:message code="signin.button"/></button>')
                     </script>
                 </sec:authorize>
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
@@ -168,7 +170,7 @@
                         $('#buttons').append('    <a href="/showFoods/cruise"  class="btn btn-outline-primary"><spring:message code="seeFood.label"/></a>\n' +
                             '                <a href="/showFoods/bus" class="btn btn-outline-primary "><spring:message code="busTour.label"/></a>\n' +
                             '                <a href="/showFoods/air" class="btn btn-outline-primary "><spring:message code="airTour.label"/></a>\n'+
-                            '                <a href="/" class="btn btn-outline-primary "><spring:message code="allTour.label"/></a>\n');
+                            '                <a href="/" class="btn btn-outline-primary "><spring:message code="allFood.label"/></a>\n');
 
                         $('#user').append(' <div class="position-for-langBtn"><button id="locales" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\\n\' +\n' +
                             '       data-toggle="dropdown"><spring:message code="lang.label"/><span class="caret"></span></button>\n' +
@@ -191,10 +193,10 @@
                 <sec:authorize access="hasRole('ROLE_USER')">
                     <script>
 
-                        $('#buttons').append('    <a href="/showTours/cruise"  class="btn btn-outline-primary"><spring:message code="seeFood.label"/></a>\n' +
-                            '                <a href="/showTours/bus" class="btn btn-outline-primary"><spring:message code="busTour.label"/></a>\n' +
-                            '                <a href="/showTours/air" class="btn btn-outline-primary"><spring:message code="airTour.label"/></a>\n'+
-                            '                <a href="/" class="btn btn-outline-primary "><spring:message code="allTour.label"/></a>\n');
+                        $('#buttons').append('    <a href="/showFoods/cruise"  class="btn btn-outline-primary"><spring:message code="seeFood.label"/></a>\n' +
+                            '                <a href="/showFoods/bus" class="btn btn-outline-primary"><spring:message code="busTour.label"/></a>\n' +
+                            '                <a href="/showFoods/air" class="btn btn-outline-primary"><spring:message code="airTour.label"/></a>\n'+
+                            '                <a href="/" class="btn btn-outline-primary "><spring:message code="allFood.label"/></a>\n');
                         $('#user').append('  <div class="position-for-langBtn"><button id="locales" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\\n\' +\n' +
                             '       data-toggle="dropdown"><spring:message code="lang.label"/><span class="caret"></span></button>\n' +
                             '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
@@ -217,7 +219,7 @@
                         $('#buttons').append('    <a href="/showFoods/cruise"  class="btn btn-outline-primary"><spring:message code="seeFood.label"/></a>\n' +
                             '                <a href="/showFoods/bus" class="btn btn-outline-primary "><spring:message code="busTour.label"/></a>\n' +
                             '                <a href="/showFoods/air" class="btn btn-outline-primary "><spring:message code="airTour.label"/></a>\n'+
-                            '                <a href="/" class="btn btn-outline-primary "><spring:message code="allTour.label"/></a>\n');
+                            '                <a href="/" class="btn btn-outline-primary "><spring:message code="allFood.label"/></a>\n');
                         $('#user').append('<div class="position-for-langBtn"><button id="locales" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\\n\' +\n' +
                             '       data-toggle="dropdown"><spring:message code="lang.label"/><span class="caret"></span></button>\n' +
                             '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
@@ -229,7 +231,7 @@
                             '</div><button class="btn btn-outline-primary dropdown-toggle position-button" type="button" data-toggle="dropdown">${pageContext.request.userPrincipal.name}<span class="glyphicon glyphicon-user"/>\n' +
                             '                        <span class="caret"></span></button>\n' +
                             '                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
-                            '                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/showTours"><spring:message code="tours"/></a></li>\n' +
+                            '                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/showFods"><spring:message code="foods"/></a></li>\n' +
                             '                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="updateAccountSettings()"><spring:message code="settings.label"/></a></li>\n' +
                             '</ul>\n' +
                             '        <a href="<c:url value="/logout" />" class="btn btn-outline-primary position-button"><spring:message code="logout"/></a>');

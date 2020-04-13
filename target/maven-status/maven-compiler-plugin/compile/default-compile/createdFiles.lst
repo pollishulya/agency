@@ -4,6 +4,7 @@ com\agency\entity\Food.class
 com\agency\service\FoodCompanyService.class
 com\agency\entity\Program.class
 com\agency\service\AccountService.class
+com\agency\controller\FoodDescriptionController.class
 com\agency\dto\FoodDescriptionDto.class
 com\agency\service\LocationService.class
 com\agency\controller\CommentController.class
@@ -23,6 +24,7 @@ com\agency\entity\Role.class
 com\agency\dto\LocationDto.class
 com\agency\entity\BaseEntity.class
 com\agency\service\CommentService.class
+com\agency\controller\FoodCompanyController.class
 com\agency\entity\Client.class
 com\agency\service\ProgramService.class
 com\agency\mapper\AccountMapper.class

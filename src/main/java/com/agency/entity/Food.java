@@ -47,6 +47,10 @@ public class Food extends BaseEntity {
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE},orphanRemoval = true,mappedBy = "food", fetch = FetchType.LAZY)
     private Set<Order> order = new HashSet<>();
 
+    @JsonIgnore
+    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "food",fetch = FetchType.LAZY)
+    private Set<Reservation> reservations = new HashSet<>();
+
   /*  @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "unicorn")
     public List<Droid> getDroids() {
         return droids;

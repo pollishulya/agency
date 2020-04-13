@@ -47,6 +47,7 @@ D:\agency\src\main\java\com\agency\controller\CommentController.java
 D:\agency\src\main\java\com\agency\mapper\ClientMapper.java
 D:\agency\src\main\java\com\agency\controller\StartController.java
 D:\agency\src\main\java\com\agency\service\ClientService.java
+D:\agency\src\main\java\com\agency\controller\FoodCompanyController.java
 D:\agency\src\main\java\com\agency\repository\FoodRepository.java
 D:\agency\src\main\java\com\agency\configuration\WebServletConfiguration.java
 D:\agency\src\main\java\com\agency\mapper\LocationMapper.java
@@ -59,4 +60,5 @@ D:\agency\src\main\java\com\agency\repository\OrderRepository.java
 D:\agency\src\main\java\com\agency\entity\Location.java
 D:\agency\src\main\java\com\agency\repository\RoleRepository.java
 D:\agency\src\main\java\com\agency\configuration\HibernateAwareObjectMapper.java
+D:\agency\src\main\java\com\agency\controller\FoodDescriptionController.java
 D:\agency\src\main\java\com\agency\repository\CommentRepository.java

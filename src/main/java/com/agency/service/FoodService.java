@@ -30,14 +30,14 @@ public class FoodService {
     private final FoodRepository foodRepository;
     private final  FoodMapper foodMapper;
     private final AccountRepository accountRepository;
-    private final  FoodDescriptionRepository tourDescriptionRepository;
+    private final  FoodDescriptionRepository foodDescriptionRepository;
 
     @Autowired
     public FoodService(FoodRepository foodRepository, FoodMapper foodMapper, AccountRepository accountRepository, FoodDescriptionRepository foodDescriptionRepository) {
         this.foodRepository = foodRepository;
         this.foodMapper = foodMapper;
         this.accountRepository = accountRepository;
-        this.tourDescriptionRepository = foodDescriptionRepository;
+        this.foodDescriptionRepository = foodDescriptionRepository;
     }
 
 
