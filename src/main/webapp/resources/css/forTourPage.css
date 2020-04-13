@@ -227,7 +227,7 @@ div.disabled
 
 body{
     overflow-x: hidden;
-    background-image: url("/resources/images/background.jpg");
+    background-image: url("/resources/images/fon.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

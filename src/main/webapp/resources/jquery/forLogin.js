@@ -13,18 +13,19 @@ function signUpForm() {
 }
 
 function signUp() {
-    var name = $('#nameSignUp').val();
+    var surname = $('#nameSignUp').val();
     var phone = $('#phoneSignUp').val();
     var email = $('#emailSignUp').val();
     var password = $('#passwordSignUp').val();
     var accountDto = ({
-        "name": name,
+        "surname": surname,
         "phone": phone,
         "email": email,
         "password": password
     });
-    $.ajax({
-        type: "Post",
+
+            $.ajax({
+                type:  "Post",
         url: "/registration",
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(accountDto),

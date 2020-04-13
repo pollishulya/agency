@@ -17,9 +17,8 @@
     <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" type="text/css"/>
     <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
     <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="resources/jquery/forLogin.js"></script>
+    <script type="text/javascript" src="/resources/jquery/forLogin.js"></script>
     <link rel="stylesheet" href="/resources/css/navbar-style.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/modal.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/deleteForm.css" type="text/css">
@@ -71,9 +70,9 @@
             <div class="modal-body">
                 <form id="signUpForm">
                     <div class="form-label-group">
-                        <input type="text" id="nameSignUp" name="email" class="form-control" placeholder="Name" required
+                        <input type="text" id="surnameSignUp" name="email" class="form-control" placeholder="Name" required
                                autofocus onfocus="  $('#mistakeMessage').detach();">
-                        <label for="nameSignUp"><spring:message code="name"/></label>
+                        <label for="surnameSignUp"><spring:message code="surname"/></label>
                     </div>
                     <div class="form-label-group">
                         <input type="email" id="emailSignUp" name="email" class="form-control" placeholder="Email"
@@ -231,7 +230,7 @@
                             '</div><button class="btn btn-outline-primary dropdown-toggle position-button" type="button" data-toggle="dropdown">${pageContext.request.userPrincipal.name}<span class="glyphicon glyphicon-user"/>\n' +
                             '                        <span class="caret"></span></button>\n' +
                             '                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
-                            '                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/showFods"><spring:message code="foods"/></a></li>\n' +
+                            '                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/showFods"><spring:message code="tours"/></a></li>\n' +
                             '                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="updateAccountSettings()"><spring:message code="settings.label"/></a></li>\n' +
                             '</ul>\n' +
                             '        <a href="<c:url value="/logout" />" class="btn btn-outline-primary position-button"><spring:message code="logout"/></a>');
