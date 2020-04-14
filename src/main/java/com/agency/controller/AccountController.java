@@ -1,6 +1,7 @@
 package com.agency.controller;
 
 import com.agency.dto.AccountDto;
+import com.agency.entity.Role;
 import com.agency.mapper.AccountMapper;
 import com.agency.repository.AccountRepository;
 import com.agency.repository.RoleRepository;
@@ -148,9 +149,9 @@ public class AccountController {
 
     @GetMapping(value = "/roles", produces = "application/json")
     @ResponseBody
-    public List<Account> findRoles() {
+    public List<Role> findRoles() {
 
-        List<Account> roles = roleRepository.findAll();
+        List<Role> roles = roleRepository.findAll();
         return roles;
     }
 
