@@ -62,5 +62,4 @@ public class Food extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "food_company_id")
     private Account company;
-
 }

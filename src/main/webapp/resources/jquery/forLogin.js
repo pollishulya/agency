@@ -13,15 +13,18 @@ function signUpForm() {
 }
 
 function signUp() {
-    var surname = $('#nameSignUp').val();
+    var firstname = $('#nameSignUp').val();
     var phone = $('#phoneSignUp').val();
     var email = $('#emailSignUp').val();
     var password = $('#passwordSignUp').val();
+    var access = "user";
     var accountDto = ({
-        "surname": surname,
+        "firstname": firstname,
+        "lastname": firstname,
         "phone": phone,
         "email": email,
-        "password": password
+        "password": password,
+        "access": access
     });
 
             $.ajax({

@@ -19,7 +19,7 @@
 
     <title>Accounts</title>
 </head>
-<jsp:include page="blocks/navbar.jsp"/>
+<jsp:include page="navbar.jsp"/>
 <body>
 
 <div class="modal" id="deleteModal">
@@ -126,6 +126,6 @@
 
 <script>window.jQuery || document.write('<script src="/webjars/jquery/3.1.1/jquery.min.js"><\/script>')</script>
 </body>
-<jsp:include page="blocks/footer.jsp"/>
+<jsp:include page="footer.jsp"/>
 </html>
 

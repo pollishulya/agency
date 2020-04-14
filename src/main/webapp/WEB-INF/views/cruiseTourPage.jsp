@@ -22,7 +22,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 </head>
-<jsp:include page="blocks/navbar.jsp"/>
+<jsp:include page="navbar.jsp"/>
 <body>
 
 <div class="container panel-body">
@@ -117,7 +117,7 @@
     </div>
 </div>
 
-<jsp:include page="blocks/footer.jsp"/>
+<jsp:include page="footer.jsp"/>
 
 <script>window.jQuery || document.write('<script src="/webjars/jquery/3.1.1/jquery.min.js"><\/script>')</script>
 

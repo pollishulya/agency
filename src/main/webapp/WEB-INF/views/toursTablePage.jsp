@@ -18,7 +18,7 @@
 
     <title>Tours</title>
 </head>
-<jsp:include page="blocks/navbar.jsp"/>
+<jsp:include page="navbar.jsp"/>
 <body>
 <div class="modal fade" id="addTourModal">
     <div class="modal-dialog formContent">
@@ -57,7 +57,7 @@
                     <select id="types" class="mdb-select md-form">
                         <option value="BUS_TOUR"><spring:message code="busTour.label"/></option>
                         <option value="AIR_TOUR"><spring:message code="airTour.label"/></option>
-                        <option value="SEE_TOUR"><spring:message code="seeTour.label"/></option>
+                        <option value="SEE_TOUR"><spring:message code="seeFood.label"/></option>
                     </select>
                 </div>
                 <label><spring:message code="description.label"/></label>
@@ -148,7 +148,7 @@
                             <select id="typesUpdate" class="mdb-select md-form">
                                 <option value="BUS_TOUR"><spring:message code="busTour.label"/></option>
                                 <option value="AIR_TOUR"><spring:message code="airTour.label"/></option>
-                                <option value="SEE_TOUR"><spring:message code="seeTour.label"/></option>
+                                <option value="SEE_TOUR"><spring:message code="seeFood.label"/></option>
                             </select>
                         </div>
                         <label><spring:message code="description.label"/></label>
@@ -230,6 +230,6 @@
 </div>
 
 </body>
-<jsp:include page="blocks/footer.jsp"/>
+<jsp:include page="footer.jsp"/>
 </html>
 

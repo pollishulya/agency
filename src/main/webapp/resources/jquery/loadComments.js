@@ -68,8 +68,8 @@ $(document).ready(function () {
 
 function saveComment(id) {
     $('#saveCommentMistake').hide();
-    const message = $("#comment").val();
-    let rating = $('#count').text();
+    var message = $("#comment").val();
+    var rating = $('#count').text();
     var comment = ({"message": message, "rating": rating, "tourId": id});
     $.ajax({
         type: 'POST',
@@ -100,10 +100,10 @@ function reserveForm() {
 
 function reserve(id) {
 
-    const username = $("#name").val();
-    const name = $("#tourName").text();
-    const phone = $("#phone").val();
-    const numberPerson = $("#numberPersons").val();
+    var username = $("#name").val();
+    var name = $("#tourName").text();
+    var phone = $("#phone").val();
+    var numberPerson = $("#numberPersons").val();
     var reservation = ({
         "numberPerson": numberPerson,
         "tourId": id,
@@ -245,8 +245,8 @@ function stars() {
 
 function updateComment(id,commentId) {
     $('#saveCommentMistake').hide();
-    const message = $("#comment").val();
-    let rating = $('#count').text();
+    var message = $("#comment").val();
+    var rating = $('#count').text();
     var comment = ({"id":commentId,"message": message, "rating": rating, "tourId": id});
     $.ajax({
         type: 'POST',

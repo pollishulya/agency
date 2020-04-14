@@ -4,7 +4,7 @@ var numberDays = 0;
 function deleteRecord(id) {
     $.ajax({
         type: "POST",
-        url: "/tour/delete/" + id,
+        url: "/food/delete/" + id,
         success: function (res) {
             $('#row' + id).remove();
             location.reload();
@@ -50,7 +50,7 @@ function deleteForm(id) {
 function loadTours(id, param, numberRows) {
     $.ajax({
         type: 'GET',
-        url: "/tours/show?param=" + param + "&pageNumber=" + loadPage + "&pageSize=" + numberRows,
+        url: "/foods/show?param=" + param + "&pageNumber=" + loadPage + "&pageSize=" + numberRows,
         success: function (res) {
             $('#tableBody').empty();
             $('#noTourMessage').empty();

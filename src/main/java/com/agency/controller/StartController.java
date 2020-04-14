@@ -60,16 +60,16 @@ public class StartController {
     @PostMapping(value = "/registration")
     public ResponseEntity registration(@RequestBody AccountDto accountDto) {
 
-        if (accountDto.getFirstname().equals("") || accountDto.getEmail().equals("") || accountDto.getPhone().equals("")) {
-            return new ResponseEntity<>("Empty fields error", HttpStatus.BAD_REQUEST);
-        } else {
-            List<Account> account = accountRepository.findAccountByEmailOrPhone(accountDto.getEmail(), accountDto.getPhone());
-           if (account.size() == 0) {
-                accountService.createAccount(accountDto);
+     //   if (accountDto.getFirstname().equals("") || accountDto.getEmail().equals("") || accountDto.getPhone().equals("")) {
+       //     return new ResponseEntity<>("Empty fields error", HttpStatus.BAD_REQUEST);
+        //} else {
+          //  List<Account> account = accountRepository.findAccountByEmailOrPhone(accountDto.getEmail(), accountDto.getPhone());
+           //if (account.size() == 0) {
+               accountService.createAccount(accountDto);
                 return  new ResponseEntity<>(HttpStatus.OK);
-            }
-            return new ResponseEntity<>("Unique fields error", HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+            //}
+            //return new ResponseEntity<>("Unique fields error", HttpStatus.INTERNAL_SERVER_ERROR);
+        //}
 
     }
 

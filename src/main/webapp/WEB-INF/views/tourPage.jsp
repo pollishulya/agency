@@ -23,7 +23,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
 </head>
-<jsp:include page="blocks/navbar.jsp"/>
+<jsp:include page="navbar.jsp"/>
 <body>
 
 <div class="modal fade" id="ReserveModal">
@@ -259,6 +259,4 @@
     stars();
 </script>
 </body>
-<jsp:include page="blocks/footer.jsp"/>
-</html>
-
+<jsp:include page="footer.jsp"/>

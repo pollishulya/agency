@@ -72,7 +72,7 @@
                     <div class="form-label-group">
                         <input type="text" id="surnameSignUp" name="email" class="form-control" placeholder="Name" required
                                autofocus onfocus="  $('#mistakeMessage').detach();">
-                        <label for="surnameSignUp"><spring:message code="surname"/></label>
+                        <label for="surnameSignUp"><spring:message code="name"/></label>
                     </div>
                     <div class="form-label-group">
                         <input type="email" id="emailSignUp" name="email" class="form-control" placeholder="Email"

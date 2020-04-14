@@ -54,8 +54,8 @@ public class Account extends BaseEntity {
     @JoinColumn(name = "account_id", referencedColumnName = "id")
     private Client client;*/
 
-    @OneToOne(mappedBy = "account")
-    private Client client;
+   /* @OneToOne(mappedBy = "account")
+    private Client client;*/
 
     @OneToMany(mappedBy="account")
     private Set<Comment> comment;

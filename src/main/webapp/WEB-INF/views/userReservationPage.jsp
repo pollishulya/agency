@@ -17,7 +17,7 @@
 
     <title>My orders</title>
 </head>
-<jsp:include page="blocks/navbar.jsp"/>
+<jsp:include page="navbar.jsp"/>
 <body>
 <div class="position-table">
     <div id="table">
@@ -47,6 +47,6 @@
     loadOrders();
 </script>
 </body>
-<jsp:include page="blocks/footer.jsp"/>
+<jsp:include page="footer.jsp"/>
 </html>
 
