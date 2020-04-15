@@ -18,7 +18,7 @@ public class FoodDto extends BaseDto {
     private String name;
     private String view;
     private String cuisine;
-    private double price;
+    private String price;
     private float rating;
     private Set<Comment> comment = new HashSet<>();;
     private Set<Order> order = new HashSet<>();;

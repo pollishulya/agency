@@ -214,6 +214,7 @@
                     </script>
                 </sec:authorize>
                 <sec:authorize access="hasRole('ROLE_COMPANY')">
+
                     <script>
                         $('#buttons').append('    <a href="/showFoods/cruise"  class="btn btn-outline-primary"><spring:message code="seeFood.label"/></a>\n' +
                             '                <a href="/showFoods/bus" class="btn btn-outline-primary "><spring:message code="busTour.label"/></a>\n' +

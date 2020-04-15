@@ -46,11 +46,11 @@ public class FoodController {
         modelAndView.addObject(food);
         modelAndView.setViewName("foodPage");
 
-        if(food.isPresent()){
+      /*  if(food.isPresent()){
             modelAndView.addObject(food.get());
         } else {
             throw new RuntimeException("No food with id " + id);
-        }
+        }*/
 
         return modelAndView;
     }
@@ -78,27 +78,26 @@ public class FoodController {
 
     @GetMapping(value = "/food", produces = "application/json")
     @ResponseBody
-    //public List<Food> loadTypedFoods(@RequestParam String type) {
+ /*   public List<Food> loadTypedFoods(@RequestParam String type) {
 
-      //  List<Food> foods = foodRepository.findAllByType(type);
+        List<Food> foods = foodRepository.findAllByType(type);
 
-        //return foods;
-    //}
+        return foods;
+    }*/
 
     @PostMapping(value = "/food/save")
     public ResponseEntity save(@RequestBody Food food) {
 
 
-     /*   if (food.getName().equals("") || food.getCountry().equals("") || tour.getExitDate().equals("") ||
-                tour.getNumberDays().equals("") || tour.getCost().equals("")) {
+        if (food.getName().equals("") || food.getView().equals("") || food.getCuisine().equals("")) {
             return new ResponseEntity("empty field",HttpStatus.BAD_REQUEST);
         }
-        else if(tour.getExitDate().compareTo(new Date())<0){
+      /*  else if(food.getExitDate().compareTo(new Date())<0){
             return new ResponseEntity("data error",HttpStatus.BAD_REQUEST);
-        }
-        else {*/
+        }*/
+        else {
             return foodService.save(food);
-      //  }
+        }
     }
 
     @GetMapping(value = "/foods/show", produces = "application/json")
