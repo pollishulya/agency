@@ -40,7 +40,7 @@ public class ReservationController {
 
     @PostMapping(value = "/food/reservation")
     @Transactional
-    public ResponseEntity reserveTour(@RequestBody ReservationDto reservationDto) {
+    public ResponseEntity reserveFood(@RequestBody ReservationDto reservationDto) {
 
         Long id = getCurrentUserId();
         reservationDto.setAccountId(id);

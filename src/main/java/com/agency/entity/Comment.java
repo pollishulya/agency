@@ -28,7 +28,7 @@ public class Comment extends BaseEntity {
     @Column(name = "time")
     private String time;
 
-   /* @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
+    /*@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
     @JoinColumn(name = "account_id")
     @JsonIgnore
     private Account account;*/

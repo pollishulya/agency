@@ -36,17 +36,17 @@ public class FoodController {
         this.foodMapper = foodMapper;
     }
 
-    @GetMapping(value = "/food{id}", produces = "application/json")
+    @GetMapping(value = "/food/{id}", produces = "application/json")
     @ResponseBody
     public ModelAndView loadFood(@PathVariable Long id) {
 
         Optional<Food> food = foodRepository.findById(id);
 
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject(food);
+        modelAndView.addObject(food.get());
         modelAndView.setViewName("foodPage");
 
-      /*  if(food.isPresent()){
+       /* if(food.isPresent()){
             modelAndView.addObject(food.get());
         } else {
             throw new RuntimeException("No food with id " + id);
@@ -76,8 +76,8 @@ public class FoodController {
         return foods;
     }
 
-    @GetMapping(value = "/food", produces = "application/json")
-    @ResponseBody
+  //  @GetMapping(value = "/food", produces = "application/json")
+    //@ResponseBody
  /*   public List<Food> loadTypedFoods(@RequestParam String type) {
 
         List<Food> foods = foodRepository.findAllByType(type);
@@ -89,15 +89,15 @@ public class FoodController {
     public ResponseEntity save(@RequestBody Food food) {
 
 
-        if (food.getName().equals("") || food.getView().equals("") || food.getCuisine().equals("")) {
+      /*  if (food.getName().equals("") || food.getView().equals("") || food.getCuisine().equals("")) {
             return new ResponseEntity("empty field",HttpStatus.BAD_REQUEST);
-        }
+        }*/
       /*  else if(food.getExitDate().compareTo(new Date())<0){
             return new ResponseEntity("data error",HttpStatus.BAD_REQUEST);
         }*/
-        else {
+      //  else {
             return foodService.save(food);
-        }
+        //}
     }
 
     @GetMapping(value = "/foods/show", produces = "application/json")
@@ -140,8 +140,8 @@ public class FoodController {
 
         Optional<Food> food= foodRepository.findById(id);
         if(food.isPresent()){
-            FoodDto tourDto = foodMapper.toDto(food.get());
-            return new ResponseEntity(tourDto,HttpStatus.OK);
+            FoodDto foodDto = foodMapper.toDto(food.get());
+            return new ResponseEntity(foodDto,HttpStatus.OK);
         }
 
 

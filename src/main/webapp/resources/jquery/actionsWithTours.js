@@ -95,7 +95,7 @@ function AddNew() {
 
 function updateRecord(id) {
     $('#descriptionsUpdate').empty();
-    var url = "/tour/update/" + id;
+    var url = "/food/update/" + id;
     $("#updateForm")[0].reset();
     $("#updateTourModal").modal();
     $.ajax({
@@ -114,7 +114,7 @@ function updateRecord(id) {
     });
     $.ajax({
         type: "GET",
-        url: "/description?tourId=" + id,
+        url: "/description?foodId=" + id,
         success: function (res) {
             numberDays = res.length;
             for (var i = 0; i < res.length; i++) {
@@ -128,6 +128,57 @@ function updateRecord(id) {
 }
 
 function saveTour() {
+
+    var name = $('#name').val();
+    var country = $('#country').val();
+    var exitDate = $('#exitDate').val();
+    var numberOfDays = $('#numberDays').val();
+    var cost = $('#cost').val();
+    var type = $('#types').val();
+    var descriptions = [];
+    for (var i = 0; i <= numberDays; i++) {
+        var descriptionText = $('#description_' + i).val();
+        var description = {
+            "dayNumber": i + 1,
+            "description": descriptionText
+        };
+        descriptions.push(description);
+    }
+  //  alert(exitDate,numberOfDays,cost,type,description);
+    var foodDto = ({
+        "name": name,
+        "view": view,
+        "exitDate": exitDate,
+        "numberDays": numberOfDays,
+        "cost": cost,
+        "type": type,
+        "foodDescriptions": descriptions
+    });
+  //  alert(foodDto.name);
+    $.ajax({
+        type: "Post",
+        url: "/food/save",
+        contentType: "application/json;charset=utf-8",
+        data: JSON.stringify(foodDto),
+        success: function (res) {
+          //  alert(foodDto.country);
+            location.reload();
+            $("#addTourModal").modal("hide");
+        //    alert(foodDto.exitDate);
+        },
+        error: function (res) {
+         //   alert(foodDto.type);
+            if (res.status === 500) {
+                $('#uniqueTourFieldMistake').show();
+            } else if (res.responseJSON === "empty field") {
+                $('#emptyFieldMistake').show();
+            } else if (res.responseJSON === "data error") {
+                $('#incorrectDataMistake').show();
+            }
+        }
+    })
+};
+/*function saveTour() {
 
     var name = $('#name').val();
     var country = $('#country').val();
@@ -173,8 +224,7 @@ function saveTour() {
             }
         }
     })
-};
-
+};*/
 function saveDescription() {
 
     var name = $('#name').val();
@@ -182,7 +232,7 @@ function saveDescription() {
     for (var i = 0; i <= numberDays; i++) {
         var descriptionText = $('#description_' + i).val();
         var description = {
-            "tourName": name,
+            "foodName": name,
             "dayNumber": i + 1,
             "description": descriptionText
         };
@@ -247,7 +297,7 @@ function updateTour() {
     });
     $.ajax({
         type: "Post",
-        url: "/tour/update",
+        url: "/food/update",
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(tour),
         success: function (res) {
@@ -266,7 +316,7 @@ function updateTour() {
 };
 
 function updateDescription() {
-    var tourId = $('#idUpdate').val();
+    var foodId = $('#idUpdate').val();
     var descriptions = [];
     for (var i = 0; i < numberDays; i++) {
         var idDescription = $('#idDescription_' + i).val();
@@ -275,7 +325,7 @@ function updateDescription() {
             "id": idDescription,
             "dayNumber": i + 1,
             "description": descriptionText,
-            "tourId": tourId
+            "foodId": foodId
         };
         descriptions.push(description);
     }

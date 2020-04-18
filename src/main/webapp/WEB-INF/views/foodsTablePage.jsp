@@ -73,7 +73,7 @@
                 <div id="emptyFieldMistake" hidden><p class='alert alert-danger' role='alert'><spring:message code="emptyField.error"/></p></div>
                 <div id="emptyDescriptionMistake" hidden><p class='alert alert-danger' role='alert'><spring:message code="emptyDescription.error"/></p></div>
                 <div id="incorrectDataMistake" hidden><p class='alert alert-danger' role='alert'><spring:message code="incorrectDate.error"/></p></div>
-                <a href="/showTours" class="btn btn-primary btn-block" id="saveTourBtn"
+                <a href="/showFoods" class="btn btn-primary btn-block" id="saveTourBtn"
                    type="button" onclick="saveTour();return false;"><spring:message code="save.button"/>
                 </a>
             </form>
@@ -164,7 +164,7 @@
                         <div id="emptyFieldUpdateMistake" hidden><p class='alert alert-danger' role='alert'><spring:message code="emptyField.error"/></p></div>
                         <div id="emptyDescriptionUpdateMistake" hidden><p class='alert alert-danger' role='alert'><spring:message code="emptyDescription.error"/></p></div>
                         <div class="form-group">
-                            <a href="/showTours" class="btn btn-primary btn-block" id="updateRecord"
+                            <a href="/showFoods" class="btn btn-primary btn-block" id="updateRecord"
                                onclick="updateTour();return false;"><spring:message code="save.button"/></a>
                         </div>
                     </fieldset>

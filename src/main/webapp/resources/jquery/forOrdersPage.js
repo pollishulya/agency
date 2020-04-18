@@ -5,8 +5,8 @@ function loadOrders() {
             var html = "";
             for (var i = 0; i < data.length; i++) {
                 html += "<tr id='row_" + data[i].id + "'><td>" + data[i].username + "</td><td>" + data[i].phone + "</td><td>"
-                    + data[i].numberPerson + "</td><td><a href='/tour/"
-                    + data[i].tourId + "' class='tour-href'>" + data[i].nameTour + "</a></td>";
+                    + data[i].numberPerson + "</td><td><a href='/food/"
+                    + data[i].foodId + "' class='food-href'>" + data[i].nameFood + "</a></td>";
 
             }
             $('#tableBody').append(html);

@@ -10,6 +10,7 @@ import org.hibernate.annotations.Cascade;
 
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -27,11 +28,26 @@ public class Food extends BaseEntity {
     @Column(name = "view")
     private String view;
 
+    @Column(name = "exit_date")
+    private Date exitDate;
+
+    @Column(name = "number_days")
+    private String numberDays;
+
     @Column(name = "cuisine")
     private String cuisine;
 
+ //   @Column(name = "county")
+   // private String country;
+
     @Column(name = "price")
     private double price;
+
+    @Column(name = "cost")
+    private String cost;
+
+    @Column(name = "type")
+    private String type;
 
     @Column(name = "rating")
     private float rating;
@@ -43,9 +59,9 @@ public class Food extends BaseEntity {
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE},orphanRemoval=true, mappedBy = "food", fetch = FetchType.LAZY)
     private Set<Comment> comments = new HashSet<>();
 
-    @JsonIgnore
+  /*  @JsonIgnore
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE},orphanRemoval = true,mappedBy = "food", fetch = FetchType.LAZY)
-    private Set<Order> order = new HashSet<>();
+    private Set<Order> order = new HashSet<>();*/
 
     @JsonIgnore
     @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "food",fetch = FetchType.LAZY)

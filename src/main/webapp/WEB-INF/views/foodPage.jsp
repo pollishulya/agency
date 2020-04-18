@@ -50,6 +50,7 @@
                         <input type="number" id="numberPersons" class="form-control" placeholder="Number persons" min=1 max=6 required autofocus>
                     </div>
                     <div id="mistake"></div>
+                 <script>alert(food.id)</script>
                     <button class="btn btn-lg btn-primary btn-block" id="reserveBtn"
                             onclick="reserve(${food.id}); return false;"
                             type="submit"><spring:message code="reserve"/>
@@ -62,7 +63,7 @@
     </div>
 </div>
 
-<div id="tours" class="werty">
+<div id="foods" class="werty">
 
     <div class="blog-post">
         <section class="container">
@@ -78,9 +79,9 @@
                         <div><spring:message code="rating.error"/></div>
                     </h3>
                 </c:if>
-                <div><spring:message code="country"/><b> ${food.country}</b></div>
-                <div><spring:message code="dateBegin"/><b> ${food.exitDate}</b></div>
-                <div><spring:message code="duration"/><b>${food.numberDays}</b></div>
+                <div><spring:message code="country"/><b> ${food.view}</b></div>
+<%--                <div><spring:message code="dateBegin"/><b> ${food.exitDate}</b></div>--%>
+<%--                <div><spring:message code="duration"/><b>${food.numberDays}</b></div>--%>
                 <div><spring:message code="cost"/><b>${food.cost}$</b></div>
                 <br>
                 <div class='slideshow-container textWrapLeft'>
@@ -148,7 +149,7 @@
 
                 <div id="description"></div>
                 <script>
-                    loadDescription(${tour.id});
+                    loadDescription(${food.id});
                 </script>
                 <div id="bookingBtn" class="mar-top clearfix"></div>
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
@@ -260,3 +261,4 @@
 </script>
 </body>
 <jsp:include page="footer.jsp"/>
+</html>

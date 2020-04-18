@@ -4,7 +4,7 @@ var idComment = 0;
 function loadComments(id) {
     $.ajax({
         type: 'GET',
-        url: "/comment/comments?tourId=" + id + "&pageNumber=" + loadPage,
+        url: "/comment/comments?foodId=" + id + "&pageNumber=" + loadPage,
         success: function (data) {
             $("#nextBtn").attr("disabled", false);
             if (loadPage == 0) {
@@ -18,7 +18,7 @@ function loadComments(id) {
                 $("#nextBtn").attr("disabled", false);
             }
             $('#comments').empty();
-            var rowsHtml = " <div id='tourComment' class='panel-body'>";
+            var rowsHtml = " <div id='foodComment' class='panel-body'>";
             for (var j = 0; j < data.length; j++) {
                 idComment = data[j].id;
                 rowsHtml += "<div class='media-block'>";
@@ -47,7 +47,7 @@ function loadComments(id) {
 }
 
 function loadDescription(id) {
-    $.get("/description?tourId=" + id, function (data) {
+    $.get("/description?foodId=" + id, function (data) {
         var rowsHtml = "<ul id='list' style='list-style-type:none'><li>";
         for (var j = 0; j < data.length; j++) {
             rowsHtml += "<ul style='list-style-type:none'><div class='alert-day'>" + (j + 1) + " день</div>";
@@ -70,7 +70,7 @@ function saveComment(id) {
     $('#saveCommentMistake').hide();
     var message = $("#comment").val();
     var rating = $('#count').text();
-    var comment = ({"message": message, "rating": rating, "tourId": id});
+    var comment = ({"message": message, "rating": rating, "foodId": id});
     $.ajax({
         type: 'POST',
         contentType: "application/json;charset=utf-8",
@@ -99,23 +99,24 @@ function reserveForm() {
 }
 
 function reserve(id) {
-
+//alert(id);
     var username = $("#name").val();
-    var name = $("#tourName").text();
+    var name = $("#foodName").text();
     var phone = $("#phone").val();
     var numberPerson = $("#numberPersons").val();
     var reservation = ({
         "numberPerson": numberPerson,
-        "tourId": id,
+        "foodId": id,
         "username": username,
         "phone": phone,
-        "nameTour": name
+        "nameFood": name
     });
+    alert (JSON.stringify(reservation));
     $.ajax({
         type: 'POST',
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(reservation),
-        url: '/tour/reservation',
+        url: '/food/reservation',
         success: function (res) {
             $("#ReserveModal").modal("hide");
         },
@@ -247,7 +248,7 @@ function updateComment(id,commentId) {
     $('#saveCommentMistake').hide();
     var message = $("#comment").val();
     var rating = $('#count').text();
-    var comment = ({"id":commentId,"message": message, "rating": rating, "tourId": id});
+    var comment = ({"id":commentId,"message": message, "rating": rating, "foodId": id});
     $.ajax({
         type: 'POST',
         contentType: "application/json;charset=utf-8",

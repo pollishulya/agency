@@ -4,10 +4,7 @@ import com.agency.entity.Comment;
 import com.agency.entity.Order;
 import lombok.*;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Getter
 @Setter
@@ -18,11 +15,17 @@ public class FoodDto extends BaseDto {
     private String name;
     private String view;
     private String cuisine;
+    private String cost;
+    private String type;
     private String price;
+  //  private String country;
     private float rating;
-    private Set<Comment> comment = new HashSet<>();;
-    private Set<Order> order = new HashSet<>();;
+    private Date exitDate;
+    private String numberDays;
     private String image;
+    private Set<Comment> comment = new HashSet<>();;
+   // private Set<Order> order = new HashSet<>();;
+
     private List<FoodDescriptionDto> description = new ArrayList<>();
     private Long companyId;
     private Set<ReservationDto> reservations = new HashSet<>();

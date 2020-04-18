@@ -231,7 +231,7 @@
                             '</div><button class="btn btn-outline-primary dropdown-toggle position-button" type="button" data-toggle="dropdown">${pageContext.request.userPrincipal.name}<span class="glyphicon glyphicon-user"/>\n' +
                             '                        <span class="caret"></span></button>\n' +
                             '                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
-                            '                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/showFods"><spring:message code="tours"/></a></li>\n' +
+                            '                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/showFoods"><spring:message code="tours"/></a></li>\n' +
                             '                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="updateAccountSettings()"><spring:message code="settings.label"/></a></li>\n' +
                             '</ul>\n' +
                             '        <a href="<c:url value="/logout" />" class="btn btn-outline-primary position-button"><spring:message code="logout"/></a>');
