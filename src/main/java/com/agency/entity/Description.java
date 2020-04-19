@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Table(name = "food_description")
 @Getter
 @Setter
-public class FoodDescription extends BaseEntity {
+public class Description extends BaseEntity {
 
     @Column(name = "description")
     private String description;
@@ -23,9 +23,9 @@ public class FoodDescription extends BaseEntity {
     @JsonBackReference
     private Food food;
 
-//    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE},fetch = FetchType.LAZY)
-//    @JoinColumn(name = "id_location")
-//    @JsonBackReference
-//    private Food location;
+    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE},fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_location")
+    @JsonBackReference
+    private Location location;
 
 }

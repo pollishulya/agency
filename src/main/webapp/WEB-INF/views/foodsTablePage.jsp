@@ -34,9 +34,9 @@
                     <label for="name"><spring:message code="tourName.label"/></label>
                 </div>
                 <div class="form-label-group">
-                    <input type="text" id="country" name="country" class="form-control" placeholder="Country" required
+                    <input type="text" id="view" name="country" class="form-control" placeholder="Country" required
                            autofocus>
-                    <label for="country"><spring:message code="country.label"/></label>
+                    <label for="view"><spring:message code="country.label"/></label>
                 </div>
                 <label for="exitDate"><spring:message code="exitDate.label"/></label>
                 <div class="form-label-group">

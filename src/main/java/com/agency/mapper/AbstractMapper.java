@@ -1,6 +1,8 @@
 package com.agency.mapper;
 
 import com.agency.dto.BaseDto;
+import com.agency.dto.LocationDto;
+import com.agency.entity.Location;
 import org.dom4j.tree.AbstractEntity;
 import org.modelmapper.Converter;
 import org.modelmapper.ModelMapper;
@@ -25,6 +27,12 @@ public class AbstractMapper<E extends AbstractEntity, D extends BaseDto> extends
         this.entityClass = entityClass;
         this.dtoClass = dtoClass;
     }
+
+  /*  public AbstractMapper(Class<Location> locationClass, Class<LocationDto> locationDtoClass) {
+      //  super();
+        this.entityClass = entityClass;
+        this.dtoClass = dtoClass;
+    }*/
 
     @Override
     public E toEntity(D dto) {

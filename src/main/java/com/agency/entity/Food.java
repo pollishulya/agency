@@ -75,6 +75,10 @@ public class Food extends BaseEntity {
   @JsonManagedReference
   private List<FoodDescription> foodDescriptions = new ArrayList<>();
 
+//    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "location",fetch = FetchType.LAZY)
+//    @JsonManagedReference
+//    private List<FoodDescription> locationDescriptions = new ArrayList<>();
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "food_company_id")
     private Account company;

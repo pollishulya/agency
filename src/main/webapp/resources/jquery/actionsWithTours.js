@@ -67,7 +67,7 @@ function loadTours(id, param, numberRows) {
             }
             var html = "";
             for (var i = 0; i < res.length; i++) {
-                html += "<tr id='row" + res[i].id + "'><td>" + res[i].name + "</td><td>" + res[i].country + "</td><td>" +
+                html += "<tr id='row" + res[i].id + "'><td>" + res[i].name + "</td><td>" + res[i].view + "</td><td>" +
                     convertDate(res[i].exitDate) + "</td>" + "<td>" + res[i].numberDays + "</td>" + "<td>" + res[i].cost + "</td>" + "<td>" + setRating(res[i].rating) + "</td>" + "<td>" + res[i].type + "</td>";
                 html += "<td>" + "<button class='btn btn-danger' onclick='deleteForm(" + res[i].id +
                     ")'><span class='glyphicon glyphicon-trash'></span></button>" + "</td>";
@@ -130,44 +130,42 @@ function updateRecord(id) {
 function saveTour() {
 
     var name = $('#name').val();
-    var country = $('#country').val();
-    var exitDate = $('#exitDate').val();
-    var numberOfDays = $('#numberDays').val();
+    alert(name);
+     var view = $('#view').val();
+    alert(view);
+    // var exitDate = $('#exitDate').val();
+     var numberOfDays = $('#numberDays').val();
     var cost = $('#cost').val();
     var type = $('#types').val();
     var descriptions = [];
     for (var i = 0; i <= numberDays; i++) {
         var descriptionText = $('#description_' + i).val();
         var description = {
-            "dayNumber": i + 1,
+           // "dayNumber": i + 1,
             "description": descriptionText
         };
         descriptions.push(description);
     }
-  //  alert(exitDate,numberOfDays,cost,type,description);
+    alert(description);
     var foodDto = ({
         "name": name,
         "view": view,
-        "exitDate": exitDate,
-        "numberDays": numberOfDays,
+        //"exitDate": exitDate,
+        //"numberDays": numberOfDays,
         "cost": cost,
         "type": type,
         "foodDescriptions": descriptions
     });
-  //  alert(foodDto.name);
     $.ajax({
         type: "Post",
         url: "/food/save",
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(foodDto),
         success: function (res) {
-          //  alert(foodDto.country);
             location.reload();
             $("#addTourModal").modal("hide");
-        //    alert(foodDto.exitDate);
         },
         error: function (res) {
-         //   alert(foodDto.type);
             if (res.status === 500) {
                 $('#uniqueTourFieldMistake').show();
             } else if (res.responseJSON === "empty field") {
@@ -178,66 +176,20 @@ function saveTour() {
         }
     })
 };
-/*function saveTour() {
 
-    var name = $('#name').val();
-    var country = $('#country').val();
-    var exitDate = $('#exitDate').val();
-    var numberOfDays = $('#numberDays').val();
-    var cost = $('#cost').val();
-    var type = $('#types').val();
-    var descriptions = [];
-    for (var i = 0; i <= numberDays; i++) {
-        var descriptionText = $('#description_' + i).val();
-        var description = {
-            "dayNumber": i + 1,
-            "description": descriptionText
-        };
-        descriptions.push(description);
-    }
-    var tourDto = ({
-        "name": name,
-        "country": country,
-        "exitDate": exitDate,
-        "numberDays": numberOfDays,
-        "cost": cost,
-        "type": type,
-        "tourDescriptions": descriptions
-    });
-    $.ajax({
-        type: "Post",
-        url: "/tour/save",
-        contentType: "application/json;charset=utf-8",
-        data: JSON.stringify(tourDto),
-        success: function (res) {
-            location.reload();
-            $("#addTourModal").modal("hide");
-
-        },
-        error: function (res) {
-            if (res.status === 500) {
-                $('#uniqueTourFieldMistake').show();
-            } else if (res.responseJSON === "empty field") {
-                $('#emptyFieldMistake').show();
-            } else if (res.responseJSON === "data error") {
-                $('#incorrectDataMistake').show();
-            }
-        }
-    })
-};*/
 function saveDescription() {
 
     var name = $('#name').val();
     var descriptions = [];
-    for (var i = 0; i <= numberDays; i++) {
+   // for (var i = 0; i <= numberDays; i++) {
         var descriptionText = $('#description_' + i).val();
         var description = {
             "foodName": name,
-            "dayNumber": i + 1,
+          //  "dayNumber": i + 1,
             "description": descriptionText
         };
         descriptions.push(description);
-    }
+   // }
     $.ajax({
         type: "Post",
         url: "/description/save",
@@ -258,14 +210,14 @@ function save() {
     $('#emptyDescriptionMistake').hide();
     var i;
     var stop = 0;
-    for (i = 0; i <= numberDays; i++) {
-        var descriptionText = $('#description_' + numberDays).val();
+ //   for (i = 0; i <= numberDays; i++) {
+        var descriptionText = $('#description_' /*+ numberDays*/).val();
         if (descriptionText === "") {
             $('#emptyDescriptionMistake').show();
-            stop = 1;
-            break;
+          //  stop = 1;
+           // break;
         }
-    }
+   // }
 
     if (stop === 0) {
         saveTour();

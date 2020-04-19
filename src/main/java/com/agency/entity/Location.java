@@ -1,6 +1,7 @@
 package com.agency.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,10 @@ import org.hibernate.annotations.Cascade;
 
 
 import javax.persistence.*;
+import java.sql.Date;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -36,14 +40,27 @@ public class Location extends BaseEntity {
     @Column(name = "rating")
     private float rating;
 
-    @JsonIgnore
+    @Column(name = "exit_date")
+    private Date exitDate;
+
+
+    @Column(name = "image_url")
+    private String image;
+   /* @JsonIgnore
     @OneToOne(mappedBy = "location")
-    private Order order;
+    private Order order;*/
 
     @JsonIgnore
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE},orphanRemoval=true, mappedBy = "location", fetch = FetchType.LAZY)
     private Set<Comment> comments = new HashSet<>();
 
+    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "location",fetch = FetchType.LAZY)
+    @JsonManagedReference
+    private List<Description> descriptions = new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "location_company_id")
+    private Account company;
 
 
 

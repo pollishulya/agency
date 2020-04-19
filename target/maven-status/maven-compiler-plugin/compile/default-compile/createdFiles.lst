@@ -8,6 +8,7 @@ com\agency\controller\FoodDescriptionController.class
 com\agency\controller\ReservationController.class
 com\agency\dto\FoodDescriptionDto.class
 com\agency\service\LocationService.class
+com\agency\mapper\DescriptionMapper.class
 com\agency\controller\CommentController.class
 com\agency\controller\AccountController.class
 com\agency\repository\CommentRepository.class
@@ -34,11 +35,13 @@ com\agency\entity\Order.class
 com\agency\mapper\Mapper.class
 com\agency\repository\FoodRepository.class
 com\agency\mapper\ClientMapper.class
+com\agency\repository\DescriptionRepository.class
 com\agency\configuration\SpringSecurityConfig.class
 com\agency\dto\AccountDto.class
 com\agency\dto\ClientDto.class
 com\agency\configuration\SpringMvcConfig.class
 com\agency\dto\FoodDto.class
+com\agency\entity\Description.class
 com\agency\mapper\FoodMapper.class
 com\agency\mapper\LocationMapper.class
 com\agency\mapper\ReservationMapper.class
@@ -58,6 +61,7 @@ com\agency\repository\ClientRepository.class
 com\agency\dto\CommentDto.class
 com\agency\dto\ReservationDto.class
 com\agency\repository\ReservationRepository.class
+com\agency\dto\DescriptionDto.class
 com\agency\repository\AccountRepository.class
 com\agency\entity\FoodDescription.class
 com\agency\repository\FoodDescriptionRepository.class

@@ -10,5 +10,5 @@ public class FoodDescriptionDto extends BaseDto {
     private Integer dayNumber;
 //    private String tourName;
     private Long foodId;
-
+    private  Long locationId;
 }

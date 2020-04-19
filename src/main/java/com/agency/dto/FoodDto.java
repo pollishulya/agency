@@ -23,10 +23,8 @@ public class FoodDto extends BaseDto {
     private Date exitDate;
     private String numberDays;
     private String image;
-    private Set<Comment> comment = new HashSet<>();;
-   // private Set<Order> order = new HashSet<>();;
-
-    private List<FoodDescriptionDto> description = new ArrayList<>();
+    private Set<Comment> comment = new HashSet<>();
+     private List<FoodDescriptionDto> description = new ArrayList<>();
     private Long companyId;
     private Set<ReservationDto> reservations = new HashSet<>();
 }

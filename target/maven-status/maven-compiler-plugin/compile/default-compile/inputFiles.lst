@@ -6,6 +6,7 @@ D:\agency\src\main\java\com\agency\configuration\SpringMvcConfig.java
 D:\agency\src\main\java\com\agency\dto\ClientDto.java
 D:\agency\src\main\java\com\agency\mapper\AbstractMapper.java
 D:\agency\src\main\java\com\agency\service\CommentService.java
+D:\agency\src\main\java\com\agency\repository\DescriptionRepository.java
 D:\agency\src\main\java\com\agency\entity\FoodDescription.java
 D:\agency\src\main\java\com\agency\mapper\CommentMapper.java
 D:\agency\src\main\java\com\agency\service\LocationService.java
@@ -24,6 +25,7 @@ D:\agency\src\main\java\com\agency\controller\AccountController.java
 D:\agency\src\main\java\com\agency\entity\Comment.java
 D:\agency\src\main\java\com\agency\dto\OrderDto.java
 D:\agency\src\main\java\com\agency\repository\ClientRepository.java
+D:\agency\src\main\java\com\agency\dto\DescriptionDto.java
 D:\agency\src\main\java\com\agency\service\FoodService.java
 D:\agency\src\main\java\com\agency\configuration\DatabaseConfig.java
 D:\agency\src\main\java\com\agency\configuration\SpringSecurityConfig.java
@@ -44,13 +46,16 @@ D:\agency\src\main\java\com\agency\service\AccountService.java
 D:\agency\src\main\java\com\agency\dto\ProgramDto.java
 D:\agency\src\main\java\com\agency\entity\FoodCompany.java
 D:\agency\src\main\java\com\agency\mapper\FoodDescriptionMapper.java
+D:\agency\src\main\java\com\agency\entity\Description.java
 D:\agency\src\main\java\com\agency\entity\Account.java
 D:\agency\src\main\java\com\agency\entity\Order.java
 D:\agency\src\main\java\com\agency\controller\FoodController.java
 D:\agency\src\main\java\com\agency\dto\LocationDto.java
+D:\agency\src\main\java\com\agency\mapper\DescriptionMapper.java
 D:\agency\src\main\java\com\agency\controller\CommentController.java
 D:\agency\src\main\java\com\agency\mapper\ClientMapper.java
 D:\agency\src\main\java\com\agency\controller\StartController.java
+D:\agency\src\main\java\com\agency\entity\LocationDescription.java
 D:\agency\src\main\java\com\agency\service\ClientService.java
 D:\agency\src\main\java\com\agency\controller\FoodCompanyController.java
 D:\agency\src\main\java\com\agency\repository\FoodRepository.java
@@ -60,8 +65,8 @@ D:\agency\src\main\java\com\agency\mapper\Mapper.java
 D:\agency\src\main\java\com\agency\repository\LocationRepository.java
 D:\agency\src\main\java\com\agency\mapper\ProgramMapper.java
 D:\agency\src\main\java\com\agency\mapper\OrderMapper.java
+D:\agency\src\main\java\com\agency\dto\LocationDescriptionDto.java
 D:\agency\src\main\java\com\agency\entity\Client.java
-D:\agency\src\main\java\com\agency\repository\OrderRepository.java
 D:\agency\src\main\java\com\agency\entity\Location.java
 D:\agency\src\main\java\com\agency\repository\RoleRepository.java
 D:\agency\src\main\java\com\agency\configuration\HibernateAwareObjectMapper.java
