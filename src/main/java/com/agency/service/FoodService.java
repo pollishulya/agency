@@ -5,7 +5,7 @@ import com.agency.entity.Account;
 import com.agency.entity.Food;
 import com.agency.mapper.FoodMapper;
 import com.agency.repository.AccountRepository;
-import com.agency.repository.FoodDescriptionRepository;
+import com.agency.repository.DescriptionRepository;
 import com.agency.repository.FoodRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +30,10 @@ public class FoodService {
     private final FoodRepository foodRepository;
     private final  FoodMapper foodMapper;
     private final AccountRepository accountRepository;
-    private final  FoodDescriptionRepository foodDescriptionRepository;
+    private final  DescriptionRepository foodDescriptionRepository;
 
     @Autowired
-    public FoodService(FoodRepository foodRepository, FoodMapper foodMapper, AccountRepository accountRepository, FoodDescriptionRepository foodDescriptionRepository) {
+    public FoodService(FoodRepository foodRepository, FoodMapper foodMapper, AccountRepository accountRepository, DescriptionRepository foodDescriptionRepository) {
         this.foodRepository = foodRepository;
         this.foodMapper = foodMapper;
         this.accountRepository = accountRepository;

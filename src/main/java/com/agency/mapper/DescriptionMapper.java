@@ -40,6 +40,7 @@ public class DescriptionMapper extends AbstractMapper<Description, DescriptionDt
     @Override
     public void mapSpecificFields(Description source, DescriptionDto destination) {
         destination.setFoodId(getFoodId(source));
+        destination.setLocationId(getLocationId(source));
 //        destination.setTourName(getTourName(source));
     }
 
@@ -51,9 +52,16 @@ public class DescriptionMapper extends AbstractMapper<Description, DescriptionDt
         return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getFood().getName();
     }
 
+    private Long getLocationId(Description source) {
+        return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getLocation().getId();
+    }
 
+    private String getNameLocation(Description source) {
+        return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getLocation().getName();
+    }
     @Override
     void mapSpecificFields(DescriptionDto source, Description destination) {
         destination.setFood(foodRepository.findById(source.getFoodId()).orElse(null));
+        destination.setLocation(locationRepository.findById(source.getLocationId()).orElse(null));
     }
 }

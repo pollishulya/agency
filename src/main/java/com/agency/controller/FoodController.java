@@ -118,6 +118,7 @@ public class FoodController {
         return modelAndView;
     }
 
+
     @GetMapping(value = "/showFoods/{type}")
     public ModelAndView showTypedFoods(@PathVariable String type) {
 

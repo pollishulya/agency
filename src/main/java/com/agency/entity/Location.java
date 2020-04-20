@@ -38,7 +38,7 @@ public class Location extends BaseEntity {
     private double price;
 
     @Column(name = "rating")
-    private float rating;
+    private int rating;
 
     @Column(name = "exit_date")
     private Date exitDate;

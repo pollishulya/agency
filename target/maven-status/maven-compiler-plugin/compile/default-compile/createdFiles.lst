@@ -28,6 +28,7 @@ com\agency\dto\LocationDto.class
 com\agency\entity\BaseEntity.class
 com\agency\service\CommentService.class
 com\agency\controller\FoodCompanyController.class
+com\agency\controller\LocationController.class
 com\agency\entity\Client.class
 com\agency\service\ProgramService.class
 com\agency\mapper\AccountMapper.class

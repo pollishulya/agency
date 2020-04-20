@@ -17,7 +17,7 @@ public class LocationDto extends BaseDto {
     private int capacity;
  //   private String date;
     private double price;
-    private float rating;
+    private int rating;
   //  private Set<Comment> comment;
    // private Order order;
   private Date exitDate;

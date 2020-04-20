@@ -63,6 +63,7 @@ D:\agency\src\main\java\com\agency\configuration\WebServletConfiguration.java
 D:\agency\src\main\java\com\agency\mapper\LocationMapper.java
 D:\agency\src\main\java\com\agency\mapper\Mapper.java
 D:\agency\src\main\java\com\agency\repository\LocationRepository.java
+D:\agency\src\main\java\com\agency\controller\LocationController.java
 D:\agency\src\main\java\com\agency\mapper\ProgramMapper.java
 D:\agency\src\main\java\com\agency\mapper\OrderMapper.java
 D:\agency\src\main\java\com\agency\dto\LocationDescriptionDto.java
