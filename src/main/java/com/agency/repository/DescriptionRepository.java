@@ -9,4 +9,5 @@ public interface DescriptionRepository extends JpaRepository<Description,Long> {
 
     List<Description> findAllByFoodId(Long idFood);
     List<Description> findAllByLocationId(Long idLocation);
+    List<Description> findAllByProgramId(Long idProgram);
 }

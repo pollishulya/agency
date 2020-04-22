@@ -130,9 +130,9 @@ function updateRecord(id) {
 function saveTour() {
 
     var name = $('#name').val();
-    alert(name);
+   // alert("food"+name);
      var view = $('#view').val();
-    alert(view);
+    //alert(view);
     // var exitDate = $('#exitDate').val();
      var numberOfDays = $('#numberDays').val();
     var cost = $('#cost').val();
@@ -146,7 +146,7 @@ function saveTour() {
         };
         descriptions.push(description);
     }
-    alert(description);
+   // alert(description);
     var foodDto = ({
         "name": name,
         "view": view,

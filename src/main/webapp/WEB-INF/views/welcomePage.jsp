@@ -192,7 +192,88 @@
 
                 });
             });
+            $(document).ready(function () {
 
+                $.get("/programs", function (data) {
+
+                    var rowsHtml;
+                    for (var j = 0; j < data.length; j = j + 3) {
+                        var date = new Date(data[j].exitDate);
+                        var dd = date.getDate();
+                        var mm = date.getMonth() + 1;
+                        var yyyy = date.getFullYear();
+                        if (dd < 10) {
+                            dd = '0' + dd;
+                        }
+                        if (mm < 10) {
+                            mm = '0' + mm;
+                        }
+                        var exitDate = dd + '/' + mm + '/' + yyyy;
+                        rowsHtml = "<div class='row'>";
+                        rowsHtml += "<div class='col-md-3 tour position-tour'>";
+                        rowsHtml += "<div class='image'><img class='tour-image' src='" + data[j].image + "/1.jpg' alt='' width='258' height='160'>" +
+                            "<h2><span>" + data[j].price + " $</span></h2></div>";
+                        rowsHtml += "<p><h3>" + data[j].name + "</h3></a><p>";
+                       // rowsHtml += "<p><small>" + data[j].address + "</small></p>";
+                        rowsHtml += "<p> Дата выезда:<b>" + exitDate + "</b><p>";
+                        rowsHtml += "<p><span class='glyphicon glyphicon-time' ></span><b> " + data[j].duration + " <spring:message code='day.label'/></b></p>";
+                        rowsHtml += " <a href='/location/" + data[j].id + "'class='btn btn-primary text-uppercase position-view'>" + "<spring:message code='view.label'/>" + "</a><br/><br/>";
+                        rowsHtml += "</div>";
+                        if (j + 1 < data.length) {
+
+                            var date = new Date(data[j + 1].exitDate);
+                            var dd = date.getDate();
+                            var mm = date.getMonth() + 1;
+                            var yyyy = date.getFullYear();
+                            if (dd < 10) {
+                                dd = '0' + dd;
+                            }
+                            if (mm < 10) {
+                                mm = '0' + mm;
+                            }
+                            var exitDate = dd + '/' + mm + '/' + yyyy;
+
+                            rowsHtml += "<div class='col-md-3 tour position-tour'>";
+                            rowsHtml += "<div class='image'><img class='tour-image' src='" + data[j].image + "/1.jpg' alt='' width='258' height='160'>" +
+                                "<h2><span>" + data[j].price + " $</span></h2></div>";
+                            rowsHtml += "<p><h3>" + data[j].name + "</h3></a><p>";
+                          //  rowsHtml += "<p><small>" + data[j].duration + "</small></p>";
+                            rowsHtml += "<p> Дата выезда:<b>" + exitDate + "</b><p>";
+                            rowsHtml += "<p><span class='glyphicon glyphicon-time' ></span><b> " + data[j].duration + " <spring:message code='day.label'/></b></p>";
+                            rowsHtml += " <a href='/location/" + data[j].id + "'class='btn btn-primary text-uppercase position-view'>" + "<spring:message code='view.label'/>" + "</a><br/><br/>";
+                            rowsHtml += "</div>";
+                        }
+
+
+                        if (j + 2 < data.length) {
+                            var date = new Date(data[j + 2].exitDate);
+                            var dd = date.getDate();
+                            var mm = date.getMonth() + 1;
+                            var yyyy = date.getFullYear();
+                            if (dd < 10) {
+                                dd = '0' + dd;
+                            }
+                            if (mm < 10) {
+                                mm = '0' + mm;
+                            }
+                            var exitDate = dd + '/' + mm + '/' + yyyy;
+
+                            rowsHtml += "<div class='col-md-3 tour position-tour'>";
+                            rowsHtml += "<div class='image'><img class='tour-image' src='" + data[j].image + "/1.jpg' alt='' width='258' height='160'>" +
+                                "<h2><span>" + data[j].price + " $</span></h2></div>";
+                            rowsHtml += "<p><h3>" + data[j].name + "</h3></a><p>";
+                           // rowsHtml += "<p><small>" + data[j].address + "</small></p>";
+                            rowsHtml += "<p> Дата выезда:<b>" + exitDate + "</b><p>";
+                            rowsHtml += "<p><span class='glyphicon glyphicon-time' ></span><b> " + data[j].duration + " <spring:message code='day.label'/></b></p>";
+                            rowsHtml += " <a href='/location/" + data[j].id + "'class='btn btn-primary text-uppercase position-view'>" + "<spring:message code='view.label'/>" + "</a><br/><br/>";
+                            rowsHtml += "</div>";
+                        }
+
+                        $('#foods').append(rowsHtml);
+                    }
+
+                });
+            });
         </script>
     </div>
 </div>

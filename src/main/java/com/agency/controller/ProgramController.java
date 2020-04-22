@@ -1,10 +1,10 @@
 package com.agency.controller;
 
-import com.agency.dto.LocationDto;
-import com.agency.entity.Location;
-import com.agency.mapper.LocationMapper;
-import com.agency.repository.LocationRepository;
-import com.agency.service.LocationService;
+import com.agency.dto.ProgramDto;
+import com.agency.entity.Program;
+import com.agency.mapper.ProgramMapper;
+import com.agency.repository.ProgramRepository;
+import com.agency.service.ProgramService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -21,29 +21,29 @@ import java.util.Optional;
 
 @RestController
 @Slf4j
-public class LocationController {
+public class ProgramController {
 
-    private final LocationService locationService;
-    private final LocationRepository locationRepository;
-    private final LocationMapper locationMapper;
+    private final ProgramService locationService;
+    private final ProgramRepository locationRepository;
+    private final ProgramMapper locationMapper;
 
     @Autowired
-    public LocationController(LocationService locationService, LocationRepository locationRepository, LocationMapper locationMapper) {
+    public ProgramController(ProgramService locationService, ProgramRepository locationRepository, ProgramMapper locationMapper) {
 
         this.locationService = locationService;
         this.locationRepository = locationRepository;
         this.locationMapper = locationMapper;
     }
 
-    @GetMapping(value = "/location/{id}", produces = "application/json")
+    @GetMapping(value = "/program/{id}", produces = "application/json")
     @ResponseBody
-    public ModelAndView loadLocation(@PathVariable Long id) {
+    public ModelAndView loadProgram(@PathVariable Long id) {
 
-        Optional<Location> location = locationRepository.findById(id);
+        Optional<Program> location = locationRepository.findById(id);
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject(location.get());
-        modelAndView.setViewName("locationPage");
+        modelAndView.setViewName("programPage");
 
        /* if(food.isPresent()){
             modelAndView.addObject(food.get());
@@ -54,8 +54,8 @@ public class LocationController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/location/delete/{id}", method = {RequestMethod.POST})
-    public ResponseEntity deleteLocation(@PathVariable Long id) {
+    @RequestMapping(value = "/program/delete/{id}", method = {RequestMethod.POST})
+    public ResponseEntity deleteProgram(@PathVariable Long id) {
 
         try {
             locationRepository.deleteById(id);
@@ -66,11 +66,11 @@ public class LocationController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping(value = "/locations", produces = "application/json")
+    @GetMapping(value = "/programs", produces = "application/json")
     @ResponseBody
-    public List<Location> loadLocations() {
+    public List<Program> loadPrograms() {
 
-        List<Location> locations = locationRepository.findAll();
+        List<Program> locations = locationRepository.findAll();
 
         return locations;
     }
@@ -84,8 +84,8 @@ public class LocationController {
         return foods;
     }*/
 
-    @PostMapping(value = "/location/save")
-    public ResponseEntity save(@RequestBody Location location) {
+    @PostMapping(value = "/program/save")
+    public ResponseEntity save(@RequestBody Program location) {
 
 
       /*  if (food.getName().equals("") || food.getView().equals("") || food.getCuisine().equals("")) {
@@ -100,27 +100,27 @@ public class LocationController {
         //}
     }
 
-    @GetMapping(value = "/locations/show", produces = "application/json")
-    public ResponseEntity showLocations(@RequestParam String param, @RequestParam int pageNumber, @RequestParam(defaultValue = "7") int pageSize) {
+    @GetMapping(value = "/programs/show", produces = "application/json")
+    public ResponseEntity showPrograms(@RequestParam String param, @RequestParam int pageNumber, @RequestParam(defaultValue = "7") int pageSize) {
 
         Pageable pageable = PageRequest.of(pageNumber, pageSize);
 
         return locationService.getAll(pageable, param);
     }
 
-    @GetMapping(value = "/showLocations")
-    public ModelAndView showLocations() {
+    @GetMapping(value = "/showPrograms")
+    public ModelAndView showPrograms() {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
        // modelAndView.setViewName("locationsTablePage");
-        modelAndView.setViewName("locationsTablePage");
+        modelAndView.setViewName("programsTablePage");
 
 
         return modelAndView;
     }
 
-    @GetMapping(value = "/showLocations/{type}")
-    public ModelAndView showTypedLocations(@PathVariable String type) {
+    @GetMapping(value = "/showPrograms/{type}")
+    public ModelAndView showTypedPrograms(@PathVariable String type) {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
         if ("bus".equals(type)) {
@@ -134,14 +134,14 @@ public class LocationController {
         return modelAndView;
     }
 
-    @GetMapping(value = "/location/update/{id}", produces = "application/json")
+    @GetMapping(value = "/program/update/{id}", produces = "application/json")
     @ResponseBody
     @Transactional
-    public ResponseEntity loadLocationForUpdate(@PathVariable Long id) {
+    public ResponseEntity loadProgramForUpdate(@PathVariable Long id) {
 
-        Optional<Location> location= locationRepository.findById(id);
+        Optional<Program> location= locationRepository.findById(id);
         if(location.isPresent()){
-            LocationDto locationDto = locationMapper.toDto(location.get());
+            ProgramDto locationDto = locationMapper.toDto(location.get());
             return new ResponseEntity(locationDto,HttpStatus.OK);
         }
 
@@ -149,8 +149,8 @@ public class LocationController {
         return new ResponseEntity(HttpStatus.NOT_FOUND);
 }
 
-    @PostMapping(value = "/location/update")
-    public ResponseEntity updateLocation(@RequestBody LocationDto location) {
+    @PostMapping(value = "/program/update")
+    public ResponseEntity updateProgram(@RequestBody ProgramDto location) {
 
         locationService.update(location);
 

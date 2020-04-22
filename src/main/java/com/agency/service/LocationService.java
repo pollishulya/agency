@@ -51,9 +51,9 @@ public class LocationService {
             location.setCompany(accountRepository.findById(id).get());
             location.setImage("/resources/images/imageForFood");
 
-            if (location.getDescriptions() != null) {
-                location.getDescriptions().forEach(td -> td.setLocation(location));
-            }
+//            if (location.getDescription() != null) {
+//                location.getDescription().forEach(td -> td.setLocation(location));
+//            }
 
             Location savedTour = locationRepository.saveAndFlush(location);
 

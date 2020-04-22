@@ -127,45 +127,48 @@ function updateRecord(id) {
     });
 }
 
+//
 function saveLocation() {
 
     var name = $('#name').val();
-    alert(name);
-     var address = $('#address').val();
-    alert(address);
-    // var exitDate = $('#exitDate').val();
-     var numberOfDays = $('#numberDays').val();
+    var country = $('#address').val();
+    var exitDate = $('#exitDate').val();
+    var numberOfDays = $('#numberDays').val();
     var cost = $('#cost').val();
     var type = $('#types').val();
     var descriptions = [];
     for (var i = 0; i <= numberDays; i++) {
         var descriptionText = $('#description_' + i).val();
         var description = {
-           // "dayNumber": i + 1,
+            "dayNumber": i + 1,
             "description": descriptionText
         };
         descriptions.push(description);
     }
-    alert(description);
     var locationDto = ({
         "name": name,
-        "address": address,
+        "address": country,
         "exitDate": exitDate,
-        //"numberDays": numberOfDays,
-        "price": pricw,
+       // "numberDays": numberOfDays,
+        "price": cost,
         "type": type,
         "descriptions": descriptions
     });
+    alert(locationDto.name+locationDto.address+locationDto.exitDate+locationDto.price+locationDto.type+locationDto.descriptions);
+
     $.ajax({
         type: "Post",
         url: "/location/save",
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(locationDto),
         success: function (res) {
+            alert ("success"+res);
             location.reload();
             $("#addTourModal").modal("hide");
+
         },
         error: function (res) {
+            alert ("error"+res.responseJSON);
             if (res.status === 500) {
                 $('#uniqueTourFieldMistake').show();
             } else if (res.responseJSON === "empty field") {
@@ -202,6 +205,56 @@ function saveDescription() {
     })
 };
 
+function saveTour() {
+    alert("food");
+    var name = $('#name').val();
+     alert("food"+name);
+    var view = $('#view').val();
+    //alert(view);
+    // var exitDate = $('#exitDate').val();
+    var numberOfDays = $('#numberDays').val();
+    var cost = $('#cost').val();
+    var type = $('#types').val();
+    var descriptions = [];
+    for (var i = 0; i <= numberDays; i++) {
+        var descriptionText = $('#description_' + i).val();
+        var description = {
+            // "dayNumber": i + 1,
+            "description": descriptionText
+        };
+        descriptions.push(description);
+    }
+    // alert(description);
+    var foodDto = ({
+        "name": name,
+        "view": view,
+        //"exitDate": exitDate,
+        //"numberDays": numberOfDays,
+        "cost": cost,
+        "type": type,
+        "foodDescriptions": descriptions
+    });
+    alert(foodDto.name)
+    $.ajax({
+        type: "Post",
+        url: "/food/save",
+        contentType: "application/json;charset=utf-8",
+        data: JSON.stringify(foodDto),
+        success: function (res) {
+            location.reload();
+            $("#addTourModal").modal("hide");
+        },
+        error: function (res) {
+            if (res.status === 500) {
+                $('#uniqueTourFieldMistake').show();
+            } else if (res.responseJSON === "empty field") {
+                $('#emptyFieldMistake').show();
+            } else if (res.responseJSON === "data error") {
+                $('#incorrectDataMistake').show();
+            }
+        }
+    })
+};
 
 function save() {
 
@@ -220,7 +273,7 @@ function save() {
    // }
 
     if (stop === 0) {
-        saveTour();
+        saveLocation();
         saveDescription();
     }
 }

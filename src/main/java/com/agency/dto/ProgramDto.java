@@ -4,7 +4,7 @@ import com.agency.entity.Comment;
 import com.agency.entity.Order;
 import lombok.*;
 
-import java.util.Set;
+import java.util.*;
 
 @Getter
 @Setter
@@ -14,8 +14,13 @@ public class ProgramDto extends BaseDto {
     private Long id;
     private String name;
     private String duration;
+    private String type;
     private double price;
     private float rating;
-    private Set<Comment> comment;
-    private Set<Order> order;
+    private Date exitDate;
+    private String image;
+    private Set<Comment> comment = new HashSet<>();;
+    private List<DescriptionDto> description = new ArrayList<>();
+    private Long companyId;
+    private Set<ReservationDto> reservations = new HashSet<>();
 }

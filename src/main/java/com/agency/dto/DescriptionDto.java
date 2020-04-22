@@ -12,5 +12,6 @@ public class DescriptionDto extends BaseDto {
     //    private String tourName;
     private Long locationId;
     private Long foodId;
+    private Long programId;
 
 }

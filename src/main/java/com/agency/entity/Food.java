@@ -37,9 +37,6 @@ public class Food extends BaseEntity {
     @Column(name = "cuisine")
     private String cuisine;
 
- //   @Column(name = "county")
-   // private String country;
-
     @Column(name = "price")
     private double price;
 
@@ -72,7 +69,7 @@ public class Food extends BaseEntity {
         return droids;
     }*/
   @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "food",fetch = FetchType.LAZY)
-  @JsonManagedReference
+ // @JsonManagedReference
   private List<FoodDescription> foodDescriptions = new ArrayList<>();
 
 //    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "location",fetch = FetchType.LAZY)

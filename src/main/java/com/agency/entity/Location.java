@@ -35,7 +35,10 @@ public class Location extends BaseEntity {
     private String date;
 
     @Column(name = "price")
-    private double price;
+    private String price;
+
+    @Column(name = "type")
+    private String type;
 
     @Column(name = "rating")
     private int rating;
@@ -43,25 +46,18 @@ public class Location extends BaseEntity {
     @Column(name = "exit_date")
     private Date exitDate;
 
-
     @Column(name = "image_url")
     private String image;
-   /* @JsonIgnore
-    @OneToOne(mappedBy = "location")
-    private Order order;*/
 
     @JsonIgnore
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE},orphanRemoval=true, mappedBy = "location", fetch = FetchType.LAZY)
     private Set<Comment> comments = new HashSet<>();
 
     @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "location",fetch = FetchType.LAZY)
-    @JsonManagedReference
+    //@JsonManagedReference
     private List<Description> descriptions = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "location_company_id")
     private Account company;
-
-
-
 }

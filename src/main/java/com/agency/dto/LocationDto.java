@@ -14,17 +14,13 @@ public class LocationDto extends BaseDto {
     private Long id;
     private String name;
     private String address;
+    private String type;
     private int capacity;
- //   private String date;
-    private double price;
+    private String price;
     private int rating;
-  //  private Set<Comment> comment;
-   // private Order order;
-  private Date exitDate;
+    private Date exitDate;
     private String image;
     private Set<Comment> comment = new HashSet<>();;
-
-
     private List<DescriptionDto> description = new ArrayList<>();
     private Long companyId;
     private Set<ReservationDto> reservations = new HashSet<>();

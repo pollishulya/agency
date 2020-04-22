@@ -20,12 +20,17 @@ public class Description extends BaseEntity {
 
     @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE},fetch = FetchType.LAZY)
     @JoinColumn(name = "id_food")
-    @JsonBackReference
+   // @JsonBackReference
     private Food food;
-
+//
     @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE},fetch = FetchType.LAZY)
     @JoinColumn(name = "id_location")
-    @JsonBackReference
+    //@JsonBackReference
     private Location location;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE},fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_program")
+    //@JsonBackReference
+    private Program program;
 
 }
