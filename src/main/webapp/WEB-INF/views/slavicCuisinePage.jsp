@@ -29,7 +29,7 @@
         <script type="text/javascript">
             $(document).ready(function () {
 
-                $.get("/food?type=SLAVIC", function (data) {
+                $.get("/food?cuisine=SLAVIC", function (data) {
 
                     var rowsHtml;
                     for (var j = 0; j < data.length; j = j + 3) {

@@ -68,7 +68,7 @@ function loadPrograms(id, param, numberRows) {
             var html = "";
             for (var i = 0; i < res.length; i++) {
                 html += "<tr id='row" + res[i].id + "'><td>" + res[i].name + "</td><td>" + res[i].duration + "</td><td>" +
-                    convertDate(res[i].exitDate) + "</td>" + "<td>" + res[i].numberDays + "</td>" + "<td>" + res[i].price + "</td>" + "<td>" + setRating(res[i].rating) + "</td>" + "<td>" + res[i].type + "</td>";
+                    res[i].price + "</td>" + "<td>" + setRating(res[i].rating) + "</td>" + "<td>" + res[i].type + "</td>";
                 html += "<td>" + "<button class='btn btn-danger' onclick='deleteForm(" + res[i].id +
                     ")'><span class='glyphicon glyphicon-trash'></span></button>" + "</td>";
                 html += "<td>" + "<button class='btn btn-primary' onclick='updateRecord(" + res[i].id + ");return false;'>Update</button>" + "</td></tr>";
@@ -132,24 +132,22 @@ function saveProgram() {
 
     var name = $('#name').val();
     var duration = $('#duration').val();
-    var exitDate = $('#exitDate').val();
+   // var exitDate = $('#exitDate').val();
     //var numberOfDays = $('#numberDays').val();
     var price = $('#price').val();
     var type = $('#types').val();
     var descriptions = [];
-    for (var i = 0; i <= numberDays; i++) {
-        var descriptionText = $('#description_' + i).val();
+   // for (var i = 0; i <= numberDays; i++) {
+        var descriptionText = $('#description_').val();
         var description = {
-            "dayNumber": i + 1,
+          //  "duration": i + 1,
             "description": descriptionText
         };
         descriptions.push(description);
-    }
+   // }
     var programDto = ({
         "name": name,
         "duration": duration,
-        "exitDate": exitDate,
-       // "numberDays": numberOfDays,
         "price": price,
         "type": type,
         "descriptions": descriptions
@@ -185,7 +183,7 @@ function saveDescription() {
     var name = $('#name').val();
     var descriptions = [];
    // for (var i = 0; i <= numberDays; i++) {
-        var descriptionText = $('#description_' + i).val();
+        var descriptionText = $('#description_' ).val();
         var description = {
             "programName": name,
           //  "dayNumber": i + 1,
@@ -205,56 +203,6 @@ function saveDescription() {
     })
 };
 
-function saveTour() {
-    alert("food");
-    var name = $('#name').val();
-     alert("food"+name);
-    var view = $('#view').val();
-    //alert(view);
-    // var exitDate = $('#exitDate').val();
-    var numberOfDays = $('#numberDays').val();
-    var cost = $('#cost').val();
-    var type = $('#types').val();
-    var descriptions = [];
-    for (var i = 0; i <= numberDays; i++) {
-        var descriptionText = $('#description_' + i).val();
-        var description = {
-            // "dayNumber": i + 1,
-            "description": descriptionText
-        };
-        descriptions.push(description);
-    }
-    // alert(description);
-    var foodDto = ({
-        "name": name,
-        "view": view,
-        //"exitDate": exitDate,
-        //"numberDays": numberOfDays,
-        "cost": cost,
-        "type": type,
-        "foodDescriptions": descriptions
-    });
-    alert(foodDto.name)
-    $.ajax({
-        type: "Post",
-        url: "/food/save",
-        contentType: "application/json;charset=utf-8",
-        data: JSON.stringify(foodDto),
-        success: function (res) {
-            program.reload();
-            $("#addTourModal").modal("hide");
-        },
-        error: function (res) {
-            if (res.status === 500) {
-                $('#uniqueTourFieldMistake').show();
-            } else if (res.responseJSON === "empty field") {
-                $('#emptyFieldMistake').show();
-            } else if (res.responseJSON === "data error") {
-                $('#incorrectDataMistake').show();
-            }
-        }
-    })
-};
 
 function save() {
 
@@ -284,20 +232,16 @@ function updateProgram () {
     $('#emptyFieldUpdateMistake').hide();
 
     var name = $('#nameUpdate').val();
-    var country = $('#countryUpdate').val();
-    var exitDate = $('#exitDateUpdate').val();
+    var duration = $('#durationUpdate').val();
     var id = $('#idUpdate').val();
-    var numberDays = $('#numberDaysUpdate').val();
-    var cost = $('#costUpdate').val();
+    var price = $('#costUpdate').val();
     var type = $('#typesUpdate').val();
 
     var tour = ({
         "id": id,
         "name": name,
-        "country": country,
-        "exitDate": exitDate,
-        "numberDays": numberDays,
-        "cost": cost,
+        "duration": duration,
+        "price": price,
         "type": type
     });
     $.ajax({

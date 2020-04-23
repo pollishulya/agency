@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/resources/css/forTourTablePage.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/formTourAdd-style.css" type="text/css">
 
-    <title>Tours</title>
+    <title>Programs</title>
 </head>
 <jsp:include page="navbar.jsp"/>
 <body>
@@ -31,33 +31,23 @@
                 <div class="form-label-group">
                     <input type="text" id="name" name="name" class="form-control" placeholder="Tour name" required
                            autofocus>
-                    <label for="name"><spring:message code="tourName.label"/></label>
+                    <label for="name"><spring:message code="programName.label"/></label>
                 </div>
                 <div class="form-label-group">
-                    <input type="text" id="duration" name="country" class="form-control" placeholder="Country" required
+                    <input type="text" id="duration" name="duration" class="form-control" placeholder="Country" required
                            autofocus>
-                    <label for="duration"><spring:message code="country.label"/></label>
-                </div>
-                <label for="exitDate"><spring:message code="exitDate.label"/></label>
-                <div class="form-label-group">
-                    <input type="date" id="exitDate" name="exitDate" class="form-control" required autofocus>
+                    <label for="duration"><spring:message code="duration.label"/></label>
                 </div>
                 <div class="form-label-group">
-                    <input type="text" id="numberDays" name="numberDays" class="form-control" placeholder="Number days"
-                           required
+                    <input type="text" id="price" name="price" class="form-control" placeholder="Cost" required
                            autofocus>
-                    <label for="numberDays"><spring:message code="numberDays.label"/></label>
-                </div>
-                <div class="form-label-group">
-                    <input type="text" id="cost" name="cost" class="form-control" placeholder="Cost" required
-                           autofocus>
-                    <label for="cost"><spring:message code="cost.label"/></label>
+                    <label for="price"><spring:message code="cost.label"/></label>
                 </div>
                 <div class="form-label-group" id="type">
                     <select id="types" class="mdb-select md-form">
-                        <option value="BUS_TOUR"><spring:message code="busTour.label"/></option>
-                        <option value="AIR_TOUR"><spring:message code="airTour.label"/></option>
-                        <option value="SEE_TOUR"><spring:message code="seeFood.label"/></option>
+                        <option value="LEADING"><spring:message code="leading.label"/></option>
+                        <option value="QUEST"><spring:message code="quest.label"/></option>
+                        <option value="SHOW"><spring:message code="show.label"/></option>
                     </select>
                 </div>
                 <label><spring:message code="description.label"/></label>
@@ -117,25 +107,13 @@
                         <div class="form-label-group">
                             <input type="text" id="nameUpdate" name="nameUpdate" class="form-control"
                                    placeholder="Tour name" required autofocus>
-                            <label for="nameUpdate"><spring:message code="tourName.label"/></label>
+                            <label for="nameUpdate"><spring:message code="programName.label"/></label>
                         </div>
 
                         <div class="form-label-group">
                             <input type="text" id="countryUpdate" name="countryUpdate" class="form-control"
                                    placeholder="Country" required autofocus>
-                            <label for="countryUpdate"><spring:message code="country.label"/></label>
-                        </div>
-
-                        <label><spring:message code="exitDate.label"/></label>
-                        <div class="form-label-group">
-                            <input type="date" id="exitDateUpdate" name="exitDateUpdate" class="form-control"
-                                             required autofocus>
-                        </div>
-
-                        <div class="form-label-group">
-                            <input type="text" id="numberDaysUpdate" name="numberDaysUpdate" class="form-control"
-                                   placeholder="Number days" required autofocus>
-                            <label for="numberDaysUpdate"><spring:message code="numberDays.label"/></label>
+                            <label for="countryUpdate"><spring:message code="duration.label"/></label>
                         </div>
 
                         <div class="form-label-group">
@@ -146,9 +124,9 @@
 
                         <div class="form-label-group" id="typeUpdate">
                             <select id="typesUpdate" class="mdb-select md-form">
-                                <option value="BUS_TOUR"><spring:message code="busTour.label"/></option>
-                                <option value="AIR_TOUR"><spring:message code="airTour.label"/></option>
-                                <option value="SEE_TOUR"><spring:message code="seeFood.label"/></option>
+                                <option value="LEADING"><spring:message code="leading.label"/></option>
+                                <option value="QUEST"><spring:message code="quest.label"/></option>
+                                <option value="SHOW"><spring:message code="show.label"/></option>
                             </select>
                         </div>
                         <label><spring:message code="description.label"/></label>
@@ -196,10 +174,8 @@
     <table id='tourTable' class='table table-hover table-bordered table-sm' cellspacing='0' width='100%'>
         <thead class="black white-text">
         <tr>
-            <th scope="col"><spring:message code="tourName.label"/></th>
-            <th scope="col"><spring:message code="country.label"/></th>
-            <th scope="col"><spring:message code="exitDate.label"/></th>
-            <th scope="col"><spring:message code="numberDays.label"/></th>
+            <th scope="col"><spring:message code="programName.label"/></th>
+            <th scope="col"><spring:message code="duration.label"/></th>
             <th scope="col"><spring:message code="costForTable.label"/></th>
             <th scope="col"><spring:message code="rating.label"/></th>
             <th scope="col"><spring:message code="type.label"/></th>

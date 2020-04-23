@@ -10,13 +10,13 @@
     <script src=" //cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 
-    <script src="/resources/jquery/actionsWithTours.js"></script>
+    <script src="/resources/jquery/actionsWithFoods.js"></script>
     <link rel="stylesheet" href="/resources/css/deleteForm.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/table-style.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/forTourTablePage.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/formTourAdd-style.css" type="text/css">
 
-    <title>Tours</title>
+    <title>Foods</title>
 </head>
 <jsp:include page="navbar.jsp"/>
 <body>
@@ -31,34 +31,29 @@
                 <div class="form-label-group">
                     <input type="text" id="name" name="name" class="form-control" placeholder="Tour name" required
                            autofocus>
-                    <label for="name"><spring:message code="tourName.label"/></label>
+                    <label for="name"><spring:message code="foodName.label"/></label>
                 </div>
-                <div class="form-label-group">
-                    <input type="text" id="view" name="country" class="form-control" placeholder="Country" required
-                           autofocus>
-                    <label for="view"><spring:message code="country.label"/></label>
-                </div>
-                <label for="exitDate"><spring:message code="exitDate.label"/></label>
-                <div class="form-label-group">
-                    <input type="date" id="exitDate" name="exitDate" class="form-control" required autofocus>
-                </div>
-                <div class="form-label-group">
-                    <input type="text" id="numberDays" name="numberDays" class="form-control" placeholder="Number days"
-                           required
-                           autofocus>
-                    <label for="numberDays"><spring:message code="numberDays.label"/></label>
-                </div>
-                <div class="form-label-group">
-                    <input type="text" id="cost" name="cost" class="form-control" placeholder="Cost" required
-                           autofocus>
-                    <label for="cost"><spring:message code="cost.label"/></label>
-                </div>
-                <div class="form-label-group" id="type">
-                    <select id="types" class="mdb-select md-form">
+
+                <div class="form-label-group" id="cuisine">
+                    <select id="cuisines" class="mdb-select md-form">
                         <option value="ASIA"><spring:message code="asian.label"/></option>
                         <option value="SLAVIC"><spring:message code="slavic.label"/></option>
                         <option value="EAST"><spring:message code="east.label"/></option>
                         <option value="EUROPE"><spring:message code="europe.label"/></option>
+                    </select>
+                </div>
+                <div class="form-label-group">
+                    <input type="text" id="price" name="price" class="form-control" placeholder="Cost" required
+                           autofocus>
+                    <label for="price"><spring:message code="cost.label"/></label>
+                </div>
+                <div class="form-label-group" id="type">
+                    <select id="types" class="mdb-select md-form">
+                        <option value="SNACKS"><spring:message code="snacks.label"/></option>
+                        <option value="FIRST"><spring:message code="first.label"/></option>
+                        <option value="SECOND"><spring:message code="second.label"/></option>
+                        <option value="DESSERT"><spring:message code="dessert.label"/></option>
+                        <option value="DRINKS"><spring:message code="drinks.label"/></option>
                     </select>
                 </div>
                 <label><spring:message code="description.label"/></label>
@@ -118,25 +113,16 @@
                         <div class="form-label-group">
                             <input type="text" id="nameUpdate" name="nameUpdate" class="form-control"
                                    placeholder="Tour name" required autofocus>
-                            <label for="nameUpdate"><spring:message code="tourName.label"/></label>
+                            <label for="nameUpdate"><spring:message code="foodName.label"/></label>
                         </div>
 
-                        <div class="form-label-group">
-                            <input type="text" id="countryUpdate" name="countryUpdate" class="form-control"
-                                   placeholder="Country" required autofocus>
-                            <label for="countryUpdate"><spring:message code="country.label"/></label>
-                        </div>
-
-                        <label><spring:message code="exitDate.label"/></label>
-                        <div class="form-label-group">
-                            <input type="date" id="exitDateUpdate" name="exitDateUpdate" class="form-control"
-                                             required autofocus>
-                        </div>
-
-                        <div class="form-label-group">
-                            <input type="text" id="numberDaysUpdate" name="numberDaysUpdate" class="form-control"
-                                   placeholder="Number days" required autofocus>
-                            <label for="numberDaysUpdate"><spring:message code="numberDays.label"/></label>
+                        <div class="form-label-group" id="cuisineUpdate">
+                            <select id="cuisinesUpdate" class="mdb-select md-form">
+                                <option value="ASIA"><spring:message code="asian.label"/></option>
+                                <option value="SLAVIC"><spring:message code="slavic.label"/></option>
+                                <option value="EAST"><spring:message code="east.label"/></option>
+                                <option value="EUROPE"><spring:message code="europe.label"/></option>
+                            </select>
                         </div>
 
                         <div class="form-label-group">
@@ -147,10 +133,11 @@
 
                         <div class="form-label-group" id="typeUpdate">
                             <select id="typesUpdate" class="mdb-select md-form">
-                                <option value="ASIA"><spring:message code="asian.label"/></option>
-                                <option value="SLAVIC"><spring:message code="slavic.label"/></option>
-                                <option value="EAST"><spring:message code="east.label"/></option>
-                                <option value="EUROPE"><spring:message code="europe.label"/></option>
+                                <option value="SNACKS"><spring:message code="snacks.label"/></option>
+                                <option value="FIRST"><spring:message code="first.label"/></option>
+                                <option value="SECOND"><spring:message code="second.label"/></option>
+                                <option value="DESSERT"><spring:message code="dessert.label"/></option>
+                                <option value="DRINKS"><spring:message code="drinks.label"/></option>
                             </select>
                         </div>
                         <label><spring:message code="description.label"/></label>
@@ -199,9 +186,7 @@
         <thead class="black white-text">
         <tr>
             <th scope="col"><spring:message code="tourName.label"/></th>
-            <th scope="col"><spring:message code="country.label"/></th>
-            <th scope="col"><spring:message code="exitDate.label"/></th>
-            <th scope="col"><spring:message code="numberDays.label"/></th>
+            <th scope="col"><spring:message code="cuisine.label"/></th>
             <th scope="col"><spring:message code="costForTable.label"/></th>
             <th scope="col"><spring:message code="rating.label"/></th>
             <th scope="col"><spring:message code="type.label"/></th>

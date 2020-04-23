@@ -17,7 +17,7 @@ public class ProgramDto extends BaseDto {
     private String type;
     private double price;
     private float rating;
-    private Date exitDate;
+  //  private Date exitDate;
     private String image;
     private Set<Comment> comment = new HashSet<>();;
     private List<DescriptionDto> description = new ArrayList<>();

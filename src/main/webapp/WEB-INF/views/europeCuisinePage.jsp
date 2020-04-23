@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Only Travel</title>
+    <title>Chilling.by</title>
 
     <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" type="text/css"/>
     <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
@@ -29,7 +29,7 @@
         <script type="text/javascript">
             $(document).ready(function () {
 
-                $.get("/food?type=EUROPE", function (data) {
+                $.get("/food?cuisine=EUROPE", function (data) {
 
                     var rowsHtml;
                     for (var j = 0; j < data.length; j = j + 3) {

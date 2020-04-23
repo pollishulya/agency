@@ -67,8 +67,8 @@ function loadTours(id, param, numberRows) {
             }
             var html = "";
             for (var i = 0; i < res.length; i++) {
-                html += "<tr id='row" + res[i].id + "'><td>" + res[i].name + "</td><td>" + res[i].view + "</td><td>" +
-                    convertDate(res[i].exitDate) + "</td>" + "<td>" + res[i].numberDays + "</td>" + "<td>" + res[i].cost + "</td>" + "<td>" + setRating(res[i].rating) + "</td>" + "<td>" + res[i].type + "</td>";
+                html += "<tr id='row" + res[i].id + "'><td>" + res[i].name + "</td><td>" + res[i].cuisine + "</td><td>" +
+                    res[i].price + "</td>" + "<td>" + setRating(res[i].rating) + "</td>" + "<td>" + res[i].type + "</td>";
                 html += "<td>" + "<button class='btn btn-danger' onclick='deleteForm(" + res[i].id +
                     ")'><span class='glyphicon glyphicon-trash'></span></button>" + "</td>";
                 html += "<td>" + "<button class='btn btn-primary' onclick='updateRecord(" + res[i].id + ");return false;'>Update</button>" + "</td></tr>";
@@ -104,10 +104,10 @@ function updateRecord(id) {
         success: function (res) {
             $("#idUpdate").val(res.id);
             $("#nameUpdate").val(res.name);
-            $("#countryUpdate").val(res.country);
-            $("#exitDateUpdate").val(convertDateForUpdateField(res.exitDate));
-            $("#numberDaysUpdate").val(res.numberDays);
-            $("#costUpdate").val(res.cost);
+            $("#cuisineUpdate").val(res.cuisine);
+            //$("#exitDateUpdate").val(convertDateForUpdateField(res.exitDate));
+           // $("#numberDaysUpdate").val(res.numberDays);
+            $("#costUpdate").val(res.price);
             $("#typesUpdate").val(res.type);
 
         }
@@ -130,32 +130,25 @@ function updateRecord(id) {
 function saveTour() {
 
     var name = $('#name').val();
-   // alert("food"+name);
-     var view = $('#view').val();
-    //alert(view);
-    // var exitDate = $('#exitDate').val();
-     var numberOfDays = $('#numberDays').val();
-    var cost = $('#cost').val();
+    var cuisine = $('#cuisines').val();
+    var price = $('#cost').val();
     var type = $('#types').val();
     var descriptions = [];
     for (var i = 0; i <= numberDays; i++) {
         var descriptionText = $('#description_' + i).val();
         var description = {
-           // "dayNumber": i + 1,
             "description": descriptionText
         };
         descriptions.push(description);
     }
-   // alert(description);
     var foodDto = ({
         "name": name,
-        "view": view,
-        //"exitDate": exitDate,
-        //"numberDays": numberOfDays,
-        "cost": cost,
+        "cuisine": cuisine,
+        "price": price,
         "type": type,
         "foodDescriptions": descriptions
     });
+    alert(foodDto.cuisine)
     $.ajax({
         type: "Post",
         url: "/food/save",
@@ -185,7 +178,6 @@ function saveDescription() {
         var descriptionText = $('#description_' + i).val();
         var description = {
             "foodName": name,
-          //  "dayNumber": i + 1,
             "description": descriptionText
         };
         descriptions.push(description);
@@ -231,27 +223,23 @@ function updateTour() {
     $('#emptyFieldUpdateMistake').hide();
 
     var name = $('#nameUpdate').val();
-    var country = $('#countryUpdate').val();
-    var exitDate = $('#exitDateUpdate').val();
+    var cuisine = $('#countryUpdate').val();
     var id = $('#idUpdate').val();
-    var numberDays = $('#numberDaysUpdate').val();
-    var cost = $('#costUpdate').val();
+    var price = $('#costUpdate').val();
     var type = $('#typesUpdate').val();
 
-    var tour = ({
+    var food = ({
         "id": id,
         "name": name,
-        "country": country,
-        "exitDate": exitDate,
-        "numberDays": numberDays,
-        "cost": cost,
+        "cuisine": cuisine,
+        "price": price,
         "type": type
     });
     $.ajax({
         type: "Post",
         url: "/food/update",
         contentType: "application/json;charset=utf-8",
-        data: JSON.stringify(tour),
+        data: JSON.stringify(food),
         success: function (res) {
             updateDescription();
             $("#updateTourModal").modal("hide");

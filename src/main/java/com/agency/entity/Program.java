@@ -36,8 +36,8 @@ public class Program extends BaseEntity {
     @Column(name = "type")
     private String type;
 
-    @Column(name = "exit_date")
-    private Date exitDate;
+ //   @Column(name = "exit_date")
+   // private Date exitDate;
 
 
     @Column(name = "image_url")

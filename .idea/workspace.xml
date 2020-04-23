@@ -7,38 +7,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfedfaa7-d78e-46d7-9c7a-56bfab34c927" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithPrograms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/leadingProgramPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/questProgramPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProgramPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/FoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/FoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/ReservationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/ReservationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/FoodCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/FoodCompany.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/mapper/ReservationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/mapper/ReservationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/ProgramDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/ProgramDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/locale/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale/messages_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/airTourPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/busTourPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cruiseTourPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dasha.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programsTablePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programsTablePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programsTablePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/ProgramDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/ProgramDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/mapper/ProgramMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/mapper/ProgramMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/repository/ProgramRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/repository/ProgramRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithPrograms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithPrograms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithTours.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithFoods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/FoodDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/FoodDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Food.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/com.agency-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/com.agency-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,64 +68,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-565">
-              <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1649">
-              <caret line="106" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="-221">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/navbar.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="156" column="65" selection-start-line="156" selection-start-column="65" selection-end-line="156" selection-end-column="65" />
+            <state relative-caret-position="-334">
+              <caret line="139" column="101" selection-start-line="139" selection-start-column="101" selection-end-line="139" selection-end-column="101" />
             </state>
           </provider>
         </entry>
@@ -141,28 +88,88 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programsTablePage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="213" column="20" selection-start-line="213" selection-start-column="20" selection-end-line="213" selection-end-column="20" />
+            <state relative-caret-position="326">
+              <caret line="177" column="72" selection-start-line="177" selection-start-column="72" selection-end-line="177" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties">
+          <provider editor-type-id="ResourceBundle" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-123">
-              <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+            <state relative-caret-position="222">
+              <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithFoods.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+            <state relative-caret-position="289">
+              <caret line="102" column="17" lean-forward="true" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
+              <folding>
+                <element signature="n#!!block;n#deleteRecord#0" />
+                <element signature="n#!!block;n#convertDate#0" />
+                <element signature="n#!!block;n#convertDateForUpdateField#0" />
+                <element signature="n#!!block;n#deleteForm#0" />
+                <element signature="n#!!block;n#loadTours#0" />
+                <element signature="n#!!block;n#AddNew#0" />
+                <element signature="n#!!block;n#saveTour#0" />
+                <element signature="n#!!block;n#addDay#0" />
+                <element signature="n#!!block;n#addDayInUpdate#0" />
+                <element signature="n#!!block;n#deleteDayInUpdate#0" />
+                <element signature="n#!!block;n#setRating#0" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithPrograms.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1088">
+              <caret line="76" column="10" lean-forward="true" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+              <folding>
+                <element signature="n#!!block;n#convertDateForUpdateField#0" />
+                <element signature="n#!!block;n#deleteForm#0" />
+                <element signature="n#!!block;n#save#0" />
+                <element signature="n#!!block;n#updateProgram#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="126" column="52" selection-start-line="126" selection-start-column="52" selection-end-line="126" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/leadingProgramPage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/questProgramPage.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProgramPage.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -176,7 +183,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>accountService</find>
       <find>Account</find>
       <find>user</find>
       <find>countBy</find>
@@ -206,6 +212,7 @@
       <find>showFood</find>
       <find>show</find>
       <find>sh</find>
+      <find>onl</find>
     </findStrings>
     <replaceStrings>
       <replace>user</replace>
@@ -225,8 +232,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/LocationDiscriprionDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/LocationDescriprion.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/LocationDescription.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/LocationDescriptionDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/LocationRepository.java" />
@@ -243,39 +248,41 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithLocations.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/DescriptionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/service/LocationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Program.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/LocationDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/ProgramDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Description.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/DescriptionDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/ProgramMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/DescriptionRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/service/ProgramService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/ProgramRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/FoodCompany.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithPrograms.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programsTablePage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/ReservationDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Reservation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/ReservationMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Location.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage2.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/locale/messages_en.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/FoodController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/navbar.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/ProgramDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Program.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/locale/messages_en.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithFoods.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programsTablePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithPrograms.js" />
       </list>
     </option>
   </component>
@@ -372,42 +379,6 @@
               <item name="agency" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -449,24 +420,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="jquery" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -499,7 +452,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../писл 5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -733,7 +686,7 @@
       <workItem from="1586966382925" duration="13375000" />
       <workItem from="1587120420240" duration="324000" />
       <workItem from="1587151253046" duration="4950000" />
-      <workItem from="1587205215801" duration="77552000" />
+      <workItem from="1587205215801" duration="83223000" />
     </task>
     <task id="LOCAL-00001" summary="Dasha and Polina are beautiful">
       <created>1584463781555</created>
@@ -847,17 +800,25 @@
       <option name="project" value="LOCAL" />
       <updated>1587558162473</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="cuisine pages">
+      <created>1587664791563</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1587664791563</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259240000" />
+    <option name="totallyTimeSpent" value="264911000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-3" width="1542" height="830" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="top" id="Ant Build" order="0" side_tool="true" weight="0.8535871" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49716714" visible="true" weight="0.18120806" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49716714" visible="true" weight="0.18120806" />
       <window_info id="Structure" order="1" sideWeight="0.5028329" side_tool="true" weight="0.14563759" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -868,8 +829,8 @@
       <window_info id="Web" order="8" sideWeight="0.50141644" side_tool="true" weight="0.18120806" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.328125" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2635432" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3235725" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27818447" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3235725" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -989,58 +950,26 @@
     <MESSAGE value="location back-end" />
     <MESSAGE value="location front welcomePage" />
     <MESSAGE value="program back-end" />
-    <option name="LAST_COMMIT_MESSAGE" value="program back-end" />
+    <MESSAGE value="cuisine pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="cuisine pages" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithPrograms.js</url>
+          <line>33</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/ProgramDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/FoodCompany.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="38" column="84" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/ProgramMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/LocationDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -1144,16 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2482">
-          <caret line="146" selection-start-line="146" selection-end-line="146" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/LocationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -1165,9 +1084,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userReservationPage.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/enums/Roles.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1186,13 +1102,6 @@
         <state relative-caret-position="-3737" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithPrograms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="156" column="32" selection-start-line="156" selection-start-column="29" selection-end-line="156" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1207,31 +1116,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage2.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="60" column="94" lean-forward="true" selection-start-line="57" selection-start-column="23" selection-end-line="60" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_en.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1259,39 +1147,6 @@
             <element signature="e#1668#1669#0" expanded="true" />
             <element signature="e#1753#1754#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithTours.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="n#!!block;n#deleteRecord#0" />
-            <element signature="n#!!block;n#convertDate#0" />
-            <element signature="n#!!block;n#convertDateForUpdateField#0" />
-            <element signature="n#!!block;n#deleteForm#0" />
-            <element signature="n#!!block;n#AddNew#0" />
-            <element signature="n#!!block;n#updateRecord#0" />
-            <element signature="n#!!block;n#saveDescription#0" />
-            <element signature="n#!!block;n#save#0" />
-            <element signature="n#!!block;n#updateTour#0" />
-            <element signature="n#!!block;n#updateDescription#0" />
-            <element signature="e#8768#8790#0" />
-            <element signature="e#9395#9673#0" />
-            <element signature="n#!!block;n#addDay#0" />
-            <element signature="n#!!block;n#deleteDay#0" />
-            <element signature="n#!!block;n#addDayInUpdate#0" />
-            <element signature="n#!!block;n#deleteDayInUpdate#0" />
-            <element signature="n#!!block;n#setRating#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1348">
-          <caret line="76" column="30" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1331,59 +1186,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/navbar.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="156" column="65" selection-start-line="156" selection-start-column="65" selection-end-line="156" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programsTablePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="213" column="20" selection-start-line="213" selection-start-column="20" selection-end-line="213" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123">
-          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1394,10 +1200,165 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="38" column="54" lean-forward="true" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userReservationPage.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/ProgramDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="-4343">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accountsTablePage.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_en.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2193">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithFoods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="102" column="17" lean-forward="true" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!block;n#deleteRecord#0" />
+            <element signature="n#!!block;n#convertDate#0" />
+            <element signature="n#!!block;n#convertDateForUpdateField#0" />
+            <element signature="n#!!block;n#deleteForm#0" />
+            <element signature="n#!!block;n#loadTours#0" />
+            <element signature="n#!!block;n#AddNew#0" />
+            <element signature="n#!!block;n#saveTour#0" />
+            <element signature="n#!!block;n#addDay#0" />
+            <element signature="n#!!block;n#addDayInUpdate#0" />
+            <element signature="n#!!block;n#deleteDayInUpdate#0" />
+            <element signature="n#!!block;n#setRating#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="126" column="52" selection-start-line="126" selection-start-column="52" selection-end-line="126" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/leadingProgramPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/questProgramPage.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProgramPage.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programsTablePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="177" column="72" selection-start-line="177" selection-start-column="72" selection-end-line="177" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-334">
+          <caret line="139" column="101" selection-start-line="139" selection-start-column="101" selection-end-line="139" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithPrograms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="76" column="10" lean-forward="true" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+          <folding>
+            <element signature="n#!!block;n#convertDateForUpdateField#0" />
+            <element signature="n#!!block;n#deleteForm#0" />
+            <element signature="n#!!block;n#save#0" />
+            <element signature="n#!!block;n#updateProgram#0" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -123,12 +123,12 @@ public class ProgramController {
     public ModelAndView showTypedPrograms(@PathVariable String type) {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        if ("bus".equals(type)) {
-            modelAndView.setViewName("busTourPage");
-        } else if ("air".equals(type)) {
-            modelAndView.setViewName("airTourPage");
-        } else if ("cruise".equals(type)) {
-            modelAndView.setViewName("cruiseTourPage");
+        if ("leading".equals(type)) {
+            modelAndView.setViewName("leadingProgramPage");
+        } else if ("quest".equals(type)) {
+            modelAndView.setViewName("questProgramPage");
+        } else if ("show".equals(type)) {
+            modelAndView.setViewName("showProgramPage");
         }
 
         return modelAndView;
