@@ -12,5 +12,8 @@ public class ReservationDto extends BaseDto {
     private String nameFood;
     private String username;
     private String phone;
+    private String nameLocation;
+    private Long locationId;
+   // private Long programId;
 
 }

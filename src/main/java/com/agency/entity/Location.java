@@ -60,4 +60,8 @@ public class Location extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "location_company_id")
     private Account company;
+
+  /*  @JsonIgnore
+    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "location",fetch = FetchType.LAZY)
+    private Set<Reservation> reservations = new HashSet<>();*/
 }

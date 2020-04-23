@@ -99,7 +99,7 @@ function reserveForm() {
 }
 
 function reserve(id) {
-//alert(id);
+alert("id"+id);
     var username = $("#name").val();
     var name = $("#foodName").text();
     var phone = $("#phone").val();

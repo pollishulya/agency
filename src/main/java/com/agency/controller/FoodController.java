@@ -123,14 +123,15 @@ public class FoodController {
     public ModelAndView showTypedFoods(@PathVariable String type) {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        if ("bus".equals(type)) {
-            modelAndView.setViewName("busTourPage");
-        } else if ("air".equals(type)) {
-            modelAndView.setViewName("airTourPage");
-        } else if ("cruise".equals(type)) {
-            modelAndView.setViewName("cruiseTourPage");
+        if ("europe".equals(type)) {
+            modelAndView.setViewName("europeCuisinePage");
+        } else if ("slavic".equals(type)) {
+            modelAndView.setViewName("slavicCuisinePage");
+        } else if ("east".equals(type)) {
+            modelAndView.setViewName("eastCuisinePage");
+        } else if ("asia".equals(type)) {
+            modelAndView.setViewName("asiaCuisinePage");
         }
-
         return modelAndView;
     }
 

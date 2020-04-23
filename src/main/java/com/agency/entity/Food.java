@@ -25,14 +25,14 @@ public class Food extends BaseEntity {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "view")
-    private String view;
+  //  @Column(name = "view")
+    //private String view;
 
-    @Column(name = "exit_date")
-    private Date exitDate;
+  //  @Column(name = "exit_date")
+    //private Date exitDate;
 
-    @Column(name = "number_days")
-    private String numberDays;
+ //   @Column(name = "number_days")
+   // private String numberDays;
 
     @Column(name = "cuisine")
     private String cuisine;
@@ -40,8 +40,8 @@ public class Food extends BaseEntity {
     @Column(name = "price")
     private double price;
 
-    @Column(name = "cost")
-    private String cost;
+  //  @Column(name = "cost")
+    //private String cost;
 
     @Column(name = "type")
     private String type;

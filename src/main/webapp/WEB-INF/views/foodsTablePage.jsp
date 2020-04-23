@@ -55,9 +55,10 @@
                 </div>
                 <div class="form-label-group" id="type">
                     <select id="types" class="mdb-select md-form">
-                        <option value="BUS_TOUR"><spring:message code="busTour.label"/></option>
-                        <option value="AIR_TOUR"><spring:message code="airTour.label"/></option>
-                        <option value="SEE_TOUR"><spring:message code="seeFood.label"/></option>
+                        <option value="ASIA"><spring:message code="asian.label"/></option>
+                        <option value="SLAVIC"><spring:message code="slavic.label"/></option>
+                        <option value="EAST"><spring:message code="east.label"/></option>
+                        <option value="EUROPE"><spring:message code="europe.label"/></option>
                     </select>
                 </div>
                 <label><spring:message code="description.label"/></label>
@@ -146,9 +147,10 @@
 
                         <div class="form-label-group" id="typeUpdate">
                             <select id="typesUpdate" class="mdb-select md-form">
-                                <option value="BUS_TOUR"><spring:message code="busTour.label"/></option>
-                                <option value="AIR_TOUR"><spring:message code="airTour.label"/></option>
-                                <option value="SEE_TOUR"><spring:message code="seeFood.label"/></option>
+                                <option value="ASIA"><spring:message code="asian.label"/></option>
+                                <option value="SLAVIC"><spring:message code="slavic.label"/></option>
+                                <option value="EAST"><spring:message code="east.label"/></option>
+                                <option value="EUROPE"><spring:message code="europe.label"/></option>
                             </select>
                         </div>
                         <label><spring:message code="description.label"/></label>

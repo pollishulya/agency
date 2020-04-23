@@ -166,9 +166,11 @@
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                     <script>
 
-                        $('#buttons').append('    <a href="/showFoods/cruise"  class="btn btn-outline-primary"><spring:message code="seeFood.label"/></a>\n' +
-                            '                <a href="/showFoods/bus" class="btn btn-outline-primary "><spring:message code="busTour.label"/></a>\n' +
-                            '                <a href="/showFoods/air" class="btn btn-outline-primary "><spring:message code="airTour.label"/></a>\n'+
+                        $('#buttons').append(
+                            '                <a href="/showFoods/asia" class="btn btn-outline-primary "><spring:message code="asian.label"/></a>\n'+
+                            '                <a href="/showFoods/europe" class="btn btn-outline-primary "><spring:message code="europe.label"/></a>\n'+
+                            '                <a href="/showFoods/slavic" class="btn btn-outline-primary "><spring:message code="slavic.label"/></a>\n'+
+                            '                <a href="/showFoods/east" class="btn btn-outline-primary "><spring:message code="east.label"/></a>\n'+
                             '                <a href="/" class="btn btn-outline-primary "><spring:message code="allFood.label"/></a>\n');
 
                         $('#user').append(' <div class="position-for-langBtn"><button id="locales" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\\n\' +\n' +
@@ -192,9 +194,11 @@
                 <sec:authorize access="hasRole('ROLE_USER')">
                     <script>
 
-                        $('#buttons').append('    <a href="/showFoods/cruise"  class="btn btn-outline-primary"><spring:message code="seeFood.label"/></a>\n' +
-                            '                <a href="/showFoods/bus" class="btn btn-outline-primary"><spring:message code="busTour.label"/></a>\n' +
-                            '                <a href="/showFoods/air" class="btn btn-outline-primary"><spring:message code="airTour.label"/></a>\n'+
+                        $('#buttons').append(
+                            '                <a href="/showFoods/asia" class="btn btn-outline-primary "><spring:message code="asian.label"/></a>\n'+
+                            '                <a href="/showFoods/europe" class="btn btn-outline-primary "><spring:message code="europe.label"/></a>\n'+
+                            '                <a href="/showFoods/slavic" class="btn btn-outline-primary "><spring:message code="slavic.label"/></a>\n'+
+                            '                <a href="/showFoods/east" class="btn btn-outline-primary "><spring:message code="east.label"/></a>\n'+
                             '                <a href="/" class="btn btn-outline-primary "><spring:message code="allFood.label"/></a>\n');
                         $('#user').append('  <div class="position-for-langBtn"><button id="locales" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\\n\' +\n' +
                             '       data-toggle="dropdown"><spring:message code="lang.label"/><span class="caret"></span></button>\n' +
@@ -216,9 +220,10 @@
                 <sec:authorize access="hasRole('ROLE_COMPANY')">
 
                     <script>
-                        $('#buttons').append('    <a href="/showFoods/cruise"  class="btn btn-outline-primary"><spring:message code="seeFood.label"/></a>\n' +
-                            '                <a href="/showFoods/bus" class="btn btn-outline-primary "><spring:message code="busTour.label"/></a>\n' +
-                            '                <a href="/showFoods/air" class="btn btn-outline-primary "><spring:message code="airTour.label"/></a>\n'+
+                        $('#buttons').append( '                <a href="/showFoods/asia" class="btn btn-outline-primary "><spring:message code="asian.label"/></a>\n'+
+                            '                <a href="/showFoods/europe" class="btn btn-outline-primary "><spring:message code="europe.label"/></a>\n'+
+                            '                <a href="/showFoods/slavic" class="btn btn-outline-primary "><spring:message code="slavic.label"/></a>\n'+
+                            '                <a href="/showFoods/east" class="btn btn-outline-primary "><spring:message code="east.label"/></a>\n'+
                             '                <a href="/" class="btn btn-outline-primary "><spring:message code="allFood.label"/></a>\n');
                         $('#user').append('<div class="position-for-langBtn"><button id="locales" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\\n\' +\n' +
                             '       data-toggle="dropdown"><spring:message code="lang.label"/><span class="caret"></span></button>\n' +
@@ -233,6 +238,7 @@
                             '                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
                             '                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/showFoods"><spring:message code="foods"/></a></li>\n' +
                             '                     <li role="presentation"><a role="menuitem" tabindex="-1" href="/showLocations"><spring:message code="locations"/></a></li>\n' +
+                            '                     <li role="presentation"><a role="menuitem" tabindex="-1" href="/showPrograms"><spring:message code="programs"/></a></li>\n' +
                             '  <li role="presentation"><a role="menuitem" tabindex="-1" onclick="updateAccountSettings()"><spring:message code="settings.label"/></a></li>\n' +
                             '</ul>\n' +
                             '        <a href="<c:url value="/logout" />" class="btn btn-outline-primary position-button"><spring:message code="logout"/></a>');

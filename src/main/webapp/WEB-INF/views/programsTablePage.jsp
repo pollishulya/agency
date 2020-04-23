@@ -10,13 +10,13 @@
     <script src=" //cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 
-    <script src="/resources/jquery/actionsWithTours.js"></script>
+    <script src="/resources/jquery/actionsWithPrograms.js"></script>
     <link rel="stylesheet" href="/resources/css/deleteForm.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/table-style.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/forTourTablePage.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/formTourAdd-style.css" type="text/css">
 
-    <title>Locations</title>
+    <title>Tours</title>
 </head>
 <jsp:include page="navbar.jsp"/>
 <body>
@@ -34,9 +34,9 @@
                     <label for="name"><spring:message code="tourName.label"/></label>
                 </div>
                 <div class="form-label-group">
-                    <input type="text" id="view" name="country" class="form-control" placeholder="Country" required
+                    <input type="text" id="duration" name="country" class="form-control" placeholder="Country" required
                            autofocus>
-                    <label for="view"><spring:message code="country.label"/></label>
+                    <label for="duration"><spring:message code="country.label"/></label>
                 </div>
                 <label for="exitDate"><spring:message code="exitDate.label"/></label>
                 <div class="form-label-group">
@@ -73,8 +73,8 @@
                 <div id="emptyFieldMistake" hidden><p class='alert alert-danger' role='alert'><spring:message code="emptyField.error"/></p></div>
                 <div id="emptyDescriptionMistake" hidden><p class='alert alert-danger' role='alert'><spring:message code="emptyDescription.error"/></p></div>
                 <div id="incorrectDataMistake" hidden><p class='alert alert-danger' role='alert'><spring:message code="incorrectDate.error"/></p></div>
-                <a href="/showLocations" class="btn btn-primary btn-block" id="saveTourBtn"
-                   type="button" onclick="saveTour();return false;"><spring:message code="save.button"/>
+                <a href="/showPrograms" class="btn btn-primary btn-block" id="saveTourBtn"
+                   type="button" onclick="saveProgram();return false;"><spring:message code="save.button"/>
                 </a>
             </form>
         </div>
@@ -88,7 +88,7 @@
             </div>
             <div class="modal-body">
                 <form id="deleteForm">
-                    <input type="hidden" id="idDeleteTour">
+                    <input type="hidden" id="idDeleteProgram">
                     <label class="questionForm"><spring:message code="confirmDelete.label"/></label>
                     <div id="deleteTourMistake" hidden><p class='alert alert-danger' role='alert'><spring:message code="deleteTour.error"/></p></div>
                     <hr>
@@ -164,8 +164,8 @@
                         <div id="emptyFieldUpdateMistake" hidden><p class='alert alert-danger' role='alert'><spring:message code="emptyField.error"/></p></div>
                         <div id="emptyDescriptionUpdateMistake" hidden><p class='alert alert-danger' role='alert'><spring:message code="emptyDescription.error"/></p></div>
                         <div class="form-group">
-                            <a href="/showLocations" class="btn btn-primary btn-block" id="updateRecord"
-                               onclick="updateTour();return false;"><spring:message code="save.button"/></a>
+                            <a href="/showPrograms" class="btn btn-primary btn-block" id="updateRecord"
+                               onclick="updateProgram();return false;"><spring:message code="save.button"/></a>
                         </div>
                     </fieldset>
                 </form>
@@ -184,7 +184,7 @@
         <option value="20">20</option>
     </select>
     <input type="text" class="search-input pull-right" placeholder="Search" id="search"
-           onkeyup="$('#tableBody').empty();loadTours(1,this.value, $('#numberRows').val())">
+           onkeyup="$('#tableBody').empty();loadPrograms(1,this.value, $('#numberRows').val())">
 
     <div id="noTourMessage">
         <div class='panel panel-warning'>
@@ -211,18 +211,18 @@
         </tbody>
     </table>
     <script type="text/javascript">
-        loadTours(1, $('#search').val(), 5);
+        loadPrograms(1, $('#search').val(), 5);
     </script>
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-end">
             <li class="page-item">
                 <button type="submit" class="btn btn-primary" id="previousBtn"
-                        onclick="loadPage=loadPage-1;loadTours(1,$('#search').val(),$('#numberRows').val());">
+                        onclick="loadPage=loadPage-1;loadPrograms(1,$('#search').val(),$('#numberRows').val());">
                     <spring:message code="previous"/></button>
             </li>
             <li class="page-item">
                 <button type="submit" class="btn btn-primary" id="nextBtn"
-                        onclick="loadPage=loadPage+1;loadTours(1,$('#search').val(),$('#numberRows').val());">
+                        onclick="loadPage=loadPage+1;loadPrograms(1,$('#search').val(),$('#numberRows').val());">
                     <spring:message code="next"/></button>
             </li>
         </ul>

@@ -7,6 +7,7 @@ com\agency\service\AccountService.class
 com\agency\controller\FoodDescriptionController.class
 com\agency\controller\ReservationController.class
 com\agency\dto\FoodDescriptionDto.class
+com\agency\controller\ProgramController.class
 com\agency\service\LocationService.class
 com\agency\mapper\DescriptionMapper.class
 com\agency\controller\CommentController.class
@@ -20,7 +21,6 @@ com\agency\mapper\CommentMapper.class
 com\agency\service\ClientService.class
 com\agency\configuration\DatabaseConfig.class
 com\agency\repository\ProgramRepository.class
-com\agency\service\OrderService.class
 com\agency\entity\Reservation.class
 com\agency\entity\Comment.class
 com\agency\entity\Role.class
