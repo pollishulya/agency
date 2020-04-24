@@ -18,7 +18,7 @@
 
     <title>Programs</title>
 </head>
-<jsp:include page="navbar.jsp"/>
+<jsp:include page="blocks/navbar.jsp"/>
 <body>
 <div class="modal fade" id="addTourModal">
     <div class="modal-dialog formContent">
@@ -111,15 +111,15 @@
                         </div>
 
                         <div class="form-label-group">
-                            <input type="text" id="countryUpdate" name="countryUpdate" class="form-control"
+                            <input type="text" id="durationUpdate" name="durationUpdate" class="form-control"
                                    placeholder="Country" required autofocus>
-                            <label for="countryUpdate"><spring:message code="duration.label"/></label>
+                            <label for="durationUpdate"><spring:message code="duration.label"/></label>
                         </div>
 
                         <div class="form-label-group">
-                            <input type="text" id="costUpdate" name="costUpdate" class="form-control" placeholder="Cost"
+                            <input type="text" id="priceUpdate" name="priceUpdate" class="form-control" placeholder="Cost"
                                    required autofocus>
-                            <label for="costUpdate"><spring:message code="cost.label"/></label>
+                            <label for="priceUpdate"><spring:message code="cost.label"/></label>
                         </div>
 
                         <div class="form-label-group" id="typeUpdate">
@@ -206,6 +206,6 @@
 </div>
 
 </body>
-<jsp:include page="footer.jsp"/>
+<jsp:include page="blocks/footer.jsp"/>
 </html>
 

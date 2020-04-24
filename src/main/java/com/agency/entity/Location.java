@@ -31,8 +31,8 @@ public class Location extends BaseEntity {
     @Column(name = "capacity")
     private int capacity;
 
-    @Column(name = "date")
-    private String date;
+  //  @Column(name = "date")
+    //private String date;
 
     @Column(name = "price")
     private String price;
@@ -43,8 +43,8 @@ public class Location extends BaseEntity {
     @Column(name = "rating")
     private int rating;
 
-    @Column(name = "exit_date")
-    private Date exitDate;
+    //@Column(name = "exit_date")
+    //private Date exitDate;
 
     @Column(name = "image_url")
     private String image;

@@ -18,7 +18,7 @@
 
     <title>Foods</title>
 </head>
-<jsp:include page="navbar.jsp"/>
+<jsp:include page="blocks/navbar.jsp"/>
 <body>
 <div class="modal fade" id="addTourModal">
     <div class="modal-dialog formContent">
@@ -217,6 +217,6 @@
 </div>
 
 </body>
-<jsp:include page="footer.jsp"/>
+<jsp:include page="blocks/footer.jsp"/>
 </html>
 

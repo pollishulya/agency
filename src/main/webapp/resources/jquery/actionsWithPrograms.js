@@ -15,31 +15,6 @@ function deleteRecord(id) {
     });
 };
 
-function convertDate(exitDate) {
-    var date = new Date(exitDate);
-    var dd = date.getDate();
-    var mm = date.getMonth() + 1;
-    var yyyy = date.getFullYear();
-    if (dd < 10) {
-        dd = '0' + dd;
-    }
-    if (mm < 10) {
-        mm = '0' + mm;
-    }
-    var result = dd + '/' + mm + '/' + yyyy;
-
-    return result;
-}
-
-function convertDateForUpdateField(exitDate) {
-
-    var date = new Date(exitDate);
-    var day = ("0" + date.getDate()).slice(-2);
-    var month = ("0" + (date.getMonth() + 1)).slice(-2);
-    var today = date.getFullYear() + "-" + (month) + "-" + (day);
-
-    return today;
-}
 
 function deleteForm(id) {
     $("#deleteForm")[0].reset();
@@ -104,10 +79,8 @@ function updateRecord(id) {
         success: function (res) {
             $("#idUpdate").val(res.id);
             $("#nameUpdate").val(res.name);
-            $("#countryUpdate").val(res.address);
-            $("#exitDateUpdate").val(convertDateForUpdateField(res.exitDate));
-            $("#numberDaysUpdate").val(res.numberDays);
-            $("#costUpdate").val(res.price);
+            $("#durationUpdate").val(res.duration);
+            $("#priceUpdate").val(res.price);
             $("#typesUpdate").val(res.type);
 
         }
@@ -120,8 +93,8 @@ function updateRecord(id) {
             for (var i = 0; i < res.length; i++) {
                 var html = "<input type='hidden' id='idDescription_" + i + "'><textarea class='description' id='descriptionUpdate_" + i + "'></textarea>";
                 $('#descriptionsUpdate').append(html);
-                $('#idDescription_' + i).val(res[i].id);
-                $('#descriptionUpdate_' + i).val(res[i].description);
+                $('#idDescription_' ).val(res[i].id);
+                $('#descriptionUpdate_').val(res[i].description);
             }
         }
     });

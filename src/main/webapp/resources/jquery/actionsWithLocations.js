@@ -67,8 +67,9 @@ function loadLocations(id, param, numberRows) {
             }
             var html = "";
             for (var i = 0; i < res.length; i++) {
-                html += "<tr id='row" + res[i].id + "'><td>" + res[i].name + "</td><td>" + res[i].address + "</td><td>" +
-                    convertDate(res[i].exitDate) + "</td>" + "<td>" + res[i].numberDays + "</td>" + "<td>" + res[i].price + "</td>" + "<td>" + setRating(res[i].rating) + "</td>" + "<td>" + res[i].type + "</td>";
+                html += "<tr id='row" + res[i].id + "'><td>" + res[i].name + "</td><td>" + res[i].address + "</td><td>"
+                    + res[i].capacity + "</td>" + "<td>" + res[i].price + "</td><td>" + setRating(res[i].rating) + "</td>"
+                    + "<td>" + res[i].type + "</td>";
                 html += "<td>" + "<button class='btn btn-danger' onclick='deleteForm(" + res[i].id +
                     ")'><span class='glyphicon glyphicon-trash'></span></button>" + "</td>";
                 html += "<td>" + "<button class='btn btn-primary' onclick='updateRecord(" + res[i].id + ");return false;'>Update</button>" + "</td></tr>";
@@ -131,30 +132,28 @@ function updateRecord(id) {
 function saveLocation() {
 
     var name = $('#name').val();
-    var country = $('#address').val();
-    var exitDate = $('#exitDate').val();
-    var numberOfDays = $('#numberDays').val();
-    var cost = $('#cost').val();
+    var address = $('#address').val();
+    var capacity = $('#capacity').val();
+    var price = $('#price').val();
     var type = $('#types').val();
     var descriptions = [];
-    for (var i = 0; i <= numberDays; i++) {
+   // for (var i = 0; i <= numberDays; i++) {
         var descriptionText = $('#description_' + i).val();
         var description = {
-            "dayNumber": i + 1,
+           // "dayNumber": i + 1,
             "description": descriptionText
         };
         descriptions.push(description);
-    }
+   // }
     var locationDto = ({
         "name": name,
-        "address": country,
-        "exitDate": exitDate,
-       // "numberDays": numberOfDays,
-        "price": cost,
+        "address": address,
+        "capacity": capacity,
+        "price": price,
         "type": type,
         "descriptions": descriptions
     });
-    alert(locationDto.name+locationDto.address+locationDto.exitDate+locationDto.price+locationDto.type+locationDto.descriptions);
+   // alert(locationDto.name+locationDto.address+locationDto.exitDate+locationDto.price+locationDto.type+locationDto.descriptions);
 
     $.ajax({
         type: "Post",
@@ -162,13 +161,11 @@ function saveLocation() {
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(locationDto),
         success: function (res) {
-            alert ("success"+res);
             location.reload();
             $("#addTourModal").modal("hide");
 
         },
         error: function (res) {
-            alert ("error"+res.responseJSON);
             if (res.status === 500) {
                 $('#uniqueTourFieldMistake').show();
             } else if (res.responseJSON === "empty field") {
@@ -205,57 +202,6 @@ function saveDescription() {
     })
 };
 
-function saveTour() {
-    alert("food");
-    var name = $('#name').val();
-     alert("food"+name);
-    var view = $('#view').val();
-    //alert(view);
-    // var exitDate = $('#exitDate').val();
-    var numberOfDays = $('#numberDays').val();
-    var cost = $('#cost').val();
-    var type = $('#types').val();
-    var descriptions = [];
-    for (var i = 0; i <= numberDays; i++) {
-        var descriptionText = $('#description_' + i).val();
-        var description = {
-            // "dayNumber": i + 1,
-            "description": descriptionText
-        };
-        descriptions.push(description);
-    }
-    // alert(description);
-    var foodDto = ({
-        "name": name,
-        "view": view,
-        //"exitDate": exitDate,
-        //"numberDays": numberOfDays,
-        "cost": cost,
-        "type": type,
-        "foodDescriptions": descriptions
-    });
-    alert(foodDto.name)
-    $.ajax({
-        type: "Post",
-        url: "/food/save",
-        contentType: "application/json;charset=utf-8",
-        data: JSON.stringify(foodDto),
-        success: function (res) {
-            location.reload();
-            $("#addTourModal").modal("hide");
-        },
-        error: function (res) {
-            if (res.status === 500) {
-                $('#uniqueTourFieldMistake').show();
-            } else if (res.responseJSON === "empty field") {
-                $('#emptyFieldMistake').show();
-            } else if (res.responseJSON === "data error") {
-                $('#incorrectDataMistake').show();
-            }
-        }
-    })
-};
-
 function save() {
 
     $('#uniqueTourFieldMistake').hide();
@@ -284,27 +230,25 @@ function updateLocation () {
     $('#emptyFieldUpdateMistake').hide();
 
     var name = $('#nameUpdate').val();
-    var country = $('#countryUpdate').val();
-    var exitDate = $('#exitDateUpdate').val();
+    var address = $('#addressUpdate').val();
+    var capacity= $('#capacityUpdate').val();
     var id = $('#idUpdate').val();
-    var numberDays = $('#numberDaysUpdate').val();
-    var cost = $('#costUpdate').val();
+    var price = $('#priceUpdate').val();
     var type = $('#typesUpdate').val();
 
-    var tour = ({
+    var location = ({
         "id": id,
         "name": name,
-        "country": country,
-        "exitDate": exitDate,
-        "numberDays": numberDays,
-        "cost": cost,
+        "address": address,
+        "capacity": capacity,
+        "price": price,
         "type": type
     });
     $.ajax({
         type: "Post",
         url: "/location/update",
         contentType: "application/json;charset=utf-8",
-        data: JSON.stringify(tour),
+        data: JSON.stringify(location),
         success: function (res) {
             updateDescription();
             $("#updateTourModal").modal("hide");
