@@ -105,8 +105,6 @@ function reserve(id) {
     var phone = $("#phone").val();
     var numberPerson = $("#numberPersons").val();
     var date = $('#date').val();
-    
-    alert("dfghjkl;lkjhgf");
     var reservation = ({
         "numberPerson": numberPerson,
         "foodId": id,
@@ -116,7 +114,7 @@ function reserve(id) {
         "nameFood": name
     });
     alert(reservation.date);
-    //alert (JSON.stringify(reservation));
+    alert (JSON.stringify(reservation));
     $.ajax({
         type: 'POST',
         contentType: "application/json;charset=utf-8",

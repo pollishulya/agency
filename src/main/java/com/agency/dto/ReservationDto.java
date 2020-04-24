@@ -2,6 +2,8 @@ package com.agency.dto;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class ReservationDto extends BaseDto {
 
@@ -14,6 +16,7 @@ public class ReservationDto extends BaseDto {
     private String phone;
     private String nameLocation;
     private Long locationId;
+    private Date date;
    // private Long programId;
 
 }

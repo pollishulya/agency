@@ -49,6 +49,10 @@
                     <div class="form-label-group">
                         <input type="number" id="numberPersons" class="form-control" placeholder="Number persons" min=1 max=6 required autofocus>
                     </div>
+                    <label for="date"><spring:message code="exitDate.label"/></label>
+                    <div class="form-label-group">
+                        <input type="date" id="date" name="date" class="form-control" required autofocus>
+                    </div>
                     <div id="mistake"></div>
                  <script>alert(food.id)</script>
                     <button class="btn btn-lg btn-primary btn-block" id="reserveBtn"
@@ -79,7 +83,7 @@
                         <div><spring:message code="rating.error"/></div>
                     </h3>
                 </c:if>
-                <div><spring:message code="country"/><b> ${food.cuisine}</b></div>
+                <div><spring:message code="cuisine.label"/><b> ${food.cuisine}</b></div>
 <%--                <div><spring:message code="dateBegin"/><b> ${food.exitDate}</b></div>--%>
 <%--                <div><spring:message code="duration"/><b>${food.numberDays}</b></div>--%>
                 <div><spring:message code="cost"/><b>${food.price}$</b></div>

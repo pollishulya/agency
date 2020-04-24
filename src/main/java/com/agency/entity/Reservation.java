@@ -18,8 +18,8 @@ public class Reservation extends BaseEntity {
     @Column(name = "username")
     private String username;
 
- //   @Column(name = "date")
-   // private Date date;
+    @Column(name = "date")
+    private Date date;
 
   //  @Column(name = "nameFood")
     //private String nameFood;

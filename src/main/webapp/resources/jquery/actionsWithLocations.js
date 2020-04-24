@@ -46,6 +46,8 @@ function deleteForm(id) {
     $("#deleteForm")[0].reset();
     $("#deleteModal").modal();
     $('#idDeleteTour').val(id);
+    alert("del"+id);
+
 }
 
 function loadLocations(id, param, numberRows) {
