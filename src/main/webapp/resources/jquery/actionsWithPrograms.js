@@ -7,7 +7,7 @@ function deleteRecord(id) {
         url: "/program/delete/" + id,
         success: function (res) {
             $('#row' + id).remove();
-            programlocation.reload();
+            location.reload();
         },
         error: function (res) {
             $('#deleteTourMistake').show();

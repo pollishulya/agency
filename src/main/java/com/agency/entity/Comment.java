@@ -22,8 +22,8 @@ public class Comment extends BaseEntity {
     @Column(name = "rating")
     private int rating;
 
-    @Column(name = "date")
-    private String date;
+//    @Column(name = "date")
+  //  private String date;
 
     @Column(name = "time")
     private String time;

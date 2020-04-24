@@ -16,7 +16,7 @@ public class CommentDto extends BaseDto {
     private Long id;
     private String message;
     private int rating;
-    private String date;
+   // private String date;
     private String time;
     private Account account;
     private Food food;
@@ -26,6 +26,8 @@ public class CommentDto extends BaseDto {
 
     private String username;
 
-    private Long foodId;
+    private Long locationId;
+    private Long programId;
+   private Long foodId;
     private Long accountId;
 }

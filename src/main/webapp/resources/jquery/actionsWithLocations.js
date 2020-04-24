@@ -2,6 +2,7 @@ var loadPage = 0;
 var numberDays = 0;
 
 function deleteRecord(id) {
+    alert("удаляем запись "+id);
     $.ajax({
         type: "POST",
         url: "/location/delete/" + id,
@@ -68,7 +69,7 @@ function loadLocations(id, param, numberRows) {
             var html = "";
             for (var i = 0; i < res.length; i++) {
                 html += "<tr id='row" + res[i].id + "'><td>" + res[i].name + "</td><td>" + res[i].address + "</td><td>"
-                    + res[i].capacity + "</td>" + "<td>" + res[i].price + "</td><td>" + setRating(res[i].rating) + "</td>"
+                    + res[i].capacity+ "</td>" + "<td>" + res[i].price + "</td><td>" + setRating(res[i].rating) + "</td>"
                     + "<td>" + res[i].type + "</td>";
                 html += "<td>" + "<button class='btn btn-danger' onclick='deleteForm(" + res[i].id +
                     ")'><span class='glyphicon glyphicon-trash'></span></button>" + "</td>";
@@ -105,10 +106,10 @@ function updateRecord(id) {
         success: function (res) {
             $("#idUpdate").val(res.id);
             $("#nameUpdate").val(res.name);
-            $("#countryUpdate").val(res.address);
-            $("#exitDateUpdate").val(convertDateForUpdateField(res.exitDate));
-            $("#numberDaysUpdate").val(res.numberDays);
-            $("#costUpdate").val(res.price);
+            $("#addressUpdate").val(res.address);
+           // $("#exitDateUpdate").val(convertDateForUpdateField(res.exitDate));
+            $("#capacityUpdate").val(res.capacity);
+            $("#priceUpdate").val(res.price);
             $("#typesUpdate").val(res.type);
 
         }
@@ -319,7 +320,7 @@ $(document).ready(function () {
         var selectedOption = $('#numberRows').val();
         if (selectedOption != '') {
             $('#tableBody').empty();
-            loadTours(1, param, selectedOption);
+            loadLocations(1, param, selectedOption);
         }
     });
 });

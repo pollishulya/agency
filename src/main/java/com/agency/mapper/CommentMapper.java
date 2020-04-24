@@ -7,6 +7,7 @@ import com.agency.repository.AccountRepository;
 import com.agency.repository.CommentRepository;
 
 import com.agency.repository.FoodRepository;
+import com.agency.repository.ProgramRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -21,15 +22,19 @@ public class CommentMapper extends AbstractMapper<Comment, CommentDto> {
     private final CommentRepository commentRepository;
     private final AccountRepository userRepository;
     private final FoodRepository foodRepository;
+    private final ProgramRepository programRepository;
 
     @Autowired
     public CommentMapper(ModelMapper mapper, CommentRepository commentRepository, AccountRepository userRepository,
-                         FoodRepository foodRepository) {
+                         FoodRepository foodRepository,
+                         ProgramRepository programRepository
+                         ) {
         super(Comment.class, CommentDto.class);
         this.mapper = mapper;
         this.commentRepository = commentRepository;
         this.userRepository = userRepository;
         this.foodRepository = foodRepository;
+        this.programRepository=programRepository;
     }
 
     @PostConstruct
@@ -37,9 +42,11 @@ public class CommentMapper extends AbstractMapper<Comment, CommentDto> {
         mapper.createTypeMap(Comment.class, CommentDto.class)
                 .addMappings(m -> m.skip(CommentDto::setUsername)).setPostConverter(toDtoConverter())
                 .addMappings(m -> m.skip(CommentDto::setFoodId)).setPostConverter(toDtoConverter())
+                .addMappings(m -> m.skip(CommentDto::setProgramId)).setPostConverter(toDtoConverter())
                 .addMappings(m -> m.skip(CommentDto::setAccountId)).setPostConverter(toDtoConverter());
         mapper.createTypeMap(CommentDto.class, Comment.class)
                 .addMappings(m -> m.skip(Comment::setFood)).setPostConverter(toEntityConverter())
+                .addMappings(m -> m.skip(Comment::setProgram)).setPostConverter(toEntityConverter())
                 .addMappings(m -> m.skip(Comment::setAccount)).setPostConverter(toEntityConverter());
 
     }
@@ -58,6 +65,10 @@ public class CommentMapper extends AbstractMapper<Comment, CommentDto> {
     private Long getFoodId(Comment source) {
         return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getFood().getId();
     }
+    private Long getProgramId(Comment source) {
+        return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getProgram().getId();
+    }
+
     private Long getAccountId(Comment source) {
         return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getAccount().getId();
     }
@@ -65,6 +76,7 @@ public class CommentMapper extends AbstractMapper<Comment, CommentDto> {
     @Override
     void mapSpecificFields(CommentDto source, Comment destination) {
         destination.setFood(foodRepository.findById(source.getFoodId()).orElse(null));
+       destination.setProgram(programRepository.findById(source.getProgramId()).orElse(null));
         destination.setAccount(userRepository.findById(source.getAccountId()).orElse(null));
     }
 }

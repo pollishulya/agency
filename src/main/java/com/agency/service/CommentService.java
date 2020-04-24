@@ -9,6 +9,7 @@ import com.agency.repository.AccountRepository;
 import com.agency.repository.CommentRepository;
 import com.agency.repository.FoodRepository;
 
+import com.agency.repository.ProgramRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -30,13 +31,17 @@ public class CommentService {
     private final FoodRepository foodRepository;
     private final CommentMapper commentMapper;
     private final AccountRepository accountRepository;
+    private final ProgramRepository programRepository;
 
     @Autowired
-    public CommentService(CommentRepository commentRepository, FoodRepository foodRepository, CommentMapper commentMapper, AccountRepository accountRepository) {
+    public CommentService(CommentRepository commentRepository, FoodRepository foodRepository, CommentMapper commentMapper,
+                          AccountRepository accountRepository,
+                          ProgramRepository programRepository) {
         this.commentRepository = commentRepository;
         this.foodRepository = foodRepository;
         this.commentMapper = commentMapper;
         this.accountRepository = accountRepository;
+        this.programRepository=programRepository;
     }
 
     public CommentDto save(CommentDto commentDto) {

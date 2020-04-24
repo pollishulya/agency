@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name="reservation")
@@ -17,6 +18,8 @@ public class Reservation extends BaseEntity {
     @Column(name = "username")
     private String username;
 
+ //   @Column(name = "date")
+   // private Date date;
 
   //  @Column(name = "nameFood")
     //private String nameFood;
