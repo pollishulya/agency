@@ -38,7 +38,8 @@ public class Program extends BaseEntity {
 
  //   @Column(name = "exit_date")
    // private Date exitDate;
-
+ @Column(name = "description")
+ private String description;
 
     @Column(name = "image_url")
     private String image;
@@ -47,9 +48,9 @@ public class Program extends BaseEntity {
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE},orphanRemoval=true, mappedBy = "program", fetch = FetchType.LAZY)
     private Set<Comment> comments = new HashSet<>();
 
-    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "program",fetch = FetchType.LAZY)
+  /*  @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "program",fetch = FetchType.LAZY)
     //@JsonManagedReference
-    private List<Description> descriptions = new ArrayList<>();
+    private List<Description> descriptions = new ArrayList<>();*/
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "program_company_id")

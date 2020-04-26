@@ -239,6 +239,7 @@
                             '                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/showFoods"><spring:message code="foods"/></a></li>\n' +
                             '                     <li role="presentation"><a role="menuitem" tabindex="-1" href="/showLocations"><spring:message code="locations"/></a></li>\n' +
                             '                     <li role="presentation"><a role="menuitem" tabindex="-1" href="/showPrograms"><spring:message code="programs"/></a></li>\n' +
+                            '                     <li role="presentation"><a role="menuitem" tabindex="-1" href="/companyOrders"><spring:message code="reserve"/></a></li>\n' +
                             '  <li role="presentation"><a role="menuitem" tabindex="-1" onclick="updateAccountSettings()"><spring:message code="settings.label"/></a></li>\n' +
                             '</ul>\n' +
                             '        <a href="<c:url value="/logout" />" class="btn btn-outline-primary position-button"><spring:message code="logout"/></a>');

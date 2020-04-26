@@ -36,7 +36,8 @@ function updateRecord(id) {
         url: url,
         success: function (data) {
             $("#idUpdate").val(data.id);
-            $("#nameUpdate").val(data.name);
+            $("#firstnameUpdate").val(data.firstname);
+            $("#lastnameUpdate").val(data.lastname);
             $("#phoneUpdate").val(data.phone);
             $("#emailUpdate").val(data.email);
             $("#roles").val(data.role);
@@ -56,18 +57,21 @@ function deleteFormHide() {
 function update() {
     $('#uniqueFieldMistake').hide();
     $('#emptyFieldMistake').hide();
-    var name = $('#nameUpdate').val();
+    var firstname = $('#firstnameUpdate').val();
+    var lastname = $('#lastnameUpdate').val();
     var phone = $('#phoneUpdate').val();
     var email = $('#emailUpdate').val();
     var id = $('#idUpdate').val();
     var role = $('#roles').val();
     var accountDto = ({
         "id": id,
-        "name": name,
+        "firstname": firstname,
+        "lastname": lastname,
         "phone": phone,
         "email": email,
         "role": role
     });
+    alert(JSON.stringify(accountDto));
     $.ajax({
         type: "Post",
         contentType: "application/json;charset=utf-8",
@@ -107,7 +111,7 @@ function loadAccounts(param, numberRows) {
             }
             var html = "";
             for (var i = 0; i < data.length; i++) {
-                html += "<tr id='row_" + data[i].id + "'><td>" + data[i].name + "</td><td>" + data[i].phone + "</td><td>" +
+                html += "<tr id='row_" + data[i].id + "'><td>" + data[i].firstname + "</td><td>" + data[i].lastname + "</td><td>" + data[i].phone + "</td><td>" +
                     data[i].email + "</td><td>" + data[i].role + "</td>";
                 html += "<td>" + "<button class='btn btn-danger' onclick='deleteForm(" + data[i].id +
                     ")'><span class='glyphicon glyphicon-trash'></span></button>" + "</td>";

@@ -51,6 +51,19 @@ public class ReservationController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @PostMapping(value = "/location/reservation")
+    @Transactional
+    public ResponseEntity reserveLocation(@RequestBody ReservationDto reservationDto) {
+
+        Long id = getCurrentUserId();
+        reservationDto.setAccountId(id);
+        Reservation reservation = reservationMapper.toEntity(reservationDto);
+        log.info(reservation.getUsername());
+        reservationRepository.save(reservation);
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
     @GetMapping(value = "/reservation/load", produces = "application/json")
     @ResponseBody
     @Transactional
@@ -72,6 +85,14 @@ public class ReservationController {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
         modelAndView.setViewName("userReservationPage");
+
+        return modelAndView;
+    }
+    @GetMapping(value = "/companyOrders")
+    public ModelAndView showCompanyOrders() {
+
+        ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
+        modelAndView.setViewName("companyReservationPage");
 
         return modelAndView;
     }

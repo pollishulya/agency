@@ -59,7 +59,7 @@
                 </div>
                 <label><spring:message code="description.label"/></label>
                 <div class="form-label-group" id="descriptions">
-                    <textarea class="description" id="description_0"></textarea>
+                    <textarea class="description" id="description"></textarea>
                 </div>
                 <div class="form-label-group pull-right">
                     <button type="button" class="btn btn-primary btn-xs" onclick="addDay();">+</button>

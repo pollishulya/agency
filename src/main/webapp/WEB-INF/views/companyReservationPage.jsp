@@ -27,10 +27,8 @@
                 <th scope="col"><spring:message code="username.label"/></th>
                 <th scope="col"><spring:message code="phone.label"/></th>
                 <th scope="col"><spring:message code="numberPerson.label"/></th>
-                <th scope="col"><spring:message code="date.label"/></th>
                 <th scope="col"><spring:message code="tour.label"/></th>
                 <th scope="col"><spring:message code="status.label"/></th>
-                <th scope="col"><spring:message code="delete.label"/></th>
             </tr>
             </thead>
             <tbody id='tableBody'>

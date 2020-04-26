@@ -16,10 +16,12 @@ public class DescriptionMapper extends AbstractMapper<Description, DescriptionDt
 
     private final ModelMapper mapper;
     private final FoodRepository foodRepository;
-    private final LocationRepository locationRepository;
+   private final LocationRepository locationRepository;
 
     @Autowired
-    public DescriptionMapper(ModelMapper mapper, FoodRepository foodRepository, LocationRepository locationRepository) {
+    public DescriptionMapper(ModelMapper mapper, FoodRepository foodRepository
+            , LocationRepository locationRepository
+    ) {
 
         super(Description.class, DescriptionDto.class);
         this.mapper = mapper;
@@ -31,7 +33,7 @@ public class DescriptionMapper extends AbstractMapper<Description, DescriptionDt
     public void setupMapper() {
         mapper.createTypeMap(Description.class, DescriptionDto.class)
                 .addMappings(m -> m.skip(DescriptionDto::setFoodId)).setPostConverter(toDtoConverter());
-//                .addMappings(m -> m.skip(TourDescriptionDto::setTourName)).setPostConverter(toDtoConverter());
+                //.addMappings(m -> m.skip(TourDescriptionDto::setTourName)).setPostConverter(toDtoConverter());
         mapper.createTypeMap(DescriptionDto.class, Description.class)
                 .addMappings(m -> m.skip(Description::setFood)).setPostConverter(toEntityConverter());
 
@@ -40,7 +42,7 @@ public class DescriptionMapper extends AbstractMapper<Description, DescriptionDt
     @Override
     public void mapSpecificFields(Description source, DescriptionDto destination) {
         destination.setFoodId(getFoodId(source));
-        destination.setLocationId(getLocationId(source));
+       // destination.setLocationId(getLocationId(source));
 //        destination.setTourName(getTourName(source));
     }
 
@@ -62,6 +64,6 @@ public class DescriptionMapper extends AbstractMapper<Description, DescriptionDt
     @Override
     void mapSpecificFields(DescriptionDto source, Description destination) {
         destination.setFood(foodRepository.findById(source.getFoodId()).orElse(null));
-        destination.setLocation(locationRepository.findById(source.getLocationId()).orElse(null));
+       destination.setLocation(locationRepository.findById(source.getLocationId()).orElse(null));
     }
 }

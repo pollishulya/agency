@@ -34,9 +34,9 @@ public class Reservation extends BaseEntity {
     @JoinColumn(name = "food_id")
     private Food food;
 
-  //  @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
-    //@JoinColumn(name = "location_id")
-    //private Location location;
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
+  @JoinColumn(name = "location_id")
+  private Location location;
 
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
     @JoinColumn(name = "account_id")

@@ -20,7 +20,8 @@ public class ProgramDto extends BaseDto {
   //  private Date exitDate;
     private String image;
     private Set<Comment> comment = new HashSet<>();;
-    private List<DescriptionDto> description = new ArrayList<>();
+  //private List<DescptionDto> descriptios= new ArrayList<>();
+  private String description;
     private Long companyId;
     private Set<ReservationDto> reservations = new HashSet<>();
 }

@@ -105,8 +105,7 @@ function reserve(id) {
     var phone = $("#phone").val();
     var numberPerson = $("#numberPersons").val();
     var date = $('#date').val();
-    
-    alert("dfghjkl;lkjhgf");
+
     var reservation = ({
         "numberPerson": numberPerson,
         "foodId": id,
@@ -122,6 +121,37 @@ function reserve(id) {
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(reservation),
         url: '/food/reservation',
+        success: function (res) {
+            $("#ReserveModal").modal("hide");
+        },
+        error: function (res) {
+        }
+    });
+};
+
+function reserveLocation(id) {
+
+    var username = $("#name").val();
+    var name = $("#foodName").text();
+    var phone = $("#phone").val();
+    var numberPerson = $("#numberPersons").val();
+    var date = $('#date').val();
+
+    var reservation = ({
+        "numberPerson": numberPerson,
+        "locationId": id,
+        "username": username,
+        "phone": phone,
+        "date": date,
+       // "nameFood": name
+    });
+   // alert(reservation.);
+    alert (JSON.stringify(reservation));
+    $.ajax({
+        type: 'POST',
+        contentType: "application/json;charset=utf-8",
+        data: JSON.stringify(reservation),
+        url: '/location/reservation',
         success: function (res) {
             $("#ReserveModal").modal("hide");
         },

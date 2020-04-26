@@ -19,9 +19,10 @@ public class LocationDto extends BaseDto {
     private String price;
     private int rating;
   //  private Date exitDate;
+    private String description;
     private String image;
     private Set<Comment> comment = new HashSet<>();;
-    private List<DescriptionDto> description = new ArrayList<>();
+  // private List<DescriptionDto> description = new ArrayList<>();
     private Long companyId;
     private Set<ReservationDto> reservations = new HashSet<>();
 }

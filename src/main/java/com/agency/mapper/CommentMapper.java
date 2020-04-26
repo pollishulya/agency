@@ -76,7 +76,7 @@ public class CommentMapper extends AbstractMapper<Comment, CommentDto> {
     @Override
     void mapSpecificFields(CommentDto source, Comment destination) {
         destination.setFood(foodRepository.findById(source.getFoodId()).orElse(null));
-       destination.setProgram(programRepository.findById(source.getProgramId()).orElse(null));
+//       destination.setProgram(programRepository.findById(source.getProgramId()).orElse(null));
         destination.setAccount(userRepository.findById(source.getAccountId()).orElse(null));
     }
 }

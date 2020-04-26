@@ -52,7 +52,7 @@
                     <div id="mistake"></div>
                  <script>alert(location.id)</script>
                     <button class="btn btn-lg btn-primary btn-block" id="reserveBtn"
-                            onclick="reserve(${location.id}); return false;"
+                            onclick="reserveLocation(${location.id}); return false;"
                             type="submit"><spring:message code="reserve"/>
                     </button>
                 </form>

@@ -40,6 +40,9 @@ public class Location extends BaseEntity {
     @Column(name = "type")
     private String type;
 
+    @Column(name = "description")
+   private String description;
+
     @Column(name = "rating")
     private int rating;
 
@@ -53,7 +56,7 @@ public class Location extends BaseEntity {
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE},orphanRemoval=true, mappedBy = "location", fetch = FetchType.LAZY)
     private Set<Comment> comments = new HashSet<>();
 
-    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "location",fetch = FetchType.LAZY)
+  @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "location",fetch = FetchType.LAZY)
     //@JsonManagedReference
     private List<Description> descriptions = new ArrayList<>();
 

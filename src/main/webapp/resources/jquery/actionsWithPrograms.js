@@ -109,23 +109,24 @@ function saveProgram() {
     //var numberOfDays = $('#numberDays').val();
     var price = $('#price').val();
     var type = $('#types').val();
-    var descriptions = [];
+    var description= $('#description').val();
+   // var descriptions = [];
    // for (var i = 0; i <= numberDays; i++) {
-        var descriptionText = $('#description_').val();
+      /*  var descriptionText = $('#description_').val();
         var description = {
           //  "duration": i + 1,
             "description": descriptionText
         };
         descriptions.push(description);
-   // }
+   // }*/
     var programDto = ({
         "name": name,
         "duration": duration,
         "price": price,
         "type": type,
-        "descriptions": descriptions
+        "description": description
     });
-    //alert(locationDto.name+locationDto.address+locationDto.exitDate+locationDto.price+locationDto.type+locationDto.descriptions);
+    alert(programDto.description);
 
     $.ajax({
         type: "Post",
@@ -133,13 +134,13 @@ function saveProgram() {
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(programDto),
         success: function (res) {
-          //  alert ("success"+res);
+            alert ("success"+res);
             program.reload();
             $("#addTourModal").modal("hide");
 
         },
         error: function (res) {
-        //    alert ("error"+res.responseJSON);
+            alert ("error"+res.responseJSON);
             if (res.status === 500) {
                 $('#uniqueTourFieldMistake').show();
             } else if (res.responseJSON === "empty field") {

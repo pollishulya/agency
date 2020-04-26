@@ -18,18 +18,17 @@ public class ReservationMapper extends com.agency.mapper.AbstractMapper<Reservat
     private final ModelMapper mapper;
     private final AccountRepository accountRepository;
     private final FoodRepository foodRepository;
-  //  private final LocationRepository locationRepository;
+    private final LocationRepository locationRepository;
 
     @Autowired
-    public ReservationMapper(ModelMapper mapper, AccountRepository accountRepository, FoodRepository foodRepository
-            //,
-              //               LocationRepository locationRepository
+    public ReservationMapper(ModelMapper mapper, AccountRepository accountRepository, FoodRepository foodRepository,
+                            LocationRepository locationRepository
     ) {
         super(Reservation.class, ReservationDto.class);
         this.mapper = mapper;
         this.accountRepository = accountRepository;
         this.foodRepository = foodRepository;
-        //this.locationRepository=locationRepository;
+        this.locationRepository=locationRepository;
     }
 
     @PostConstruct
@@ -37,13 +36,13 @@ public class ReservationMapper extends com.agency.mapper.AbstractMapper<Reservat
         mapper.createTypeMap(Reservation.class, ReservationDto.class)
                 .addMappings(m -> m.skip(ReservationDto::setAccountId)).setPostConverter(toDtoConverter())
                 .addMappings(m -> m.skip(ReservationDto::setNameFood)).setPostConverter(toDtoConverter())
-                .addMappings(m -> m.skip(ReservationDto::setFoodId)).setPostConverter(toDtoConverter());
+                .addMappings(m -> m.skip(ReservationDto::setFoodId)).setPostConverter(toDtoConverter())
              //   .addMappings(m -> m.skip(ReservationDto::setNameLocation)).setPostConverter(toDtoConverter())
-               // .addMappings(m -> m.skip(ReservationDto::setLocationId)).setPostConverter(toDtoConverter());
+                .addMappings(m -> m.skip(ReservationDto::setLocationId)).setPostConverter(toDtoConverter());
         mapper.createTypeMap(ReservationDto.class, Reservation.class)
                 .addMappings(m -> m.skip(Reservation::setAccount)).setPostConverter(toEntityConverter())
-                .addMappings(m -> m.skip(Reservation::setFood)).setPostConverter(toEntityConverter());
-                //.addMappings(m -> m.skip(Reservation::setLocation)).setPostConverter(toEntityConverter());
+                .addMappings(m -> m.skip(Reservation::setFood)).setPostConverter(toEntityConverter())
+                .addMappings(m -> m.skip(Reservation::setLocation)).setPostConverter(toEntityConverter());
 
     }
 
@@ -66,11 +65,11 @@ public class ReservationMapper extends com.agency.mapper.AbstractMapper<Reservat
         return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getFood().getName();
     }
 
-   /* private Long getLocationId(Reservation source) {
+    private Long getLocationId(Reservation source) {
         return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getLocation().getId();
     }
 
-    private String getLocationName(Reservation source) {
+  /*  private String getLocationName(Reservation source) {
         return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getLocation().getName();
     }*/
 
@@ -79,6 +78,6 @@ public class ReservationMapper extends com.agency.mapper.AbstractMapper<Reservat
     void mapSpecificFields(ReservationDto source, Reservation destination) {
         destination.setAccount(accountRepository.findById(source.getAccountId()).orElse(null));
         destination.setFood(foodRepository.findById(source.getFoodId()).orElse(null));
-     //   destination.setLocation(locationRepository.findById(source.getLocationId()).orElse(null));
+//       destination.setLocation(locationRepository.findById(source.getLocationId()).orElse(null));
     }
 }

@@ -30,14 +30,16 @@ public class LocationService {
     private final LocationRepository locationRepository;
     private final LocationMapper locationMapper;
     private final AccountRepository accountRepository;
-    private final DescriptionRepository descriptionRepository;
+   // private final DescriptionRepository descriptionRepository;
 
     @Autowired
-    public LocationService(LocationRepository locationRepository, LocationMapper locationMapper, AccountRepository accountRepository, DescriptionRepository descriptionRepository) {
+    public LocationService(LocationRepository locationRepository, LocationMapper locationMapper, AccountRepository accountRepository
+           // , DescriptionRepository descriptionRepository
+    ) {
         this.locationRepository = locationRepository;
         this.locationMapper = locationMapper;
         this.accountRepository = accountRepository;
-        this.descriptionRepository = descriptionRepository;
+      //  this.descriptionRepository = descriptionRepository;
     }
 
 

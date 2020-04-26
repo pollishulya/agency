@@ -53,9 +53,14 @@
             <form id="updateForm">
                 <input type="hidden" id="idUpdate" name="id">
                 <div class="form-label-group">
-                    <input type="text" id="nameUpdate" class="form-control" placeholder="Name" required
+                    <input type="text" id="firstnameUpdate" class="form-control" placeholder="Name" required
                            autofocus>
-                    <label for="nameUpdate"><spring:message code="name"/></label>
+                    <label for="firstnameUpdate"><spring:message code="name"/></label>
+                </div>
+                <div class="form-label-group">
+                    <input type="text" id="lastnameUpdate" class="form-control" placeholder="Name" required
+                           autofocus>
+                    <label for="lastnameUpdate"><spring:message code="name"/></label>
                 </div>
                 <div class="form-label-group">
                     <input type="text" id="phoneUpdate" class="form-control" placeholder="Phone" required
@@ -91,6 +96,7 @@
     <table id='table' class='table table-hover table-bordered table-sm' cellspacing='0' width='100%'>
         <thead class="black white-text table-info">
         <tr>
+            <th scope="col"><spring:message code="username.label"/></th>
             <th scope="col"><spring:message code="username.label"/></th>
             <th scope="col"><spring:message code="phone.label"/></th>
             <th scope="col"><spring:message code="email.label"/></th>

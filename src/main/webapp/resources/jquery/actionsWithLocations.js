@@ -139,7 +139,8 @@ function saveLocation() {
     var capacity = $('#capacity').val();
     var price = $('#price').val();
     var type = $('#types').val();
-    var descriptions = [];
+    var description= $('#description').val();
+    /*s = [];
    // for (var i = 0; i <= numberDays; i++) {
         var descriptionText = $('#description_' + i).val();
         var description = {
@@ -147,16 +148,16 @@ function saveLocation() {
             "description": descriptionText
         };
         descriptions.push(description);
-   // }
+   // }*/
     var locationDto = ({
         "name": name,
         "address": address,
         "capacity": capacity,
         "price": price,
         "type": type,
-        "descriptions": descriptions
+        "description": description
     });
-   // alert(locationDto.name+locationDto.address+locationDto.exitDate+locationDto.price+locationDto.type+locationDto.descriptions);
+    alert(JSON.stringify(locationDto));
 
     $.ajax({
         type: "Post",

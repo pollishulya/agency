@@ -57,8 +57,11 @@ public class Account extends BaseEntity {
    /* @OneToOne(mappedBy = "account")
     private Client client;*/
 
-    @OneToMany(mappedBy="account")
-    private Set<Comment> comment;
+   // @OneToMany(mappedBy="account")
+    //private Set<Comment> comment;
+   @JsonIgnore
+   @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE},orphanRemoval=true, mappedBy = "account", fetch = FetchType.LAZY)
+   private Set<Comment> comments = new HashSet<>();
 
    /* @JsonIgnore
     @OneToOne(mappedBy = "account")
