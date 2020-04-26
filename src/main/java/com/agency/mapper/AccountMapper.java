@@ -13,11 +13,7 @@ import java.util.Objects;
 
 @Component
 public class AccountMapper extends AbstractMapper<Account, AccountDto> {
-  /* @Bean
-    public ModelMapper modelMapper() {
-        return new ModelMapper();
-    }*/
-   // @Autowired
+
     private final ModelMapper mapper;
     private final AccountRepository accountRepository;
 
@@ -32,16 +28,17 @@ public class AccountMapper extends AbstractMapper<Account, AccountDto> {
     public void setupMapper() {
 
         mapper.createTypeMap(Account.class, AccountDto.class)
-                .addMappings(m -> m.skip(AccountDto::setAccess)).setPostConverter(toDtoConverter());
+                .addMappings(m -> m.skip(AccountDto::setRole)).setPostConverter(toDtoConverter());
 
     }
+
     @Override
     public void mapSpecificFields(Account source, AccountDto destination) {
-        destination.setAccess(getAccess(source));
+        destination.setRole(getRole(source));
     }
 
-    private String getAccess(Account source) {
-        return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getAccess();
+    private String getRole(Account source) {
+        return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getRoleSet().iterator().next().getRole().name();
     }
 
 
@@ -50,3 +47,4 @@ public class AccountMapper extends AbstractMapper<Account, AccountDto> {
 
     }
 }
+

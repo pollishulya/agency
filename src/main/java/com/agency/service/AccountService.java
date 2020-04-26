@@ -3,6 +3,7 @@ package com.agency.service;
 import com.agency.dto.AccountDto;
 //import com.agency.entity.Role;
 //import com.agency.enums.Roles;
+import com.agency.entity.Role;
 import com.agency.enums.Roles;
 import com.agency.mapper.AccountMapper;
 import com.agency.repository.AccountRepository;
@@ -45,7 +46,7 @@ public class AccountService {
     public AccountDto createAccount(AccountDto account) {
 
         account.setPassword(bCryptPasswordEncoder.encode(account.getPassword()));
-       // setRolesForAccount(account, Roles.ROLE_USER);
+        setRolesForAccount(account, Roles.ROLE_USER);
 
         return accountMapper.toDto(accountRepository.save(accountMapper.toEntity(account)));
     }
@@ -54,13 +55,12 @@ public class AccountService {
 
         Optional<Account> account=accountRepository.findById(accountDto.getId());
 
-
         if(account.isPresent()){
 
             String password =account.get().getPassword();
 
             accountDto.setPassword(password);
-          //  setRolesForAccount(accountDto, Roles.valueOf(accountDto.getAccess()));
+            setRolesForAccount(accountDto, Roles.valueOf(accountDto.getRole()));
             Account updatedAccount = accountRepository.saveAndFlush(accountMapper.toEntity(accountDto));
 
             return new ResponseEntity(accountMapper.toDto(updatedAccount),HttpStatus.OK);
@@ -70,15 +70,14 @@ public class AccountService {
     }
 
 
-   /* public void setRolesForAccount(AccountDto account, Roles role) {
+    public void setRolesForAccount(AccountDto account, Roles role) {
 
-       // Set<Role> roles = new HashSet<>();
+        Set<Role> roles = new HashSet<>();
+        roles.add(roleRepository.findByRole(role));
 
-       // roles.add(roleRepository.findByRole(role));
-
-      //  account.setAccess(role);
+        account.setRoleSet(roles);
     }
-*/
+
     public void changePassword(Account account, String password) {
 
         account.setPassword(bCryptPasswordEncoder.encode(password));
@@ -86,8 +85,5 @@ public class AccountService {
 
         log.info("IN UserService changeUserPassword for user {}", account);
 
-    }
-    public String start(){
-        return "hello";
     }
 }
