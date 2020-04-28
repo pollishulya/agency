@@ -112,9 +112,10 @@ function reserve(id) {
         "username": username,
         "phone": phone,
         "date": date,
-        "nameFood": name
+        "nameFood": name,
+        "status":"BOOKED"
     });
-    alert(reservation.date);
+    alert(reservation.status);
     //alert (JSON.stringify(reservation));
     $.ajax({
         type: 'POST',
@@ -143,6 +144,7 @@ function reserveLocation(id) {
         "username": username,
         "phone": phone,
         "date": date,
+       // "status": "BOOKED"
        // "nameFood": name
     });
    // alert(reservation.);

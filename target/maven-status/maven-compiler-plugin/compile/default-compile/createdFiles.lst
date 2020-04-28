@@ -51,6 +51,7 @@ com\agency\service\FoodService.class
 com\agency\repository\RoleRepository.class
 com\agency\entity\Location.class
 com\agency\repository\CompanyRepository.class
+com\agency\enums\Reservearions.class
 com\agency\configuration\HibernateAwareObjectMapper.class
 com\agency\dto\BaseDto.class
 com\agency\entity\Account.class

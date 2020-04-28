@@ -38,6 +38,9 @@ public class FoodCompany extends BaseEntity{
     @JsonIgnore
     @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},mappedBy = "company",fetch = FetchType.LAZY)
     private Set<Program> program = new HashSet<>();
+   /* @JsonIgnore
+    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "company",fetch = FetchType.LAZY)
+    private Set<Reservation> reservations = new HashSet<>();*/
 
 
 }

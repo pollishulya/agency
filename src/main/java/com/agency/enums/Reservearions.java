@@ -1,4 +1,6 @@
 package com.agency.enums;
 
-public class Reservearions {
+public enum Reservearions {
+    BOOKED,
+    CANCELED
 }

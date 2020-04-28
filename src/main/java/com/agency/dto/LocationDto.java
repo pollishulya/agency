@@ -24,5 +24,5 @@ public class LocationDto extends BaseDto {
     private Set<Comment> comment = new HashSet<>();;
   // private List<DescriptionDto> description = new ArrayList<>();
     private Long companyId;
-    private Set<ReservationDto> reservations = new HashSet<>();
+   // private Set<ReservationDto> reservations = new HashSet<>();
 }

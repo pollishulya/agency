@@ -79,7 +79,7 @@ public class ReservationController {
 
         return reservationsDto;
     }
-    @GetMapping(value = "/reservation/loadCompany", produces = "application/json")
+   /* @GetMapping(value = "/reservation/loadCompany", produces = "application/json")
     @ResponseBody
     @Transactional
     public List<ReservationDto> companyOrders() {
@@ -94,7 +94,7 @@ public class ReservationController {
 
         return reservationsDto;
     }
-
+*/
     @GetMapping(value = "/orders")
     public ModelAndView showOrders() {
 
