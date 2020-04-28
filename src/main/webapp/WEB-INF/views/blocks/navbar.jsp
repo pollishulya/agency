@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <title>Only Travel</title>
+    <title>Chilling.by</title>
 
     <base href="/">
 
@@ -28,124 +28,46 @@
 </head>
 <header>
 
-
-    <div class="modal fade " id="loginModal">
-        <div class="modal-dialog formContent">
-            <input type="hidden" id="token" name="${_csrf.parameterName}"
-                   value="${_csrf.token}"/>
-            <div class="modal-header">
-                <a href="#" class="close" data-dismiss="modal">&times;</a>
-                <h5 id="title"><spring:message code="signin"/></h5>
-            </div>
-            <div class="modal-body">
-                <form id="loginForm" action="/j_spring_security_check" method="post">
-                    <div class="form-label-group">
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required
-                               autofocus onfocus="  $('#mistakeMessage').detach();">
-                        <label for="email"><spring:message code="email"/></label>
-                    </div>
-                    <div class="form-label-group">
-                        <input type="password" id="password" name="password" class="form-control" placeholder="Password"
-                               required autofocus onfocus="  $('#mistakeMessage').detach();">
-                        <label for="password"><spring:message code="password"/></label>
-                    </div>
-                    <c:if test="${not empty error}">
-                        <div id="loginMistake"><p class='alert alert-danger' role='alert'><spring:message
-                                code="${error}"/></p></div>
-                    </c:if>
-                    <button class="btn btn-primary btn-block" id="loginBtn"
-                            type="submit"><spring:message code="signin.button"/>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="signUpModal">
-        <div class="modal-dialog formContent">
-            <div class="modal-header">
-                <a href="#" class="close" data-dismiss="modal">&times;</a>
-                <h5><spring:message code="signup.label"/></h5>
-            </div>
-            <div class="modal-body">
-                <form id="signUpForm">
-                    <div class="form-label-group">
-                        <input type="text" id="surnameSignUp" name="email" class="form-control" placeholder="Name" required
-                               autofocus onfocus="  $('#mistakeMessage').detach();">
-                        <label for="surnameSignUp"><spring:message code="name"/></label>
-                    </div>
-                    <div class="form-label-group">
-                        <input type="email" id="emailSignUp" name="email" class="form-control" placeholder="Email"
-                               required
-                               autofocus onfocus="  $('#mistakeMessage').detach();">
-                        <label for="emailSignUp"><spring:message code="email"/></label>
-                    </div>
-                    <div class="form-label-group">
-                        <input type="text" id="phoneSignUp" name="phone" class="form-control" placeholder="Phone"
-                               required
-                               autofocus onfocus="  $('#mistakeMessage').detach();">
-                        <label for="phoneSignUp"><spring:message code="phone"/></label>
-                    </div>
-                    <div class="form-label-group">
-                        <input type="password" id="passwordSignUp" name="password" class="form-control"
-                               placeholder="Password" required
-                               onfocus="  $('#mistakeMessage').detach();">
-                        <label for="passwordSignUp"><spring:message code="password"/></label>
-                    </div>
-                    <a class="btn btn-primary btn-block" id="signUpBtn"
-                       onclick="signUp()"><spring:message code="signup.button"/>
-                    </a>
-                </form>
-            </div>
-        </div>
-    </div>
-
     <div class="modal fade" id="accountSettingsModal">
         <div class="modal-dialog formContent">
-            <div class="modal-header">
-                <a href="#" class="close" data-dismiss="modal">&times;</a>
-                <h5><spring:message code="update.label"/></h5>
-            </div>
-            <div class="modal-body">
-                <form id="settingsForm">
-                    <input type="hidden" id="idUpdateViaUser" name="id">
-                    <input type="hidden" id="roleUpdateViaUser" name="role">
-                    <div class="form-label-group">
-                        <input type="text" id="nameUpdateViaUser" class="form-control" placeholder="Name" required
-                               autofocus>
-                        <label for="nameUpdateViaUser"><spring:message code="name.label"/></label>
-                    </div>
-                    <div class="form-label-group">
-                        <input type="text" id="phoneUpdateViaUser" class="form-control" placeholder="Phone" required
-                               autofocus>
-                        <label for="phoneUpdateViaUser"><spring:message code="phone.label"/></label>
-                    </div>
-                    <div class="form-label-group">
-                        <input type="text" id="emailUpdateViaUser" class="form-control"
-                               placeholder="Email" required autofocus>
-                        <label for="emailUpdateViaUser"><spring:message code="email.label"/></label>
-                    </div>
-                    <div id="uniqueFieldInSettingsMistake" hidden><p class='alert alert-danger' role='alert'>
-                        <spring:message
-                                code="uniqueField.error"/></p></div>
-                    <div id="emptyFieldInSettingsMistake" hidden><p class='alert alert-danger' role='alert'>
-                        <spring:message
-                                code="emptyField.error"/></p></div>
-                    <a href="/account/showAccounts" class="btn btn-primary btn-block" id="updateRecord"
-                       onclick="updateAccount();return false;"><spring:message code="save.button"/></a>
-                </form>
-            </div>
+            <a href="#" class="close" data-dismiss="modal">&times;</a>
+            <h5><spring:message code="update.label"/></h5>
+        </div>
+        <div class="modal-body">
+            <form id="settingsForm">
+                <input type="hidden" id="idUpdateViaUser" name="id">
+                <input type="hidden" id="roleUpdateViaUser" name="role">
+                <div class="form-label-group">
+                    <input type="text" id="nameUpdateViaUser" class="form-control" placeholder="Name" required
+                           autofocus>
+                    <label for="nameUpdateViaUser"><spring:message code="name.label"/></label>
+                </div>
+                <div class="form-label-group">
+                    <input type="text" id="phoneUpdateViaUser" class="form-control" placeholder="Phone" required
+                           autofocus>
+                    <label for="phoneUpdateViaUser"><spring:message code="phone.label"/></label>
+                </div>
+                <div class="form-label-group">
+                    <input type="text" id="emailUpdateViaUser" class="form-control"
+                           placeholder="Email" required autofocus>
+                    <label for="emailUpdateViaUser"><spring:message code="email.label"/></label>
+                </div>
+                <div id="uniqueFieldInSettingsMistake" hidden><p class='alert alert-danger' role='alert'>
+                    <spring:message
+                            code="uniqueField.error"/></p></div>
+                <div id="emptyFieldInSettingsMistake" hidden><p class='alert alert-danger' role='alert'>
+                    <spring:message
+                            code="emptyField.error"/></p></div>
+                <a href="/account/showAccounts" class="btn btn-primary btn-block" id="updateRecord"
+                   onclick="updateAccount();return false;"><spring:message code="save.button"/></a>
+            </form>
         </div>
     </div>
 
 
     <nav class="navbar navbar-expand-md  fixed-top">
         <div class="container">
-            <div id="navbar" class="collapse navbar-collapse">
-                <a href="/" id="home">
-                    <img src='/resources/images/home_label.svg' width="50" height="50" class="d-inline-block align-top" alt=""/>OnlyTravel
-
-                </a>
+            <div id="navbar" class="collapse navbar-collapse"></div>
                 <div id="buttons" class="position-groupTourBtn"></div>
                 <div id="user" class="position-for-logBtn"></div>
                 <div id="logoutBtn"></div>
@@ -159,21 +81,30 @@
                             '                        <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
                             '                                                   onclick="languageSelect(\'ru\');"><spring:message code="lang.ru"/></a></li>\n' +
                             '                    </ul>\n' +
-                            '                </div>' +
-                            '<button type="button" class="btn btn-info position-button" id="signup" onclick="signUpForm()"><spring:message code="signup.button"/></button> <button type="button" class="btn btn-info position-button" id="login" onclick="loginForm(0)"><spring:message code="signin.button"/></button>')
+                            '                </div>' +' <a id="enter" href="/enter" class="btn btn-outline-primary "><spring:message code="enter.label"/></a>\n')
                     </script>
                 </sec:authorize>
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                     <script>
 
                         $('#buttons').append(
-                            '                <a href="/showFoods/asia" class="btn btn-outline-primary "><spring:message code="asian.label"/></a>\n'+
-                            '                <a href="/showFoods/europe" class="btn btn-outline-primary "><spring:message code="europe.label"/></a>\n'+
-                            '                <a href="/showFoods/slavic" class="btn btn-outline-primary "><spring:message code="slavic.label"/></a>\n'+
-                            '                <a href="/showFoods/east" class="btn btn-outline-primary "><spring:message code="east.label"/></a>\n'+
-                            '                <a href="/" class="btn btn-outline-primary "><spring:message code="allFood.label"/></a>\n');
+                            '                 <button id="kitchen" class="btn btn-outline-primary dropdown-toggle" type="button"\\n\' +\n' +
+                            '       data-toggle="dropdown"><spring:message code="kitchen.label"/><span class="caret"></span></button>\n' +
+                            '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
+                            '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                               href="/showFoods/asia"><spring:message code="asian.label"/></a></li>\n' +
+                            '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                             href="/showFoods/europe"><spring:message code="europe.label"/></a></li>\n' +
+                            '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                               href="/showFoods/slavic"><spring:message code="slavic.label"/></a></li>\n' +
+                            '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                             href="/showFoods/east"><spring:message code="east.label"/></a></li>\n' +
+                            ' <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                             href="/"><spring:message code="allFood.label"/></a></li>\n' +
+                            '                   </ul>\n')
 
-                        $('#user').append(' <div class="position-for-langBtn"><button id="locales" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\\n\' +\n' +
+                        $('#user').append(' <div class="position-for-langBtn">' +
+                            '<button id="locales" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\\n\' +\n' +
                             '       data-toggle="dropdown"><spring:message code="lang.label"/><span class="caret"></span></button>\n' +
                             '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
                             '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
@@ -186,8 +117,8 @@
                             '                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
                             '                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/account/showAccounts"><spring:message code="account"/></a></li>\n' +
                             '                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="updateAccountSettings()"><spring:message code="settings.label"/></a></li>\n' +
-                            ' </ul>\n' +
-                            '   <a href="<c:url value="/logout" />" class="btn btn-outline-primary position-button"><spring:message code="logout"/></a>');
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="<c:url value="/logout" />"><spring:message code="logout"/></a></li>\n' +
+                            ' </ul>\n');
 
                     </script>
                 </sec:authorize>
@@ -195,11 +126,20 @@
                     <script>
 
                         $('#buttons').append(
-                            '                <a href="/showFoods/asia" class="btn btn-outline-primary "><spring:message code="asian.label"/></a>\n'+
-                            '                <a href="/showFoods/europe" class="btn btn-outline-primary "><spring:message code="europe.label"/></a>\n'+
-                            '                <a href="/showFoods/slavic" class="btn btn-outline-primary "><spring:message code="slavic.label"/></a>\n'+
-                            '                <a href="/showFoods/east" class="btn btn-outline-primary "><spring:message code="east.label"/></a>\n'+
-                            '                <a href="/" class="btn btn-outline-primary "><spring:message code="allFood.label"/></a>\n');
+                            '                 <button id="kitchen" class="btn btn-outline-primary dropdown-toggle" type="button"\\n\' +\n' +
+                        '       data-toggle="dropdown"><spring:message code="kitchen.label"/><span class="caret"></span></button>\n' +
+                        '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
+                        '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                        '                                               href="/showFoods/asia"><spring:message code="asian.label"/></a></li>\n' +
+                        '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                        '                             href="/showFoods/europe"><spring:message code="europe.label"/></a></li>\n' +
+                        '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                        '                                               href="/showFoods/slavic"><spring:message code="slavic.label"/></a></li>\n' +
+                        '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                        '                             href="/showFoods/east"><spring:message code="east.label"/></a></li>\n' +
+                        ' <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                        '                             href="/"><spring:message code="allFood.label"/></a></li>\n' +
+                        '                   </ul>\n')
                         $('#user').append('  <div class="position-for-langBtn"><button id="locales" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\\n\' +\n' +
                             '       data-toggle="dropdown"><spring:message code="lang.label"/><span class="caret"></span></button>\n' +
                             '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
@@ -213,18 +153,27 @@
                             '                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
                             '                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/orders"><spring:message code="myOrder"/></a></li>\n' +
                             '                        <li role="presentation"><a role="menuitem" tabindex="-1" onclick="updateAccountSettings()"><spring:message code="settings.label"/></a></li>\n' +
-                            '                    </ul>\n' +
-                            '<a href="<c:url value="/logout" />" class="btn btn-outline-primary position-button"><spring:message code="logout"/></a>');
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="<c:url value="/logout" />"><spring:message code="logout"/></a></li>\n' +
+                            '     </ul>\n');
                     </script>
                 </sec:authorize>
                 <sec:authorize access="hasRole('ROLE_COMPANY')">
 
                     <script>
-                        $('#buttons').append( '                <a href="/showFoods/asia" class="btn btn-outline-primary "><spring:message code="asian.label"/></a>\n'+
-                            '                <a href="/showFoods/europe" class="btn btn-outline-primary "><spring:message code="europe.label"/></a>\n'+
-                            '                <a href="/showFoods/slavic" class="btn btn-outline-primary "><spring:message code="slavic.label"/></a>\n'+
-                            '                <a href="/showFoods/east" class="btn btn-outline-primary "><spring:message code="east.label"/></a>\n'+
-                            '                <a href="/" class="btn btn-outline-primary "><spring:message code="allFood.label"/></a>\n');
+                        $('#buttons').append(    '                 <button id="kitchen" class="btn btn-outline-primary dropdown-toggle" type="button"\\n\' +\n' +
+                            '       data-toggle="dropdown"><spring:message code="kitchen.label"/><span class="caret"></span></button>\n' +
+                            '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
+                            '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                               href="/showFoods/asia"><spring:message code="asian.label"/></a></li>\n' +
+                            '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                             href="/showFoods/europe"><spring:message code="europe.label"/></a></li>\n' +
+                            '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                               href="/showFoods/slavic"><spring:message code="slavic.label"/></a></li>\n' +
+                            '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                             href="/showFoods/east"><spring:message code="east.label"/></a></li>\n' +
+                            ' <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                             href="/"><spring:message code="allFood.label"/></a></li>\n' +
+                            '                   </ul>\n')
                         $('#user').append('<div class="position-for-langBtn"><button id="locales" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\\n\' +\n' +
                             '       data-toggle="dropdown"><spring:message code="lang.label"/><span class="caret"></span></button>\n' +
                             '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
@@ -241,8 +190,8 @@
                             '                     <li role="presentation"><a role="menuitem" tabindex="-1" href="/showPrograms"><spring:message code="programs"/></a></li>\n' +
                             '                     <li role="presentation"><a role="menuitem" tabindex="-1" href="/companyOrders"><spring:message code="reserve"/></a></li>\n' +
                             '  <li role="presentation"><a role="menuitem" tabindex="-1" onclick="updateAccountSettings()"><spring:message code="settings.label"/></a></li>\n' +
-                            '</ul>\n' +
-                            '        <a href="<c:url value="/logout" />" class="btn btn-outline-primary position-button"><spring:message code="logout"/></a>');
+                            '<li role="presentation"><a role="menuitem" tabindex="-1" href="<c:url value="/logout" />"><spring:message code="logout"/></a></li>\n' +
+                            '</ul>\n' );
                     </script>
                 </sec:authorize>
 

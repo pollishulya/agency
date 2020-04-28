@@ -39,6 +39,17 @@ public class StartController {
         return modelAndView;
     }
 
+    @GetMapping(value = "/enter")
+    public ModelAndView showFoods() {
+
+        ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
+        modelAndView.setViewName("enter");
+
+
+        return modelAndView;
+    }
+
+
     @GetMapping(value = "/")
     public ModelAndView start(@RequestParam(value = "error", required = false) String error,
                               @RequestParam(value = "logout", required = false) String logout) {

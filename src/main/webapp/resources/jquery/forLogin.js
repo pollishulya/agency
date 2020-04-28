@@ -102,3 +102,24 @@ function updateAccount() {
 function languageSelect(selectedOption) {
     window.location.replace(window.location.pathname + '?lang=' + selectedOption);
 }
+
+
+function timer()
+{
+    var tm=new Date();
+    var h=tm.getHours();
+    var m=tm.getMinutes();
+    var s=tm.getSeconds();
+    m=checkTime(m);
+    s=checkTime(s);
+    document.getElementById('timer').innerHTML=h+":"+m+":"+s;
+    setTimeout('timer()',500);
+}
+function checkTime(i)
+{
+    if (i<10)
+    {
+        i="0" + i;
+    }
+    return i;
+}

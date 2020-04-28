@@ -79,6 +79,21 @@ public class ReservationController {
 
         return reservationsDto;
     }
+    @GetMapping(value = "/reservation/loadCompany", produces = "application/json")
+    @ResponseBody
+    @Transactional
+    public List<ReservationDto> companyOrders() {
+
+        Long id = getCurrentUserId();
+        List<Reservation> reservations = reservationRepository.findAllByLocationId(id);
+
+        List<ReservationDto> reservationsDto = new ArrayList<>();
+        for (Reservation reservation : reservations) {
+            reservationsDto.add(reservationMapper.toDto(reservation));
+        }
+
+        return reservationsDto;
+    }
 
     @GetMapping(value = "/orders")
     public ModelAndView showOrders() {
@@ -88,6 +103,34 @@ public class ReservationController {
 
         return modelAndView;
     }
+
+    @GetMapping(value = "/pageLocation")
+    public ModelAndView pageLocation() {
+
+        ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
+        modelAndView.setViewName("pageLocation");
+
+        return modelAndView;
+    }
+
+    @GetMapping(value = "/pageMenu")
+    public ModelAndView pageMenu() {
+
+        ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
+        modelAndView.setViewName("pageMenu");
+
+        return modelAndView;
+    }
+
+    @GetMapping(value = "/pageTamada")
+    public ModelAndView pageTamada() {
+
+        ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
+        modelAndView.setViewName("pageTamada");
+
+        return modelAndView;
+    }
+
     @GetMapping(value = "/companyOrders")
     public ModelAndView showCompanyOrders() {
 

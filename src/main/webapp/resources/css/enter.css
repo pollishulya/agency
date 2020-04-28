@@ -1,0 +1,96 @@
+#enter{
+    display:none;
+}
+
+#signUpBtn{
+    position:relative;
+    width: 200px;
+    left: 90px;
+    font-size: 20px;
+}
+
+ #loginBtn{
+    position:relative;
+    width: 100px;
+    left: 125px;
+     font-size: 20px;
+}
+
+.form-label-group{
+    width:400px;
+}
+.title {
+    font-family: FreeMono, monospace;
+    font-variant: small-caps;
+    text-decoration: none;
+
+    text-shadow: 2px 2px 0 orange,
+    2px -2px 0 orange,
+    -2px 2px 0 orange,
+    -2px -2px 0 orange;
+    color: white;
+    transition: all 1s;
+    position:relative;
+    left:160px;
+
+    font-size: 30px;
+}
+.col2 {
+    position: absolute;
+    left: 875px;
+    bottom: 195px;
+    border-radius: 20px;
+    border-left:5px solid #dbf246; padding: 15px;
+    background: rgba(191, 194, 176, 0.7);
+}
+.col {
+    position:absolute;
+    left:325px;
+    top:223px;
+    background: rgba(191, 194, 176, 0.7);
+    border-radius: 20px;
+    border-left:5px solid #dbf246; padding: 15px;
+
+}
+
+.btn-outline-primary {
+    display: inline-block;
+    text-shadow: 1px 1px 1px white,
+    1px -1px 1px white,
+    -1px 1px 1px white,
+    -1px -1px 1px white;
+    color: orange;
+    transition: all 1s;
+}
+.btn-outline-primary:after {
+    content: "";
+    display: block;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    margin: auto;
+    border-bottom: 3px solid orange;
+    bottom: .15em;
+    transition: all 1s;
+}
+.btn-outline-primary:hover:after {
+    width: 0%;
+    border-bottom-width: 1px;
+}
+
+button, a{
+    background: none;
+}
+
+#test {
+    border-radius: 20px;
+    border-color: orange;
+    border-width: 3px;
+    background:none;
+color: white;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 30px;
+}
+

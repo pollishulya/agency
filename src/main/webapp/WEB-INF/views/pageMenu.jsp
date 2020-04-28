@@ -9,13 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Only Travel</title>
+    <title>Chilling.by</title>
 
     <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" type="text/css"/>
     <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
     <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
 
-    <base href="/">
     <link rel="stylesheet" href="/resources/css/forWelcomePage.css" type="text/css">
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -30,7 +29,7 @@
         <script type="text/javascript">
             $(document).ready(function () {
 
-                $.get("/food?cuisine=SLAVIC", function (data) {
+                $.get("/foods", function (data) {
 
                     var rowsHtml;
                     for (var j = 0; j < data.length; j = j + 3) {
@@ -111,14 +110,13 @@
 
                 });
             });
-
         </script>
     </div>
 </div>
 
-<jsp:include page="blocks/footer.jsp"/>
 
 <script>window.jQuery || document.write('<script src="/webjars/jquery/3.1.1/jquery.min.js"><\/script>')</script>
 
 </body>
+<jsp:include page="blocks/footer.jsp"/>
 </html>

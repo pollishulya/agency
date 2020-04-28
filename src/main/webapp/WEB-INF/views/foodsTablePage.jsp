@@ -18,6 +18,7 @@
 
     <title>Foods</title>
 </head>
+<jsp:include page="blocks/navbar1.jsp"/>
 <jsp:include page="blocks/navbar.jsp"/>
 <body>
 <div class="modal fade" id="addTourModal">

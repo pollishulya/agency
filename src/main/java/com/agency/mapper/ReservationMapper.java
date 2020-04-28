@@ -37,7 +37,8 @@ public class ReservationMapper extends com.agency.mapper.AbstractMapper<Reservat
                 .addMappings(m -> m.skip(ReservationDto::setAccountId)).setPostConverter(toDtoConverter())
                 .addMappings(m -> m.skip(ReservationDto::setNameFood)).setPostConverter(toDtoConverter())
                 .addMappings(m -> m.skip(ReservationDto::setFoodId)).setPostConverter(toDtoConverter())
-             //   .addMappings(m -> m.skip(ReservationDto::setNameLocation)).setPostConverter(toDtoConverter())
+                .addMappings(m -> m.skip(ReservationDto::setCompanyId)).setPostConverter(toDtoConverter())
+               .addMappings(m -> m.skip(ReservationDto::setNameLocation)).setPostConverter(toDtoConverter())
                 .addMappings(m -> m.skip(ReservationDto::setLocationId)).setPostConverter(toDtoConverter());
         mapper.createTypeMap(ReservationDto.class, Reservation.class)
                 .addMappings(m -> m.skip(Reservation::setAccount)).setPostConverter(toEntityConverter())
@@ -51,6 +52,9 @@ public class ReservationMapper extends com.agency.mapper.AbstractMapper<Reservat
         destination.setAccountId(getAccountId(source));
         destination.setNameFood(getFoodName(source));
         destination.setFoodId(getFoodId(source));
+        destination.setLocationId(getLocationId(source));
+       // destination.setFoodId(getLocationName(source));
+
     }
 
     private Long getAccountId(Reservation source) {
@@ -61,6 +65,7 @@ public class ReservationMapper extends com.agency.mapper.AbstractMapper<Reservat
         return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getFood().getId();
     }
 
+
     private String getFoodName(Reservation source) {
         return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getFood().getName();
     }
@@ -69,15 +74,15 @@ public class ReservationMapper extends com.agency.mapper.AbstractMapper<Reservat
         return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getLocation().getId();
     }
 
-  /*  private String getLocationName(Reservation source) {
+   private String getLocationName(Reservation source) {
         return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getLocation().getName();
-    }*/
+    }
 
 
     @Override
     void mapSpecificFields(ReservationDto source, Reservation destination) {
         destination.setAccount(accountRepository.findById(source.getAccountId()).orElse(null));
         destination.setFood(foodRepository.findById(source.getFoodId()).orElse(null));
-//       destination.setLocation(locationRepository.findById(source.getLocationId()).orElse(null));
+       destination.setLocation(locationRepository.findById(source.getLocationId()).orElse(null));
     }
 }

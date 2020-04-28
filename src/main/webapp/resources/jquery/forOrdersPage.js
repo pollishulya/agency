@@ -18,7 +18,7 @@ function loadOrders() {
     });
 }
 function loadCompanyOrders() {
-    $.get("/reservation/load", function (data) {
+    $.get("/reservation/loadCompany", function (data) {
         if (data.length > 0) {
             $('#noReservationMessage').empty();
             var html = "";

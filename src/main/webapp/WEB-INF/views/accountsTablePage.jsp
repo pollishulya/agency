@@ -19,6 +19,7 @@
 
     <title>Accounts</title>
 </head>
+<jsp:include page="blocks/navbar1.jsp"/>
 <jsp:include page="blocks/navbar.jsp"/>
 <body>
 
