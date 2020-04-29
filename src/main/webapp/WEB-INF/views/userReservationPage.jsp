@@ -32,6 +32,7 @@
                 <th scope="col"><spring:message code="status.label"/></th>
                 <th scope="col"><spring:message code="date.label"/></th>
                 <th scope="col"><spring:message code="tour.label"/></th>
+                <th scope="col"><spring:message code="delete.label"/></th>
 
             </tr>
             </thead>

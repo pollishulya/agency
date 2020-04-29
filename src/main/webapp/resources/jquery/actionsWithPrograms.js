@@ -44,9 +44,9 @@ function loadPrograms(id, param, numberRows) {
             for (var i = 0; i < res.length; i++) {
                 html += "<tr id='row" + res[i].id + "'><td>" + res[i].name + "</td><td>" + res[i].duration + "</td><td>" +
                     res[i].price + "</td>" + "<td>" + setRating(res[i].rating) + "</td>" + "<td>" + res[i].type + "</td>";
-                html += "<td>" + "<button class='btn btn-danger' onclick='deleteForm(" + res[i].id +
-                    ")'><span class='glyphicon glyphicon-trash'></span></button>" + "</td>";
-                html += "<td>" + "<button class='btn btn-primary' onclick='updateRecord(" + res[i].id + ");return false;'>Update</button>" + "</td></tr>";
+                    html += "<td>" + "<button id='delete' class='btn btn-primary' onclick='deleteForm(" + res[i].id +
+                    ")'>Удалить</button>" + "</td>";
+                html += "<td>" + "<button id='update' class='btn btn-primary' onclick='updateRecord(" + res[i].id + ");return false;'>Редактировать</button>" + "</td></tr>";
             }
             $('#tableBody').append(html);
         },

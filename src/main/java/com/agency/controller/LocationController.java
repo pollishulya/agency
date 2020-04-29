@@ -75,14 +75,14 @@ public class LocationController {
         return locations;
     }
 
-  //  @GetMapping(value = "/food", produces = "application/json")
-    //@ResponseBody
- /*   public List<Food> loadTypedFoods(@RequestParam String type) {
+   @GetMapping(value = "/location", produces = "application/json")
+    @ResponseBody
+    public List<Location> loadTypedLocations(@RequestParam String type) {
 
-        List<Food> foods = foodRepository.findAllByType(type);
+        List<Location> locations = locationRepository.findAllByType(type);
 
-        return foods;
-    }*/
+        return locations;
+    }
 
     @PostMapping(value = "/location/save")
     public ResponseEntity save(@RequestBody Location location) {
@@ -123,12 +123,14 @@ public class LocationController {
     public ModelAndView showTypedLocations(@PathVariable String type) {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        if ("bus".equals(type)) {
-            modelAndView.setViewName("busTourPage");
-        } else if ("air".equals(type)) {
-            modelAndView.setViewName("airTourPage");
-        } else if ("cruise".equals(type)) {
-            modelAndView.setViewName("cruiseTourPage");
+        if ("restaurant".equals(type)) {
+            modelAndView.setViewName("restaurantLocationPage");
+        } else if ("manor".equals(type)) {
+            modelAndView.setViewName("manorLocationPage");
+        } else if ("tent".equals(type)) {
+            modelAndView.setViewName("tentLocationPage");
+        } else if ("space".equals(type)) {
+            modelAndView.setViewName("spaceLocationPage");
         }
 
         return modelAndView;

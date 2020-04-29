@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="/resources/css/deleteForm.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/forAccountTablePage.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/table-style.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/enter.css" type="text/css">
+
 
     <title>Accounts</title>
 </head>
@@ -23,8 +25,8 @@
 <jsp:include page="blocks/navbar.jsp"/>
 <body>
 
-<div class="modal" id="deleteModal">
-    <div class="modal-dialog formContentDelete">
+<div class="modal" id="deleteModal" style="position: absolute; left: 400px;top:-25px">
+    <div class="col">
         <div>
             <div class="modal-header">
                 <a href="#" class="close" data-dismiss="modal">&times;</a>
@@ -44,11 +46,11 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="updateAccountModal">
-    <div class="modal-dialog formContent">
+<div class="modal fade" id="updateAccountModal" style="position: absolute; left: 300px;top:-100px">
+    <div class="col">
         <div class="modal-header">
             <a href="#" class="close" data-dismiss="modal">&times;</a>
-            <h5><spring:message code="update.label"/></h5>
+            <h5 class="title" style="position: relative; left: 110px;"><spring:message code="update.label"/>Редактирование</h5>
         </div>
         <div class="modal-body">
             <form id="updateForm">

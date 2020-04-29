@@ -1,5 +1,6 @@
 package com.agency.controller;
 
+import com.agency.dto.AccountDto;
 import com.agency.dto.ReservationDto;
 import com.agency.entity.Account;
 import com.agency.entity.Reservation;
@@ -70,8 +71,7 @@ public class ReservationController {
     public List<ReservationDto> userOrders() {
 
         Long id = getCurrentUserId();
-        List<Reservation> reservations = reservationRepository.findAllByAccountId(id);
-
+        List<Reservation> reservations = reservationRepository.findAllByCompanyId(id);
         List<ReservationDto> reservationsDto = new ArrayList<>();
         for (Reservation reservation : reservations) {
             reservationsDto.add(reservationMapper.toDto(reservation));
@@ -83,10 +83,20 @@ public class ReservationController {
     public ModelAndView showOrders() {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        modelAndView.setViewName("usReservationPage");
+        modelAndView.setViewName("userReservationPage");
 
         return modelAndView;
     }
+
+    @GetMapping(value = "/cancel/{id}", produces = "application/json")
+    @ResponseBody
+    @Transactional
+    public ReservationDto cancelRecord(@PathVariable Long id) {
+        ReservationDto account = reservationMapper.toDto(reservationRepository.findById(id).get());
+
+        return account;
+    }
+
 
     @GetMapping(value = "/reservation/loadCompany", produces = "application/json")
     @ResponseBody

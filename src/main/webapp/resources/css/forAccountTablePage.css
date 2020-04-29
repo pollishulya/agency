@@ -14,3 +14,25 @@ body{
     border-radius: 20px;
     background: rgba(191, 194, 176, 0.7);
 }
+
+#nextBtn,#previousBtn,#add,#addmenu,#saveTourBtn,#updateRecord,#update,#delete,#deleteBtn{
+    border-radius: 20px;
+    border-color: orange;
+    border-width: 3px;
+    background:none;
+    color: white;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+}
+
+#add{
+    position:relative;
+    left:825px;
+}
+
+#addmenu{
+    position:relative;
+    left:795px;
+}

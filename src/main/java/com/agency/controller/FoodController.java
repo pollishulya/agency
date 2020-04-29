@@ -76,14 +76,14 @@ public class FoodController {
         return foods;
     }
 
-  //  @GetMapping(value = "/food", produces = "application/json")
-    //@ResponseBody
- /*   public List<Food> loadTypedFoods(@RequestParam String type) {
+    @GetMapping(value = "/food", produces = "application/json")
+    @ResponseBody
+    public List<Food> loadTypedFoods(@RequestParam String cuisine) {
 
-        List<Food> foods = foodRepository.findAllByType(type);
+        List<Food> foods = foodRepository.findAllByCuisine(cuisine);
 
         return foods;
-    }*/
+    }
 
     @PostMapping(value = "/food/save")
     public ResponseEntity save(@RequestBody Food food) {

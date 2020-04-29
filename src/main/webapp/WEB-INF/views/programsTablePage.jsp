@@ -15,17 +15,19 @@
     <link rel="stylesheet" href="/resources/css/table-style.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/forTourTablePage.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/formTourAdd-style.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/enter.css" type="text/css">
+
 
     <title>Programs</title>
 </head>
 <jsp:include page="blocks/navbar1.jsp"/>
 <jsp:include page="blocks/navbar.jsp"/>
 <body>
-<div class="modal fade" id="addTourModal">
-    <div class="modal-dialog formContent">
+<div class="modal fade" id="addTourModal" style="position: absolute; left: 300px;top:-100px">
+    <div class="col">
         <div class="modal-header">
             <a href="#" class="close" data-dismiss="modal">&times;</a>
-            <h5 id="title"><spring:message code="addTour.label"/></h5>
+            <h5 class="title" style="position: relative; left: 110px;"><spring:message code="addTour.label"/></h5>
         </div>
         <div class="modal-body">
             <form id="addForm">
@@ -71,8 +73,8 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="deleteModal">
-    <div class="modal-dialog formContentDelete">
+<div class="modal fade" id="deleteModal" style="position: absolute; left: 400px;top:-25px">
+    <div class="col">
         <div>
             <div class="modal-header">
                 <a href="#" class="close" data-dismiss="modal">&times;</a>
@@ -92,12 +94,12 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="updateTourModal">
-    <div class="modal-dialog formContent">
-        <div class="modal-content">
+<div class="modal fade" id="updateTourModal" style="position: absolute; left: 300px;top:-100px">
+    <div class="col">
+
             <div class="modal-header">
                 <a href="#" class="close" data-dismiss="modal">&times</a>
-                <h4 id="ModalTitleUpdate"></h4>
+                <h4 class="title" style="position: relative; left: 110px;">Редактирование</h4>
             </div>
             <div class="modal-body">
                 <form id="updateForm">
@@ -154,7 +156,6 @@
 </div>
 
 <div id="backimage" class="position-table">
-    <button id="add" class="btn btn-info" onclick="AddNew(0)"><spring:message code="addTour.button"/></button>
         <br/><br/>
     <label><spring:message code="numberRows.label"/></label>
     <select id="numberRows" class="mdb-select md-form select-option">
@@ -204,6 +205,7 @@
                     <spring:message code="next"/></button>
             </li>
         </ul>
+        <button id="addmenu" class="btn btn-info" onclick="AddNew(0)"><spring:message code="addProgram.button"/></button>
     </nav>
 </div>
 

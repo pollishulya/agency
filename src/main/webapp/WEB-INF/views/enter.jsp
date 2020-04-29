@@ -27,6 +27,7 @@
 </head>
 <jsp:include page="blocks/navbar1.jsp"/>
 <jsp:include page="blocks/navbar.jsp"/>
+<body>
 
 <div class="row">
     <div class="col">
@@ -89,6 +90,5 @@
         </div>
 </div>
 </div>
-<button id="test">hello</button>
 </body>
 </html>

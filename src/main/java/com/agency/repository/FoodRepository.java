@@ -20,7 +20,9 @@ public interface FoodRepository extends JpaRepository<Food, Long> {
 
     Page<Food> findAllByCompanyId(Long id, Pageable pageable);
 
-   // List<Food> findAllByType(String type);
+    List<Food> findAllByType(String type);
+
+    List<Food> findAllByCuisine(String cuisine);
 
     @Query("SELECT food FROM Food food WHERE food.name LIKE CONCAT('%', :string, '%')")
     Page<Food> findFoods(@Param("string") String param, Pageable pageable);

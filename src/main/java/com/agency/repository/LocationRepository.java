@@ -24,7 +24,7 @@ public interface  LocationRepository extends JpaRepository<Location, Long> {
 
     Page<Location> findAllByCompanyId(Long id, Pageable pageable);
 
-    // List<Food> findAllByType(String type);
+    List<Location> findAllByType(String type);
 
     @Query("SELECT location FROM Location location WHERE location.name LIKE CONCAT('%', :string, '%')")
     Page<Location> findLocations(@Param("string") String param, Pageable pageable);

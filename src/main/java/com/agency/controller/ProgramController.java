@@ -23,23 +23,23 @@ import java.util.Optional;
 @Slf4j
 public class ProgramController {
 
-    private final ProgramService locationService;
-    private final ProgramRepository locationRepository;
-    private final ProgramMapper locationMapper;
+    private final ProgramService programService;
+    private final ProgramRepository programRepository;
+    private final ProgramMapper programMapper;
 
     @Autowired
     public ProgramController(ProgramService locationService, ProgramRepository locationRepository, ProgramMapper locationMapper) {
 
-        this.locationService = locationService;
-        this.locationRepository = locationRepository;
-        this.locationMapper = locationMapper;
+        this.programService = locationService;
+        this.programRepository = locationRepository;
+        this.programMapper = locationMapper;
     }
 
     @GetMapping(value = "/program/{id}", produces = "application/json")
     @ResponseBody
     public ModelAndView loadProgram(@PathVariable Long id) {
 
-        Optional<Program> location = locationRepository.findById(id);
+        Optional<Program> location = programRepository.findById(id);
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject(location.get());
@@ -58,7 +58,7 @@ public class ProgramController {
     public ResponseEntity deleteProgram(@PathVariable Long id) {
 
         try {
-            locationRepository.deleteById(id);
+            programRepository.deleteById(id);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.METHOD_NOT_ALLOWED);
         }
@@ -70,19 +70,19 @@ public class ProgramController {
     @ResponseBody
     public List<Program> loadPrograms() {
 
-        List<Program> locations = locationRepository.findAll();
+        List<Program> locations = programRepository.findAll();
 
         return locations;
     }
 
-  //  @GetMapping(value = "/food", produces = "application/json")
-    //@ResponseBody
- /*   public List<Food> loadTypedFoods(@RequestParam String type) {
+   @GetMapping(value = "/program", produces = "application/json")
+    @ResponseBody
+    public List<Program> loadTypedFoods(@RequestParam String type) {
 
-        List<Food> foods = foodRepository.findAllByType(type);
+        List<Program> programs = programRepository.findAllByType(type);
 
-        return foods;
-    }*/
+        return programs;
+    }
 
     @PostMapping(value = "/program/save")
     public ResponseEntity save(@RequestBody Program location) {
@@ -96,7 +96,7 @@ public class ProgramController {
         }*/
       //  else {
 
-            return locationService.save(location);
+            return programService.save(location);
         //}
     }
 
@@ -105,7 +105,7 @@ public class ProgramController {
 
         Pageable pageable = PageRequest.of(pageNumber, pageSize);
 
-        return locationService.getAll(pageable, param);
+        return programService.getAll(pageable, param);
     }
 
     @GetMapping(value = "/showPrograms")
@@ -139,9 +139,9 @@ public class ProgramController {
     @Transactional
     public ResponseEntity loadProgramForUpdate(@PathVariable Long id) {
 
-        Optional<Program> location= locationRepository.findById(id);
+        Optional<Program> location= programRepository.findById(id);
         if(location.isPresent()){
-            ProgramDto locationDto = locationMapper.toDto(location.get());
+            ProgramDto locationDto = programMapper.toDto(location.get());
             return new ResponseEntity(locationDto,HttpStatus.OK);
         }
 
@@ -152,7 +152,7 @@ public class ProgramController {
     @PostMapping(value = "/program/update")
     public ResponseEntity updateProgram(@RequestBody ProgramDto location) {
 
-        locationService.update(location);
+        programService.update(location);
 
         return new ResponseEntity(HttpStatus.OK);
     }

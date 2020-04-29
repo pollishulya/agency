@@ -82,15 +82,5 @@ button, a{
     background: none;
 }
 
-#test {
-    border-radius: 20px;
-    border-color: orange;
-    border-width: 3px;
-    background:none;
-color: white;
-    font-weight: bold;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 30px;
-}
+
 

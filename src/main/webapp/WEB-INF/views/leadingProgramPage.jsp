@@ -30,7 +30,7 @@
         <script type="text/javascript">
             $(document).ready(function () {
 
-                $.get("/food?cuisine=ASIA", function (data) {
+                $.get("/program?type=LEADING", function (data) {
 
                     var rowsHtml;
                     for (var j = 0; j < data.length; j = j + 3) {

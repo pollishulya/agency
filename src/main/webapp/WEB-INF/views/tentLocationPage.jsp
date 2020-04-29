@@ -30,7 +30,8 @@
         <script type="text/javascript">
             $(document).ready(function () {
 
-                $.get("/food?cuisine=ASIA", function (data) {
+                $.get("/location?type=TENT", function (data) {
+
                     var rowsHtml;
                     for (var j = 0; j < data.length; j = j + 3) {
                         var date = new Date(data[j].exitDate);

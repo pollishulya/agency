@@ -113,9 +113,9 @@ function loadAccounts(param, numberRows) {
             for (var i = 0; i < data.length; i++) {
                 html += "<tr id='row_" + data[i].id + "'><td>" + data[i].firstname + "</td><td>" + data[i].lastname + "</td><td>" + data[i].phone + "</td><td>" +
                     data[i].email + "</td><td>" + data[i].role + "</td>";
-                html += "<td>" + "<button class='btn btn-danger' onclick='deleteForm(" + data[i].id +
-                    ")'><span class='glyphicon glyphicon-trash'></span></button>" + "</td>";
-                html += "<td>" + "<button class='btn btn-primary' onclick='updateRecord(" + data[i].id + ")'>Update</button>" + "</td></tr>";
+                html += "<td>" + "<button id='delete' class='btn btn-primary' onclick='deleteForm(" + res[i].id +
+                    ")'>Удалить</button>" + "</td>";
+                html += "<td>" + "<button id='update' class='btn btn-primary' onclick='updateRecord(" + res[i].id + ");return false;'>Редактировать</button>" + "</td></tr>";
 
             }
             $('#tableBody').append(html);
