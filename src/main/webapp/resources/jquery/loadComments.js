@@ -140,13 +140,16 @@ function reserveLocation(id) {
     var date = $('#date').val();
 
     var reservation = ({
+
         "numberPerson": numberPerson,
         "locationId": id,
         "username": username,
         "phone": phone,
         "date": date,
-       // "status": "BOOKED"
-       // "nameFood": name
+        "foodId":1,
+        "companyId": 2,
+        "status": "BOOKED",
+        "nameFood": name,
     });
    // alert(reservation.);
     alert (JSON.stringify(reservation));

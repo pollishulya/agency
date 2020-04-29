@@ -71,7 +71,7 @@ public class ReservationController {
     public List<ReservationDto> userOrders() {
 
         Long id = getCurrentUserId();
-        List<Reservation> reservations = reservationRepository.findAllByCompanyId(id);
+        List<Reservation> reservations = reservationRepository.findAllByAccountId(id);
         List<ReservationDto> reservationsDto = new ArrayList<>();
         for (Reservation reservation : reservations) {
             reservationsDto.add(reservationMapper.toDto(reservation));
