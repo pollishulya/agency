@@ -1,10 +1,7 @@
-thead {
-    background: #80ced6;
-}
 
 .position-table {
     position: relative;
-    margin-top: 40px;
-    margin-left: 150px;
+    margin-top: 0px;
+    margin-left: 0px;
     width: 1000px;
 }

@@ -25,17 +25,36 @@
 <jsp:include page="blocks/navbar1.jsp"/>
 <jsp:include page="blocks/navbar.jsp"/>
 <body>
-
 <div id="backimage">
     <table>
         <tr>
-            <td class="grow"><a href="/pageLocation"> <img src="/resources/images/location.jpg" width="350" height="550"> </a></td>
-            <td class="grow"><a href="/pageMenu"><img src="/resources/images/menu.jpg" width="350" height="550"></a></td>
-            <td class="grow"><a href="/pageTamada"><img src="/resources/images/tamada.jpg" width="350" height="550"></a></td>
+            <td class="grow" data-tooltip="Нажмите, чтобы просмотреть локации"><a href="/pageLocation"> <img src="/resources/images/location.jpg" width="350" height="550"> </a></td>
+            <td class="grow" data-tooltip="Нажмите, чтобы просмотреть меню"><a href="/pageMenu"><img src="/resources/images/menu.jpg" width="350" height="550"></a></td>
+            <td class="grow" data-tooltip="Нажмите, чтобы просмотреть развлечения"><a href="/pageTamada"><img src="/resources/images/tamada.jpg" width="350" height="550"></a></td>
         </tr>
     </table>
+    <div id="tooltip"></div>
 </div>
-
+<script>
+    $(function(){
+        $("[data-tooltip]").mousemove(function (eventObject) {
+            $data_tooltip = $(this).attr("data-tooltip");
+            $("#tooltip").html($data_tooltip)
+                .css({
+                    "top" : eventObject.pageY -200,
+                    "left" : eventObject.pageX -250
+                })
+                .show();
+        }).mouseout(function () {
+            $("#tooltip").hide()
+                .html("")
+                .css({
+                    "top" : 0,
+                    "left" : 0
+                });
+        });
+    });
+</script>
 <script>window.jQuery || document.write('<script src="/webjars/jquery/3.1.1/jquery.min.js"><\/script>')</script>
 
 </body>

@@ -17,31 +17,35 @@
 
     <title>My orders</title>
 </head>
+<br>
 <jsp:include page="blocks/navbar1.jsp"/>
 <jsp:include page="blocks/navbar.jsp"/>
 <body>
-<div class="position-table">
+<div id="backimage" class="position-table">
     <div id="table">
-        <table class='table table-hover table-bordered table-sm' cellspacing='0' width='100%'>
-            <thead class="black white-text">
+        <table class='table'>
+            <thead class="thead-light">
             <tr>
                 <th scope="col"><spring:message code="username.label"/></th>
                 <th scope="col"><spring:message code="phone.label"/></th>
                 <th scope="col"><spring:message code="numberPerson.label"/></th>
-                <th scope="col"><spring:message code="tour.label"/></th>
                 <th scope="col"><spring:message code="status.label"/></th>
+                <th scope="col"><spring:message code="date.label"/></th>
+                <th scope="col"><spring:message code="tour.label"/></th>
+
             </tr>
             </thead>
             <tbody id='tableBody'>
             </tbody>
         </table>
-    </div>
+
 
     <div id="noReservationMessage">
         <div class='panel panel-warning'>
             <div class='panel-heading'></div>
             <div class='panel-body'><spring:message code='noReservation.error'/></div>
         </div>
+    </div>
     </div>
 </div>
 

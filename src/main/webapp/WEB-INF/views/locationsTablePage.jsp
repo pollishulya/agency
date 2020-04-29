@@ -166,8 +166,8 @@
     </div>
 </div>
 
-<div class="position-table">
-    <button class="btn btn-info" onclick="AddNew(0)"><spring:message code="addTour.button"/></button>
+<div id="backimage" class="position-table">
+    <button id="add" class="btn btn-info" onclick="AddNew(0)"><spring:message code="addTour.button"/></button>
         <br/><br/>
     <label><spring:message code="numberRows.label"/></label>
     <select id="numberRows" class="mdb-select md-form select-option">
@@ -184,9 +184,9 @@
             <div class='panel-body'><spring:message code='noTour.error'/></div>
         </div>
     </div>
-
-    <table id='tourTable' class='table table-hover table-bordered table-sm' cellspacing='0' width='100%'>
-        <thead class="black white-text">
+<div id="table">
+    <table id='tourTable' class='table'>
+        <thead class="thread-light">
         <tr>
             <th scope="col"><spring:message code="locationName.label"/></th>
             <th scope="col"><spring:message code="address.label"/></th>
@@ -201,6 +201,7 @@
         <tbody id='tableBody'>
         </tbody>
     </table>
+</div>
     <script type="text/javascript">
         loadLocations(1, $('#search').val(), 5);
     </script>

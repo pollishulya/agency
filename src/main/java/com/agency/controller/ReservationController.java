@@ -79,13 +79,22 @@ public class ReservationController {
 
         return reservationsDto;
     }
-   /* @GetMapping(value = "/reservation/loadCompany", produces = "application/json")
+    @GetMapping(value = "/orders")
+    public ModelAndView showOrders() {
+
+        ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
+        modelAndView.setViewName("userReservationPage");
+
+        return modelAndView;
+    }
+
+    @GetMapping(value = "/reservation/loadCompany", produces = "application/json")
     @ResponseBody
     @Transactional
     public List<ReservationDto> companyOrders() {
 
         Long id = getCurrentUserId();
-        List<Reservation> reservations = reservationRepository.findAllByLocationId(id);
+        List<Reservation> reservations = reservationRepository.findAllByCompanyId(id);
 
         List<ReservationDto> reservationsDto = new ArrayList<>();
         for (Reservation reservation : reservations) {
@@ -94,14 +103,24 @@ public class ReservationController {
 
         return reservationsDto;
     }
-*/
-    @GetMapping(value = "/orders")
-    public ModelAndView showOrders() {
+
+    @GetMapping(value = "/ordersCompany")
+    public ModelAndView showOrdersCompany() {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        modelAndView.setViewName("userReservationPage");
+        modelAndView.setViewName("companyReservationPage");
 
         return modelAndView;
+    }
+
+    private Long getCurrentUserId() {
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String email = authentication.getName();
+        Account account = accountRepository.findByEmail(email);
+        Long id = account.getId();
+
+        return id;
     }
 
     @GetMapping(value = "/pageLocation")
@@ -140,13 +159,5 @@ public class ReservationController {
         return modelAndView;
     }
 
-    private Long getCurrentUserId() {
 
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String email = authentication.getName();
-        Account account = accountRepository.findByEmail(email);
-        Long id = account.getId();
-
-        return id;
-    }
 }

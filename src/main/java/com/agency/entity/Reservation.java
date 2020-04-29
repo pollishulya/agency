@@ -70,12 +70,19 @@ public class Reservation extends BaseEntity {
     @JoinColumn(name = "account_id")
     private Account account;
 
-  /* @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
+  @Column(name = "status")
+  private String status;
+
+
+  @Column(name = "date")
+  private Date date;
+
+   @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
     @JoinColumn(name = "location_id")
     private Location location;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id")
-    private Account company;*/
+    private Account company;
 
 }

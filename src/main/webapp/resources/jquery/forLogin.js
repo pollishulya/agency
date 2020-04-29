@@ -33,6 +33,7 @@ function signUp() {
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(accountDto),
         success: function (result) {
+                    alert("регистрация прошла успешно");
             loginForm();
             $("#signUpModal").modal("hide");
         },

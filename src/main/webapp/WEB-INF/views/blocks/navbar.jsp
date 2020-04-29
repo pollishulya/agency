@@ -73,15 +73,16 @@
                 <div id="logoutBtn"></div>
                 <sec:authorize access="isAnonymous()">
                     <script>
-                        $('#user').append('<button id="locales" class="btn btn-outline-primary dropdown-toggle position-button" type="button"\n' +
+                        $('#user').append(
+                            '<button id="locales1" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\n' +
                             '                            data-toggle="dropdown"><spring:message code="lang.label"/><span class="caret"></span></button>\n' +
                             '                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
-                            '                        <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                        <li  role="presentation"><a role="menuitem" tabindex="-1"\n' +
                             '                                                   onclick="languageSelect(\'en\');"><spring:message code="lang.eng"/></a></li>\n' +
-                            '                        <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                        <li  role="presentation"><a role="menuitem" tabindex="-1"\n' +
                             '                                                   onclick="languageSelect(\'ru\');"><spring:message code="lang.ru"/></a></li>\n' +
                             '                    </ul>\n' +
-                            '                </div>' +' <a id="enter" href="/enter" class="btn btn-outline-primary "><spring:message code="enter.label"/></a>\n')
+                            '               </div><a id="enter" href="/enter" class="btn btn-outline-primary "><spring:message code="enter.label"/></a>\n')
                     </script>
                 </sec:authorize>
                 <sec:authorize access="hasRole('ROLE_ADMIN')">

@@ -64,7 +64,7 @@ public class Location extends BaseEntity {
     @JoinColumn(name = "location_company_id")
     private Account company;
 
-   /* @JsonIgnore
+    @JsonIgnore
     @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "location",fetch = FetchType.LAZY)
-    private Set<Reservation> reservations = new HashSet<>();*/
+    private Set<Reservation> reservations = new HashSet<>();
 }

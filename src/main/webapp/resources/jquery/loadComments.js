@@ -109,6 +109,7 @@ function reserve(id) {
     var reservation = ({
         "numberPerson": numberPerson,
         "foodId": id,
+        "companyId": 55,
         "username": username,
         "phone": phone,
         "date": date,

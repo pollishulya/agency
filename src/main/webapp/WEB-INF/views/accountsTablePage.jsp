@@ -83,7 +83,7 @@
     </div>
 </div>
 
-<div class="position-table">
+<div id="backimage" class="position-table">
     <br/><br/>
     <label><spring:message code="numberRows.label"/></label>
     <select id="numberRows" class="mdb-select md-form select-option">
@@ -94,8 +94,9 @@
 
     <input type="text" class="search-input pull-right" placeholder="Search" id="search"
            onkeyup="$('#tableBody').empty();loadAccounts(this.value, $('#numberRows').val())">
-    <table id='table' class='table table-hover table-bordered table-sm' cellspacing='0' width='100%'>
-        <thead class="black white-text table-info">
+    <div id="table">
+    <table class='table'>
+        <thead class="thread-light">
         <tr>
             <th scope="col"><spring:message code="username.label"/></th>
             <th scope="col"><spring:message code="username.label"/></th>
@@ -115,6 +116,7 @@
 
         </script>
     </table>
+    </div>
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-end">
             <li class="page-item">

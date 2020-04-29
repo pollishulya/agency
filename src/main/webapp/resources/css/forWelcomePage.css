@@ -118,3 +118,18 @@ td{
     background: rgba(191, 194, 176, 0.7);
 }
 
+#tooltip {
+    z-index: 9999;
+    position: absolute;
+    display: none;
+    top:0px;
+    left:0px;
+    width: 250px;
+    background-color: #fff;
+    padding: 5px 10px 5px 10px;
+    color: #000;
+    border: 1px solid #888;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px #555;
+    box-sizing: initial;
+}

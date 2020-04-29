@@ -14,7 +14,7 @@
     font-variant: small-caps;
     position: absolute;
     left: -550px;
-bottom: -5px;
+bottom: -8px;
     text-decoration: none;
 
     text-shadow: 2px 2px 0 orange,
@@ -49,7 +49,6 @@ top: 14px;
 
 .position-for-login{
     position: absolute;
-
     left: 1360px;
     color: red;
     font-family:sans-serif;
@@ -57,7 +56,6 @@ top: 14px;
 
 .position-7{
     position: absolute;
-
     left: 1260px;
     color: red;
     font-family:sans-serif;
@@ -77,22 +75,23 @@ top: 14px;
     font-family:sans-serif;
 }
 
+
 .position-button{
     position: relative;
 margin-top: 10px;
-    margin-right: 7px;
+    margin-right: 15px;
 }
 
 .position-kitchen{
     position: relative;
     margin-top: 10px;
-    margin-right: 7px;
+    margin-right: 15px;
 }
 
 .position-lang{
     position: relative;
     margin-top: 10px;
-    margin-right: 7px;
+    margin-right: 15px;
 }
 
 .user{
@@ -179,5 +178,17 @@ position: relative;
 }
 
 #enter{
-    top: 40px;
+    position:relative;
+    top: 5px;
+    left:40px;
 }
+#locales1{
+    position:relative;
+    left:40px;
+}
+
+.dropdown-menu{
+    background: orange;
+    text-decoration: underline;
+}
+
