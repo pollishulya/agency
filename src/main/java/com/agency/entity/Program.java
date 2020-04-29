@@ -52,6 +52,10 @@ public class Program extends BaseEntity {
     //@JsonManagedReference
     private List<Description> descriptions = new ArrayList<>();*/
 
+    @JsonIgnore
+    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "program",fetch = FetchType.LAZY)
+    private Set<BookingProgram> reservations = new HashSet<>();
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "program_company_id")
     private Account company;

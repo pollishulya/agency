@@ -15,7 +15,7 @@ body{
     background: rgba(191, 194, 176, 0.7);
 }
 
-#nextBtn,#previousBtn,#add,#addmenu,#saveTourBtn,#updateRecord,#update,#delete,#deleteBtn{
+#nextBtn,#previousBtn,#add,#addmenu,#saveTourBtn,#updateRecord,#update,#delete,#deleteBtn,#ReserveBtn{
     border-radius: 20px;
     border-color: orange;
     border-width: 3px;

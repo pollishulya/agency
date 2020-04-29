@@ -22,17 +22,23 @@
     <link rel="stylesheet" href="/resources/css/navbar-style.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/modal.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/deleteForm.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/enter.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/forAccountTablePage.css" type="text/css">
+
+
+    <link rel="stylesheet" href="/resources/css/table-style.css" type="text/css">
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 </head>
 <header>
 
-    <div class="modal fade" id="accountSettingsModal">
-        <div class="modal-dialog formContent">
+    <div class="modal fade" id="accountSettingsModal" style="position: absolute; left: 300px;top:-100px">
+        <div class="col">
+            <div class="modal-header">
             <a href="#" class="close" data-dismiss="modal">&times;</a>
-            <h5><spring:message code="update.label"/></h5>
-        </div>
+            <h5 class="title" style="position: relative; left: 110px;"><spring:message code="update.label"/></h5>
+            </div>
         <div class="modal-body">
             <form id="settingsForm">
                 <input type="hidden" id="idUpdateViaUser" name="id">
@@ -63,6 +69,7 @@
             </form>
         </div>
     </div>
+</div>
 
 
     <nav class="navbar navbar-expand-md  fixed-top">

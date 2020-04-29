@@ -15,7 +15,6 @@
     <script src="/resources/jquery/actionsWithAccount.js"></script>
     <link rel="stylesheet" href="/resources/css/deleteForm.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/forAccountTablePage.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/table-style.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/enter.css" type="text/css">
 
 
@@ -50,7 +49,7 @@
     <div class="col">
         <div class="modal-header">
             <a href="#" class="close" data-dismiss="modal">&times;</a>
-            <h5 class="title" style="position: relative; left: 110px;"><spring:message code="update.label"/>Редактирование</h5>
+            <h5 class="title" style="position: relative; left: 110px;"><spring:message code="update.label"/></h5>
         </div>
         <div class="modal-body">
             <form id="updateForm">

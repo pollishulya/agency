@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/resources/css/deleteForm.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/forWelcomePage.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/enter.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/enterforbutton.css" type="text/css">
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
