@@ -83,7 +83,7 @@ public class ReservationController {
     public ModelAndView showOrders() {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        modelAndView.setViewName("userReservationPage");
+        modelAndView.setViewName("usReservationPage");
 
         return modelAndView;
     }

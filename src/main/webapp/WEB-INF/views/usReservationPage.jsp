@@ -40,17 +40,17 @@
         </table>
 
 
-        <div id="noReservationMessage">
-            <div class='panel panel-warning'>
-                <div class='panel-heading'></div>
-                <div class='panel-body'><spring:message code='noReservation.error'/></div>
-            </div>
+    <div id="noReservationMessage">
+        <div class='panel panel-warning'>
+            <div class='panel-heading'></div>
+            <div class='panel-body'><spring:message code='noReservation.error'/></div>
         </div>
+    </div>
     </div>
 </div>
 
 <script type="text/javascript">
-    loadOrders();
+    loadCompanyOrders();
 </script>
 </body>
 <jsp:include page="blocks/footer.jsp"/>

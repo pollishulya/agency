@@ -16,10 +16,8 @@ function convertDate(exitDate) {
 
 
 function loadOrders() {
-    $.get("/reservation/load", function (data) {
-        alert(data+" "+data.length);
+    $.get("/reservation/loadCompany", function (data) {
         if (data.length > 0) {
-            alert(data+" "+data.length);
             $('#noReservationMessage').empty();
             var html = "";
             for (var i = 0; i < data.length; i++) {
@@ -30,7 +28,6 @@ function loadOrders() {
             }
             $('#tableBody').append(html);
         } else {
-            alert(data+" "+data.length);
             $('#table').detach();
 
 
