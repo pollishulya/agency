@@ -110,6 +110,7 @@ function reserve(id) {
         "numberPerson": numberPerson,
         "foodId": id,
         "companyId": 55,
+        "programId": id,
         "username": username,
         "phone": phone,
         "date": date,

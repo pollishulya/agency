@@ -32,6 +32,6 @@ public class ReservationDto extends BaseDto {
     /*private Long locationId;*/
     private Date date;
     private String status;
-    // private Long programId;
+     private Long programId;
 
 }

@@ -32,14 +32,14 @@ public class BookingProgramMapper extends AbstractMapper<BookingProgram, Booking
        // this.locationRepository=locationRepository;
     }
 
-    @PostConstruct
     public void setupMapper() {
-        mapper.createTypeMap((BookingProgram.class, BookingProgramDto.class)
-                .addMappings(m -> m.skip((BookingProgramDto::setAccountId)).setPostConverter(toDtoConverter())
-                .addMappings(m -> m.skip((BookingProgramDto::setNameProgram)).setPostConverter(toDtoConverter())
-                .addMappings(m -> m.skip((BookingProgramDto::setProgramId)).setPostConverter(toDtoConverter())
-                .addMappings(m -> m.skip((BookingProgramDto::setCompanyId)).setPostConverter(toDtoConverter());
-        mapper.createTypeMap((BookingProgramDto.class, BookingProgram.class)
+        mapper.createTypeMap(BookingProgram.class, BookingProgramDto.class)
+                .addMappings(m -> m.skip(BookingProgramDto::setAccountId)).setPostConverter(toDtoConverter())
+                .addMappings(m -> m.skip(BookingProgramDto::setNameProgram)).setPostConverter(toDtoConverter())
+                .addMappings(m -> m.skip(BookingProgramDto::setProgramId)).setPostConverter(toDtoConverter())
+              //  .addMappings(m -> m.skip(BookingProgramDto::setLocationId)).setPostConverter(toDtoConverter())
+                .addMappings(m -> m.skip(BookingProgramDto::setCompanyId)).setPostConverter(toDtoConverter());
+        mapper.createTypeMap(BookingProgramDto.class, BookingProgram.class)
                 .addMappings(m -> m.skip(BookingProgram::setAccount)).setPostConverter(toEntityConverter())
                 .addMappings(m -> m.skip(BookingProgram::setProgram)).setPostConverter(toEntityConverter())
                 .addMappings(m -> m.skip(BookingProgram::setCompany)).setPostConverter(toEntityConverter());
