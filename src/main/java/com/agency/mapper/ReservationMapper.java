@@ -85,6 +85,7 @@ public class ReservationMapper extends AbstractMapper<Reservation, ReservationDt
     void mapSpecificFields(ReservationDto source, Reservation destination) {
         destination.setAccount(accountRepository.findById(source.getAccountId()).orElse(null));
         //destination.setCompany(accountRepository.findById(source.getCompanyId()).orElse(null));
+     //   destination.setCompany(accountRepository.findById(source.getCompanyId()).orElse(null))
       destination.setFood(tourRepository.findById(source.getFoodId()).orElse(null));
       // destination.setLocation(locationRepository.findById(source.getLocationId()).orElse(null));
         destination.setCompany(accountRepository.findById(source.getCompanyId()).orElse(null));

@@ -68,13 +68,13 @@
                             var exitDate = dd + '/' + mm + '/' + yyyy;
 
                             rowsHtml += "<div class='col-md-3 tour position-tour'>";
-                            rowsHtml += "<div class='image'><img class='tour-image' src='" + data[j].image + "/1.jpg' alt='' width='258' height='160'>" +
-                                "<h2><span>" + data[j].price + " $</span></h2></div>";
-                            rowsHtml += "<p><h3>" + data[j].name + "</h3></a><p>";
+                            rowsHtml += "<div class='image'><img class='tour-image' src='" + data[j+1].image + "/1.jpg' alt='' width='258' height='160'>" +
+                                "<h2><span>" + data[j+1].price + " $</span></h2></div>";
+                            rowsHtml += "<p><h3>" + data[j+1].name + "</h3></a><p>";
                             //  rowsHtml += "<p><small>" + data[j].duration + "</small></p>";
                             rowsHtml += "<p> Дата выезда:<b>" + exitDate + "</b><p>";
-                            rowsHtml += "<p><span class='glyphicon glyphicon-time' ></span><b> " + data[j].duration + " <spring:message code='day.label'/></b></p>";
-                            rowsHtml += " <a href='/program/" + data[j].id + "'class='btn btn-primary text-uppercase position-view'>" + "<spring:message code='view.label'/>" + "</a><br/><br/>";
+                            rowsHtml += "<p><span class='glyphicon glyphicon-time' ></span><b> " + data[j+1].duration + " <spring:message code='day.label'/></b></p>";
+                            rowsHtml += " <a href='/program/" + data[j+1].id + "'class='btn btn-primary text-uppercase position-view'>" + "<spring:message code='view.label'/>" + "</a><br/><br/>";
                             rowsHtml += "</div>";
                         }
 
@@ -93,13 +93,13 @@
                             var exitDate = dd + '/' + mm + '/' + yyyy;
 
                             rowsHtml += "<div class='col-md-3 tour position-tour'>";
-                            rowsHtml += "<div class='image'><img class='tour-image' src='" + data[j].image + "/1.jpg' alt='' width='258' height='160'>" +
-                                "<h2><span>" + data[j].price + " $</span></h2></div>";
-                            rowsHtml += "<p><h3>" + data[j].name + "</h3></a><p>";
+                            rowsHtml += "<div class='image'><img class='tour-image' src='" + data[j+2].image + "/1.jpg' alt='' width='258' height='160'>" +
+                                "<h2><span>" + data[j+2].price + " $</span></h2></div>";
+                            rowsHtml += "<p><h3>" + data[j+2].name + "</h3></a><p>";
                             // rowsHtml += "<p><small>" + data[j].address + "</small></p>";
                             rowsHtml += "<p> Дата выезда:<b>" + exitDate + "</b><p>";
-                            rowsHtml += "<p><span class='glyphicon glyphicon-time' ></span><b> " + data[j].duration + " <spring:message code='day.label'/></b></p>";
-                            rowsHtml += " <a href='/program/" + data[j].id + "'class='btn btn-primary text-uppercase position-view'>" + "<spring:message code='view.label'/>" + "</a><br/><br/>";
+                            rowsHtml += "<p><span class='glyphicon glyphicon-time' ></span><b> " + data[j+2].duration + " <spring:message code='day.label'/></b></p>";
+                            rowsHtml += " <a href='/program/" + data[j+2].id + "'class='btn btn-primary text-uppercase position-view'>" + "<spring:message code='view.label'/>" + "</a><br/><br/>";
                             rowsHtml += "</div>";
                         }
 

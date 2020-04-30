@@ -15,7 +15,16 @@ body{
     background: rgba(191, 194, 176, 0.7);
 }
 
-#nextBtn,#previousBtn,#add,#addmenu,#saveTourBtn,#updateRecord,#update,#delete,#deleteBtn,#ReserveBtn{
+#backimageLook{
+    position: relative;
+    left: 250px;
+    padding: 15px;
+    width: 800px;
+    border-radius: 20px;
+    background: rgba(191, 194, 176, 0.7);
+}
+
+#nextBtn,#previousBtn,#add,#addmenu,#saveTourBtn,#updateRecord,#update,#delete,#deleteBtn,#ReserveBtn,#reserve,#send{
     border-radius: 20px;
     border-color: orange;
     border-width: 3px;

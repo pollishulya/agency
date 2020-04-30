@@ -77,6 +77,10 @@ public class Reservation extends BaseEntity {
   @Column(name = "date")
   private Date date;
 
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
+    @JoinColumn(name = "program_id")
+    private Program program;
+
    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
     @JoinColumn(name = "location_id")
     private Location location;

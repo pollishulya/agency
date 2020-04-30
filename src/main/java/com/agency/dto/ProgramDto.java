@@ -24,4 +24,5 @@ public class ProgramDto extends BaseDto {
   private String description;
     private Long companyId;
     private Set<BookingProgramDto> reservations = new HashSet<>();
+    private Set<ProgramDto> reservation = new HashSet<>();
 }

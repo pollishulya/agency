@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class BookingProgramDto extends BaseDto {
+public class BookingLocationDto extends BaseDto {
 
         private Long id;
         private int numberPerson;

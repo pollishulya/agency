@@ -117,13 +117,46 @@ function reserve(id) {
         "nameFood": name,
         "status":"BOOKED"
     });
-    alert(reservation.status);
-    //alert (JSON.stringify(reservation));
+//    alert(reservation.status);
+    alert (JSON.stringify(reservation));
     $.ajax({
         type: 'POST',
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(reservation),
         url: '/food/reservation',
+        success: function (res) {
+            $("#ReserveModal").modal("hide");
+        },
+        error: function (res) {
+        }
+    });
+};
+
+function reserveProgram(id) {
+
+    var username = $("#name").val();
+    var name = $("#programName").text();
+    var phone = $("#phone").val();
+    var numberPerson = $("#numberPersons").val();
+    var date = $('#date').val();
+
+    var reservation = ({
+        "numberPerson": numberPerson,
+        "nameProgram":name,
+        "companyId": 55,
+        "programId": id,
+        "username": username,
+        "phone": phone,
+        "date": date,
+        "status":"BOOKED"
+    });
+//    alert(reservation.status);
+    alert (JSON.stringify(reservation));
+    $.ajax({
+        type: 'POST',
+        contentType: "application/json;charset=utf-8",
+        data: JSON.stringify(reservation),
+        url: '/program/bookingProgram',
         success: function (res) {
             $("#ReserveModal").modal("hide");
         },
@@ -146,8 +179,9 @@ function reserveLocation(id) {
         "locationId": id,
         "username": username,
         "phone": phone,
-        "date": date, "foodId":1,
-        "companyId": 2,
+        "date": date,
+        "foodId":1,
+        "companyId": 55,
         "status": "BOOKED",
         "nameFood": name,
     });

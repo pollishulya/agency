@@ -31,7 +31,7 @@
 <jsp:include page="blocks/navbar.jsp"/>
 <body>
 
-<div class="modal fade" id="ReserveModal" style="position: absolute; left: 400px;top:0px">
+<div class="modal fade" id="ReserveModal" style="position: absolute; left: 325px;top:0px">
     <div class="col">
         <div>
             <div class="modal-header">
@@ -76,7 +76,7 @@
 
     <div class="blog-post">
         <section class="container">
-            <div class="panel-body">
+            <div id="backimageLook" style="position:relative;left:-70px">
                 <h1 class="blog-post-title"><p id="tourName">${food.name}</p></h1>
                 <c:if test="${food.rating != -1}">
                     <h2>
@@ -93,21 +93,21 @@
 <%--                <div><spring:message code="duration"/><b>${food.numberDays}</b></div>--%>
                 <div><spring:message code="cost"/><b>${food.price}$</b></div>
                 <br>
-                <div class='slideshow-container textWrapLeft'>
+                <div class='slideshow-container textWrapLeft' style="position:relative; left:225px">
 
                     <div class='mySlides'>
                         <div class='numbertext'>1 / 3</div>
-                        <img src='${food.image}/1.jpg' alt='' style='width:100%'>
+                        <img src='${food.image}/1.jpg' alt='' style='width:100%;position:relative; left:0px;'>
                     </div>
 
                     <div class='mySlides'>
                         <div class='numbertext'>2 / 3</div>
-                        <img src='${food.image}/2.jpg' style='width:100%'>
+                        <img src='${food.image}/2.jpg' style='width:100%;position:relative; left:0px;'>
                     </div>
 
                     <div class='mySlides'>
                         <div class='numbertext'>3 / 3</div>
-                        <img src='${food.image}/3.jpg' style='width:100%'>
+                        <img src='${food.image}/3.jpg' style='width:100%;position:relative; left:0px;'>
                     </div>
 
                     <a class='prev' onclick='plusSlides(-1)'>&#10094;</a>
@@ -147,118 +147,120 @@
                     }
                 </script>
                 <br>
-                <div style='text-align:center'>
+                <div style='text-align:center; display:none'>
                     <span class='dot' onclick='currentSlide(1)'></span>
                     <span class='dot' onclick='currentSlide(2)'></span>
                     <span class='dot' onclick='currentSlide(3)'></span>
                 </div>
-            </div>
+
             <br>
-            <div class="panel-body">
+
 
                 <div id="description"></div>
                 <script>
                     loadDescription(${food.id});
                 </script>
-                <div id="bookingBtn" class="mar-top clearfix"></div>
+                <div id="bookingBtn" class="mar-top clearfix" style="position:relative; bottom:205px" ></div>
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                     <script>
                         $('#bookingBtn').append('<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="<spring:message code="sendCommentError"/>">\n' +
-                            '                                <button class="btn btn-sm btn-primary pull-right"  onclick="reserveForm(0)" type="submit" disabled> <i class="fa fa-pencil fa-fw"></i> <spring:message code="reserve"/> </button>\n' +
+                            '                                <button style="display:none" id="reserve" class="btn btn-sm btn-primary pull-right"  onclick="reserveForm(0)" type="submit" disabled> <i class="fa fa-pencil fa-fw"></i> <spring:message code="reserve"/> </button>\n' +
                             '                                    </span>')
                     </script>
                 </sec:authorize>
                 <sec:authorize access="hasRole('ROLE_COMPANY')">
                     <script>
                         $('#bookingBtn').append('<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="<spring:message code="sendCommentError"/>">\n' +
-                            '                                <button class="btn btn-sm btn-primary pull-right"  onclick="reserveForm(0)" type="submit" disabled> <i class="fa fa-pencil fa-fw"></i> <spring:message code="reserve"/> </button>\n' +
+                            '                                <button style="display:none" id="reserve" class="btn btn-sm btn-primary pull-right"  onclick="reserveForm(0)" type="submit" disabled> <i class="fa fa-pencil fa-fw"></i> <spring:message code="reserve"/> </button>\n' +
                             '                                    </span>')
                     </script>
                 </sec:authorize>
                 <sec:authorize access="hasRole('ROLE_USER')">
                     <script>
-                        $('#bookingBtn').append('   <button class=\'btn btn-primary pull-right\' onclick="reserveForm(0)"><spring:message code="reserve"/></button>')
+                        $('#bookingBtn').append('   <button id="reserve" class=\'btn btn-primary pull-right\' onclick="reserveForm(0)"><spring:message code="reserve"/></button>')
                     </script>
                 </sec:authorize>
                 <sec:authorize access="isAnonymous()">
                     <script>
                         $('#bookingBtn').append('<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="<spring:message code="sendCommentError"/>">\n' +
-                            '                                <button class="btn btn-sm btn-primary pull-right"  onclick="reserveForm(0)" type="submit" disabled> <i class="fa fa-pencil fa-fw"></i> <spring:message code="reserve"/> </button>\n' +
+                            '                                <button style="display:none" id="reserve" class="btn btn-sm btn-primary pull-right"  onclick="reserveForm(0)" type="submit" disabled> <i class="fa fa-pencil fa-fw"></i> <spring:message code="reserve"/> </button>\n' +
                             '                                    </span>')
                     </script>
                 </sec:authorize>
 
-            </div>
+
 
             <br>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="panel-body">
+
 <%--                        <div class="panel-body">--%>
-                            <div class="form-group shadow-textarea comment">
-                                <label for="comment"><spring:message code="comment"/></label>
-                                <div class="container">
-                                    <div id="rating" class="row lead">
-                                        <div id="stars" class="starrr"></div>
-                                    </div>
-                                    <input type="hidden" id="count">
-                                </div>
-                                <textarea class="commentForm" id="comment" rows="4" cols="70"
-                                          placeholder=<spring:message code="writeComment"/>></textarea>
-                            </div>
+
                             <div id="saveCommentMistake" hidden><p class='alert alert-danger' role='alert'>
                                 <spring:message code="saveComment.error"/></p></div>
                             <div id="sendButton" class="mar-top clearfix"></div>
                             <sec:authorize access="hasRole('ROLE_USER')">
                                 <script>
-                                    $('#sendButton').append('<button class="btn btn-sm btn-primary pull-right" onclick="saveComment(${food.id})" type="submit"> <i class="fa fa-pencil fa-fw"></i> <spring:message code="send"/> </button>')
+                                    $('#sendButton').append(' <div class="form-group shadow-textarea comment">\n' +
+                                        '                                <label for="comment"><spring:message code="comment"/></label>\n' +
+                                        '                                <div class="container">\n' +
+                                        '                                    <div id="rating" class="row lead">\n' +
+                                        '                                        <div id="stars" class="starrr"></div>\n' +
+                                        '                                    </div>\n' +
+                                        '                                    <input type="hidden" id="count">\n' +
+                                        '                                </div>\n' +
+                                        '                                <textarea class="commentForm" id="comment" rows="4" cols="70" style="width=763p"\n' +
+                                        '                                          placeholder=<spring:message code="writeComment"/>></textarea>\n' +
+                                        '                            </div>' +
+                                        '<button id="send" class="btn btn-sm btn-primary pull-right" onclick="saveComment(${food.id})" type="submit"> <i class="fa fa-pencil fa-fw"></i> <spring:message code="send"/> </button>')
                                 </script>
                             </sec:authorize>
                             <sec:authorize access="isAnonymous()">
                                 <script>
                                     $('#sendButton').append('<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="<spring:message code="sendCommentError"/>">\n' +
-                                        '                                <button class="btn btn-sm btn-primary pull-right" onclick="saveComment(${food.id})" type="submit" disabled> <i class="fa fa-pencil fa-fw"></i> <spring:message code="send"/> </button>\n' +
+                                        '                                <button style="display:none" id="send" class="btn btn-sm btn-primary pull-right" onclick="saveComment(${food.id})" type="submit" disabled> <i class="fa fa-pencil fa-fw"></i> <spring:message code="send"/> </button>\n' +
                                         '                                    </span>')
                                 </script>
                             </sec:authorize>
                             <sec:authorize access="hasRole('ROLE_ADMIN')">
                                 <script>
                                     $('#sendButton').append('<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="<spring:message code="sendCommentError"/>">\n' +
-                                        '                                <button class="btn btn-sm btn-primary pull-right" onclick="saveComment(${food.id})" type="submit" disabled> <i class="fa fa-pencil fa-fw"></i> <spring:message code="send"/> </button>\n' +
+                                        '                                <button  style="display:none" id="send" class="btn btn-sm btn-primary pull-right" onclick="saveComment(${food.id})" type="submit" disabled> <i class="fa fa-pencil fa-fw"></i> <spring:message code="send"/> </button>\n' +
                                         '                                    </span>')
                                 </script>
                             </sec:authorize>
                             <sec:authorize access="hasRole('ROLE_COMPANY')">
                                 <script>
                                     $('#sendButton').append('<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="<spring:message code="sendCommentError"/>">\n' +
-                                        '                                <button class="btn btn-sm btn-primary pull-right" onclick="saveComment(${food.id})" type="submit" disabled> <i class="fa fa-pencil fa-fw"></i> <spring:message code="send"/> </button>\n' +
+                                        '                                <button style="display:none" id="send" class="btn btn-sm btn-primary pull-right" onclick="saveComment(${food.id})" type="submit" disabled> <i class="fa fa-pencil fa-fw"></i> <spring:message code="send"/> </button>\n' +
                                         '                                    </span>')
                                 </script>
                             </sec:authorize>
 <%--                        </div>--%>
-                    </div>
+
                     <div id="comments">
-                        <div class='panel-body'>
-                                <div class='media-block'>
+
+                                <div class='media-block' style="position:relative;left:300px">
                                     <p><spring:message code="noComments.error"/></p>
                                 </div>
-                        </div>
+
                     </div>
                     <nav aria-label="Page navigation example">
                         <ul class="pagination justify-content-end">
                             <li class="page-item">
-                                <button type="submit" class="btn btn-sm btn-primary" id="previousBtn"
+                                <button type="submit" class="btn btn-sm btn-primary" id="previousBtn" style="position:relative;left:360px"
                                         onclick="loadPage=loadPage-1;loadComments(${food.id})"><spring:message
                                         code="previous"/></button>
                             </li>
                             <li class="page-item">
-                                <button type="submit" class="btn btn-sm btn-primary " id="nextBtn"
+                                <button type="submit" class="btn btn-sm btn-primary " id="nextBtn" style="position:relative;left:360px"
                                         onclick="loadPage=loadPage+1;loadComments(${food.id});"><spring:message
                                         code="next"/></button>
                             </li>
                         </ul>
                     </nav>
                 </div>
+            </div>
             </div>
         </section>
     </div>
