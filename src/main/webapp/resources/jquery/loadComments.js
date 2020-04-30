@@ -168,7 +168,7 @@ function reserveProgram(id) {
 function reserveLocation(id) {
 
     var username = $("#name").val();
-    var name = $("#foodName").text();
+    var name = $("#locationName").text();
     var phone = $("#phone").val();
     var numberPerson = $("#numberPersons").val();
     var date = $('#date').val();
@@ -180,10 +180,9 @@ function reserveLocation(id) {
         "username": username,
         "phone": phone,
         "date": date,
-        "foodId":1,
         "companyId": 55,
         "status": "BOOKED",
-        "nameFood": name,
+        "nameLocation": name,
     });
    // alert(reservation.);
     alert (JSON.stringify(reservation));
@@ -191,7 +190,7 @@ function reserveLocation(id) {
         type: 'POST',
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(reservation),
-        url: '/location/reservation',
+        url: '/location/bookingLocation',
         success: function (res) {
             $("#ReserveModal").modal("hide");
         },

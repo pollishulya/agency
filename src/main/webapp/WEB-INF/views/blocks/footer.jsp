@@ -4,7 +4,7 @@
 <%--</head>--%>
 <footer>
     <hr>
-    <p align="center"> &copy; OnlyTravel, 2020</p>
+    <p align="center"> &copy; Chilling.by</p>
 </footer>
 
 <%--</html>--%>

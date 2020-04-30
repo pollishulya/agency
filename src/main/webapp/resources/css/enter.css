@@ -78,5 +78,13 @@ button, a{
     background: none;
 }
 
-
-
+.nameTable{
+    display: inline-block;
+    text-shadow: 1px 1px 1px #ffffff,
+    1px -1px 1px #ffffff,
+    -1px 1px 1px #ffffff,
+    -1px -1px 1px #ffffff;
+    color: orange;
+    font-size: 17px;
+    transition: all 1s;
+}

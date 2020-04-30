@@ -21,8 +21,8 @@ public class Account extends BaseEntity {
     @Column(name = "firstname")
     private String firstname;
 
-    @Column(name = "middlename")
-    private String middlename;
+  //  @Column(name = "middlename")
+    //private String middlename;
 
     @Column(name = "lastname")
     private String lastname;
@@ -33,8 +33,8 @@ public class Account extends BaseEntity {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "access")
-    private String access;
+  //  @Column(name = "access")
+    //private String access;
 
     @Column(name = "login")
     private String login;

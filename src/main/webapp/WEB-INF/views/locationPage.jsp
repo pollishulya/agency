@@ -73,7 +73,7 @@
     <div class="blog-post">
         <section class="container">
           <div id="backimageLook" style="position:relative;left:-70px">
-                <h1 class="blog-post-title"><p id="tourName">${location.name}</p></h1>
+                <h1 class="blog-post-title"><p id="locationName">${location.name}</p></h1>
                 <c:if test="${location.rating != -1}">
                     <h2>
                         <div class="starrr disabled stars-existing" data-rating=${location.rating}></div>

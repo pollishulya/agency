@@ -9,9 +9,9 @@ public class BookingLocationDto extends BaseDto {
 
         private Long id;
         private int numberPerson;
-        private String nameProgram;
+        private String nameLocation;
         private Long companyId;
-        private Long programId;
+        private Long locationId;
         private String username;
         private String phone;
 

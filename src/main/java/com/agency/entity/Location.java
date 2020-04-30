@@ -60,6 +60,11 @@ public class Location extends BaseEntity {
     //@JsonManagedReference
     private List<Description> descriptions = new ArrayList<>();
 
+    @JsonIgnore
+    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "location",fetch = FetchType.LAZY)
+    private Set<BookingLocation> reservation = new HashSet<>();
+
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "location_company_id")
     private Account company;

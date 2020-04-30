@@ -35,12 +35,12 @@ public class BookingProgramMapper extends AbstractMapper<BookingProgram, Booking
         mapper.createTypeMap(BookingProgram.class, BookingProgramDto.class)
                 .addMappings(m -> m.skip(BookingProgramDto::setAccountId)).setPostConverter(toDtoConverter())
                 .addMappings(m -> m.skip(BookingProgramDto::setNameProgram)).setPostConverter(toDtoConverter())
-                .addMappings(m -> m.skip(BookingProgramDto::setProgramId)).setPostConverter(toDtoConverter());
-               // .addMappings(m -> m.skip(BookingProgramDto::setCompanyId)).setPostConverter(toDtoConverter());
+                .addMappings(m -> m.skip(BookingProgramDto::setProgramId)).setPostConverter(toDtoConverter())
+                .addMappings(m -> m.skip(BookingProgramDto::setCompanyId)).setPostConverter(toDtoConverter());
         mapper.createTypeMap(BookingProgramDto.class, BookingProgram.class)
                 .addMappings(m -> m.skip(BookingProgram::setAccount)).setPostConverter(toEntityConverter())
-                .addMappings(m -> m.skip(BookingProgram::setProgram)).setPostConverter(toEntityConverter());
-            //    .addMappings(m -> m.skip(BookingProgram::setCompany)).setPostConverter(toEntityConverter());
+                .addMappings(m -> m.skip(BookingProgram::setProgram)).setPostConverter(toEntityConverter())
+               .addMappings(m -> m.skip(BookingProgram::setCompany)).setPostConverter(toEntityConverter());
 
     }
 
@@ -49,7 +49,7 @@ public class BookingProgramMapper extends AbstractMapper<BookingProgram, Booking
         destination.setAccountId(getAccountId(source));
         destination.setNameProgram(getProgramName(source));
         destination.setProgramId(getProgramId(source));
-      //  destination.setCompanyId(getCompanyId(source));
+        destination.setCompanyId(getCompanyId(source));
     }
 
     private Long getAccountId(BookingProgram source) {
@@ -60,9 +60,9 @@ public class BookingProgramMapper extends AbstractMapper<BookingProgram, Booking
         return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getProgram().getId();
     }
 
-  //  private Long getCompanyId(BookingProgram source) {
-    //    return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getCompany().getId();
-    //}
+    private Long getCompanyId(BookingProgram source) {
+        return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getCompany().getId();
+    }
 
     private String getProgramName(BookingProgram source) {
         return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getProgram().getName();
@@ -73,7 +73,7 @@ public class BookingProgramMapper extends AbstractMapper<BookingProgram, Booking
     void mapSpecificFields(BookingProgramDto source, BookingProgram destination) {
         destination.setAccount(accountRepository.findById(source.getAccountId()).orElse(null));
       destination.setProgram(programRepository.findById(source.getProgramId()).orElse(null));
-       // destination.setCompany(accountRepository.findById(source.getCompanyId()).orElse(null));
+        destination.setCompany(accountRepository.findById(source.getCompanyId()).orElse(null));
 
     }
 }

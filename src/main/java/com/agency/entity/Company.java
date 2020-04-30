@@ -10,10 +10,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name="food_company")
+@Table(name="company")
 @Getter
 @Setter
-public class FoodCompany extends BaseEntity{
+public class Company extends BaseEntity{
 
     @Column(name = "name")
     private String name;

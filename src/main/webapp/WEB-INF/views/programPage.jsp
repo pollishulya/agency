@@ -241,7 +241,7 @@
                                 </div>
                         </div>
                     </div>
-                    <nav aria-label="Page navigation example">
+                    <nav aria-label="Page navigation example">f
                         <ul class="pagination justify-content-end">
                             <li class="page-item">
                                 <button type="submit" class="btn btn-sm btn-primary" id="previousBtn" style="position:relative;left:360px"
