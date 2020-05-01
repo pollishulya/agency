@@ -133,20 +133,21 @@ function saveTour() {
     var cuisine = $('#cuisines').val();
     var price = $('#cost').val();
     var type = $('#types').val();
-    var descriptions = [];
+    var description = $('#description').val();
+   /* var descriptions = [];
     for (var i = 0; i <= numberDays; i++) {
         var descriptionText = $('#description_' + i).val();
         var description = {
             "description": descriptionText
         };
         descriptions.push(description);
-    }
+    }*/
     var foodDto = ({
         "name": name,
         "cuisine": cuisine,
         "price": price,
         "type": type,
-        "foodDescriptions": descriptions
+        "description": description
     });
     alert(foodDto.cuisine)
     $.ajax({

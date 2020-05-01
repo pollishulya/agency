@@ -5,7 +5,6 @@ import com.agency.entity.Account;
 import com.agency.entity.Program;
 import com.agency.mapper.ProgramMapper;
 import com.agency.repository.AccountRepository;
-import com.agency.repository.DescriptionRepository;
 import com.agency.repository.ProgramRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,14 +29,16 @@ public class ProgramService {
     private final ProgramRepository locationRepository;
     private final ProgramMapper locationMapper;
     private final AccountRepository accountRepository;
-    private final DescriptionRepository descriptionRepository;
+//    private final DescriptionRepository descriptionRepository;
 
     @Autowired
-    public ProgramService(ProgramRepository locationRepository, ProgramMapper locationMapper, AccountRepository accountRepository, DescriptionRepository descriptionRepository) {
+    public ProgramService(ProgramRepository locationRepository, ProgramMapper locationMapper, AccountRepository accountRepository
+        //    , DescriptionRepository descriptionRepository
+    ) {
         this.locationRepository = locationRepository;
         this.locationMapper = locationMapper;
         this.accountRepository = accountRepository;
-        this.descriptionRepository = descriptionRepository;
+      //  this.descriptionRepository = descriptionRepository;
     }
 
 

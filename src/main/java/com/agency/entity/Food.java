@@ -40,6 +40,8 @@ public class Food extends BaseEntity {
     @Column(name = "price")
     private double price;
 
+    @Column(name = "description")
+    private String description;
   //  @Column(name = "cost")
     //private String cost;
 
@@ -68,13 +70,15 @@ public class Food extends BaseEntity {
     public List<Droid> getDroids() {
         return droids;
     }*/
-  @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "food",fetch = FetchType.LAZY)
+ // @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "food",fetch = FetchType.LAZY)
  // @JsonManagedReference
-  private List<FoodDescription> foodDescriptions = new ArrayList<>();
+  //private List<FoodDescription> foodDescriptions = new ArrayList<>();
 
 //    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "location",fetch = FetchType.LAZY)
 //    @JsonManagedReference
 //    private List<FoodDescription> locationDescriptions = new ArrayList<>();
+
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "food_company_id")

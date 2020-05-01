@@ -46,6 +46,96 @@ function loadComments(id) {
 
 }
 
+function loadCommentsProgram(id) {
+    $.ajax({
+        type: 'GET',
+        url: "/commentProgram/comments?programId=" + id + "&pageNumber=" + loadPage,
+        success: function (data) {
+            $("#nextBtn").attr("disabled", false);
+            if (loadPage == 0) {
+                $("#previousBtn").attr("disabled", true);
+            } else {
+                $("#previousBtn").attr("disabled", false);
+            }
+            if (data.length < 7) {
+                $("#nextBtn").attr("disabled", true);
+            } else {
+                $("#nextBtn").attr("disabled", false);
+            }
+            $('#comments').empty();
+            var rowsHtml = " <div id='foodComment' class='panel-body'>";
+            for (var j = 0; j < data.length; j++) {
+                idComment = data[j].id;
+                rowsHtml += "<div class='media-block'>";
+                rowsHtml += "<a class='media-left' href='#'><img class='img-circle img-sm' src='/resources/images/user.png'></a>";
+                rowsHtml += "<div class='media-body'><div class='mar-btm'>";
+                rowsHtml += "<p class='text-semibold media-heading box-inline'>" + data[j].username + "</p>";
+                rowsHtml += "<div class='starrr disabled stars-existing' data-rating=" + data[j].rating + "></div>";
+                rowsHtml += "<p class='text-muted text-sm'><i class='fa fa-mobile fa-lg'></i>" + data[j].time + "</p></div>";
+                rowsHtml += "<p>" + data[j].message + "</p>";
+                rowsHtml += "</div></div><hr>";
+            }
+            rowsHtml += "</div>";
+            $('#comments').append(rowsHtml);
+
+
+        },
+        error: function (res) {
+            if (loadPage == 0) {
+                $("#previousBtn").attr("disabled", true);
+            }
+            $("#nextBtn").attr("disabled", true);
+        }
+
+    });
+
+}
+
+function loadCommentsLocation(id) {
+    $.ajax({
+        type: 'GET',
+        url: "/commentLocation/comments?locationId=" + id + "&pageNumber=" + loadPage,
+        success: function (data) {
+            $("#nextBtn").attr("disabled", false);
+            if (loadPage == 0) {
+                $("#previousBtn").attr("disabled", true);
+            } else {
+                $("#previousBtn").attr("disabled", false);
+            }
+            if (data.length < 7) {
+                $("#nextBtn").attr("disabled", true);
+            } else {
+                $("#nextBtn").attr("disabled", false);
+            }
+            $('#comments').empty();
+            var rowsHtml = " <div id='foodComment' class='panel-body'>";
+            for (var j = 0; j < data.length; j++) {
+                idComment = data[j].id;
+                rowsHtml += "<div class='media-block'>";
+                rowsHtml += "<a class='media-left' href='#'><img class='img-circle img-sm' src='/resources/images/user.png'></a>";
+                rowsHtml += "<div class='media-body'><div class='mar-btm'>";
+                rowsHtml += "<p class='text-semibold media-heading box-inline'>" + data[j].username + "</p>";
+                rowsHtml += "<div class='starrr disabled stars-existing' data-rating=" + data[j].rating + "></div>";
+                rowsHtml += "<p class='text-muted text-sm'><i class='fa fa-mobile fa-lg'></i>" + data[j].time + "</p></div>";
+                rowsHtml += "<p>" + data[j].message + "</p>";
+                rowsHtml += "</div></div><hr>";
+            }
+            rowsHtml += "</div>";
+            $('#comments').append(rowsHtml);
+
+
+        },
+        error: function (res) {
+            if (loadPage == 0) {
+                $("#previousBtn").attr("disabled", true);
+            }
+            $("#nextBtn").attr("disabled", true);
+        }
+
+    });
+
+}
+
 function loadDescription(id) {
     $.get("/description?foodId=" + id, function (data) {
         var rowsHtml = "<ul id='list' style='list-style-type:none'><li>";
@@ -92,6 +182,58 @@ function saveComment(id) {
     });
 }
 
+function saveCommentLocation(id) {
+    $('#saveCommentMistake').hide();
+    var message = $("#comment").val();
+    var rating = $('#count').text();
+    var comment = ({"message": message, "rating": rating, "locationId": id});
+    $.ajax({
+        type: 'POST',
+        contentType: "application/json;charset=utf-8",
+        data: JSON.stringify(comment),
+        url: '/commentLocation/save',
+        success: function (res) {
+            var url = window.location.href;
+            window.location.replace(url);
+
+        },
+        error: function (res) {
+            $('#comment').val(res.responseJSON.message);
+            $('#sendButton').empty();
+            $('#sendButton').append('<button class="btn btn-sm btn-primary pull-right" onclick="updateComment(' + id + ','+res.responseJSON.id+')" type="submit"> <i class="fa fa-pencil fa-fw"></i>update </button>');
+
+            $('#saveCommentMistake').show();
+        }
+
+    });
+}
+
+function saveCommentProgram(id) {
+    $('#saveCommentMistake').hide();
+    var message = $("#comment").val();
+    var rating = $('#count').text();
+    var comment = ({"message": message, "rating": rating, "programId": id});
+    $.ajax({
+        type: 'POST',
+        contentType: "application/json;charset=utf-8",
+        data: JSON.stringify(comment),
+        url: '/commentProgram/save',
+        success: function (res) {
+            var url = window.location.href;
+            window.location.replace(url);
+
+        },
+        error: function (res) {
+            $('#comment').val(res.responseJSON.message);
+            $('#sendButton').empty();
+            $('#sendButton').append('<button class="btn btn-sm btn-primary pull-right" onclick="updateComment(' + id + ','+res.responseJSON.id+')" type="submit"> <i class="fa fa-pencil fa-fw"></i>update </button>');
+
+            $('#saveCommentMistake').show();
+        }
+
+    });
+}
+
 function reserveForm() {
     $("#ReserveForm")[0].reset();
     $("#ReserveModal").modal();
@@ -110,7 +252,6 @@ function reserve(id) {
         "numberPerson": numberPerson,
         "foodId": id,
         "companyId": 55,
-        "programId": id,
         "username": username,
         "phone": phone,
         "date": date,

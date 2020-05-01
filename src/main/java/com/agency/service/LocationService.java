@@ -5,7 +5,6 @@ import com.agency.entity.Account;
 import com.agency.entity.Location;
 import com.agency.mapper.LocationMapper;
 import com.agency.repository.AccountRepository;
-import com.agency.repository.DescriptionRepository;
 import com.agency.repository.LocationRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.agency.entity;
+/*package com.agency.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
@@ -28,4 +28,4 @@ public class FoodDescription extends BaseEntity {
 //    @JsonBackReference
 //    private Food location;
 
-}
+}*/

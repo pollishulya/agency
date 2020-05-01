@@ -2,7 +2,6 @@ var loadPage = 0;
 var numberDays = 0;
 
 function deleteRecord(id) {
-    alert("удаляем запись "+id);
     $.ajax({
         type: "POST",
         url: "/location/delete/" + id,

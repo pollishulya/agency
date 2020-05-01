@@ -59,7 +59,6 @@
                         <input type="date" id="date" name="date" class="form-control" required autofocus>
                     </div>
                     <div id="mistake"></div>
-                 <script>alert(food.id)</script>
                     <button class="btn btn-lg btn-primary btn-block" id="reserveBtn"
                             onclick="reserve(${food.id}); return false;"
                             type="submit"><spring:message code="reserve"/>
@@ -89,9 +88,10 @@
                     </h3>
                 </c:if>
                 <div><spring:message code="cuisine.label"/><b> ${food.cuisine}</b></div>
-<%--                <div><spring:message code="dateBegin"/><b> ${food.exitDate}</b></div>--%>
-<%--                <div><spring:message code="duration"/><b>${food.numberDays}</b></div>--%>
+
                 <div><spring:message code="cost"/><b>${food.price}$</b></div>
+                <br>
+                <div style="font-size: 20px">${food.description}</div>
                 <br>
                 <div class='slideshow-container textWrapLeft' style="position:relative; left:225px">
 
@@ -155,11 +155,6 @@
 
             <br>
 
-
-                <div id="description"></div>
-                <script>
-                    loadDescription(${food.id});
-                </script>
                 <div id="bookingBtn" class="mar-top clearfix" style="position:relative; bottom:205px" ></div>
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                     <script>

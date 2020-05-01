@@ -130,7 +130,6 @@ public class ProgramController {
         } else if ("show".equals(type)) {
             modelAndView.setViewName("showProgramPage");
         }
-
         return modelAndView;
     }
 

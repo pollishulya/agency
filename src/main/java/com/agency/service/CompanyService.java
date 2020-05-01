@@ -10,12 +10,12 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 @Slf4j
 @Service
-public class FoodCompanyService {
+public class CompanyService {
 
     private final CompanyRepository companyRepository;
 
     @Autowired
-    public FoodCompanyService(CompanyRepository companyRepository) {
+    public CompanyService(CompanyRepository companyRepository) {
         this.companyRepository = companyRepository;
     }
 

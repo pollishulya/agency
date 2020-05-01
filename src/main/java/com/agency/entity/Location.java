@@ -54,7 +54,7 @@ public class Location extends BaseEntity {
 
     @JsonIgnore
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE},orphanRemoval=true, mappedBy = "location", fetch = FetchType.LAZY)
-    private Set<Comment> comments = new HashSet<>();
+    private Set<CommentLocation> comments = new HashSet<>();
 
   @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "location",fetch = FetchType.LAZY)
     //@JsonManagedReference
@@ -69,7 +69,5 @@ public class Location extends BaseEntity {
     @JoinColumn(name = "location_company_id")
     private Account company;
 
-    @JsonIgnore
-    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "location",fetch = FetchType.LAZY)
-    private Set<Reservation> reservations = new HashSet<>();
+
 }

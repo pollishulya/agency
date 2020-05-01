@@ -5,7 +5,6 @@ import com.agency.entity.Account;
 import com.agency.entity.Food;
 import com.agency.mapper.FoodMapper;
 import com.agency.repository.AccountRepository;
-import com.agency.repository.DescriptionRepository;
 import com.agency.repository.FoodRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,14 +29,13 @@ public class FoodService {
     private final FoodRepository foodRepository;
     private final  FoodMapper foodMapper;
     private final AccountRepository accountRepository;
-    private final  DescriptionRepository foodDescriptionRepository;
+   // private final  DescriptionRepository foodDescriptionRepository;
 
     @Autowired
-    public FoodService(FoodRepository foodRepository, FoodMapper foodMapper, AccountRepository accountRepository, DescriptionRepository foodDescriptionRepository) {
+    public FoodService(FoodRepository foodRepository, FoodMapper foodMapper, AccountRepository accountRepository) {
         this.foodRepository = foodRepository;
         this.foodMapper = foodMapper;
         this.accountRepository = accountRepository;
-        this.foodDescriptionRepository = foodDescriptionRepository;
     }
 
 
@@ -50,11 +48,7 @@ public class FoodService {
             food.setRating(-1);
             food.setCompany(accountRepository.findById(id).get());
             food.setImage("/resources/images/imageForFood");
-
-            if (food.getFoodDescriptions() != null) {
-                food.getFoodDescriptions().forEach(td -> td.setFood(food));
-            }
-
+            
             Food savedTour = foodRepository.saveAndFlush(food);
 
             return new ResponseEntity(savedTour,HttpStatus.OK);

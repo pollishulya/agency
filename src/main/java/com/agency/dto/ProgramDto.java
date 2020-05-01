@@ -1,6 +1,7 @@
 package com.agency.dto;
 
 import com.agency.entity.Comment;
+import com.agency.entity.CommentProgram;
 import lombok.*;
 
 import java.util.*;
@@ -18,10 +19,10 @@ public class ProgramDto extends BaseDto {
     private float rating;
   //  private Date exitDate;
     private String image;
-    private Set<Comment> comment = new HashSet<>();;
-  //private List<DescptionDto> descriptios= new ArrayList<>();
+    private Set<CommentProgram> comment = new HashSet<>();
+
   private String description;
     private Long companyId;
     private Set<BookingProgramDto> reservations = new HashSet<>();
-    private Set<ProgramDto> reservation = new HashSet<>();
+
 }

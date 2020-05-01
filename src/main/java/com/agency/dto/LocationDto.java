@@ -1,6 +1,7 @@
 package com.agency.dto;
 
 import com.agency.entity.Comment;
+import com.agency.entity.CommentLocation;
 import lombok.*;
 
 import java.util.*;
@@ -20,9 +21,9 @@ public class LocationDto extends BaseDto {
   //  private Date exitDate;
     private String description;
     private String image;
-    private Set<Comment> comment = new HashSet<>();;
+    private Set<CommentLocation> comment = new HashSet<>();
   // private List<DescriptionDto> description = new ArrayList<>();
     private Long companyId;
-    private Set<ReservationDto> reservations = new HashSet<>();
+
     private Set<BookingLocationDto> reservation = new HashSet<>();
 }

@@ -10,33 +10,96 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfedfaa7-d78e-46d7-9c7a-56bfab34c927" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/BookingLocationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/BookingLocation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/mapper/BookingLocationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/repository/BookingLocationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentLocationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentProgramController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/CommentLocationDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/CommentProgramDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/CommentLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/CommentProgram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/mapper/CommentLocationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/mapper/CommentProgramMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/repository/CommentLocationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/repository/CommentProgramRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/CommentLocationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/CommentProgramService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/AccountDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/AccountDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/BookingLocationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/BookingLocationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/ClientDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/ClientDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/FoodCompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/FoodCompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/FoodDescriptionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/LocationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/ClientDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/CommentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/CommentDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/DescriptionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/DescriptionDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/LocationDescriptionDto.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/LocationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/LocationDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/OrderDto.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/ProgramDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/ProgramDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/FoodCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/ReservationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/ReservationDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/FoodDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/FoodDescription.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/mapper/BookingProgramMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/mapper/BookingProgramMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/mapper/ClientMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/mapper/CommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/mapper/DescriptionMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodDescriptionMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/mapper/ReservationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/mapper/ReservationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/repository/ClientRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/repository/CompanyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/repository/DescriptionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/repository/FoodDescriptionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/service/ClientService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/service/FoodCompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/service/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/FoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/service/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/LocationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/service/ProgramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/ProgramService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/locale/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/leadingProgramPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/leadingProgramPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locationPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manorLocationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manorLocationPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageLocation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageLocation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageMenu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageTamada.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageTamada.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/enter.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/enter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/forTourTablePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/forTourTablePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/questProgramPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/questProgramPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/restaurantLocationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/restaurantLocationPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProgramPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProgramPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/spaceLocationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/spaceLocationPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tentLocationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tentLocationPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithFoods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithFoods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithLocations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithLocations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/AccountDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/AccountDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/ClientDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/CommentDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/CommentDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/FoodDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/FoodDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/LocationDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/LocationDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/OrderDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/ProgramDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/ProgramDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Food.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/com.agency-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Program.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/mapper/ClientMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/repository/ClientRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -76,118 +139,53 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageLocation.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/navbar.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="226" column="45" selection-start-line="226" selection-start-column="45" selection-end-line="226" selection-end-column="45" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="1871">
+              <caret line="301" column="92" selection-start-line="301" selection-start-column="92" selection-end-line="301" selection-end-column="92" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/BookingLocationController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_en.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1368">
-              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="646">
+              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/ReservationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1641">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-              <folding>
-                <element signature="method#getCurrentUserId#0;class#ReservationController#0" />
-                <element signature="method#pageLocation#0;class#ReservationController#0" />
-                <element signature="method#pageMenu#0;class#ReservationController#0" />
-                <element signature="method#pageTamada#0;class#ReservationController#0" />
-                <element signature="method#showCompanyOrders#0;class#ReservationController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Company.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-220">
-              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Program.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="661">
-              <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Location.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/AccountDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-            </state>
-          </provider>
+          <provider editor-type-id="ResourceBundle" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="527">
+              <caret line="125" column="62" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="62" />
+            </state>
+          </provider>
+          <provider editor-type-id="ResourceBundle" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/modal.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1923" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/deleteForm.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1022" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/FoodController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="959">
+              <caret line="133" column="9" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -195,8 +193,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/LocationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2052">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="219">
+              <caret line="129" column="41" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/enter.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1243" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -214,14 +237,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>loc</find>
-      <find>type</find>
-      <find>air</find>
-      <find>showFood</find>
-      <find>show</find>
-      <find>sh</find>
       <find>onl</find>
-      <find>load</find>
       <find>loadLo</find>
       <find>dele</find>
       <find>view</find>
@@ -230,11 +246,9 @@
       <find>reser</find>
       <find>delete</find>
       <find>lo</find>
-      <find>reserv</find>
       <find>description</find>
       <find>descri</find>
       <find>des</find>
-      <find>desc</find>
       <find>descr</find>
       <find>capacity</find>
       <find>home</find>
@@ -244,6 +258,15 @@
       <find>loa</find>
       <find>nam</find>
       <find>reserve</find>
+      <find>desc</find>
+      <find>res</find>
+      <find>reserv</find>
+      <find>loca</find>
+      <find>location</find>
+      <find>load</find>
+      <find>food</find>
+      <find>user</find>
+      <find>foodId</find>
     </findStrings>
     <replaceStrings>
       <replace>user</replace>
@@ -263,57 +286,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tentLocationPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithLocations.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithPrograms.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/jquery/forOrdersPage.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locationsTablePage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programsTablePage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/ReservationController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithFoods.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithAccount.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/enterforbutton.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/enter.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/navbar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accountsTablePage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/forAccountTablePage.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/bookingProgram.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/bookingProgram.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/bookingProgram.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/BookingProgramRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/ReservationProgramDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/ReservationDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Reservation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/CommentDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/CommentLocationDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/CommentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/CommentLocationMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/service/CommentLocationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/CommentLocationRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/CommentLocation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/CommentProgram.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/CommentProgramDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/CommentProgramRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Program.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/BookingProgramController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/ProgramDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/BookingProgramDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/BookingProgram.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/ReservationMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageTamada.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/locale/messages_en.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/BookingLocationDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/BookingLocation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Location.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/LocationDto.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/BookingLocationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/repository/BookingLocationRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Location.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/service/CommentProgramService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/CommentProgramMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/ProgramDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentProgramController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentLocationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Comment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/FoodDescription.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/DescriptionDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/DescriptionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodDescriptionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/FoodDescriptionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/service/ProgramService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locationPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/BookingProgramMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/BookingLocationMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/footer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/forTourTablePage.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/enter.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageMenu.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tentLocationPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/spaceLocationPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/restaurantLocationPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manorLocationPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageLocation.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/AccountDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Account.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/FoodCompany.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Company.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProgramPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/questProgramPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageTamada.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/leadingProgramPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/FoodController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/LocationController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/navbar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/locale/messages_en.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties" />
       </list>
     </option>
   </component>
@@ -346,7 +369,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -379,15 +401,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="agency" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="agency" type="b2602c69:ProjectViewProjectNode" />
@@ -498,15 +511,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="jquery" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -536,10 +540,17 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="blocks" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="agency" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agency" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -573,9 +584,9 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.agency.controller" />
-      <recent name="com.agency.repository" />
       <recent name="com.agency.mapper" />
-      <recent name="com.agency.entity" />
+      <recent name="com.agency.service" />
+      <recent name="com.agency.repository" />
       <recent name="com.agency.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -792,7 +803,9 @@
       <workItem from="1588145552720" duration="21746000" />
       <workItem from="1588171918216" duration="3202000" />
       <workItem from="1588186722371" duration="23212000" />
-      <workItem from="1588239956997" duration="17920000" />
+      <workItem from="1588239956997" duration="32612000" />
+      <workItem from="1588276976174" duration="704000" />
+      <workItem from="1588277861503" duration="20725000" />
     </task>
     <task id="LOCAL-00001" summary="Dasha and Polina are beautiful">
       <created>1584463781555</created>
@@ -1004,17 +1017,25 @@
       <option name="project" value="LOCAL" />
       <updated>1588205881779</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="welcomePage+reservation">
+      <created>1588258837311</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1588258837312</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="479980000" />
+    <option name="totallyTimeSpent" value="516101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-3" width="1542" height="830" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="top" id="Ant Build" order="0" side_tool="true" weight="0.8535871" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49716714" visible="true" weight="0.22214764" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49716714" visible="true" weight="0.22885907" />
       <window_info id="Structure" order="1" sideWeight="0.5028329" side_tool="true" weight="0.14563759" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1024,7 +1045,7 @@
       <window_info id="Learn" order="7" weight="0.3295302" />
       <window_info id="Web" order="8" sideWeight="0.50141644" side_tool="true" weight="0.18120806" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32796487" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.054172765" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3601757" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28111273" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1050,7 +1071,7 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="top" id="Ant Build" order="0" side_tool="true" weight="0.8535871" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49716714" visible="true" weight="0.22214764" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49716714" visible="true" weight="0.22885907" />
       <window_info id="Structure" order="1" sideWeight="0.5028329" side_tool="true" weight="0.14563759" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1061,7 +1082,7 @@
       <window_info id="Web" order="8" sideWeight="0.50141644" side_tool="true" weight="0.18120806" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32796487" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20204978" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3601757" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28111273" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1129,7 +1150,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="FoodMapper" />
     <MESSAGE value="Front-end work!!!" />
     <MESSAGE value="тут вступает Дашка" />
     <MESSAGE value="reservation" />
@@ -1154,7 +1174,8 @@
     <MESSAGE value="formes" />
     <MESSAGE value="start food booking" />
     <MESSAGE value="booking program+ pages desighn" />
-    <option name="LAST_COMMIT_MESSAGE" value="booking program+ pages desighn" />
+    <MESSAGE value="welcomePage+reservation" />
+    <option name="LAST_COMMIT_MESSAGE" value="welcomePage+reservation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1167,27 +1188,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/agency/controller/BookingProgramController.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/agency/controller/BookingProgramController.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/agency/controller/BookingProgramController.java</url>
           <line>52</line>
           <properties />
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/agency/controller/BookingProgramController.java</url>
-          <line>49</line>
-          <properties />
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/agency/controller/ReservationController.java</url>
@@ -1215,8 +1218,14 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js</url>
-          <line>100</line>
+          <line>242</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js</url>
+          <line>3</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1226,392 +1235,460 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/BookingProgramDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/FoodDescription.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/CommentProgramDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/DescriptionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodDescriptionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#2119#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/ReservationMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/DescriptionDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageTamada.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/LocationMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1624">
-          <caret line="101" column="72" selection-start-line="101" selection-start-column="72" selection-end-line="101" selection-end-column="72" />
+        <state relative-caret-position="102">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manorLocationPage.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/questProgramPage.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/DescriptionRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1366" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usReservationPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/BookingProgramController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="113" column="40" selection-start-line="113" selection-start-column="40" selection-end-line="113" selection-end-column="40" />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_en.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="112" column="28" lean-forward="true" selection-start-line="112" selection-start-column="28" selection-end-line="112" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/LocationDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2902">
-          <caret line="246" column="77" selection-start-line="246" selection-start-column="77" selection-end-line="246" selection-end-column="77" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#6;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#li#0;n#ul#0;n#nav#0;n#div#6;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/repository/BookingLocationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/BookingLocationDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.2.RELEASE/spring-beans-5.0.2.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18173">
-          <caret line="1143" selection-start-line="1143" selection-end-line="1143" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/BookingLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/BookingProgramMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/service/FoodService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="41" column="107" selection-start-line="41" selection-start-column="107" selection-end-line="41" selection-end-column="107" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/ProgramMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locationPage.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/FoodDescriptionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="6" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="6" />
+        <state relative-caret-position="595">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="94" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/mapper/BookingLocationMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/FoodCompanyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="53" column="54" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/companyReservationPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-546" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programsTablePage.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/restaurantLocationPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1671" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProgramPage.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/forTourPage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1398" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/reserveModal.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="186" column="26" selection-start-line="186" selection-start-column="26" selection-end-line="186" selection-end-column="26" />
-          <folding>
-            <element signature="n#!!block;n#loadComments#0" />
-            <element signature="n#!!block;n#loadDescription#0" />
-            <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="e#2415#2550#0" />
-            <element signature="n#!!block;n#saveComment#0" />
-            <element signature="n#!!block;n#reserveProgram#0" />
-            <element signature="n#!!block;n#stars#0" />
-            <element signature="n#!!block;n#updateComment#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/starRating.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1538">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/formTourAdd-style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3447" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/enter.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1264" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageMenu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="51" column="46" selection-start-line="51" selection-end-line="51" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/footer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/forTourTablePage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="73" column="1" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/forWelcomePage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="116" column="24" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/navbar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-182" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/enter.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/navbar-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="112" column="28" selection-start-line="112" selection-start-column="28" selection-end-line="112" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageLocation.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="226" column="45" selection-start-line="226" selection-start-column="45" selection-end-line="226" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/LocationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2052">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/BookingLocationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1368">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        <state relative-caret-position="185">
+          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/ReservationController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/service/ProgramService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1641">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="method#getCurrentUserId#0;class#ReservationController#0" />
-            <element signature="method#pageLocation#0;class#ReservationController#0" />
-            <element signature="method#pageMenu#0;class#ReservationController#0" />
-            <element signature="method#pageTamada#0;class#ReservationController#0" />
-            <element signature="method#showCompanyOrders#0;class#ReservationController#0" />
-          </folding>
+        <state relative-caret-position="-954">
+          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+        <state relative-caret-position="136">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Company.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Role.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="306">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Program.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locationPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+        <state relative-caret-position="231">
+          <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Location.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+        <state relative-caret-position="323">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!block;n#loadDescription#0" />
+            <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#saveComment#0" />
+            <element signature="n#!!block;n#saveCommentLocation#0" />
+            <element signature="n#!!block;n#reserveProgram#0" />
+            <element signature="n#!!block;n#reserveLocation#0" />
+            <element signature="n#!!block;n#stars#0" />
+            <element signature="n#!!block;n#updateComment#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/AccountDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="324">
+          <caret line="239" column="38" lean-forward="true" selection-start-line="239" selection-start-column="38" selection-end-line="239" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/forWelcomePage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="155">
+          <caret line="121" column="4" selection-start-line="120" selection-end-line="134" selection-end-column="1" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/Reservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accountsTablePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2010" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/companyReservationPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usReservationPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-521" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tentLocationPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="111" column="85" selection-start-line="111" selection-start-column="85" selection-end-line="111" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/spaceLocationPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="69" column="81" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manorLocationPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="69" column="81" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="69" column="81" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProgramPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="109" column="85" selection-start-line="109" selection-start-column="85" selection-end-line="109" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/restaurantLocationPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="69" column="81" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/questProgramPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="108" column="85" selection-start-line="108" selection-start-column="85" selection-end-line="108" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-899">
+          <caret line="96" column="100" selection-start-line="96" selection-start-column="100" selection-end-line="96" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageTamada.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="107" column="85" selection-start-line="107" selection-start-column="85" selection-end-line="107" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageMenu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="125" column="10" selection-start-line="125" selection-end-line="125" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageLocation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="77" column="85" selection-start-line="77" selection-start-column="85" selection-end-line="77" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/leadingProgramPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="69" column="81" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="69" column="81" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="70" column="81" selection-start-line="70" selection-start-column="81" selection-end-line="70" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="109" column="85" selection-start-line="109" selection-start-column="85" selection-end-line="109" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/navbar-style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/table-style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/forAccountTablePage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-343" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/modal.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1923" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/deleteForm.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1022" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/enter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1243" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/LocationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="129" column="41" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/FoodController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="959">
+          <caret line="133" column="9" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/navbar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1871">
+          <caret line="301" column="92" selection-start-line="301" selection-start-column="92" selection-end-line="301" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_en.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="125" column="62" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="62" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
     </entry>
   </component>
   <component name="masterDetails">

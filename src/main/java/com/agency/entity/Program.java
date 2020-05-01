@@ -46,7 +46,7 @@ public class Program extends BaseEntity {
 
     @JsonIgnore
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE},orphanRemoval=true, mappedBy = "program", fetch = FetchType.LAZY)
-    private Set<Comment> comments = new HashSet<>();
+    private Set<CommentProgram> comments = new HashSet<>();
 
   /*  @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "program",fetch = FetchType.LAZY)
     //@JsonManagedReference
@@ -55,9 +55,7 @@ public class Program extends BaseEntity {
     @JsonIgnore
     @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "program",fetch = FetchType.LAZY)
     private Set<BookingProgram> reservations = new HashSet<>();
-    @JsonIgnore
-    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},orphanRemoval = true,mappedBy = "program",fetch = FetchType.LAZY)
-    private Set<Reservation> reservation = new HashSet<>();
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "program_company_id")

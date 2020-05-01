@@ -132,8 +132,7 @@ public class LocationController {
         } else if ("space".equals(type)) {
             modelAndView.setViewName("spaceLocationPage");
         }
-
-        return modelAndView;
+           return modelAndView;
     }
 
     @GetMapping(value = "/location/update/{id}", produces = "application/json")

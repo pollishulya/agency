@@ -24,15 +24,34 @@
 <jsp:include page="blocks/navbar1.jsp"/>
 <jsp:include page="blocks/navbar.jsp"/>
 <body>
-
-<div class="container panel-body">
-    <div id="foods">
+<div id="backimage" style="position:relative;left:240px;">
+    <table id="restaurant" data-tooltip='Нажмите, чтобы узнать подробнее'>
         <script type="text/javascript">
+            $(function(){
+                $("[data-tooltip]").mousemove(function (eventObject) {
+                    $data_tooltip = $(this).attr("data-tooltip");
+                    $("#tooltip").html($data_tooltip)
+                        .css({
+                            "top" : eventObject.pageY -200,
+                            "left" : eventObject.pageX -250
+                        })
+                        .show();
+                }).mouseout(function () {
+                    $("#tooltip").hide()
+                        .html("")
+                        .css({
+                            "top" : 0,
+                            "left" : 0
+                        });
+                });
+            });
+
+
             $(document).ready(function () {
 
                 $.get("/location?type=RESTAURANT", function (data) {
                     var rowsHtml;
-                    for (var j = 0; j < data.length; j = j + 3) {
+                    for (var j = 0; j<data.length; j = j + 3) {
                         var date = new Date(data[j].exitDate);
                         var dd = date.getDate();
                         var mm = date.getMonth() + 1;
@@ -44,17 +63,12 @@
                             mm = '0' + mm;
                         }
                         var exitDate = dd + '/' + mm + '/' + yyyy;
-
-                        rowsHtml = "<div class='row'>";
-                        rowsHtml += "<div class='col-md-3 tour position-tour'>";
-                        rowsHtml += "<div class='image'><img class='tour-image' src='" + data[j].image + "/1.jpg' alt='' width='258' height='160'>" +
-                            "<h2><span>" + data[j].cost + " $</span></h2></div>";
-                        rowsHtml += "<p><h3>" + data[j].name + "</h3></a><p>";
-                        rowsHtml += "<p><small>" + data[j].country + "</small></p>";
-                        rowsHtml += "<p> Дата выезда:<b>" + exitDate + "</b><p>";
-                        rowsHtml += "<p><span class='glyphicon glyphicon-time' ></span><b> " + data[j].numberDays + " <spring:message code='day.label'/></b></p>";
-                        rowsHtml += " <a href='/food/" + data[j].id + "'class='btn btn-primary text-uppercase position-view'>" + "<spring:message code='view.label'/>" + "</a><br/><br/>";
-                        rowsHtml += "</div>";
+                        rowsHtml = "<tr class='row' >";
+                        rowsHtml += "<td>";
+                        rowsHtml += "<a href='/location/" + data[j].id + "'><div class='image'  style='position:relative;left:60px'><img class='grow' src='" + data[j].image + "/1.jpg' alt='' width='308' height='210'>" +
+                            "</div></a>";
+                        rowsHtml += "<p><h3 class='nameTable' style='font-size:26px;position:relative;left:80px''>" + data[j].name + "</h3><p>";
+                        rowsHtml += "</td>";
                         if (j + 1 < data.length) {
 
                             var date = new Date(data[j + 1].exitDate);
@@ -69,50 +83,45 @@
                             }
                             var exitDate = dd + '/' + mm + '/' + yyyy;
 
-                            rowsHtml += "<div class='col-md-3 tour position-tour'>";
-                            rowsHtml += "<div class='image'><img class='tour-image' src='" + data[j + 1].image + "/1.jpg' alt='' width='258' height='160'>" +
-                                "<h2><span>" + data[j + 1].cost + " $</span></h2></div>";
-                            rowsHtml += "<p><h3>" + data[j + 1].name + "</h3></a><p>";
-                            rowsHtml += "<p><small>" + data[j + 1].country + "</small></p>";
-                            rowsHtml += "<p> Дата выезда:<b>" + exitDate + "</b><p>";
-                            rowsHtml += "<p><span class='glyphicon glyphicon-time' ></span><b> " + data[j + 1].numberDays + " <spring:message code='day.label'/></b></p>";
-                            rowsHtml += " <a href='/food/" + data[j + 1].id + "'class='btn btn-primary text-uppercase position-view'>" + "<spring:message code='view.label'/>" + "</a><br/><br/>";
-                            rowsHtml += "</div>";
+
+                            rowsHtml += "<td>";
+                            rowsHtml += "<a href='/location/" + data[j+1].id + "'><div style='position:relative;left:55px' class='image'><img class='grow' src='" + data[j+1].image + "/1.jpg' alt='' width='308' height='210'>" +
+                                "</div></a>";
+                            rowsHtml += "<p><h3 class='nameTable' style='font-size:26px; position: relative;left:75px'>" + data[j+1].name + "</h3><p>";
+                            rowsHtml += "</td>";
                         }
 
 
                         if (j + 2 < data.length) {
-                            //     var date = new Date(data[j + 2].exitDate);
-                            //    var dd = date.getDate();
-                            //    var mm = date.getMonth() + 1;
-                            //    var yyyy = date.getFullYear();
-                            //    if (dd < 10) {
-                            //        dd = '0' + dd;
-                            //    }
-                            //    if (mm < 10) {
-                            //        mm = '0' + mm;
-                            //    }
-                            //    var exitDate = dd + '/' + mm + '/' + yyyy;
+                            var date = new Date(data[j + 2].exitDate);
+                            var dd = date.getDate();
+                            var mm = date.getMonth() + 1;
+                            var yyyy = date.getFullYear();
+                            if (dd < 10) {
+                                dd = '0' + dd;
+                            }
+                            if (mm < 10) {
+                                mm = '0' + mm;
+                            }
+                            var exitDate = dd + '/' + mm + '/' + yyyy;
 
-                            rowsHtml += "<div class='col-md-3 tour position-tour'>";
-                            rowsHtml += "<div class='image'><img class='tour-image' src='" + data[j + 2].image + "/1.jpg' alt='' width='258' height='160'>" +
-                                "<h2><span>" + data[j + 2].cost + " $</span></h2></div>";
-                            rowsHtml += "<p><h3>" + data[j + 2].name + "</h3></a><p>";
-                            rowsHtml += "<p><small>" + data[j + 2].view + "</small></p>";
-                            rowsHtml += "<p> Кухня:<b>" + data[j+2].type + "</b><p>";
-                            <%--rowsHtml += "<p><span class='glyphicon glyphicon-time' ></span><b> " + data[j + 2].numberDays + " <spring:message code='day.label'/></b></p>";--%>
-                            rowsHtml += " <a href='/food/" + data[j + 2].id + "'class='btn btn-primary text-uppercase position-view'>" + "<spring:message code='view.label'/>" + "</a><br/><br/>";
-                            rowsHtml += "</div>";
+
+                            rowsHtml += "<td>";
+                            rowsHtml += "<a href='/location/" + data[j+2].id + "'><div style='position:relative;left:55px' class='image'><img class='grow' src='" + data[j+2].image + "/1.jpg' alt='' width='308' height='210'>" +
+                                "</div></a>";
+                            rowsHtml += "<p><h3 class='nameTable' style='font-size:26px; position:relative;left:75px'>" + data[j+2].name + "</h3><p>";
+                            rowsHtml += "</td>";
                         }
 
-                        $('#foods').append(rowsHtml);
+                        $('#restaurant').append(rowsHtml);
                     }
 
                 });
             });
 
         </script>
-    </div>
+    </table>
+    <div id="tooltip"></div>
 </div>
 
 <jsp:include page="blocks/footer.jsp"/>

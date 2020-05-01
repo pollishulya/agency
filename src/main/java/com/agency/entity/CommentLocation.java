@@ -1,20 +1,18 @@
 package com.agency.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "comment_food")
+@Table(name = "comment_location")
 @Getter
 @Setter
 //@AllArgsConstructor
 //@NoArgsConstructor
-public class Comment extends BaseEntity {
+public class CommentLocation extends BaseEntity {
 
     @Column(name = "message")
     private String message;
@@ -38,9 +36,9 @@ public class Comment extends BaseEntity {
     private Account account;*/
 
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
-    @JoinColumn(name = "food_id")
+    @JoinColumn(name = "location_id")
     @JsonIgnore
-    private Food food;
+    private Location location;
 
 
 }

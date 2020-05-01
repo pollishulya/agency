@@ -54,10 +54,13 @@
                     <div class="form-label-group">
                         <input type="number" id="numberPersons" class="form-control" placeholder="Number persons" min=1 max=6 required autofocus>
                     </div>
+                    <label for="date"><spring:message code="exitDate.label"/></label>
+                    <div class="form-label-group">
+                        <input type="date" id="date" name="date" class="form-control" required autofocus>
+                    </div>
                     <div id="mistake"></div>
-                 <script>alert(program.id)</script>
                     <button class="btn btn-lg btn-primary btn-block" id="reserveBtn"
-                            onclick="reserveProgram(${program.id}); return false;"
+                            onclick="reserve(${program.id}); return false;"
                             type="submit"><spring:message code="reserve"/>
                     </button>
                 </form>
@@ -88,6 +91,8 @@
 <%--                <div><spring:message code="dateBegin"/><b> ${food.exitDate}</b></div>--%>
 <%--                <div><spring:message code="duration"/><b>${food.numberDays}</b></div>--%>
                 <div><spring:message code="cost"/><b>${program.price}$</b></div>
+                <br>
+                <div style="font-size: 20px">${program.description}</div>
                 <br>
                 <div class='slideshow-container textWrapLeft' style="position:relative; left:225px">
 
@@ -143,19 +148,7 @@
                     }
                 </script>
                 <br>
-                <div style='text-align:center;display: none'>
-                    <span class='dot' onclick='currentSlide(1)'></span>
-                    <span class='dot' onclick='currentSlide(2)'></span>
-                    <span class='dot' onclick='currentSlide(3)'></span>
-                </div>
-
             <br>
-
-
-                <div id="description"></div>
-                <script>
-                    loadDescription(${program.id});
-                </script>
                 <div id="bookingBtn" class="mar-top clearfix" style="position:relative; bottom:205px" ></div>
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                     <script>
@@ -208,7 +201,7 @@
                                         '                                <textarea class="commentForm" id="comment" rows="4" cols="70" style="width:762px"\n' +
                                         '                                          placeholder=<spring:message code="writeComment"/>></textarea>\n' +
                                         '                            </div>' +
-                                        '<button id="send" class="btn btn-sm btn-primary pull-right" onclick="saveComment(${program.id})" type="submit"> <i class="fa fa-pencil fa-fw"></i> <spring:message code="send"/> </button>')
+                                        '<button id="send" class="btn btn-sm btn-primary pull-right" onclick="saveCommentProgram(${program.id})" type="submit"> <i class="fa fa-pencil fa-fw"></i> <spring:message code="send"/> </button>')
                                 </script>
                             </sec:authorize>
                             <sec:authorize access="isAnonymous()">
@@ -245,12 +238,12 @@
                         <ul class="pagination justify-content-end">
                             <li class="page-item">
                                 <button type="submit" class="btn btn-sm btn-primary" id="previousBtn" style="position:relative;left:360px"
-                                        onclick="loadPage=loadPage-1;loadComments(${program.id})"><spring:message
+                                        onclick="loadPage=loadPage-1;loadCommentsProgram(${program.id})"><spring:message
                                         code="previous"/></button>
                             </li>
                             <li class="page-item">
                                 <button type="submit" class="btn btn-sm btn-primary " id="nextBtn" style="position:relative;left:360px"
-                                        onclick="loadPage=loadPage+1;loadComments(${program.id});"><spring:message
+                                        onclick="loadPage=loadPage+1;loadCommentsProgram(${program.id});"><spring:message
                                         code="next"/></button>
                             </li>
                         </ul>
@@ -262,7 +255,7 @@
 
 </div>
 <script>
-    loadComments(${program.id});
+    loadCommentsProgram(${program.id});
     stars();
 </script>
 </body>

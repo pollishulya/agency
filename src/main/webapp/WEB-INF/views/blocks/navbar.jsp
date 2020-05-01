@@ -80,6 +80,47 @@
                 <div id="logoutBtn"></div>
                 <sec:authorize access="isAnonymous()">
                     <script>
+                        $('#buttons').append(
+                            '                <div style="position:relative; top:0px" > <button id="kitchen" class="btn btn-outline-primary dropdown-toggle" type="button"\n' +
+                            '       data-toggle="dropdown"><spring:message code="cuisine.label"/><span class="caret"></span></button>\n' +
+                            '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
+                            '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                               href="/showFoods/asia"><spring:message code="asian.label"/></a></li>\n' +
+                            '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                             href="/showFoods/europe"><spring:message code="europe.label"/></a></li>\n' +
+                            '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                               href="/showFoods/slavic"><spring:message code="slavic.label"/></a></li>\n' +
+                            '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                             href="/showFoods/east"><spring:message code="east.label"/></a></li>\n' +
+                            ' <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                             href="/pageMenu"><spring:message code="allFood.label"/></a></li>\n' +
+                            '                   </ul>\n' +
+                            '                   </div> <div style="position:relative; left:100px;top:-40px"><button id="location" class="btn btn-outline-primary dropdown-toggle" type="button"\n' +
+                            '                                   data-toggle="dropdown"><spring:message code="location.label"/><span class="caret"></span></button>\n' +
+                            '                                   <ul class="dropdown-menu"  role="menu" aria-labelledby="menu1">\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                                           href="/showLocations/tent"><spring:message code="tent.label"/></a></li\n' +
+                            '                                          <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showLocations/space"><spring:message code="space.label"/></a></li>\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                                           href="/showLocations/manor"><spring:message code="manor.label"/></a></li>\n' +
+                            '                                          <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showLocations/restaurant"><spring:message code="restaurant.label"/></a></li>\n' +
+                            '                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/pageLocation"><spring:message code="allLocations.label"/></a></li>\n' +
+                            '                                               </ul>\n'+
+                       ' </div><div style="position:relative; left:220px;top:-80px"><button id="program"  class="btn btn-outline-primary dropdown-toggle" type="button"\n' +
+                        '                                   data-toggle="dropdown"><spring:message code="program.label"/><span class="caret"></span></button>\n' +
+                        '                                   <ul class="dropdown-menu"  role="menu" aria-labelledby="menu1">\n' +
+                        '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                        '                                                         href="/showPrograms/show"><spring:message code="show.label"/></a></li>\n' +
+                        '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                        '                                                                           href="/showPrograms/quest"><spring:message code="quest.label"/></a></li>\n' +
+                        '                                          <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                        '                                                         href="/showPrograms/leading"><spring:message code="leading.label"/></a></li>\n' +
+                        '                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                        '                                                         href="/pageTamada"><spring:message code="allPrograms.label"/></a></li>\n' +
+                        '                                               </ul></div>\n');
                         $('#user').append(
                             '<button id="locales1" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\n' +
                             '                            data-toggle="dropdown"><spring:message code="lang.label"/><span class="caret"></span></button>\n' +
@@ -96,8 +137,8 @@
                     <script>
 
                         $('#buttons').append(
-                            '                 <button id="kitchen" class="btn btn-outline-primary dropdown-toggle" type="button"\\n\' +\n' +
-                            '       data-toggle="dropdown"><spring:message code="kitchen.label"/><span class="caret"></span></button>\n' +
+                            '                <div style="position:relative; top:0px" > <button id="kitchen" class="btn btn-outline-primary dropdown-toggle" type="button"\n' +
+                            '       data-toggle="dropdown"><spring:message code="cuisine.label"/><span class="caret"></span></button>\n' +
                             '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
                             '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
                             '                                               href="/showFoods/asia"><spring:message code="asian.label"/></a></li>\n' +
@@ -108,9 +149,34 @@
                             '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
                             '                             href="/showFoods/east"><spring:message code="east.label"/></a></li>\n' +
                             ' <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
-                            '                             href="/"><spring:message code="allFood.label"/></a></li>\n' +
-                            '                   </ul>\n')
-
+                            '                             href="/pageMenu"><spring:message code="allFood.label"/></a></li>\n' +
+                            '                   </ul>\n' +
+                            '                   </div> <div style="position:relative; left:100px;top:-40px"><button id="location" class="btn btn-outline-primary dropdown-toggle" type="button"\n' +
+                            '                                   data-toggle="dropdown"><spring:message code="location.label"/><span class="caret"></span></button>\n' +
+                            '                                   <ul class="dropdown-menu"  role="menu" aria-labelledby="menu1">\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                                           href="/showLocations/tent"><spring:message code="tent.label"/></a></li\n' +
+                            '                                          <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showLocations/space"><spring:message code="space.label"/></a></li>\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                                           href="/showLocations/manor"><spring:message code="manor.label"/></a></li>\n' +
+                            '                                          <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showLocations/restaurant"><spring:message code="restaurant.label"/></a></li>\n' +
+                            '                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/pageLocation"><spring:message code="allLocations.label"/></a></li>\n' +
+                            '                                               </ul>\n'+
+                            ' </div><div style="position:relative; left:220px;top:-80px"><button id="program"  class="btn btn-outline-primary dropdown-toggle" type="button"\n' +
+                            '                                   data-toggle="dropdown"><spring:message code="program.label"/><span class="caret"></span></button>\n' +
+                            '                                   <ul class="dropdown-menu"  role="menu" aria-labelledby="menu1">\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showPrograms/show"><spring:message code="show.label"/></a></li>\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                                           href="/showPrograms/quest"><spring:message code="quest.label"/></a></li>\n' +
+                            '                                          <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showPrograms/leading"><spring:message code="leading.label"/></a></li>\n' +
+                            '                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/pageTamada"><spring:message code="allPrograms.label"/></a></li>\n' +
+                            '                                               </ul></div>\n');
                         $('#user').append(' <div class="position-for-langBtn">' +
                             '<button id="locales" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\\n\' +\n' +
                             '       data-toggle="dropdown"><spring:message code="lang.label"/><span class="caret"></span></button>\n' +
@@ -134,20 +200,46 @@
                     <script>
 
                         $('#buttons').append(
-                            '                 <button id="kitchen" class="btn btn-outline-primary dropdown-toggle" type="button"\\n\' +\n' +
-                        '       data-toggle="dropdown"><spring:message code="kitchen.label"/><span class="caret"></span></button>\n' +
-                        '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
-                        '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
-                        '                                               href="/showFoods/asia"><spring:message code="asian.label"/></a></li>\n' +
-                        '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
-                        '                             href="/showFoods/europe"><spring:message code="europe.label"/></a></li>\n' +
-                        '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
-                        '                                               href="/showFoods/slavic"><spring:message code="slavic.label"/></a></li>\n' +
-                        '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
-                        '                             href="/showFoods/east"><spring:message code="east.label"/></a></li>\n' +
-                        ' <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
-                        '                             href="/"><spring:message code="allFood.label"/></a></li>\n' +
-                        '                   </ul>\n')
+                            '                <div style="position:relative; top:0px" > <button id="kitchen" class="btn btn-outline-primary dropdown-toggle" type="button"\n' +
+                            '       data-toggle="dropdown"><spring:message code="cuisine.label"/><span class="caret"></span></button>\n' +
+                            '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
+                            '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                               href="/showFoods/asia"><spring:message code="asian.label"/></a></li>\n' +
+                            '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                             href="/showFoods/europe"><spring:message code="europe.label"/></a></li>\n' +
+                            '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                               href="/showFoods/slavic"><spring:message code="slavic.label"/></a></li>\n' +
+                            '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                             href="/showFoods/east"><spring:message code="east.label"/></a></li>\n' +
+                            ' <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                             href="/pageMenu"><spring:message code="allFood.label"/></a></li>\n' +
+                            '                   </ul>\n' +
+                            '                   </div> <div style="position:relative; left:100px;top:-40px"><button id="location" class="btn btn-outline-primary dropdown-toggle" type="button"\n' +
+                            '                                   data-toggle="dropdown"><spring:message code="location.label"/><span class="caret"></span></button>\n' +
+                            '                                   <ul class="dropdown-menu"  role="menu" aria-labelledby="menu1">\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                                           href="/showLocations/tent"><spring:message code="tent.label"/></a></li\n' +
+                            '                                          <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showLocations/space"><spring:message code="space.label"/></a></li>\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                                           href="/showLocations/manor"><spring:message code="manor.label"/></a></li>\n' +
+                            '                                          <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showLocations/restaurant"><spring:message code="restaurant.label"/></a></li>\n' +
+                            '                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/pageLocation"><spring:message code="allLocations.label"/></a></li>\n' +
+                            '                                               </ul>\n'+
+                            ' </div><div style="position:relative; left:220px;top:-80px"><button id="program"  class="btn btn-outline-primary dropdown-toggle" type="button"\n' +
+                            '                                   data-toggle="dropdown"><spring:message code="program.label"/><span class="caret"></span></button>\n' +
+                            '                                   <ul class="dropdown-menu"  role="menu" aria-labelledby="menu1">\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showPrograms/show"><spring:message code="show.label"/></a></li>\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                                           href="/showPrograms/quest"><spring:message code="quest.label"/></a></li>\n' +
+                            '                                          <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showPrograms/leading"><spring:message code="leading.label"/></a></li>\n' +
+                            '                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/pageTamada"><spring:message code="allPrograms.label"/></a></li>\n' +
+                            '                                               </ul></div>\n');
                         $('#user').append('  <div class="position-for-langBtn"><button id="locales" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\\n\' +\n' +
                             '       data-toggle="dropdown"><spring:message code="lang.label"/><span class="caret"></span></button>\n' +
                             '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
@@ -168,8 +260,8 @@
                 <sec:authorize access="hasRole('ROLE_COMPANY')">
 
                     <script>
-                        $('#buttons').append(    '                 <button id="kitchen" class="btn btn-outline-primary dropdown-toggle" type="button"\\n\' +\n' +
-                            '       data-toggle="dropdown"><spring:message code="kitchen.label"/><span class="caret"></span></button>\n' +
+                        $('#buttons').append(   '                <div style="position:relative; top:0px" > <button id="kitchen" class="btn btn-outline-primary dropdown-toggle" type="button"\n' +
+                            '       data-toggle="dropdown"><spring:message code="cuisine.label"/><span class="caret"></span></button>\n' +
                             '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +
                             '                 <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
                             '                                               href="/showFoods/asia"><spring:message code="asian.label"/></a></li>\n' +
@@ -180,8 +272,34 @@
                             '              <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
                             '                             href="/showFoods/east"><spring:message code="east.label"/></a></li>\n' +
                             ' <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
-                            '                             href="/"><spring:message code="allFood.label"/></a></li>\n' +
-                            '                   </ul>\n')
+                            '                             href="/pageMenu"><spring:message code="allFood.label"/></a></li>\n' +
+                            '                   </ul>\n' +
+                            '                   </div> <div style="position:relative; left:100px;top:-40px"><button id="location" class="btn btn-outline-primary dropdown-toggle" type="button"\n' +
+                            '                                   data-toggle="dropdown"><spring:message code="location.label"/><span class="caret"></span></button>\n' +
+                            '                                   <ul class="dropdown-menu"  role="menu" aria-labelledby="menu1">\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                                           href="/showLocations/tent"><spring:message code="tent.label"/></a></li\n' +
+                            '                                          <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showLocations/space"><spring:message code="space.label"/></a></li>\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                                           href="/showLocations/manor"><spring:message code="manor.label"/></a></li>\n' +
+                            '                                          <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showLocations/restaurant"><spring:message code="restaurant.label"/></a></li>\n' +
+                            '                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/pageLocation"><spring:message code="allLocations.label"/></a></li>\n' +
+                            '                                               </ul>\n'+
+                            ' </div><div style="position:relative; left:220px;top:-80px"><button id="program"  class="btn btn-outline-primary dropdown-toggle" type="button"\n' +
+                            '                                   data-toggle="dropdown"><spring:message code="program.label"/><span class="caret"></span></button>\n' +
+                            '                                   <ul class="dropdown-menu"  role="menu" aria-labelledby="menu1">\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showPrograms/show"><spring:message code="show.label"/></a></li>\n' +
+                            '                                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                                           href="/showPrograms/quest"><spring:message code="quest.label"/></a></li>\n' +
+                            '                                          <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/showPrograms/leading"><spring:message code="leading.label"/></a></li>\n' +
+                            '                             <li role="presentation"><a role="menuitem" tabindex="-1"\n' +
+                            '                                                         href="/pageTamada"><spring:message code="allPrograms.label"/></a></li>\n' +
+                            '                                               </ul></div>\n');
                         $('#user').append('<div class="position-for-langBtn"><button id="locales" class="btn btn-outline-primary dropdown-toggle position-lang" type="button"\\n\' +\n' +
                             '       data-toggle="dropdown"><spring:message code="lang.label"/><span class="caret"></span></button>\n' +
                             '       <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">\n' +

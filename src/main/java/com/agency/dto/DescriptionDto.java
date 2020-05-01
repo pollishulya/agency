@@ -1,4 +1,4 @@
-package com.agency.dto;//package com.agency.dto;
+/*package com.agency.dto;//package com.agency.dto;
 
 
 import lombok.Data;
@@ -14,4 +14,4 @@ public class DescriptionDto extends BaseDto {
     private Long foodId;
     private Long programId;
 
-}
+}*/
