@@ -10,98 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfedfaa7-d78e-46d7-9c7a-56bfab34c927" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentLocationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentProgramController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/CommentLocationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/CommentProgramDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/CommentLocation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/CommentProgram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/mapper/CommentLocationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/mapper/CommentProgramMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/repository/CommentLocationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/repository/CommentProgramRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/CommentLocationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/CommentProgramService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/FoodCompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/FoodCompanyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/FoodDescriptionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/LocationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/ClientDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/CommentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/CommentDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/DescriptionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/DescriptionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/LocationDescriptionDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/LocationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/LocationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/OrderDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/ProgramDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/ProgramDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/dto/ReservationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/dto/ReservationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/FoodDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/FoodDescription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/entity/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/mapper/ClientMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/mapper/CommentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/mapper/DescriptionMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodDescriptionMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/mapper/ReservationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/mapper/ReservationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/repository/ClientRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/repository/CompanyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/repository/DescriptionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/repository/FoodDescriptionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/service/ClientService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/service/FoodCompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/CompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/service/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/FoodService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/service/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/LocationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agency/service/ProgramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/agency/service/ProgramService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/locale/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale/messages_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/asiaCuisinePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/eastCuisinePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/europeCuisinePage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodsTablePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/leadingProgramPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/leadingProgramPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locationPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manorLocationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manorLocationPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageLocation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageLocation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageMenu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageTamada.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageTamada.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/questProgramPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/questProgramPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/restaurantLocationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/restaurantLocationPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProgramPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showProgramPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/slavicCuisinePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/spaceLocationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/spaceLocationPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tentLocationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tentLocationPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithFoods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithFoods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithLocations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery/actionsWithLocations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/images/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/user.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/AccountDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/AccountDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/ClientDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/CommentDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/CommentDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/FoodDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/FoodDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/LocationDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/LocationDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/OrderDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/dto/ProgramDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/dto/ProgramDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Food.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/entity/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/agency/entity/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/mapper/ClientMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/agency/repository/ClientRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -150,34 +66,72 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_en.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+            <state relative-caret-position="153">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+            </state>
+          </provider>
+          <provider editor-type-id="ResourceBundle" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
             </state>
           </provider>
           <provider editor-type-id="ResourceBundle" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="125" column="62" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="62" />
+            <state relative-caret-position="189">
+              <caret line="94" column="98" selection-start-line="94" selection-start-column="98" selection-end-line="94" selection-end-column="98" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#4;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="ResourceBundle" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/modal.css">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1923" />
+            <state relative-caret-position="201">
+              <caret line="93" column="98" selection-start-line="93" selection-start-column="98" selection-end-line="93" selection-end-column="98" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/deleteForm.css">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/forTourTablePage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1022" />
+            <state relative-caret-position="-971" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="113" column="33" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
+              <folding>
+                <element signature="n#!!block;n#loadDescription#0" />
+                <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
+                <element signature="n#!!block;n#saveComment#0" />
+                <element signature="n#!!block;n#saveCommentLocation#0" />
+                <element signature="n#!!block;n#reserveProgram#0" />
+                <element signature="n#!!block;n#reserveLocation#0" />
+                <element signature="n#!!block;n#stars#0" />
+                <element signature="n#!!block;n#updateComment#0" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -191,35 +145,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/LocationController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locationPage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="129" column="41" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/enter.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1243" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcomePage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+            <state relative-caret-position="173">
+              <caret line="94" column="96" selection-start-line="94" selection-start-column="96" selection-end-line="94" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -305,7 +234,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentProgramController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentLocationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/CommentController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/Comment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/entity/FoodDescription.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java" />
@@ -314,9 +242,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/agency/mapper/FoodDescriptionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/FoodDescriptionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/service/ProgramService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locationPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageMenu.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tentLocationPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/spaceLocationPage.jsp" />
@@ -335,8 +260,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/ProgramController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agency/controller/LocationController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blocks/navbar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/locale/messages_en.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/locale/messages_en.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locationPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp" />
       </list>
     </option>
   </component>
@@ -805,7 +734,7 @@
       <workItem from="1588186722371" duration="23212000" />
       <workItem from="1588239956997" duration="32612000" />
       <workItem from="1588276976174" duration="704000" />
-      <workItem from="1588277861503" duration="20725000" />
+      <workItem from="1588277861503" duration="24495000" />
     </task>
     <task id="LOCAL-00001" summary="Dasha and Polina are beautiful">
       <created>1584463781555</created>
@@ -1024,18 +953,25 @@
       <option name="project" value="LOCAL" />
       <updated>1588258837312</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="correct output">
+      <created>1588301156477</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1588301156477</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="516101000" />
+    <option name="totallyTimeSpent" value="519871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-3" width="1542" height="830" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="top" id="Ant Build" order="0" side_tool="true" weight="0.8535871" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49716714" visible="true" weight="0.22885907" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49716714" weight="0.22885907" />
       <window_info id="Structure" order="1" sideWeight="0.5028329" side_tool="true" weight="0.14563759" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1046,7 +982,7 @@
       <window_info id="Web" order="8" sideWeight="0.50141644" side_tool="true" weight="0.18120806" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.054172765" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3601757" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3601757" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28111273" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1081,7 +1017,7 @@
       <window_info id="Learn" order="7" weight="0.3295302" />
       <window_info id="Web" order="8" sideWeight="0.50141644" side_tool="true" weight="0.18120806" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32796487" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.054172765" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3601757" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28111273" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1150,7 +1086,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Front-end work!!!" />
     <MESSAGE value="тут вступает Дашка" />
     <MESSAGE value="reservation" />
     <MESSAGE value="WelcomePage is cool" />
@@ -1175,7 +1110,8 @@
     <MESSAGE value="start food booking" />
     <MESSAGE value="booking program+ pages desighn" />
     <MESSAGE value="welcomePage+reservation" />
-    <option name="LAST_COMMIT_MESSAGE" value="welcomePage+reservation" />
+    <MESSAGE value="correct output" />
+    <option name="LAST_COMMIT_MESSAGE" value="correct output" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1235,13 +1171,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/entity/FoodDescription.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agency/dto/FoodDescriptionDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1343,44 +1272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locationPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="34" />
-          <folding>
-            <element signature="n#!!block;n#loadDescription#0" />
-            <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#!!block;n#saveComment#0" />
-            <element signature="n#!!block;n#saveCommentLocation#0" />
-            <element signature="n#!!block;n#reserveProgram#0" />
-            <element signature="n#!!block;n#reserveLocation#0" />
-            <element signature="n#!!block;n#stars#0" />
-            <element signature="n#!!block;n#updateComment#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="239" column="38" lean-forward="true" selection-start-line="239" selection-start-column="38" selection-end-line="239" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1504,27 +1395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="108" column="85" selection-start-line="108" selection-start-column="85" selection-end-line="108" selection-end-column="85" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-899">
-          <caret line="96" column="100" selection-start-line="96" selection-start-column="100" selection-end-line="96" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageTamada.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="107" column="85" selection-start-line="107" selection-start-column="85" selection-end-line="107" selection-end-column="85" />
           <folding>
             <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
@@ -1674,21 +1544,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_en.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        <state relative-caret-position="272">
+          <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
         </state>
       </provider>
       <provider editor-type-id="ResourceBundle" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_ru_RU.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/locale/messages_en.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="125" column="62" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="62" />
+        <state relative-caret-position="153">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
         </state>
       </provider>
       <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/forTourTablePage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-971" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pageTamada.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="107" column="85" selection-start-line="107" selection-start-column="85" selection-end-line="107" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/jquery/loadComments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="113" column="33" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!block;n#loadDescription#0" />
+            <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#saveComment#0" />
+            <element signature="n#!!block;n#saveCommentLocation#0" />
+            <element signature="n#!!block;n#reserveProgram#0" />
+            <element signature="n#!!block;n#reserveLocation#0" />
+            <element signature="n#!!block;n#stars#0" />
+            <element signature="n#!!block;n#updateComment#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/foodPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="93" column="98" selection-start-line="93" selection-start-column="98" selection-end-line="93" selection-end-column="98" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/locationPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="94" column="96" selection-start-line="94" selection-start-column="96" selection-end-line="94" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/programPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="94" column="98" selection-start-line="94" selection-start-column="98" selection-end-line="94" selection-end-column="98" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#4;n#div#0;n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

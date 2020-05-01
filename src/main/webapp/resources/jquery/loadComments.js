@@ -18,10 +18,10 @@ function loadComments(id) {
                 $("#nextBtn").attr("disabled", false);
             }
             $('#comments').empty();
-            var rowsHtml = " <div id='foodComment' class='panel-body'>";
+            var rowsHtml = " <div id='foodComment'>";
             for (var j = 0; j < data.length; j++) {
                 idComment = data[j].id;
-                rowsHtml += "<div class='media-block'>";
+                rowsHtml += "<hr><div class='media-block'>";
                 rowsHtml += "<a class='media-left' href='#'><img class='img-circle img-sm' src='/resources/images/user.png'></a>";
                 rowsHtml += "<div class='media-body'><div class='mar-btm'>";
                 rowsHtml += "<p class='text-semibold media-heading box-inline'>" + data[j].username + "</p>";
@@ -63,10 +63,10 @@ function loadCommentsProgram(id) {
                 $("#nextBtn").attr("disabled", false);
             }
             $('#comments').empty();
-            var rowsHtml = " <div id='foodComment' class='panel-body'>";
+            var rowsHtml = " <div id='foodComment'>";
             for (var j = 0; j < data.length; j++) {
                 idComment = data[j].id;
-                rowsHtml += "<div class='media-block'>";
+                rowsHtml += "<hr><div class='media-block'>";
                 rowsHtml += "<a class='media-left' href='#'><img class='img-circle img-sm' src='/resources/images/user.png'></a>";
                 rowsHtml += "<div class='media-body'><div class='mar-btm'>";
                 rowsHtml += "<p class='text-semibold media-heading box-inline'>" + data[j].username + "</p>";
@@ -108,10 +108,10 @@ function loadCommentsLocation(id) {
                 $("#nextBtn").attr("disabled", false);
             }
             $('#comments').empty();
-            var rowsHtml = " <div id='foodComment' class='panel-body'>";
+            var rowsHtml = " <div id='foodComment'>";
             for (var j = 0; j < data.length; j++) {
                 idComment = data[j].id;
-                rowsHtml += "<div class='media-block'>";
+                rowsHtml += "<hr><div class='media-block'>";
                 rowsHtml += "<a class='media-left' href='#'><img class='img-circle img-sm' src='/resources/images/user.png'></a>";
                 rowsHtml += "<div class='media-body'><div class='mar-btm'>";
                 rowsHtml += "<p class='text-semibold media-heading box-inline'>" + data[j].username + "</p>";

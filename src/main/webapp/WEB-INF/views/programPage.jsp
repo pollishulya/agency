@@ -91,65 +91,8 @@
 <%--                <div><spring:message code="dateBegin"/><b> ${food.exitDate}</b></div>--%>
 <%--                <div><spring:message code="duration"/><b>${food.numberDays}</b></div>--%>
                 <div><spring:message code="cost"/><b>${program.price}$</b></div>
-                <br>
-                <div style="font-size: 20px">${program.description}</div>
-                <br>
-                <div class='slideshow-container textWrapLeft' style="position:relative; left:225px">
 
-                    <div class='mySlides'>
-                        <div class='numbertext'>1 / 3</div>
-                        <img src='${program.image}/1.jpg' alt='' style='width:100% ;position:relative; left:0px;'>
-                    </div>
-
-                    <div class='mySlides'>
-                        <div class='numbertext'>2 / 3</div>
-                        <img src='${program.image}/2.jpg' style='width:100%;position:relative; left:0px;'>
-                    </div>
-
-                    <div class='mySlides'>
-                        <div class='numbertext'>3 / 3</div>
-                        <img src='${program.image}/3.jpg' style='width:100%;position:relative; left:0px;'>
-                    </div>
-
-                    <a class='prev' onclick='plusSlides(-1)'>&#10094;</a>
-                    <a class='next' onclick='plusSlides(1)'>&#10095;</a>
-
-                </div>
-                <script>
-                    var slideIndex = 1;
-                    showSlides(slideIndex);
-
-                    function plusSlides(n) {
-                        showSlides(slideIndex += n);
-                    }
-
-                    function currentSlide(n) {
-                        showSlides(slideIndex = n);
-                    }
-
-                    function showSlides(n) {
-                        var i;
-                        var slides = document.getElementsByClassName("mySlides");
-                        var dots = document.getElementsByClassName("dot");
-                        if (n > slides.length) {
-                            slideIndex = 1
-                        }
-                        if (n < 1) {
-                            slideIndex = slides.length
-                        }
-                        for (i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none";
-                        }
-                        for (i = 0; i < dots.length; i++) {
-                            dots[i].className = dots[i].className.replace(" active", "");
-                        }
-                        slides[slideIndex - 1].style.display = "block";
-                        dots[slideIndex - 1].className += " active";
-                    }
-                </script>
-                <br>
-            <br>
-                <div id="bookingBtn" class="mar-top clearfix" style="position:relative; bottom:205px" ></div>
+                <div id="bookingBtn" class="mar-top clearfix" style="position:relative; bottom:145px" ></div>
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                     <script>
                         $('#bookingBtn').append('<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="<spring:message code="sendCommentError"/>">\n' +
@@ -166,7 +109,7 @@
                 </sec:authorize>
                 <sec:authorize access="hasRole('ROLE_USER')">
                     <script>
-                        $('#bookingBtn').append('   <button id="reserve" class=\'btn btn-primary pull-right\' onclick="reserveForm(0)"><spring:message code="reserve"/></button>')
+                        $('#bookingBtn').append('   <button id="reserve"  class=\'btn btn-primary pull-right\' onclick="reserveForm(0)"><spring:message code="reserve"/></button>')
                     </script>
                 </sec:authorize>
                 <sec:authorize access="isAnonymous()">
@@ -177,8 +120,9 @@
                     </script>
                 </sec:authorize>
 
-
-
+                <div style="font-size: 20px">${program.description}</div>
+                <br>
+                        <img style="position:relative; left:225px;" width="300px" height="200px" src='${program.image}/1.jpg' alt=''>
             <br>
             <div class="row">
                 <div class="col-md-12">
@@ -227,14 +171,15 @@
                             </sec:authorize>
 <%--                        </div>--%>
 
+    <label ><spring:message code="comments.label"/></label>
                     <div id="comments" >
 
-                                <div class='media-block' style="position:relative;left:300px">
+                                <div style="position:relative;left:300px">
                                     <p><spring:message code="noComments.error"/></p>
                                 </div>
                         </div>
                     </div>
-                    <nav aria-label="Page navigation example">f
+                    <nav aria-label="Page navigation example">
                         <ul class="pagination justify-content-end">
                             <li class="page-item">
                                 <button type="submit" class="btn btn-sm btn-primary" id="previousBtn" style="position:relative;left:360px"

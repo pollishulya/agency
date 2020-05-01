@@ -90,72 +90,8 @@
                 <div><spring:message code="cuisine.label"/><b> ${food.cuisine}</b></div>
 
                 <div><spring:message code="cost"/><b>${food.price}$</b></div>
-                <br>
-                <div style="font-size: 20px">${food.description}</div>
-                <br>
-                <div class='slideshow-container textWrapLeft' style="position:relative; left:225px">
 
-                    <div class='mySlides'>
-                        <div class='numbertext'>1 / 3</div>
-                        <img src='${food.image}/1.jpg' alt='' style='width:100%;position:relative; left:0px;'>
-                    </div>
-
-                    <div class='mySlides'>
-                        <div class='numbertext'>2 / 3</div>
-                        <img src='${food.image}/2.jpg' style='width:100%;position:relative; left:0px;'>
-                    </div>
-
-                    <div class='mySlides'>
-                        <div class='numbertext'>3 / 3</div>
-                        <img src='${food.image}/3.jpg' style='width:100%;position:relative; left:0px;'>
-                    </div>
-
-                    <a class='prev' onclick='plusSlides(-1)'>&#10094;</a>
-                    <a class='next' onclick='plusSlides(1)'>&#10095;</a>
-
-                </div>
-                <script>
-                    var slideIndex = 1;
-                    showSlides(slideIndex);
-
-                    function plusSlides(n) {
-                        showSlides(slideIndex += n);
-                    }
-
-                    function currentSlide(n) {
-                        showSlides(slideIndex = n);
-                    }
-
-                    function showSlides(n) {
-                        var i;
-                        var slides = document.getElementsByClassName("mySlides");
-                        var dots = document.getElementsByClassName("dot");
-                        if (n > slides.length) {
-                            slideIndex = 1
-                        }
-                        if (n < 1) {
-                            slideIndex = slides.length
-                        }
-                        for (i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none";
-                        }
-                        for (i = 0; i < dots.length; i++) {
-                            dots[i].className = dots[i].className.replace(" active", "");
-                        }
-                        slides[slideIndex - 1].style.display = "block";
-                        dots[slideIndex - 1].className += " active";
-                    }
-                </script>
-                <br>
-                <div style='text-align:center; display:none'>
-                    <span class='dot' onclick='currentSlide(1)'></span>
-                    <span class='dot' onclick='currentSlide(2)'></span>
-                    <span class='dot' onclick='currentSlide(3)'></span>
-                </div>
-
-            <br>
-
-                <div id="bookingBtn" class="mar-top clearfix" style="position:relative; bottom:205px" ></div>
+                <div id="bookingBtn" class="mar-top clearfix" style="position:relative; bottom:145px" ></div>
                 <sec:authorize access="hasRole('ROLE_ADMIN')">
                     <script>
                         $('#bookingBtn').append('<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="<spring:message code="sendCommentError"/>">\n' +
@@ -183,9 +119,11 @@
                     </script>
                 </sec:authorize>
 
+                <div style="font-size: 20px">${food.description}</div>
+                <br>
+                <img style="position:relative; left:220px;" width="300px" height="200px" src='${program.image}/1.jpg' alt=''>
+                <br>
 
-
-            <br>
             <div class="row">
                 <div class="col-md-12">
 
@@ -204,7 +142,7 @@
                                         '                                    </div>\n' +
                                         '                                    <input type="hidden" id="count">\n' +
                                         '                                </div>\n' +
-                                        '                                <textarea class="commentForm" id="comment" rows="4" cols="70" style="width=763p"\n' +
+                                        '                                <textarea class="commentForm" id="comment" rows="4" cols="70" style="width:763px"\n' +
                                         '                                          placeholder=<spring:message code="writeComment"/>></textarea>\n' +
                                         '                            </div>' +
                                         '<button id="send" class="btn btn-sm btn-primary pull-right" onclick="saveComment(${food.id})" type="submit"> <i class="fa fa-pencil fa-fw"></i> <spring:message code="send"/> </button>')
@@ -232,7 +170,7 @@
                                 </script>
                             </sec:authorize>
 <%--                        </div>--%>
-
+    <label ><spring:message code="comments.label"/></label>
                     <div id="comments">
 
                                 <div class='media-block' style="position:relative;left:300px">
