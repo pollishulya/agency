@@ -1,4 +1,4 @@
-.tour {
+.position {
     position: relative;
     moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -12,15 +12,15 @@
     height: 400px;
 }
 
-.tour p {
+.position p {
     font-size: 15px;
 }
 
-.tour h3 {
+.position h3 {
     color: #36486b;
 }
 
-.tour-image {
+.position-image {
     margin-bottom: 7px;
     margin-top: 7px;
 }
@@ -72,7 +72,7 @@ h2 span {
 }
 
 
-.position-tour {
+.position-position {
     position: relative;
     margin-right: 40px;
     margin-left: 40px;

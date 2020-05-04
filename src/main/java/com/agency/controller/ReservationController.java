@@ -1,12 +1,15 @@
 package com.agency.controller;
 
 import com.agency.dto.AccountDto;
+import com.agency.dto.FoodDto;
 import com.agency.dto.ReservationDto;
 import com.agency.entity.Account;
+import com.agency.entity.Food;
 import com.agency.entity.Reservation;
 import com.agency.mapper.ReservationMapper;
 import com.agency.repository.AccountRepository;
 import com.agency.repository.ReservationRepository;
+import com.agency.service.FoodService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +22,9 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 
 @RestController
@@ -29,13 +34,16 @@ public class ReservationController {
     private final ReservationRepository reservationRepository;
     private final AccountRepository accountRepository;
     private final ReservationMapper reservationMapper;
+    private final FoodService foodService;
 
     @Autowired
-    public ReservationController(ReservationRepository reservationRepository, AccountRepository accountRepository, ReservationMapper reservationMapper) {
+    public ReservationController(ReservationRepository reservationRepository, AccountRepository accountRepository,
+                                 ReservationMapper reservationMapper, FoodService foodService) {
 
         this.reservationRepository = reservationRepository;
         this.accountRepository = accountRepository;
         this.reservationMapper = reservationMapper;
+        this.foodService=foodService;
     }
 
 
@@ -47,7 +55,46 @@ public class ReservationController {
         reservationDto.setAccountId(id);
         Reservation reservation = reservationMapper.toEntity(reservationDto);
         log.info(reservation.getUsername());
+        List<Reservation> previousDate = reservationRepository.findByFoodIdAndDate(reservationDto.getFoodId(), reservationDto.getDate());
+       if (reservation.getPhone().equals("") ||reservation.getUsername().equals("")) {
+            return new ResponseEntity("empty field",HttpStatus.BAD_REQUEST);
+
+        }
+        else if(!reservation.getDate().after(new Date())){
+            return new ResponseEntity("data error",HttpStatus.BAD_REQUEST);
+        } else if (!previousDate.isEmpty()) {
+            return new ResponseEntity("data booked",HttpStatus.BAD_REQUEST);
+
+        }
+          else {
         reservationRepository.save(reservation);
+        return new ResponseEntity<>(HttpStatus.OK);
+        }
+
+    }
+   /* @GetMapping(value = "/reserve/cancelFood//{id}", produces = "application/json")
+    @ResponseBody
+    @Transactional
+    public ResponseEntity cancelFood(@PathVariable Long id) {
+
+       /* try {
+            reservationRepository.saveAndFlush(id);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.METHOD_NOT_ALLOWED);
+        }*/
+
+      /*  return new ResponseEntity<>(HttpStatus.OK);
+    }*/
+
+
+    @RequestMapping(value = "/reserve/delete/{id}", method = {RequestMethod.POST})
+    public ResponseEntity deleteBookingFood(@PathVariable Long id) {
+
+        try {
+            reservationRepository.deleteById(id);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.METHOD_NOT_ALLOWED);
+        }
 
         return new ResponseEntity<>(HttpStatus.OK);
     }
@@ -65,7 +112,7 @@ public class ReservationController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping(value = "/reservation/load", produces = "application/json")
+    @GetMapping(value = "/reservation/loadFood", produces = "application/json")
     @ResponseBody
     @Transactional
     public List<ReservationDto> userOrders() {
@@ -79,26 +126,41 @@ public class ReservationController {
 
         return reservationsDto;
     }
+
+    @RequestMapping(value = "/bookingFood/cancel/{id}", method = {RequestMethod.POST})
+    public ResponseEntity cancelBookingLocation(@RequestBody ReservationDto food) {
+
+        foodService.cancel(food);
+
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
     @GetMapping(value = "/orders")
     public ModelAndView showOrders() {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        modelAndView.setViewName("userReservationPage");
+        modelAndView.setViewName("logic/userReservationPage");
 
         return modelAndView;
     }
 
-    @GetMapping(value = "/cancel/{id}", produces = "application/json")
+    @GetMapping(value = "/orders/cancel", produces = "application/json")
     @ResponseBody
     @Transactional
-    public ReservationDto cancelRecord(@PathVariable Long id) {
-        ReservationDto account = reservationMapper.toDto(reservationRepository.findById(id).get());
+    public ResponseEntity loadBookingFoodForUpdate(/*@PathVariable Long id*/) {
+Long id= Long.valueOf(1);
+        Optional<Reservation> food= reservationRepository.findById(id);
+        if(food.isPresent()){
+            ReservationDto foodDto = reservationMapper.toDto(food.get());
+            return new ResponseEntity(foodDto,HttpStatus.OK);
+        }
 
-        return account;
+
+        return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
 
 
-    @GetMapping(value = "/reservation/loadCompany", produces = "application/json")
+    @GetMapping(value = "/reservation/loadCompanyFood", produces = "application/json")
     @ResponseBody
     @Transactional
     public List<ReservationDto> companyOrders() {
@@ -118,7 +180,7 @@ public class ReservationController {
     public ModelAndView showOrdersCompany() {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        modelAndView.setViewName("companyReservationPage");
+        modelAndView.setViewName("logic/companyReservationPage");
 
         return modelAndView;
     }
@@ -137,7 +199,7 @@ public class ReservationController {
     public ModelAndView pageLocation() {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        modelAndView.setViewName("pageLocation");
+        modelAndView.setViewName("location/pageLocation");
 
         return modelAndView;
     }
@@ -146,7 +208,7 @@ public class ReservationController {
     public ModelAndView pageMenu() {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        modelAndView.setViewName("pageMenu");
+        modelAndView.setViewName("food/pageMenu");
 
         return modelAndView;
     }
@@ -155,7 +217,7 @@ public class ReservationController {
     public ModelAndView pageTamada() {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        modelAndView.setViewName("pageTamada");
+        modelAndView.setViewName("program/pageTamada");
 
         return modelAndView;
     }
@@ -164,7 +226,7 @@ public class ReservationController {
     public ModelAndView showCompanyOrders() {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        modelAndView.setViewName("companyReservationPage");
+        modelAndView.setViewName("logic/companyReservationPage");
 
         return modelAndView;
     }

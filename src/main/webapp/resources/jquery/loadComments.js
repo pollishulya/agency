@@ -235,8 +235,25 @@ function saveCommentProgram(id) {
 }
 
 function reserveForm() {
-    $("#ReserveForm")[0].reset();
+  $("#ReserveForm")[0].reset();
     $("#ReserveModal").modal();
+        $("#ReserveForm")[0].reset();
+        $("#ReserveModal").modal();
+        $.ajax({
+            type: "GET",
+            url: url,
+            success: function (data) {
+                $("#idUpdateViaUser").val(data.id);
+                $("#nameUpdateViaUser").val(data.username);
+                $("#phone").val(11111);
+
+            },
+            error: function (data) {
+                $("#ReserveModal").modal("hide");
+                $("#errorForm")[0].reset();
+                $("#errorModal").modal();
+            }
+        })
 
 }
 
@@ -258,8 +275,6 @@ function reserve(id) {
         "nameFood": name,
         "status":"BOOKED"
     });
-//    alert(reservation.status);
-    alert (JSON.stringify(reservation));
     $.ajax({
         type: 'POST',
         contentType: "application/json;charset=utf-8",
@@ -269,6 +284,15 @@ function reserve(id) {
             $("#ReserveModal").modal("hide");
         },
         error: function (res) {
+            if (res.status === 500) {
+                $('#uniquePositionFieldMistake').show();
+            } else if (res.responseJSON === "empty field") {
+                $('#emptyFieldMistake').show();
+            } else if (res.responseJSON === "data error") {
+                $('#incorrectDataMistake').show();
+            } else if (res.responseJSON === "data booked") {
+                $('#bookingDataMistake').show();
+            }
         }
     });
 };
@@ -291,8 +315,7 @@ function reserveProgram(id) {
         "date": date,
         "status":"BOOKED"
     });
-//    alert(reservation.status);
-    alert (JSON.stringify(reservation));
+
     $.ajax({
         type: 'POST',
         contentType: "application/json;charset=utf-8",
@@ -302,6 +325,15 @@ function reserveProgram(id) {
             $("#ReserveModal").modal("hide");
         },
         error: function (res) {
+            if (res.status === 500) {
+                $('#uniquePositionFieldMistake').show();
+            } else if (res.responseJSON === "empty field") {
+                $('#emptyFieldMistake').show();
+            } else if (res.responseJSON === "data error") {
+                $('#incorrectDataMistake').show();
+            } else if (res.responseJSON === "data booked") {
+                $('#bookingDataMistake').show();
+            }
         }
     });
 };
@@ -325,8 +357,6 @@ function reserveLocation(id) {
         "status": "BOOKED",
         "nameLocation": name,
     });
-   // alert(reservation.);
-    alert (JSON.stringify(reservation));
     $.ajax({
         type: 'POST',
         contentType: "application/json;charset=utf-8",
@@ -336,6 +366,15 @@ function reserveLocation(id) {
             $("#ReserveModal").modal("hide");
         },
         error: function (res) {
+            if (res.status === 500) {
+                $('#uniquePositionFieldMistake').show();
+            } else if (res.responseJSON === "empty field") {
+                $('#emptyFieldMistake').show();
+            } else if (res.responseJSON === "data error") {
+                $('#incorrectDataMistake').show();
+            } else if (res.responseJSON === "data booked") {
+                $('#bookingDataMistake').show();
+            }
         }
     });
 };

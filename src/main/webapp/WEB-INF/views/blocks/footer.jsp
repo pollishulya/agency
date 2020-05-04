@@ -3,7 +3,7 @@
 <%--<head>--%>
 <%--</head>--%>
 <footer>
-    <hr>
+    <hr style="color:orange">
     <p align="center"> &copy; Chilling.by</p>
 </footer>
 

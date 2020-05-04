@@ -58,7 +58,7 @@ public class CommentMapper extends AbstractMapper<Comment, CommentDto> {
     }
 
     private String getUsername(Comment source) {
-        return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getAccount().getName();
+        return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getAccount().getFirstname();
     }
 
     private Long getFoodId(Comment source) {

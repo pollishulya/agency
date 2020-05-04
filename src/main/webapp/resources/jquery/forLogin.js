@@ -7,20 +7,21 @@ function loginForm() {
     $("#loginModal").modal();
 }
 
-function signUpForm() {
-    $("#signUpForm")[0].reset();
-    $("#signUpModal").modal();
+function enterForm() {
+    $("#enterForm")[0].reset();
+    $("#enterModal").modal();
 }
 
+
+
 function signUp() {
-    var firstname = $('#nameSignUp').val();
+    var name = $('#nameSignUp').val();
     var phone = $('#phoneSignUp').val();
     var email = $('#emailSignUp').val();
     var password = $('#passwordSignUp').val();
     var access = "user";
     var accountDto = ({
-        "firstname": firstname,
-        "lastname": firstname,
+        "firstname": name,
         "phone": phone,
         "email": email,
         "password": password,
@@ -33,8 +34,9 @@ function signUp() {
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(accountDto),
         success: function (result) {
-                    alert("регистрация прошла успешно");
-            loginForm();
+
+                //    alert("регистрация прошла успешно");
+            enterForm();
             $("#signUpModal").modal("hide");
         },
         error: function (result) {
@@ -51,7 +53,7 @@ function updateAccountSettings() {
         url: url,
         success: function (data) {
             $("#idUpdateViaUser").val(data.id);
-            $("#nameUpdateViaUser").val(data.name);
+            $("#nameUpdateViaUser").val(data.firstname);
             $("#phoneUpdateViaUser").val(data.phone);
             $("#emailUpdateViaUser").val(data.email);
             $("#roleUpdateViaUser").val(data.role);
@@ -75,7 +77,7 @@ function updateAccount() {
     var role = $('#roleUpdateViaUser').val();
     var accountDto = ({
         "id": id,
-        "name": name,
+        "firstname": name,
         "phone": phone,
         "email": email,
         "role": role

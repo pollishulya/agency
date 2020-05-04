@@ -2,6 +2,7 @@ var loadPage = 0;
 var numberDays = 0;
 
 function deleteRecord(id) {
+
     $.ajax({
         type: "POST",
         url: "/location/delete/" + id,
@@ -10,7 +11,7 @@ function deleteRecord(id) {
             location.reload();
         },
         error: function (res) {
-            $('#deleteTourMistake').show();
+            $('#deletePosiionMistake').show();
         }
     });
 };
@@ -44,8 +45,7 @@ function convertDateForUpdateField(exitDate) {
 function deleteForm(id) {
     $("#deleteForm")[0].reset();
     $("#deleteModal").modal();
-    $('#idDeleteTour').val(id);
-    alert("del"+id);
+    $('#idDeletePosition').val(id);
 
 }
 
@@ -55,7 +55,7 @@ function loadLocations(id, param, numberRows) {
         url: "/locations/show?param=" + param + "&pageNumber=" + loadPage + "&pageSize=" + numberRows,
         success: function (res) {
             $('#tableBody').empty();
-            $('#noTourMessage').empty();
+            $('#noPositionMessage').empty();
             $("#nextBtn").attr("disabled", false);
             if (loadPage == 0) {
                 $("#previousBtn").attr("disabled", true);
@@ -80,7 +80,7 @@ function loadLocations(id, param, numberRows) {
         },
         error: function (res) {
             if (loadPage == 0) {
-                $('#tourTable').detach();
+                $('#positionTable').detach();
                 $("#previousBtn").attr("disabled", true);
             }
             $("#nextBtn").attr("disabled", true);
@@ -92,7 +92,7 @@ function loadLocations(id, param, numberRows) {
 
 function AddNew() {
     $("#addForm")[0].reset();
-    $("#addTourModal").modal();
+    $("#addPositionModal").modal();
 
 }
 
@@ -100,7 +100,7 @@ function updateRecord(id) {
     $('#descriptionsUpdate').empty();
     var url = "/location/update/" + id;
     $("#updateForm")[0].reset();
-    $("#updateTourModal").modal();
+    $("#updatePositionModal").modal();
     $.ajax({
         type: "GET",
         url: url,
@@ -156,7 +156,7 @@ function saveLocation() {
         "type": type,
         "description": description
     });
-    alert(JSON.stringify(locationDto));
+
 
     $.ajax({
         type: "Post",
@@ -165,12 +165,12 @@ function saveLocation() {
         data: JSON.stringify(locationDto),
         success: function (res) {
             location.reload();
-            $("#addTourModal").modal("hide");
+            $("#addPositionModal").modal("hide");
 
         },
         error: function (res) {
             if (res.status === 500) {
-                $('#uniqueTourFieldMistake').show();
+                $('#uniquePositionFieldMistake').show();
             } else if (res.responseJSON === "empty field") {
                 $('#emptyFieldMistake').show();
             } else if (res.responseJSON === "data error") {
@@ -207,7 +207,7 @@ function saveDescription() {
 
 function save() {
 
-    $('#uniqueTourFieldMistake').hide();
+    $('#uniquePositionFieldMistake').hide();
     $('#emptyFieldMistake').hide();
     $('#emptyDescriptionMistake').hide();
     var i;
@@ -229,7 +229,7 @@ function save() {
 
 function updateLocation () {
 
-    $('#uniqueTourFieldUpdateMistake').hide();
+    $('#uniquePositionFieldUpdateMistake').hide();
     $('#emptyFieldUpdateMistake').hide();
 
     var name = $('#nameUpdate').val();
@@ -254,11 +254,11 @@ function updateLocation () {
         data: JSON.stringify(location),
         success: function (res) {
             updateDescription();
-            $("#updateTourModal").modal("hide");
+            $("#updatePositionModal").modal("hide");
         },
         error: function (res) {
             if (res.status === 500) {
-                $('#uniqueTourFieldUpdateMistake').show();
+                $('#uniquePositionFieldUpdateMistake').show();
             } else if (res.status === 400) {
                 $('#emptyFieldUpdateMistake').show();
             }

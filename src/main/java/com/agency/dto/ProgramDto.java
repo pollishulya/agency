@@ -15,7 +15,7 @@ public class ProgramDto extends BaseDto {
     private String name;
     private String duration;
     private String type;
-    private double price;
+    private String price;
     private float rating;
   //  private Date exitDate;
     private String image;

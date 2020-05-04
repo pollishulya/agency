@@ -35,6 +35,7 @@ public class ReservationMapper extends AbstractMapper<Reservation, ReservationDt
         mapper.createTypeMap(Reservation.class, ReservationDto.class)
                 .addMappings(m -> m.skip(ReservationDto::setAccountId)).setPostConverter(toDtoConverter())
                 .addMappings(m -> m.skip(ReservationDto::setNameFood)).setPostConverter(toDtoConverter())
+                .addMappings(m -> m.skip(ReservationDto::setUsername)).setPostConverter(toDtoConverter())
                 .addMappings(m -> m.skip(ReservationDto::setFoodId)).setPostConverter(toDtoConverter())
                 .addMappings(m -> m.skip(ReservationDto::setCompanyId)).setPostConverter(toDtoConverter());
         mapper.createTypeMap(ReservationDto.class, Reservation.class)
@@ -47,6 +48,7 @@ public class ReservationMapper extends AbstractMapper<Reservation, ReservationDt
     @Override
     public void mapSpecificFields(Reservation source, ReservationDto destination) {
         destination.setAccountId(getAccountId(source));
+        destination.setUsername(getUsername(source));
         destination.setNameFood(getFoodName(source));
         destination.setFoodId(getFoodId(source));
        // destination.setLocationId(getLocationId(source));
@@ -70,6 +72,10 @@ public class ReservationMapper extends AbstractMapper<Reservation, ReservationDt
         return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getFood().getName();
     }
 
+
+    private String getUsername(Reservation source) {
+        return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getAccount().getFirstname();
+    }
 
     @Override
     void mapSpecificFields(ReservationDto source, Reservation destination) {

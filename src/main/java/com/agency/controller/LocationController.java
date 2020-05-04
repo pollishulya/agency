@@ -43,13 +43,13 @@ public class LocationController {
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject(location.get());
-        modelAndView.setViewName("locationPage");
+        modelAndView.setViewName("location/locationPage");
 
-       /* if(food.isPresent()){
-            modelAndView.addObject(food.get());
+        if(location.isPresent()){
+            modelAndView.addObject(location.get());
         } else {
-            throw new RuntimeException("No food with id " + id);
-        }*/
+            throw new RuntimeException("No location with id " + id);
+        }
 
         return modelAndView;
     }
@@ -88,16 +88,16 @@ public class LocationController {
     public ResponseEntity save(@RequestBody Location location) {
 
 
-      /*  if (food.getName().equals("") || food.getView().equals("") || food.getCuisine().equals("")) {
+        if (location.getName().equals("") || location.getType().equals("") || location.getAddress().equals("")) {
             return new ResponseEntity("empty field",HttpStatus.BAD_REQUEST);
-        }*/
-      /*  else if(food.getExitDate().compareTo(new Date())<0){
-            return new ResponseEntity("data error",HttpStatus.BAD_REQUEST);
-        }*/
-      //  else {
-
+        }
+        else if(Double.parseDouble(location.getPrice())<0){
+            return new ResponseEntity("price error",HttpStatus.BAD_REQUEST);
+        }
+        else {
             return locationService.save(location);
-        //}
+        }
+
     }
 
     @GetMapping(value = "/locations/show", produces = "application/json")
@@ -113,7 +113,7 @@ public class LocationController {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
        // modelAndView.setViewName("locationsTablePage");
-        modelAndView.setViewName("locationsTablePage");
+        modelAndView.setViewName("location/locationsTablePage");
 
 
         return modelAndView;
@@ -124,13 +124,13 @@ public class LocationController {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
         if ("restaurant".equals(type)) {
-            modelAndView.setViewName("restaurantLocationPage");
+            modelAndView.setViewName("location/restaurantLocationPage");
         } else if ("manor".equals(type)) {
-            modelAndView.setViewName("manorLocationPage");
+            modelAndView.setViewName("location/manorLocationPage");
         } else if ("tent".equals(type)) {
-            modelAndView.setViewName("tentLocationPage");
+            modelAndView.setViewName("location/tentLocationPage");
         } else if ("space".equals(type)) {
-            modelAndView.setViewName("spaceLocationPage");
+            modelAndView.setViewName("location/spaceLocationPage");
         }
            return modelAndView;
     }

@@ -43,7 +43,7 @@ public class StartController {
     public ModelAndView showFoods() {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        modelAndView.setViewName("enter");
+        modelAndView.setViewName("account/enter");
 
 
         return modelAndView;
@@ -62,7 +62,7 @@ public class StartController {
        if (logout != null) {
             modelAndView.addObject("msg", "You've been logged out successfully.");
         }
-        modelAndView.setViewName("welcomePage");
+        modelAndView.setViewName("blocks/welcomePage");
 
         return modelAndView;
 
@@ -76,6 +76,7 @@ public class StartController {
         //} else {
           //  List<Account> account = accountRepository.findAccountByEmailOrPhone(accountDto.getEmail(), accountDto.getPhone());
            //if (account.size() == 0) {
+
                accountService.createAccount(accountDto);
                 return  new ResponseEntity<>(HttpStatus.OK);
             //}

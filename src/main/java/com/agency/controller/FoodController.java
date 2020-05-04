@@ -44,13 +44,13 @@ public class FoodController {
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject(food.get());
-        modelAndView.setViewName("foodPage");
+        modelAndView.setViewName("food/foodPage");
 
-       /* if(food.isPresent()){
+        if(food.isPresent()){
             modelAndView.addObject(food.get());
         } else {
             throw new RuntimeException("No food with id " + id);
-        }*/
+        }
 
         return modelAndView;
     }
@@ -89,15 +89,18 @@ public class FoodController {
     public ResponseEntity save(@RequestBody Food food) {
 
 
-      /*  if (food.getName().equals("") || food.getView().equals("") || food.getCuisine().equals("")) {
+        if (food.getName().equals("") || food.getType().equals("") || food.getCuisine().equals("") || food.getPrice()<0) {
             return new ResponseEntity("empty field",HttpStatus.BAD_REQUEST);
-        }*/
+        }
+         else if(food.getPrice()<0){
+            return new ResponseEntity("price error",HttpStatus.BAD_REQUEST);
+        }
       /*  else if(food.getExitDate().compareTo(new Date())<0){
             return new ResponseEntity("data error",HttpStatus.BAD_REQUEST);
         }*/
-      //  else {
+        else {
             return foodService.save(food);
-        //}
+        }
     }
 
     @GetMapping(value = "/foods/show", produces = "application/json")
@@ -112,7 +115,7 @@ public class FoodController {
     public ModelAndView showFoods() {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        modelAndView.setViewName("foodsTablePage");
+        modelAndView.setViewName("food/foodsTablePage");
 
 
         return modelAndView;
@@ -124,13 +127,13 @@ public class FoodController {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
         if ("europe".equals(type)) {
-            modelAndView.setViewName("europeCuisinePage");
+            modelAndView.setViewName("food/europeCuisinePage");
         } else if ("slavic".equals(type)) {
-            modelAndView.setViewName("slavicCuisinePage");
+            modelAndView.setViewName("food/slavicCuisinePage");
         } else if ("east".equals(type)) {
-            modelAndView.setViewName("eastCuisinePage");
+            modelAndView.setViewName("food/eastCuisinePage");
         } else if ("asia".equals(type)) {
-            modelAndView.setViewName("asiaCuisinePage");
+            modelAndView.setViewName("food/asiaCuisinePage");
         }
         return modelAndView;
     }

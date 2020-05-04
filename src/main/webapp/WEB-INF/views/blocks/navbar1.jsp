@@ -30,10 +30,9 @@
                 <div id="navbar1" class="collapse navbar-collapse">
                     <a href="/" id="home">
                         <img src='/resources/images/eda1.png' width="50" height="50" class="d-inline-block align-top" alt=""/>Chilling.by
-
                     </a>
             <img src='/resources/images/phone.png' width="35" height="35" class="d-inline-block align-top" alt=""/>+375 44 7654901
-            <img src='/resources/images/timer.png' width="35" height="35" class="d-inline-block align-top" alt=""/>Понедельник-Пятница: 10-20
+            <img src='/resources/images/timer.png' width="35" height="35" class="d-inline-block align-top" alt=""/><spring:message code="hat"/>
 <span id="timer"> </span>
                 </div>
 </body>

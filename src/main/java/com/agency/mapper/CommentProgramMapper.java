@@ -54,7 +54,7 @@ public class CommentProgramMapper extends AbstractMapper<CommentProgram, Comment
     }
 
     private String getUsername(CommentProgram source) {
-        return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getAccount().getName();
+        return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getAccount().getFirstname();
     }
 
     private Long getProgramId(CommentProgram source) {

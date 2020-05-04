@@ -142,7 +142,7 @@ public class AccountController {
     public ModelAndView showAccounts() {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        modelAndView.setViewName("accountsTablePage");
+        modelAndView.setViewName("account/accountsTablePage");
 
         return modelAndView;
     }

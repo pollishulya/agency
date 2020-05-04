@@ -10,7 +10,7 @@ function deleteRecord(id) {
             location.reload();
         },
         error: function (res) {
-            $('#deleteTourMistake').show();
+            $('#deletePositionMistake').show();
         }
     });
 };
@@ -44,16 +44,16 @@ function convertDateForUpdateField(exitDate) {
 function deleteForm(id) {
     $("#deleteForm")[0].reset();
     $("#deleteModal").modal();
-    $('#idDeleteTour').val(id);
+    $('#idDeletePosition').val(id);
 }
 
-function loadTours(id, param, numberRows) {
+function loadFood(id, param, numberRows) {
     $.ajax({
         type: 'GET',
         url: "/foods/show?param=" + param + "&pageNumber=" + loadPage + "&pageSize=" + numberRows,
         success: function (res) {
             $('#tableBody').empty();
-            $('#noTourMessage').empty();
+            $('#noPositionMessage').empty();
             $("#nextBtn").attr("disabled", false);
             if (loadPage == 0) {
                 $("#previousBtn").attr("disabled", true);
@@ -77,7 +77,7 @@ function loadTours(id, param, numberRows) {
         },
         error: function (res) {
             if (loadPage == 0) {
-                $('#tourTable').detach();
+                $('#positionTable').detach();
                 $("#previousBtn").attr("disabled", true);
             }
             $("#nextBtn").attr("disabled", true);
@@ -89,7 +89,7 @@ function loadTours(id, param, numberRows) {
 
 function AddNew() {
     $("#addForm")[0].reset();
-    $("#addTourModal").modal();
+    $("#addPositionModal").modal();
 
 }
 
@@ -97,14 +97,14 @@ function updateRecord(id) {
     $('#descriptionsUpdate').empty();
     var url = "/food/update/" + id;
     $("#updateForm")[0].reset();
-    $("#updateTourModal").modal();
+    $("#updatePositionModal").modal();
     $.ajax({
         type: "GET",
         url: url,
         success: function (res) {
             $("#idUpdate").val(res.id);
             $("#nameUpdate").val(res.name);
-            $("#cuisineUpdate").val(res.cuisine);
+            $("#cuisinesUpdate").val(res.cuisine);
             //$("#exitDateUpdate").val(convertDateForUpdateField(res.exitDate));
            // $("#numberDaysUpdate").val(res.numberDays);
             $("#costUpdate").val(res.price);
@@ -127,7 +127,7 @@ function updateRecord(id) {
     });
 }
 
-function saveTour() {
+function savePosition() {
 
     var name = $('#name').val();
     var cuisine = $('#cuisines').val();
@@ -149,7 +149,6 @@ function saveTour() {
         "type": type,
         "description": description
     });
-    alert(foodDto.cuisine)
     $.ajax({
         type: "Post",
         url: "/food/save",
@@ -198,7 +197,7 @@ function saveDescription() {
 
 function save() {
 
-    $('#uniqueTourFieldMistake').hide();
+    $('#uniquePositionFieldMistake').hide();
     $('#emptyFieldMistake').hide();
     $('#emptyDescriptionMistake').hide();
     var i;
@@ -213,18 +212,18 @@ function save() {
    // }
 
     if (stop === 0) {
-        saveTour();
+        savePosition();
         saveDescription();
     }
 }
 
-function updateTour() {
+function updatePosition() {
 
-    $('#uniqueTourFieldUpdateMistake').hide();
+    $('#uniquePositionFieldUpdateMistake').hide();
     $('#emptyFieldUpdateMistake').hide();
 
     var name = $('#nameUpdate').val();
-    var cuisine = $('#countryUpdate').val();
+    var cuisine=$('#cuisinesUpdate').val();
     var id = $('#idUpdate').val();
     var price = $('#costUpdate').val();
     var type = $('#typesUpdate').val();
@@ -243,11 +242,11 @@ function updateTour() {
         data: JSON.stringify(food),
         success: function (res) {
             updateDescription();
-            $("#updateTourModal").modal("hide");
+            $("#updatePositionModal").modal("hide");
         },
         error: function (res) {
             if (res.status === 500) {
-                $('#uniqueTourFieldUpdateMistake').show();
+                $('#uniquePositionFieldUpdateMistake').show();
             } else if (res.status === 400) {
                 $('#emptyFieldUpdateMistake').show();
             }
@@ -311,7 +310,7 @@ $(document).ready(function () {
         var selectedOption = $('#numberRows').val();
         if (selectedOption != '') {
             $('#tableBody').empty();
-            loadTours(1, param, selectedOption);
+            loadFood(1, param, selectedOption);
         }
     });
 });

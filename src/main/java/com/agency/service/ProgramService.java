@@ -1,10 +1,14 @@
 package com.agency.service;
 
+import com.agency.dto.BookingProgramDto;
 import com.agency.dto.ProgramDto;
 import com.agency.entity.Account;
+import com.agency.entity.BookingProgram;
 import com.agency.entity.Program;
+import com.agency.mapper.BookingProgramMapper;
 import com.agency.mapper.ProgramMapper;
 import com.agency.repository.AccountRepository;
+import com.agency.repository.BookingProgramRepository;
 import com.agency.repository.ProgramRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,15 +33,20 @@ public class ProgramService {
     private final ProgramRepository locationRepository;
     private final ProgramMapper locationMapper;
     private final AccountRepository accountRepository;
+    private final BookingProgramRepository bookingProgramRepository;
+    private final BookingProgramMapper bookingProgramMapper;
 //    private final DescriptionRepository descriptionRepository;
 
     @Autowired
-    public ProgramService(ProgramRepository locationRepository, ProgramMapper locationMapper, AccountRepository accountRepository
+    public ProgramService(ProgramRepository locationRepository, ProgramMapper locationMapper, AccountRepository accountRepository,
         //    , DescriptionRepository descriptionRepository
+                          BookingProgramRepository bookingProgramRepository,BookingProgramMapper bookingProgramMapper
     ) {
         this.locationRepository = locationRepository;
         this.locationMapper = locationMapper;
         this.accountRepository = accountRepository;
+        this.bookingProgramMapper=bookingProgramMapper;
+                this.bookingProgramRepository=bookingProgramRepository;
       //  this.descriptionRepository = descriptionRepository;
     }
 
@@ -61,6 +70,14 @@ public class ProgramService {
             return new ResponseEntity(savedTour,HttpStatus.OK);
         }
         return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    public BookingProgramDto cancel(BookingProgramDto programDto) {
+
+        programDto.setStatus("CANCEL");
+
+        BookingProgram program = bookingProgramRepository.saveAndFlush(bookingProgramMapper.toEntity(programDto));
+        return bookingProgramMapper.toDto(program);
     }
 
     public ProgramDto update(ProgramDto locationDto) {

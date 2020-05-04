@@ -39,17 +39,17 @@ public class ProgramController {
     @ResponseBody
     public ModelAndView loadProgram(@PathVariable Long id) {
 
-        Optional<Program> location = programRepository.findById(id);
+        Optional<Program> program = programRepository.findById(id);
 
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject(location.get());
-        modelAndView.setViewName("programPage");
+        modelAndView.addObject(program.get());
+        modelAndView.setViewName("program/programPage");
 
-       /* if(food.isPresent()){
-            modelAndView.addObject(food.get());
+        if(program.isPresent()){
+            modelAndView.addObject(program.get());
         } else {
-            throw new RuntimeException("No food with id " + id);
-        }*/
+            throw new RuntimeException("No program with id " + id);
+        }
 
         return modelAndView;
     }
@@ -85,19 +85,18 @@ public class ProgramController {
     }
 
     @PostMapping(value = "/program/save")
-    public ResponseEntity save(@RequestBody Program location) {
+    public ResponseEntity save(@RequestBody Program program) {
 
-
-      /*  if (food.getName().equals("") || food.getView().equals("") || food.getCuisine().equals("")) {
+        if (program.getName().equals("") || program.getType().equals("") || program.getDuration().equals("")) {
             return new ResponseEntity("empty field",HttpStatus.BAD_REQUEST);
-        }*/
-      /*  else if(food.getExitDate().compareTo(new Date())<0){
-            return new ResponseEntity("data error",HttpStatus.BAD_REQUEST);
-        }*/
-      //  else {
+        }
+        else if(Double.parseDouble(program.getPrice())<0){
+            return new ResponseEntity("price error",HttpStatus.BAD_REQUEST);
+        }
+        else {
+            return programService.save(program);
+        }
 
-            return programService.save(location);
-        //}
     }
 
     @GetMapping(value = "/programs/show", produces = "application/json")
@@ -113,7 +112,7 @@ public class ProgramController {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
        // modelAndView.setViewName("locationsTablePage");
-        modelAndView.setViewName("programsTablePage");
+        modelAndView.setViewName("program/programsTablePage");
 
 
         return modelAndView;
@@ -124,11 +123,11 @@ public class ProgramController {
 
         ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
         if ("leading".equals(type)) {
-            modelAndView.setViewName("leadingProgramPage");
+            modelAndView.setViewName("program/leadingProgramPage");
         } else if ("quest".equals(type)) {
-            modelAndView.setViewName("questProgramPage");
+            modelAndView.setViewName("program/questProgramPage");
         } else if ("show".equals(type)) {
-            modelAndView.setViewName("showProgramPage");
+            modelAndView.setViewName("program/showProgramPage");
         }
         return modelAndView;
     }

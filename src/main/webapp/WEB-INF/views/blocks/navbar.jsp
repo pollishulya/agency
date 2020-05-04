@@ -75,7 +75,7 @@
     <nav class="navbar navbar-expand-md  fixed-top">
         <div class="container">
             <div id="navbar" class="collapse navbar-collapse"></div>
-                <div id="buttons" class="position-groupTourBtn"></div>
+                <div id="buttons" class="position-groupPositionBtn"></div>
                 <div id="user" class="position-for-logBtn"></div>
                 <div id="logoutBtn"></div>
                 <sec:authorize access="isAnonymous()">

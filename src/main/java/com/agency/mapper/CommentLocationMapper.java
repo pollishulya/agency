@@ -54,7 +54,7 @@ public class CommentLocationMapper extends AbstractMapper<CommentLocation, Comme
     }
 
     private String getUsername(CommentLocation source) {
-        return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getAccount().getName();
+        return Objects.isNull(source) || Objects.isNull(source.getId()) ? null : source.getAccount().getFirstname();
     }
 
     private Long getLocationId(CommentLocation source) {

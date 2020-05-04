@@ -28,7 +28,7 @@ public class Program extends BaseEntity {
     private String duration;
 
     @Column(name = "price")
-    private double price;
+    private String price;
 
     @Column(name = "rating")
     private int rating;

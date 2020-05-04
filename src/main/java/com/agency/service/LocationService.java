@@ -1,10 +1,14 @@
 package com.agency.service;
 
+import com.agency.dto.BookingLocationDto;
 import com.agency.dto.LocationDto;
 import com.agency.entity.Account;
+import com.agency.entity.BookingLocation;
 import com.agency.entity.Location;
+import com.agency.mapper.BookingLocationMapper;
 import com.agency.mapper.LocationMapper;
 import com.agency.repository.AccountRepository;
+import com.agency.repository.BookingLocationRepository;
 import com.agency.repository.LocationRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,16 +33,19 @@ public class LocationService {
     private final LocationRepository locationRepository;
     private final LocationMapper locationMapper;
     private final AccountRepository accountRepository;
+    private final BookingLocationRepository bookingLocationRepository;
+    private final BookingLocationMapper bookingLocationMapper;
    // private final DescriptionRepository descriptionRepository;
 
     @Autowired
     public LocationService(LocationRepository locationRepository, LocationMapper locationMapper, AccountRepository accountRepository
-           // , DescriptionRepository descriptionRepository
+            , BookingLocationRepository bookingLocationRepository,BookingLocationMapper bookingLocationMapper
     ) {
         this.locationRepository = locationRepository;
         this.locationMapper = locationMapper;
         this.accountRepository = accountRepository;
-      //  this.descriptionRepository = descriptionRepository;
+     this.bookingLocationRepository=bookingLocationRepository;
+     this.bookingLocationMapper=bookingLocationMapper;
     }
 
 
@@ -71,6 +78,14 @@ public class LocationService {
 
         Location location = locationRepository.saveAndFlush(locationMapper.toEntity(locationDto));
         return locationMapper.toDto(location);
+    }
+
+    public BookingLocationDto cancel(BookingLocationDto locationDto) {
+
+        locationDto.setStatus("CANCEL");
+
+        BookingLocation location = bookingLocationRepository.saveAndFlush(bookingLocationMapper.toEntity(locationDto));
+        return bookingLocationMapper.toDto(location);
     }
 
     public ResponseEntity getAll(Pageable pageable, String param) {

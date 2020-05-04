@@ -10,7 +10,7 @@ function deleteRecord(id) {
             location.reload();
         },
         error: function (res) {
-            $('#deleteTourMistake').show();
+            $('#deletePositionMistake').show();
         }
     });
 };
@@ -19,7 +19,7 @@ function deleteRecord(id) {
 function deleteForm(id) {
     $("#deleteForm")[0].reset();
     $("#deleteModal").modal();
-    $('#idDeleteTour').val(id);
+    $('#idDeleteProgram').val(id);
 }
 
 function loadPrograms(id, param, numberRows) {
@@ -28,7 +28,7 @@ function loadPrograms(id, param, numberRows) {
         url: "/programs/show?param=" + param + "&pageNumber=" + loadPage + "&pageSize=" + numberRows,
         success: function (res) {
             $('#tableBody').empty();
-            $('#noTourMessage').empty();
+            $('#noPositionMessage').empty();
             $("#nextBtn").attr("disabled", false);
             if (loadPage == 0) {
                 $("#previousBtn").attr("disabled", true);
@@ -52,7 +52,7 @@ function loadPrograms(id, param, numberRows) {
         },
         error: function (res) {
             if (loadPage == 0) {
-                $('#tourTable').detach();
+                $('#positionTable').detach();
                 $("#previousBtn").attr("disabled", true);
             }
             $("#nextBtn").attr("disabled", true);
@@ -64,7 +64,7 @@ function loadPrograms(id, param, numberRows) {
 
 function AddNew() {
     $("#addForm")[0].reset();
-    $("#addTourModal").modal();
+    $("#addPositionModal").modal();
 
 }
 
@@ -72,7 +72,7 @@ function updateRecord(id) {
     $('#descriptionsUpdate').empty();
     var url = "/program/update/" + id;
     $("#updateForm")[0].reset();
-    $("#updateTourModal").modal();
+    $("#updatePositionModal").modal();
     $.ajax({
         type: "GET",
         url: url,
@@ -126,23 +126,19 @@ function saveProgram() {
         "type": type,
         "description": description
     });
-    alert(programDto.description);
-
     $.ajax({
         type: "Post",
         url: "/program/save",
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(programDto),
         success: function (res) {
-            alert ("success"+res);
             program.reload();
-            $("#addTourModal").modal("hide");
+            $("#addPositionModal").modal("hide");
 
         },
         error: function (res) {
-            alert ("error"+res.responseJSON);
             if (res.status === 500) {
-                $('#uniqueTourFieldMistake').show();
+                $('#uniquePositionFieldMistake').show();
             } else if (res.responseJSON === "empty field") {
                 $('#emptyFieldMistake').show();
             } else if (res.responseJSON === "data error") {
@@ -180,7 +176,7 @@ function saveDescription() {
 
 function save() {
 
-    $('#uniqueTourFieldMistake').hide();
+    $('#uniquePositionFieldMistake').hide();
     $('#emptyFieldMistake').hide();
     $('#emptyDescriptionMistake').hide();
     var i;
@@ -202,7 +198,7 @@ function save() {
 
 function updateProgram () {
 
-    $('#uniqueTourFieldUpdateMistake').hide();
+    $('#uniquePositionFieldUpdateMistake').hide();
     $('#emptyFieldUpdateMistake').hide();
 
     var name = $('#nameUpdate').val();
@@ -225,11 +221,11 @@ function updateProgram () {
         data: JSON.stringify(tour),
         success: function (res) {
             updateDescription();
-            $("#updateTourModal").modal("hide");
+            $("#updatePositionModal").modal("hide");
         },
         error: function (res) {
             if (res.status === 500) {
-                $('#uniqueTourFieldUpdateMistake').show();
+                $('#uniquePositionFieldUpdateMistake').show();
             } else if (res.status === 400) {
                 $('#emptyFieldUpdateMistake').show();
             }
@@ -293,7 +289,7 @@ $(document).ready(function () {
         var selectedOption = $('#numberRows').val();
         if (selectedOption != '') {
             $('#tableBody').empty();
-            loadTours(1, param, selectedOption);
+            loadFood(1, param, selectedOption);
         }
     });
 });
