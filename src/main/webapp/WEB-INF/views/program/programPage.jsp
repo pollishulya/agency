@@ -91,7 +91,7 @@
                         <div><spring:message code="rating.error"/></div>
                     </h3>
                 </c:if>
-                <div><spring:message code="country"/><b> ${program.duration}</b></div>
+                <div><spring:message code="duration"/><b> ${program.duration}</b></div>
 <%--                <div><spring:message code="dateBegin"/><b> ${food.exitDate}</b></div>--%>
 <%--                <div><spring:message code="duration"/><b>${food.numberDays}</b></div>--%>
                 <div><spring:message code="cost"/><b>${program.price}$</b></div>

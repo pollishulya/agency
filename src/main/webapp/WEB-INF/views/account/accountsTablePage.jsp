@@ -100,7 +100,6 @@
         <thead class="thread-light">
         <tr>
             <th scope="col"><spring:message code="username.label"/></th>
-            <th scope="col"><spring:message code="username.label"/></th>
             <th scope="col"><spring:message code="phone.label"/></th>
             <th scope="col"><spring:message code="email.label"/></th>
             <th scope="col"><spring:message code="role.label"/></th>

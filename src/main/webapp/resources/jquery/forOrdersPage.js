@@ -186,7 +186,7 @@ function cancelProgram(id,programId,companyId,accountId) {
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(program),
         success: function (res) {
-           
+
            // updateDescription();
            // program.reload();
             $("#updatePositionModal").modal("hide");

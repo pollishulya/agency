@@ -111,7 +111,7 @@ function loadAccounts(param, numberRows) {
             }
             var html = "";
             for (var i = 0; i < data.length; i++) {
-                html += "<tr id='row_" + data[i].id + "'><td>" + data[i].firstname + "</td><td>" + data[i].lastname + "</td><td>" + data[i].phone + "</td><td>" +
+                html += "<tr id='row_" + data[i].id + "'><td>" + data[i].firstname + "</td><td>" + data[i].phone + "</td><td>" +
                     data[i].email + "</td><td>" + data[i].role + "</td>";
                 html += "<td>" + "<button id='delete' class='btn btn-primary' onclick='deleteForm(" + data[i].id +
                     ")'>Удалить</button>" + "</td>";

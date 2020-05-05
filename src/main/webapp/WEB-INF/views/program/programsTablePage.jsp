@@ -23,7 +23,7 @@
 <jsp:include page="../blocks/navbar1.jsp"/>
 <jsp:include page="../blocks/navbar.jsp"/>
 <body>
-<div class="modal fade" id="addTourModal" style="position: absolute; left: 300px;top:-100px">
+<div class="modal fade" id="addPositionModal" style="position: absolute; left: 300px;top:-100px">
     <div class="col">
         <div class="modal-header">
             <a href="#" class="close" data-dismiss="modal">&times;</a>
