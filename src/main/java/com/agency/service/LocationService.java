@@ -35,7 +35,6 @@ public class LocationService {
     private final AccountRepository accountRepository;
     private final BookingLocationRepository bookingLocationRepository;
     private final BookingLocationMapper bookingLocationMapper;
-   // private final DescriptionRepository descriptionRepository;
 
     @Autowired
     public LocationService(LocationRepository locationRepository, LocationMapper locationMapper, AccountRepository accountRepository
@@ -57,15 +56,10 @@ public class LocationService {
 
             location.setRating(-1);
             location.setCompany(accountRepository.findById(id).get());
-            location.setImage("/resources/images/imageForFood");
+            location.setImage("/resources/images/imageForLocation");
+            Location savedLocation = locationRepository.saveAndFlush(location);
 
-//            if (location.getDescription() != null) {
-//                location.getDescription().forEach(td -> td.setLocation(location));
-//            }
-
-            Location savedTour = locationRepository.saveAndFlush(location);
-
-            return new ResponseEntity(savedTour,HttpStatus.OK);
+            return new ResponseEntity(savedLocation,HttpStatus.OK);
         }
         return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
     }
@@ -74,7 +68,7 @@ public class LocationService {
 
         locationDto.setCompanyId(getCurrentUserId());
         locationDto.setRating(3);
-        locationDto.setImage("/resources/images/imageForFood");
+        locationDto.setImage("/resources/images/imageForLocation");
 
         Location location = locationRepository.saveAndFlush(locationMapper.toEntity(locationDto));
         return locationMapper.toDto(location);

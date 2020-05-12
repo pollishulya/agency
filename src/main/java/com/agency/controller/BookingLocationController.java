@@ -127,14 +127,6 @@ public class BookingLocationController {
         return reservationsDto;
     }
 
-   /* @GetMapping(value = "/ordersCompany")
-    public ModelAndView showOrdersCompany() {
-
-        ModelAndView modelAndView = new ModelAndView(new MappingJackson2JsonView());
-        modelAndView.setViewName("companyReservationPage");
-
-        return modelAndView;
-    }*/
 
     private Long getCurrentUserId() {
 
@@ -145,7 +137,5 @@ public class BookingLocationController {
 
         return id;
     }
-
-
 
 }

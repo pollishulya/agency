@@ -99,6 +99,9 @@
                            onfocus="  $('#mistakeMessage').detach();">
                     <label for="passwordSignUp"><spring:message code="password"/></label>
                 </div>
+                <div id="uniqueFieldMistake" hidden><p class='alert alert-danger' role='alert'>
+                    <spring:message
+                            code="uniqueField.error"/></p></div>
                 <a class="btn btn-outline-primary" id="signUpBtn"
                    onclick="signUp()"><spring:message code="signup.button"/>
                 </a>

@@ -11,36 +11,11 @@ function deleteRecord(id) {
             location.reload();
         },
         error: function (res) {
-            $('#deletePosiionMistake').show();
+            $('#deletePositionMistake').show();
         }
     });
 };
 
-function convertDate(exitDate) {
-    var date = new Date(exitDate);
-    var dd = date.getDate();
-    var mm = date.getMonth() + 1;
-    var yyyy = date.getFullYear();
-    if (dd < 10) {
-        dd = '0' + dd;
-    }
-    if (mm < 10) {
-        mm = '0' + mm;
-    }
-    var result = dd + '/' + mm + '/' + yyyy;
-
-    return result;
-}
-
-function convertDateForUpdateField(exitDate) {
-
-    var date = new Date(exitDate);
-    var day = ("0" + date.getDate()).slice(-2);
-    var month = ("0" + (date.getMonth() + 1)).slice(-2);
-    var today = date.getFullYear() + "-" + (month) + "-" + (day);
-
-    return today;
-}
 
 function deleteForm(id) {
     $("#deleteForm")[0].reset();
@@ -130,7 +105,6 @@ function updateRecord(id) {
     });
 }
 
-//
 function saveLocation() {
 
     var name = $('#name').val();
@@ -139,15 +113,6 @@ function saveLocation() {
     var price = $('#price').val();
     var type = $('#types').val();
     var description= $('#description').val();
-    /*s = [];
-   // for (var i = 0; i <= numberDays; i++) {
-        var descriptionText = $('#description_' + i).val();
-        var description = {
-           // "dayNumber": i + 1,
-            "description": descriptionText
-        };
-        descriptions.push(description);
-   // }*/
     var locationDto = ({
         "name": name,
         "address": address,
@@ -180,7 +145,7 @@ function saveLocation() {
     })
 };
 
-function saveDescription() {
+/*function saveDescription() {
 
     var name = $('#name').val();
     var descriptions = [];
@@ -203,7 +168,7 @@ function saveDescription() {
         error: function (res) {
         }
     })
-};
+};*/
 
 function save() {
 
@@ -267,7 +232,7 @@ function updateLocation () {
 
 };
 
-function updateDescription() {
+/*function updateDescription() {
     var locationId = $('#idUpdate').val();
     var descriptions = [];
     for (var i = 0; i < numberDays; i++) {
@@ -294,28 +259,6 @@ function updateDescription() {
     })
 }
 
-// function update() {
-//
-//     $('#uniqueTourFieldUpdateMistake').hide();
-//     $('#emptyFieldUpdateMistake').hide();
-//     $('#emptyDescriptionUpdateMistake').hide();
-//     var i;
-//     var stop = 0;
-//     for (i = 0; i <= numberDays; i++) {
-//         var descriptionText = $('#descriptionUpdate_' + numberDays).val();
-//         if (descriptionText === "") {
-//             $('#emptyDescriptionUpdateMistake').show();
-//             stop = 1;
-//             break;
-//         }
-//     }
-//
-//     if (stop === 0) {
-//         updateTour();
-//         updateDescription();
-//     }
-// }
-
 $(document).ready(function () {
     $("#numberRows").change(function () {
         var param = $('#search').val();
@@ -331,9 +274,9 @@ function addDay() {
     numberDays = numberDays + 1;
     var html = "<textarea class='description' id='description_" + numberDays + "'></textarea>";
     $('#descriptions').append(html);
-}
+}*/
 
-function deleteDay() {
+/*function deleteDay() {
     if (numberDays >= 1) {
         $('#description_' + numberDays).detach();
         numberDays = numberDays - 1;
@@ -359,7 +302,7 @@ function deleteDayInUpdate() {
             }
         });
     }
-}
+}*/
 
 function setRating(rating) {
     if (rating === -1) {

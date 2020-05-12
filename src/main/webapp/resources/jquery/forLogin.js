@@ -34,12 +34,17 @@ function signUp() {
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(accountDto),
         success: function (result) {
-
-                //    alert("регистрация прошла успешно");
             enterForm();
             $("#signUpModal").modal("hide");
         },
         error: function (result) {
+            $('#uniqueFieldMistake').show();
+            if (result.status === 500) {
+                $('#uniqueFieldMistake').show();
+            } else if (result.status === 400) {
+                $('#emptyFieldMistake').show();
+            }
+            else { $('#emptyFieldMistake').show();}
         }
     })
 };
