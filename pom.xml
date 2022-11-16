@@ -20,7 +20,7 @@
         <slf4j.version>1.7.28</slf4j.version>
         <h2database.version>1.4.200</h2database.version>
         <lombok.version>1.18.10</lombok.version>
-        <jackson.version>2.9.5</jackson.version>
+        <jackson.version>2.12.7.1</jackson.version>
         <webjars.version>3.3.7-1</webjars.version>
         <jackson-datatype.version>2.5.3</jackson-datatype.version>
         <jquery.version>3.1.1</jquery.version>
